@@ -1,0 +1,41 @@
+import * as React from 'react'
+import { Link } from 'gatsby'
+import { Header } from '../components/header'
+import CssBaseline from '@mui/material/CssBaseline'
+import { Box, Toolbar } from '@mui/material'
+import * as constants from '../constants'
+
+type Props = {
+  pageTitle: string
+  headerTitle: string | undefined
+  children: React.ReactNode
+}
+
+export const Layout: React.FC<Props> = ({
+  pageTitle,
+  headerTitle,
+  children,
+}) => {
+  return (
+    <Box sx={{ px: 4 }}>
+      <CssBaseline />
+      <Header title={headerTitle} />
+      <title>{pageTitle}</title>
+      <Toolbar sx={constants.toolbarProps} />
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <h1>{pageTitle}</h1>
+        {children}
+      </main>
+    </Box>
+  )
+}
