@@ -7,7 +7,7 @@ import Button from '@mui/material/Button'
 import * as utility from './css/utility.module.css'
 
 type Props = {
-  title: string | undefined
+  title: string | null | undefined
 }
 
 export const Header: React.FC<Props> = ({ title }) => {

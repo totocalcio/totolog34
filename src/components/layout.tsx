@@ -7,7 +7,7 @@ import * as constants from '../constants'
 
 type Props = {
   pageTitle: string
-  headerTitle: string | undefined
+  headerTitle: string | null | undefined
   children: React.ReactNode
 }
 
