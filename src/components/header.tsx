@@ -4,7 +4,7 @@ import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import * as utility from './css/utility.module.css'
+import * as utility from '../css/utility.module.css'
 
 type Props = {
   title: string | null | undefined
