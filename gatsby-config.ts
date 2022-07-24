@@ -51,6 +51,21 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/pages/blog`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://totolog34.com',
+        sitemap: 'https://totolog34.com/sitemap.xml',
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
+        },
+      },
+    },
   ],
 }
 
