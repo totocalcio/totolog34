@@ -33,7 +33,7 @@ export const Seo = ({ description, lang, meta, title }: Props) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = site.siteMetadata.title
   let typeSafeMeta: Array<Meta>
   if (meta instanceof Array) {
     typeSafeMeta = meta
