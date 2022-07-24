@@ -30,6 +30,7 @@ const config: GatsbyConfig = {
               maxWidth: 630,
             },
           },
+          `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
         ],
       },

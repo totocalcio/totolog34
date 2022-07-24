@@ -8,6 +8,10 @@ title: 'My first blog post'
 
 text,text2,text3
 
+```js
+const aaa = 'test'
+```
+
 ```html
 <p>test</p>
 ```
