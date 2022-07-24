@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, PageProps } from 'gatsby'
 import { Layout } from '../components/layout'
+import { Seo } from '../components/seo'
 
 const Template = ({ data }: PageProps<Queries.TemplateQuery>) => {
   const frontmatter = data.markdownRemark!.frontmatter
@@ -11,6 +12,7 @@ const Template = ({ data }: PageProps<Queries.TemplateQuery>) => {
       headerTitle={data.site!.siteMetadata.title}
       pageTitle={frontmatter.title}
     >
+      <Seo title={frontmatter.title} />
       <h2>{frontmatter.date}</h2>
       <div className="blog-post-container">
         <div className="blog-post">

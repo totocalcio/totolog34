@@ -7,3 +7,9 @@ title: 'My first blog post'
 ## heading
 
 text,text2,text3
+
+```html
+<p>test</p>
+```
+
+![icon](./icon.jpg)

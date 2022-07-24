@@ -1,4 +1,4 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -21,6 +21,20 @@ const config: GatsbyConfig = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 630,
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -34,8 +48,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/pages/blog`,
       },
     },
-    `gatsby-transformer-remark`,
-  ]
-};
+  ],
+}
 
-export default config;
+export default config
