@@ -1,7 +1,7 @@
 ---
 slug: /blog/my-first-post
 date: '2022-07-17'
-title: My first blog post
+title: My first blog
 tags: [Gatsby]
 ---
 

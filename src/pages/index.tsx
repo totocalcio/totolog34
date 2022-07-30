@@ -6,23 +6,33 @@ import { Bio } from '../components/bio'
 import { Seo } from '../components/seo'
 
 const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
-  console.log(data)
   const site = data.site
   const posts = data.allMarkdownRemark.nodes
-  const group = data.allMarkdownRemark.group
+  const hasTags = (post: any) => {
+    console.log(post)
+    const ret = post.frontmatter.tags.length > 0
+    console.log(ret)
+    return ret
+  }
   return (
     <Layout pageTitle="Home Page" headerTitle={site!.siteMetadata.title}>
       <Seo title="All posts" />
       <Bio />
       <ul>
-        {posts.map((post) => (
+        {posts.map((post: any) => (
           <li key={post.frontmatter.slug}>
-            <a href={post.frontmatter.slug}>{post.frontmatter.title}</a>
-            {group.map((tag: any) => (
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
-              </Link>
-            ))}
+            <>
+              <a href={post.frontmatter.slug}>{post.frontmatter.title}</a>
+              {post.frontmatter.tags.map((tag: string) => (
+                <>
+                <span> / </span>
+
+                <Link to={`/tags/${kebabCase(tag)}/`}>
+                  {tag}
+                </Link>
+                </>
+              ))}
+            </>
           </li>
         ))}
       </ul>
