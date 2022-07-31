@@ -23,6 +23,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       title: String!
       slug: String!
       tags: [String!]
+      description: String
     }
   `)
   }
@@ -44,7 +45,7 @@ exports.createPages = async ({ actions, graphql, reporter }: Props) => {
   const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        sort: { order: ASC, fields: [frontmatter___date] }
         limit: 2000
       ) {
         nodes {
@@ -76,13 +77,15 @@ exports.createPages = async ({ actions, graphql, reporter }: Props) => {
   const tags = result.data.tagsGroup.group
 
   // Make tag pages
-  tags.forEach((tag: any) => {
-    createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-      component: tagTemplate,
-      context: {
-        tag: tag.fieldValue,
-      },
+  if (tags.length > 0) {
+    tags.forEach((tag:{fieldValue:string}) => {
+      createPage({
+        path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
+        },
+      })
     })
-  })
+  }
 }

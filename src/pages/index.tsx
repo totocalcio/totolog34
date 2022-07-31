@@ -8,29 +8,20 @@ import { Seo } from '../components/seo'
 const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
   const site = data.site
   const posts = data.allMarkdownRemark.nodes
-  const hasTags = (post: any) => {
-    console.log(post)
-    const ret = post.frontmatter.tags.length > 0
-    console.log(ret)
-    return ret
-  }
   return (
     <Layout pageTitle="Home Page" headerTitle={site!.siteMetadata.title}>
       <Seo title="All posts" />
       <Bio />
       <ul>
-        {posts.map((post: any) => (
+        {posts.map((post) => (
           <li key={post.frontmatter.slug}>
             <>
               <a href={post.frontmatter.slug}>{post.frontmatter.title}</a>
-              {post.frontmatter.tags.map((tag: string) => (
-                <>
-                <span> / </span>
-
-                <Link to={`/tags/${kebabCase(tag)}/`}>
-                  {tag}
-                </Link>
-                </>
+              {post.frontmatter.tags?.map((tag: string) => (
+                <span key={tag}>
+                  {' '}
+                  /{' '}<Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </span>
               ))}
             </>
           </li>
