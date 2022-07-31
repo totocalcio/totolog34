@@ -1,7 +1,6 @@
 import * as React from 'react'
-import { graphql, PageProps, Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import kebabCase from 'lodash/kebabCase'
+import { graphql, PageProps } from 'gatsby'
+import { Card } from '../components/card'
 import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
 import { Box } from '@mui/material'
@@ -19,29 +18,16 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
           display: 'grid',
           gridTemplateColumns: {
             xs: '1fr',
-            sm: 'repeat(2, 1fr)',
-            md: 'repeat(3, 1fr)',
+            sm: '1fr',
+            md: 'repeat(2, 1fr)',
+            lg: 'repeat(3, 1fr)',
           },
           gap: 4,
           marginTop: 3,
         }}
       >
-        {posts.map((post: any) => {
-          return (
-            <Box key={post.frontmatter.slug}>
-              <GatsbyImage
-                image={getImage(post.frontmatter.thumbnail ?? defaultImage)!}
-                alt=""
-              />
-              <Link to={post.frontmatter.slug}>{post.frontmatter.title}</Link>
-              {post.frontmatter.tags?.map((tag: string) => (
-                <span key={tag}>
-                  {' '}
-                  / <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </span>
-              ))}
-            </Box>
-          )
+        {posts.map((post) => {
+          return <Card post={post} defaultImage={defaultImage} />
         })}
       </Box>
     </Layout>
