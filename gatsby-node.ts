@@ -19,11 +19,12 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       slug: String
     }
     type Frontmatter {
-      date: String!
+      date: Date @dateformat
       title: String!
       slug: String!
       tags: [String!]
       description: String
+      thumbnail: File @fileByRelativePath
     }
   `)
   }
@@ -31,13 +32,13 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
 const path = require('path')
 const _ = require('lodash')
 
-type Props = {
+type PropsCreatePages = {
   actions: any
   graphql: any
   reporter: any
 }
 
-exports.createPages = async ({ actions, graphql, reporter }: Props) => {
+exports.createPages = async ({ actions, graphql, reporter }: PropsCreatePages) => {
   const { createPage } = actions
 
   const tagTemplate = path.resolve('src/pages/tags.tsx')

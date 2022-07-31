@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { AppBar, Box, Button, Typography,Link as MuiLink } from '@mui/material'
+import { AppBar, Box, Button, Typography, Link as MuiLink } from '@mui/material'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import * as utility from '../css/utility.module.css'
 import styled from 'styled-components'
@@ -13,7 +13,7 @@ type Props = {
 const StyledBox = styled(Box)`
   display: flex;
   justify-content: space-between;
-  align-items:center ;
+  align-items: center;
 `
 
 export const Header: React.FC<Props> = ({ title, twitter }) => {
@@ -28,7 +28,10 @@ export const Header: React.FC<Props> = ({ title, twitter }) => {
               </Typography>
             </Button>
           </Link>
-          <MuiLink target="_blank" href={`https://twitter.com/${twitter || ``}`}>
+          <MuiLink
+            target="_blank"
+            href={`https://twitter.com/${twitter || ``}`}
+          >
             <Button sx={{ color: 'primary.contrastText' }}>
               <TwitterIcon />
             </Button>
