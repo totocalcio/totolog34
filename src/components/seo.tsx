@@ -15,9 +15,9 @@ type Meta = {
 }
 
 export const Seo: React.FC<Props> = ({
-  description,
-  lang,
-  meta,
+  description = '',
+  lang = 'ja',
+  meta = [],
   title,
 }: Props) => {
   const { site } = useStaticQuery(
@@ -50,8 +50,8 @@ export const Seo: React.FC<Props> = ({
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
+      title={title || defaultTitle}
+      titleTemplate={title ? `${title} | ${defaultTitle}` : undefined}
       meta={[
         {
           name: `description`,

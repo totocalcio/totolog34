@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { AppBar, Box, Button, Typography } from '@mui/material'
+import { AppBar, Box, Button, Typography,Link as MuiLink } from '@mui/material'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import * as utility from '../css/utility.module.css'
 import styled from 'styled-components'
@@ -28,11 +28,11 @@ export const Header: React.FC<Props> = ({ title, twitter }) => {
               </Typography>
             </Button>
           </Link>
-          <Link target="_blank" to={`https://twitter.com/${twitter || ``}`}>
-          <Button sx={{ color: 'primary.contrastText' }}>
-            <TwitterIcon />
+          <MuiLink target="_blank" href={`https://twitter.com/${twitter || ``}`}>
+            <Button sx={{ color: 'primary.contrastText' }}>
+              <TwitterIcon />
             </Button>
-          </Link>
+          </MuiLink>
         </StyledBox>
       </AppBar>
     </Box>

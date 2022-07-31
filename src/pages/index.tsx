@@ -10,7 +10,7 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
   const posts = data.allMarkdownRemark.nodes
   return (
     <Layout>
-      <Seo title="All posts" />
+      <Seo title=""/>
       <ul>
         {posts.map((post) => (
           <li key={post.frontmatter.slug}>
