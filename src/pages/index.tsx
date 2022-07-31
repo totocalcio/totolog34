@@ -5,11 +5,12 @@ import { Layout } from '../components/layout'
 import { Bio } from '../components/bio'
 import { Seo } from '../components/seo'
 
-const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
-  const site = data.site
+const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
+  data,
+}: PageProps<Queries.IndexPageQuery>) => {
   const posts = data.allMarkdownRemark.nodes
   return (
-    <Layout pageTitle="Home Page" headerTitle={site!.siteMetadata.title}>
+    <Layout>
       <Seo title="All posts" />
       <Bio />
       <ul>
@@ -27,7 +28,6 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
           </li>
         ))}
       </ul>
-      <p>I'm making this by following the Gatsby Tutorial.</p>
     </Layout>
   )
 }

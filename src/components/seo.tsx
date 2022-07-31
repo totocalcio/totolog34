@@ -1,5 +1,4 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
@@ -15,7 +14,12 @@ type Meta = {
   content: string
 }
 
-export const Seo = ({ description, lang, meta, title }: Props) => {
+export const Seo: React.FC<Props> = ({
+  description,
+  lang,
+  meta,
+  title,
+}: Props) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -85,17 +89,4 @@ export const Seo = ({ description, lang, meta, title }: Props) => {
       ]}
     />
   )
-}
-
-Seo.defaultProps = {
-  lang: `ja`,
-  meta: [],
-  description: ``,
-}
-
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
 }

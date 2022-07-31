@@ -1,45 +1,33 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
-import { Header } from '../components/header'
-import CssBaseline from '@mui/material/CssBaseline'
-import { Box, Toolbar } from '@mui/material'
-import * as constants from '../constants'
-import { Footer } from './footer'
+import { useStaticQuery, graphql } from 'gatsby'
+import { Box, CssBaseline, Toolbar } from '@mui/material'
 import { ThemeProvider } from '@mui/system'
+import * as constants from '../script/constants'
 import { theme } from '../script/theme'
+import { Header } from './header'
+import { Footer } from './footer'
 
 type Props = {
-  pageTitle: string
-  headerTitle: string | null | undefined
   children: React.ReactNode
 }
 
-export const Layout: React.FC<Props> = ({
-  pageTitle,
-  headerTitle,
-  children,
-}) => {
+export const Layout: React.FC<Props> = ({ children }) => {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
     <ThemeProvider theme={theme}>
-      <Header title={headerTitle} />
+      <Header title={site.siteMetadata.title} />
       <Box sx={{ px: 4 }}>
         <CssBaseline />
-        <title>{pageTitle}</title>
         <Toolbar sx={constants.toolbarProps} />
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-        <main>
-          <h1>{pageTitle}</h1>
-          {children}
-        </main>
+        <main>{children}</main>
       </Box>
       <Footer />
     </ThemeProvider>

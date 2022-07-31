@@ -3,15 +3,14 @@ import { graphql, PageProps } from 'gatsby'
 import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
 
-const Template = ({ data }: PageProps<Queries.TemplateQuery>) => {
+const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
+  data,
+}: PageProps<Queries.TemplateQuery>) => {
   const frontmatter = data.markdownRemark!.frontmatter
   const html = data.markdownRemark!.html
 
   return (
-    <Layout
-      headerTitle={data.site!.siteMetadata.title}
-      pageTitle={frontmatter.title}
-    >
+    <Layout>
       <Seo title={frontmatter.title} />
       <h2>{frontmatter.date}</h2>
       <div className="blog-post-container">

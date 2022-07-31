@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import kebabCase from 'lodash/kebabCase'
 import { Link, graphql, PageProps } from 'gatsby'
 import { Layout } from '../components/layout'
@@ -8,16 +8,20 @@ type Tag = {
   tag?: string
 }
 
-const TagsPage = ({ data, pageContext }: PageProps<Queries.TagsPageQuery>) => {
+const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
+  data,
+  pageContext,
+}) => {
   const posts = data.allMarkdownRemark.nodes
-  const siteTitle = data.site!.siteMetadata.title || `Title`
   const { totalCount } = data.allMarkdownRemark
   const { tag }: Tag = pageContext
 
   if (posts.length === 0) {
+    const tagHeader = `タグ: "${tag}" (0記事)`
     return (
-      <Layout pageTitle={`タグ: "${tag}" (0記事)`} headerTitle={siteTitle}>
-        <Seo title={`タグ: "${tag}" (0記事)`} />
+      <Layout>
+        <h1>{tagHeader}</h1>
+        <Seo title={tagHeader} />
         <p>該当するタグの投稿記事がありません。</p>
       </Layout>
     )
@@ -26,7 +30,8 @@ const TagsPage = ({ data, pageContext }: PageProps<Queries.TagsPageQuery>) => {
   const tagHeader = `タグ: "${tag}" (${totalCount}記事)`
 
   return (
-    <Layout pageTitle={tagHeader || 'Tag'} headerTitle={siteTitle}>
+    <Layout>
+      <h1>{tagHeader || 'Tag'}</h1>
       <Seo title={tagHeader || 'Tag'} />
       <ul>
         {posts.map((post) => (
