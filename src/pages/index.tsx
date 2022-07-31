@@ -2,7 +2,6 @@ import * as React from 'react'
 import { graphql, PageProps, Link } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 import { Layout } from '../components/layout'
-import { Bio } from '../components/bio'
 import { Seo } from '../components/seo'
 
 const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
@@ -12,7 +11,6 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
   return (
     <Layout>
       <Seo title="All posts" />
-      <Bio />
       <ul>
         {posts.map((post) => (
           <li key={post.frontmatter.slug}>

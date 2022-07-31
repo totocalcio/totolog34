@@ -17,13 +17,19 @@ export const Layout: React.FC<Props> = ({ children }) => {
       site {
         siteMetadata {
           title
+          social {
+            twitter
+          }
         }
       }
     }
   `)
   return (
     <ThemeProvider theme={theme}>
-      <Header title={site.siteMetadata.title} />
+      <Header
+        title={site.siteMetadata.title}
+        twitter={site.siteMetadata.social.twitter}
+      />
       <Box sx={{ px: 4 }}>
         <CssBaseline />
         <Toolbar sx={constants.toolbarProps} />
