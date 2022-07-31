@@ -36,7 +36,7 @@ const TagsPage = ({ data, pageContext }: PageProps<Queries.TagsPageQuery>) => {
               {post.frontmatter.tags?.map((tag: string) => (
                 <span key={tag}>
                   {' '}
-                  /{' '}<Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  / <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                 </span>
               ))}
             </>

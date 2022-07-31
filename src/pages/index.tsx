@@ -20,7 +20,7 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
               {post.frontmatter.tags?.map((tag: string) => (
                 <span key={tag}>
                   {' '}
-                  /{' '}<Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  / <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                 </span>
               ))}
             </>

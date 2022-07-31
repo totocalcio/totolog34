@@ -1,9 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
+import { AppBar, Box, Button, Typography } from '@mui/material'
 import * as utility from '../css/utility.module.css'
 
 type Props = {
