@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
   return (
     <StyledFooter
       sx={{
-        p: { sm: 1 },
+        p: 1,
         textAlign: 'center',
         backgroundColor: 'primary.main',
         color: 'primary.contrastText',
