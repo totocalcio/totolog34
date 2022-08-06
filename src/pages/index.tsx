@@ -22,12 +22,18 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
             md: 'repeat(2, 1fr)',
             lg: 'repeat(3, 1fr)',
           },
-          gap: 4,
+          gap: 3,
           marginTop: 3,
         }}
       >
         {posts.map((post) => {
-          return <Card post={post} defaultImage={defaultImage} />
+          return (
+            <Card
+              post={post}
+              defaultImage={defaultImage}
+              key={post.frontmatter.slug}
+            />
+          )
         })}
       </Box>
     </Layout>

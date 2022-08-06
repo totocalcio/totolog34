@@ -30,7 +30,7 @@ export const Layout: React.FC<Props> = ({ children }) => {
         title={site.siteMetadata.title}
         twitter={site.siteMetadata.social.twitter}
       />
-      <Box sx={{ px: 4 }}>
+      <Box sx={{ px: { xs: 2, md: 4 } }}>
         <CssBaseline />
         <Toolbar sx={constants.toolbarProps} />
         <main>{children}</main>
