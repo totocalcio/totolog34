@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, PageProps } from 'gatsby'
 import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
+import { Container, Typography } from '@mui/material'
 
 const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
   data,
@@ -12,15 +13,17 @@ const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
   return (
     <Layout>
       <Seo title={frontmatter.title} />
-      <h2>{frontmatter.date}</h2>
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html ?? '' }}
-          />
+      <Container maxWidth="md" sx={{ py: 3 }}>
+        <Typography variant="h6">{frontmatter.date}</Typography>
+        <div className="blog-post-container">
+          <div className="blog-post">
+            <div
+              className="blog-post-content"
+              dangerouslySetInnerHTML={{ __html: html ?? '' }}
+            />
+          </div>
         </div>
-      </div>
+      </Container>
     </Layout>
   )
 }

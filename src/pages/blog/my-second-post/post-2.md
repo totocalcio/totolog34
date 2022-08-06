@@ -5,6 +5,6 @@ title: My second blog
 tags: [Gatsby, JavaScript]
 ---
 
-## heading
+# heading
 
 second
