@@ -8,6 +8,7 @@ import styled from 'styled-components'
 type Props = {
   title: string | null | undefined
   twitter: string
+  path?: string
 }
 
 const StyledBox = styled(Box)`
@@ -16,7 +17,7 @@ const StyledBox = styled(Box)`
   align-items: center;
 `
 
-export const Header: React.FC<Props> = ({ title, twitter }) => {
+export const Header: React.FC<Props> = ({ title, twitter, path }) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar>

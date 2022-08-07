@@ -1,8 +1,9 @@
 import * as React from 'react'
-import kebabCase from 'lodash/kebabCase'
-import { Link, graphql, PageProps } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
+import { Card } from '../components/card'
 import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
+import { Box } from '@mui/material'
 
 type Tag = {
   tag?: string
@@ -13,6 +14,7 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
   pageContext,
 }) => {
   const posts = data.allMarkdownRemark.nodes
+  const defaultImage = data.defaultImage
   const { totalCount } = data.allMarkdownRemark
   const { tag }: Tag = pageContext
 
@@ -33,21 +35,29 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
     <Layout>
       <h1>{tagHeader || 'Tag'}</h1>
       <Seo title={tagHeader || 'Tag'} />
-      <ul>
-        {posts.map((post) => (
-          <li key={post.frontmatter.slug}>
-            <>
-              <a href={post.frontmatter.slug}>{post.frontmatter.title}</a>
-              {post.frontmatter.tags?.map((tag: string) => (
-                <span key={tag}>
-                  {' '}
-                  / <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </span>
-              ))}
-            </>
-          </li>
-        ))}
-      </ul>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: {
+            xs: '1fr',
+            sm: '1fr',
+            md: 'repeat(2, 1fr)',
+            lg: 'repeat(3, 1fr)',
+          },
+          gap: 3,
+          marginTop: 3,
+        }}
+      >
+        {posts.map((post) => {
+          return (
+            <Card
+              post={post}
+              defaultImage={defaultImage}
+              key={post.frontmatter.slug}
+            />
+          )
+        })}
+      </Box>
     </Layout>
   )
 }
@@ -75,7 +85,25 @@ export const query = graphql`
           slug
           description
           tags
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
         }
+      }
+    }
+    defaultImage: file(relativePath: { eq: "profile.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 200
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }
