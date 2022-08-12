@@ -4,7 +4,7 @@ import { Seo } from '../components/seo'
 
 const NotFoundPage: React.FC = () => {
   return (
-    <Layout pageTitle="404" headerTitle="404">
+    <Layout>
       <Seo title="404: Not Found" />
     </Layout>
   )

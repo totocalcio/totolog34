@@ -97,7 +97,7 @@ export const query = graphql`
         }
       }
     }
-    defaultImage: file(relativePath: { eq: "profile.jpg" }) {
+    defaultImage: file(relativePath: { eq: "default.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 200
