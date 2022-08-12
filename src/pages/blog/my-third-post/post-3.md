@@ -1,5 +1,5 @@
 ---
-slug: /blog/my-third-post
+slug: /my-third-post
 date: '2022-07-25'
 title: My third blog
 tags: [Gatsby]

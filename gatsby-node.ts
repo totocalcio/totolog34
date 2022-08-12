@@ -38,7 +38,11 @@ type PropsCreatePages = {
   reporter: any
 }
 
-exports.createPages = async ({ actions, graphql, reporter }: PropsCreatePages) => {
+exports.createPages = async ({
+  actions,
+  graphql,
+  reporter,
+}: PropsCreatePages) => {
   const { createPage } = actions
 
   const tagTemplate = path.resolve('src/pages/tags.tsx')
@@ -79,7 +83,7 @@ exports.createPages = async ({ actions, graphql, reporter }: PropsCreatePages) =
 
   // Make tag pages
   if (tags.length > 0) {
-    tags.forEach((tag:{fieldValue:string}) => {
+    tags.forEach((tag: { fieldValue: string }) => {
       createPage({
         path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
         component: tagTemplate,

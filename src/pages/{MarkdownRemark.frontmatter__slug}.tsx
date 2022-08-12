@@ -35,7 +35,7 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        date
+        date(formatString: "YYYY-MM-DD")
         slug
         title
         tags

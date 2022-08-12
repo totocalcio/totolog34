@@ -1,7 +1,7 @@
 ---
-slug: /blog/my-first-post
-date: '2022-07-17'
-title: My first blog
+slug: '/my-first-post'
+date: '2022-07-17 18:59:04'
+title: 'My first blog'
 tags: [Gatsby]
 thumbnail: icon.jpg
 ---
