@@ -49,7 +49,14 @@ const config: GatsbyConfig = {
               maxWidth: 630,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options:{
+              aliases: {
+                sh: `shell`,
+              },
+            },
+          },
           `gatsby-remark-copy-linked-files`,
         ],
       },
