@@ -10,8 +10,8 @@ tags: ['gatsby']
 
 リニューアルしようかなと思って。２年ぶりに触ります。
 
-<figure class="wp-block-embed is-type-wp-embed is-provider-うさ技術 wp-block-embed-うさ技術">
-https://totolog34.com/225/
+[以前さわった時の記事](https://totolog34.com/225/)
+
 ```sh
 % gatsby -v
 zsh: command not found: gatsby
@@ -133,7 +133,7 @@ Thanks! Here's what we'll now do:
 % npm run develop
 ```
 
-http://localhost:8000/へアクセス
+http\://localhost:8000/へアクセス
 
 ![image](../../../../images/2022/05/2022-05-21-1.07.23.png)
 

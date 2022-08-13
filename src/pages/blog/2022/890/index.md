@@ -42,12 +42,12 @@ const count = ref<number>(0);
 
 ```javascript
 interface State {
-name: string;
-age: number;
+  name: string;
+  age: number;
 }
 const state = reactive<State>({
-name: "yoshida",
-age: 36,
+  name: "yoshida",
+  age: 36,
 });
 ```
 
@@ -83,8 +83,8 @@ const upperCaseName = computed(() => state.name.toUpperCase());
 
 ```html
 <template>
-<div>{{ count }}
-<button type="button" @click="count++">カウントアップ</button>
+  <div>{{ count }}
+  <button type="button" @click="count++">カウントアップ</button>
 </template>
 ```
 
@@ -106,16 +106,15 @@ const upperCaseName = computed(() => state.name.toUpperCase());
 <script setup lang="ts">
 //型定義
 interface Props {
-label: string;
+  label: string;
 }
 //props
 defineProps<Props>();
 </script>
 
 <template>
-<div>{{ label }}
+  <div>{{ label }}</div>
 </template>
-
 ```
 
 #### 初期値を設定する場合
@@ -137,10 +136,10 @@ withDefaults(defineProps<Props>(), { label: "defaultLabel" });
 
 ```javascript
 const changeName = (value: string) => {
-state.name = value;
+  state.name = value;
 };
 const updateName = (value: string) => {
-state.name = value;
+  state.name = value;
 };
 ```
 
@@ -153,13 +152,13 @@ state.name = value;
 ```javascript
 //型定義
 interface Emits {
-(event: "change", value: string): void;
-(event: "update", value: string): void;
+  (event: "change", value: string): void;
+  (event: "update", value: string): void;
 }
 //Emit
 const emit = defineEmits<Emits>();
 const handleUpdate = () => {
-emit("update", "update!");
+  emit("update", "update!");
 };
 ```
 
@@ -178,9 +177,9 @@ emit("update", "update!");
 
 ```javascript
 const handleInput = (e: Event) => {
-if (e.target instanceof HTMLInputElement) {
-emit("change", e.target?.value);
-}
+  if (e.target instanceof HTMLInputElement) {
+    emit("change", e.target?.value);
+  }
 };
 ```
 

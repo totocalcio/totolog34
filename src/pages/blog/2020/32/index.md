@@ -22,7 +22,7 @@ WEB フォントの使い方について説明します。画像が多めの説�
 
 [https://convertio.co/ja/font-converter/](https://convertio.co/ja/font-converter/)
 
-準備ができたら[FFFTP等](https://forest.watch.impress.co.jp/library/software/ffftp/)でサーバーにアップロードします。
+準備ができたら[FFFTP](https://forest.watch.impress.co.jp/library/software/ffftp/)等でサーバーにアップロードします。
 
 ![image](../../../../images/2020/05/image-1.png)
 

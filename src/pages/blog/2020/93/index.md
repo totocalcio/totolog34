@@ -36,8 +36,8 @@ CSS を学び始めた初期で躓いたやつです。
 
 ```css
 子{
-position:absolute;
-left:250px;
+  position:absolute;
+  left:250px;
 }
 ```
 
@@ -60,10 +60,10 @@ left:250px;
 
 ```css
 子{
-position:absolute;
-left:50%;
-width:80px;
-margin-left:-40px;
+  position:absolute;
+  left:50%;
+  width:80px;
+  margin-left:-40px;
 }
 ```
 

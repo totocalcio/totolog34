@@ -18,12 +18,12 @@ CSS を設定するために数値を見てみます。
 
 ![image](../../../../images/2020/10/image-24.png)
 
-Hex：#E9952C
-そして
+`Hex：#E9952C`。そして
 
 ![image](../../../../images/2020/10/image-21.png)
 
-不透明度：80%
+`不透明度：80%`
+
 もしもこの 2 種類のプロパティを素直にかいた場合、下記のようになるかもしれません。
 
 ```css
@@ -39,7 +39,7 @@ opacity:0.8
 
 [https://qiita.com/CUTBOSS/items/6166cf79b9f18c45a010](https://qiita.com/CUTBOSS/items/6166cf79b9f18c45a010)
 
-つまり#E9952C+CCとなるので、CSS はこのように設定します。
+つまり`#E9952C`と`透明度80%`は、`#E9952C+CC`となるので、CSSはこのように設定します。
 
 ```css
 background-color:#E9952CCC

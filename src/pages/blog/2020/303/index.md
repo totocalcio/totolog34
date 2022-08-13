@@ -19,7 +19,7 @@ npm start もしくは expo start を実行すると１００％の確率でモ�
 
 ### どんな経緯をたどったか
 
-expo init でプロジェクト作成。npm start を行うとブラウザで Expo Developer Tools が表示される。そしてその後クラッシュする。以前ためしに公式の手順に従って以前プロジェクトを作成していたことがクラッシュの原因。
+expo init でプロジェクト作成。npm startを行うとブラウザでExpo Developer Toolsが表示される。そしてその後クラッシュする。以前ためしに公式の手順に従ってreact-native initでプロジェクト作成した時は問題なく表示されていた。しかし、おそらくこの以前プロジェクトを作成していたことがクラッシュの原因。
 
 ## エラーの内容１（Couldn't start project on Android: Error running adb）
 
@@ -44,12 +44,17 @@ https://developer.android.com/studio/run/device.html#developer-device-options. I
 
 ### ターミナルから adb システムのバージョンを確認する
 
-<p class="is-style-blank-box-blue">$adb version
+```sh
+$adb version
+```
 
 ![image](../../../../images/2020/08/SnapCrab_NoName_2020-8-19_19-15-10_No-00.png)
 
-<p class="is-style-ng-box">Command 'adb' not found, but can be installed with:
+```
+Command 'adb' not found, but can be installed with:
 sudo apt install adb
+```
+
 コマンドが使えないのでadbを「sudo apt install adb」でインストールする。
 インストールできたら再度adb versionをたたく。
 
@@ -59,7 +64,10 @@ sudo apt install adb
 
 ### ディレクトリをコピーする
 
-<p class="is-style-blank-box-blue">cd ~/Android/sdk/platform-tools
+```sh
+cd ~/Android/sdk/platform-tools
+```
+
 ## エラーの内容２（Unable to connect to adb daemon on port:5037）
 
 Android Studio から AMD Manager でエミュレーターを起動してみる。
@@ -69,12 +77,24 @@ Android Studio から AMD Manager でエミュレーターを起動してみる�
 
 ### adb サービスを再起動する
 
-<p class="is-style-ng-box">AdbHostServer,cpp:102: Unable to connect to adb daemon on port:5037
+```
+AdbHostServer,cpp:102: Unable to connect to adb daemon on port:5037
+```
+
 ポート：5037が使えない・・・？のでadbサービスを再起動する。
-<p class="is-style-blank-box-blue">adb kill-server
-<p class="is-style-ng-box">cannot connect to daemon at tcp:5037: Connection refused
+
+```sh
+adb kill-server
+```
+```
+cannot connect to daemon at tcp:5037: Connection refused
+```
+
 エラーが出てしまったので管理者実行する。
-<p class="is-style-blank-box-blue">sudo adb kill-server
+
+```sh
+adb kill-server
+```
 
 ![image](../../../../images/2020/08/SnapCrab_NoName_2020-8-19_19-56-40_No-00.png)
 
@@ -83,12 +103,13 @@ Android Studio から AVD Manager でエミュレーターを再度起動する�
 
 ![image](../../../../images/2020/08/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png)
 
-エラーが消えたことを確認できたので、ここでようやくRun on Android device/emulatorをしてみる。
+エラーが消えたことを確認できたので、ここでようやくexpo startをして、Expo Developer ToolsからRun on Android device/emulatorをしてみる。
 
 ![image](../../../../images/2020/08/image-26.png)
 
-エラーがでてると思いきや、エミュレーターで USB debugging を聞かれているのでAllowを選択する。
-そしてもう一度ブラウザのRun on Android device/emulator**をクリックする
+エラーがでてると思いきや、エミュレーターでUSB debuggingを聞かれているのでAllowを選択する。
+
+そしてもう一度ブラウザのExpo Developer ToolsでRun on Android device/emulatorをクリックする
 
 ![image](../../../../images/2020/08/image-27.png)
 

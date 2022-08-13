@@ -16,7 +16,7 @@ ReactNative のダイアログ実装で検索すると有名そうなところ�
 
 [https://github.com/mmazzarolo/react-native-dialog](https://github.com/mmazzarolo/react-native-dialog)
 
-前者の[react-native-simple-dialogs](https://github.com/douglasjunior/react-native-simple-dialogs)は**「react native ダイアログ」**で検索すると１位にヒットする記事で紹介されているが、こちらのライブラリはもう更新されていない。
+前者の[react-native-simple-dialogs](https://github.com/douglasjunior/react-native-simple-dialogs)は **「react native ダイアログ」** で検索すると１位にヒットする記事で紹介されているが、こちらのライブラリはもう更新されていない。
 後者の[react-native-dialog](https://github.com/mmazzarolo/react-native-dialog)は現在(2021/09/26 執筆時）も更新されているので、今回はこちらを使用する。
 
 ## 使い方
@@ -40,16 +40,16 @@ $ yarn add react-native-dialog
 import Dialog from "react-native-dialog";
 
 return (
-<View>
-<Dialog.Container>
-<Dialog.Title>Account delete</Dialog.Title>
-<Dialog.Description>
-Do you want to delete this account? You cannot undo this action.
-</Dialog.Description>
-<Dialog.Button label="Cancel" />
-<Dialog.Button label="Delete" />
-</Dialog.Container>
-</View>
+  <View>
+    <Dialog.Container>
+      <Dialog.Title>Account delete</Dialog.Title>
+      <Dialog.Description>
+        Do you want to delete this account? You cannot undo this action.
+      </Dialog.Description>
+      <Dialog.Button label="Cancel" />
+      <Dialog.Button label="Delete" />
+    </Dialog.Container>
+  </View>
 );
 ```
 

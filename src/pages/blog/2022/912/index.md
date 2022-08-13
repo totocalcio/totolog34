@@ -70,10 +70,10 @@ touch .prettierrc
 
 ```javascript
 {
-"trailingComma": "es5",
-"tabWidth": 2,
-"semi": false,
-"singleQuote": true
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true
 }
 ```
 
@@ -84,6 +84,7 @@ touch .prettierignore
 ```
 
 次にフォーマットしたくない設定ファイルの作成です。
+
 **.prettierignore**
 ```javascript
 .cache

@@ -58,9 +58,10 @@ WordPress をインストールすると最初からインストールされて�
 
 全てにチェックを入れます。入れないと登録できません。もしもチェック項目に該当する場合は有料の商用プランを選択する必要があります。
 
-I don’t have ads on my site ＝ サイトに広告がない
-I don’t sell products/services on my site ＝ サイトで商品やサービスを販売していない
-I don’t promote a business on my site ＝ サイトでビジネスの宣伝をしていない
+- I don’t have ads on my site ＝ サイトに広告がない
+- I don’t sell products/services on my site ＝ サイトで商品やサービスを販売していない
+- I don’t promote a business on my site ＝ サイトでビジネスの宣伝をしていない
+
 全ての項目が記入できたら「CONTINUE WITH PERSONAL SUBSCRIPTION」をクリックします。
 
 ### 認証コード入力
@@ -103,7 +104,8 @@ WordPress や Wordfence のニュースを受け取るかどうか選びます�
 
 ![image](../../../../images/2020/05/image-22.png)
 
-「No Thanks」を選びます。
+「CONTINUE」をクリックするとライセンスキーの入力の画面に遷移しますが、持っていないので「No Thanks」を選びます。
+
 以上でインストールは完了ですが、インストール後の詳細設定はこちらの記事が参考になります。
 
 [https://easy-wordpress.work/wordpress/security-wordfence/](https://easy-wordpress.work/wordpress/security-wordfence/)
@@ -120,7 +122,8 @@ WordPress や Wordfence のニュースを受け取るかどうか選びます�
 
 ![image](../../../../images/2020/05/5.png)
 
-左のメニューから「ON/OFF」で変更できます。また、このページではログインページの URL も確認できます。
+左のメニューから「SiteGuard」→「ログインページ変更」→「ON/OFF」で変更できます。また、このページではログインページの URL も確認できます。
+
 SiteGuard の詳細設定はこちらが参考になります。
 
 [https://webst8.com/blog/wordpress-siteguard/](https://webst8.com/blog/wordpress-siteguard/)
@@ -130,4 +133,4 @@ SiteGuard の詳細設定はこちらが参考になります。
 
 ![image](../../../../images/2020/05/6.png)
 
-「Yes. enable auto update」を選択すると表示が消えます。
+「DISMISS」と「Yes. enable auto update」を選択すると表示が消えます。

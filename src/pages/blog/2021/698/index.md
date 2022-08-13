@@ -8,9 +8,12 @@ tags: ['css']
 
 # gulp で scss のコンパイルの階層がうまくいかない
 
-今まではglobを利用して import 文を減らそうと導入を検討しました。
-同時に CSS 設計はFLOCSSを採用しようとしたところ問題が発生しました。
-コンパイルされた CSS が想定のディレクトリに出力されない。
+今まではvs codeのLive Sass Compilerのプラグインに頼っていたのですが、ファイルが増える度にimport文を毎回足すのが手間で、globを利用してimport文を減らそうと導入を検討しました。
+
+同時にCSS設計はFLOCSSを採用しようとしたところ問題が発生しました。
+
+コンパイルされたCSSが想定のディレクトリに出力されない。
+
 ということです。
 
 ## scss の構造をそのまま維持して出力されてしまう
@@ -45,42 +48,42 @@ const paths = {
 }
 
 const compileScss = (cb) => {
-  src(paths.scss + '*_/_.scss')
+  src(paths.scss + "**/*.scss")
     .pipe(sassGlob())
     .pipe(
       sass({
-        outputStyle: 'expanded',
-      }).on('error', sass.logError)
+        outputStyle: "expanded",
+      }).on("error", sass.logError)
     )
     .pipe(
       rename(function (path) {
-        path.dirname = ''
+        path.dirname = "";
       })
     )
-    .pipe(dest(paths.css))
-  cb()
-}
+    .pipe(dest(paths.css));
+  cb();
+};
 
 const watchScss = watch(
-  paths.scss + '*_/_.scss',
+  paths.scss + "**/*.scss",
   { usePolling: true },
   compileScss
-)
+);
 
 exports.default = series(compileScss)
 ```
 
 上記コードを実行した結果が下記の通りです。
 
-![](../../../../images/2021/02/image-1.png)
+![](../../../../images/2021/02/image.png)
 
-<!-- ![image](../../../../images/2021/02/image-1.png) -->
+![](../../../../images/2021/02/image-1.png)
 
 想定通りの動きをしています。
 gulp.watch で監視していますが、更新時も問題なく動きました。
 
-<!-- ![image](../../../../images/2021/02/image-2.png)
+![image](../../../../images/2021/02/image-2.png)
 
-![image](../../../../images/2021/02/image-3.png) -->
+![image](../../../../images/2021/02/image-3.png)
 
 初めての導入で、様々な情報を元に環境を整えようとしましたが、gulp3 と gulp4 では、gulp.task が非推奨だったりコールバック関数を返さないといけなかったり、desc なしでも watch が css を出力したり…と戸惑いましたがなんとか期待通りの動きを実現できました。

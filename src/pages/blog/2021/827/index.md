@@ -19,7 +19,7 @@ ReactNative では UI コンポーネントのライブラリがいくつかあ�
 git clone https://github.com/creativetimofficial/material-kit-react-native.git sample
 ```
 
-clone もしくは、サイトから zip ファイルを落としてきたらディレクトリに移動して、関連パッケージをインストールするためにnpm installします。
+cloneもしくは、サイトからzipファイルを落としてきたらディレクトリに移動して、関連パッケージをインストールするためにyarn installもしくはnpm installします。
 
 ```sh
 $ yarn install
@@ -52,10 +52,8 @@ node.js のバージョンがサポートしていないということで、nod
 $ expo start
 ```
 
-```html
-<span class="has-inline-color has-amber-color"
-  >"md-switch" is not a valid icon name for family "ionicons"</span
->
+```
+"md-switch" is not a valid icon name for family "ionicons"
 ```
 
 warning が出ているけどひとまず気にしない

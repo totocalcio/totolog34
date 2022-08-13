@@ -47,7 +47,7 @@ text-decoration-color: red;
 text-decoration-style: dashed;
 ```
 
-線の種類が変更できます。他にもwavy（波線）などがあります。
+線の種類が変更できます。他にもdotted（点線）、double(二重線)、wavy（波線）などがあります。
 
 ## border-bottom
 
@@ -78,7 +78,11 @@ width: 150px;
 
 ```html
 <p>テスト<br />テスト２</p>
-; p{ border-bottom: 1px solid #000; width: 150px; }
+
+p {
+  border-bottom: 1px solid #000;
+  width: 150px;
+}
 ```
 
 block に対する枠線なので、複数行の場合想定した動きにならない時がある。
@@ -96,10 +100,12 @@ p {
 
 ```html
 <p>
-  <span>テスト<br />テスト２
+  <span>テスト<br />テスト２</span>
 </p>
 
-p span{ border-bottom: 1px solid #000; }
+p span{
+  border-bottom: 1px solid #000;
+}
 ```
 
 ## background
@@ -107,9 +113,11 @@ p span{ border-bottom: 1px solid #000; }
 ![image](../../../../images/2020/05/image-32.png)
 
 ```html
-<p><span>テスト</p>
+<p><span>テスト</span></p>
 
-p span{ background: linear -gradient(transparent 50%, #f00 50%) ; }
+p span{
+ background: linear -gradient(transparent 50%, #f00 50%);
+}
 ```
 
 マーカーみたいな下線や、特殊な下線をひきたい場合は background を使用します。それ以外にも background では様々な下線を表現することができます。

@@ -19,13 +19,13 @@ GraphQL で取得したデータをコンポーネントに渡そうとして発
   型 'undefined' を型 'string' に割り当てることはできません。
 ```
 
-<code>IndexPage.tsx(親)</code>
+**IndexPage.tsx(親)**
 
 ```html
-    <Layout title={data.site?.siteMetadata?.title}>
+<Layout title={data.site?.siteMetadata?.title}>
 ```
 
-<code>layout.tsx(子)</code>
+**layout.tsx(子)**
 
 ```javascript
 type Props = {
@@ -35,13 +35,12 @@ type Props = {
 export const Layout: React.FC<Props> = ({title}) => {
 ```
 
-### 対策
 
 子コンポーネント側で許容する
 
 ```javascript
 type Props = {
-title: string | null | undefined
+  title: string | null | undefined
 }
 ```
 
@@ -59,7 +58,7 @@ Error yyy: GraphQLDocumentError: Unknown type "ImageSharpFluid".
 
 ### 対策
 
-<code>gatsby-config.ts</code>に gatsby-transformer-sharp を追加する
+ gatsby-config.ts に gatsby-transformer-sharp を追加する
 
 ```javascript
 const config: GatsbyConfig = {
@@ -74,4 +73,4 @@ plugins: [
 ```
 
 gatsby develop で確認してエラーが発生しなければ OK。
-このエラーが出るということは<code>gatsby-plugin-image</code>が関係していることが多いと予想されるので、<code>gatsby-transformer-sharp</code>以外にも追加されていなかったらしておく。
+このエラーが出るということは gatsby-plugin-image が関係していることが多いと予想されるので、 gatsby-transformer-sharp 以外にも追加されていなかったらしておく。

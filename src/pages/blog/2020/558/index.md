@@ -59,7 +59,7 @@ weight で呼び出していたところを関数呼び出しに変更
 
 ![image](../../../../images/2020/10/image-14.png)
 
-calcWeight(weight)に書き換えた。
+weightの部分をcalcWeight(weight)に書き換えた。
 
 ![image](../../../../images/2020/10/image-15.png)
 

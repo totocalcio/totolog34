@@ -20,21 +20,24 @@ gatsby.js でスターターをいろんなスターターを利用してみま�
 
 ![image](../../../../images/2020/08/1.jpg)
 
-青枠のボタンをクリックしてコードをコピーします。
+赤枠のコードか青枠のボタンをクリックしてコードをコピーします。
 そのままターミナルに貼り付けてもよいですが、ディレクトリを指定したい場合は予め変更しておきます。
 
-<p class="is-style-secondary-box">gatsby new gatsby-starter-portfolio-cara https://github.com/LekoArts/gatsby-starter-portfolio-cara
+```
+gatsby new gatsby-starter-portfolio-cara https://github.com/LekoArts/gatsby-starter-portfolio-cara
 ⇓
 gatsby new blog-test01 https://github.com/LekoArts/gatsby-starter-portfolio-cara
+```
+
 ### ダウンロード完了
 
 ![image](../../../../images/2020/08/image-1.png)
 
-無事ダウンロードが完了したらディレクトリに移動して(gatsby develop)してみます。
+無事ダウンロードが完了したらディレクトリに移動して(cd blog-test01)、ビルド(gatsby develop)してみます。
 
 ![image](../../../../images/2020/08/image-17.png)
 
-ビルドが完了したらブラウザでhttp://localhost:8000/にアクセスします。
+ビルドが完了したらブラウザでhttp\://localhost:8000/にアクセスします。
 
 ![image](../../../../images/2020/08/image-18.png)
 

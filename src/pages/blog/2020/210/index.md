@@ -11,42 +11,60 @@ tags: ['html']
 
 #### 確認事項
 
-・開始タグと閉じタグの数は合っている。
-・Swiper を使用している。
+- 開始タグと閉じタグの数は合っている。
+- Swiper を使用している。
 
 ## 該当コード
 
 ```html
 </body>
- <?php wp_footer(); ?>
-  <?php if ( is_home() || is_front_page() ){ ?>
-   <script>
-    var swiper = new Swiper('.swiper-container',
-     { loop: true,
-       pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true, },
-       autoplay: { delay: 5000, disableOnInteraction: true }, });
-  <?php } ?>
+<?php wp_footer(); ?>
+<?php if ( is_home() || is_front_page() ) { ?>
+<script>
+var swiper = new Swiper('.swiper-container', {
+  loop: true,
+  pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true
+  },
+});
+<?php } ?>
 </script>
 </html>
 ```
 
 ## 原因
 
-</body>タグの外に出してはいけません。
+**\</body\>タグの外に出してはいけません。**
 
-<head>内だとうまく Swiper が動かなかったので外に出したのですが、</body>の外にまで出すとエラーになるようです。（もちろん動きはします）
+\<head\>内だとうまく Swiper が動かなかったので外に出したのですが、\</body\>の外にまで出すとエラーになるようです。（もちろん動きはします）
 
 ## 解決策
 
-<body>の中に記述します。
+**\<body\>の中に記述します。**
 
 ```html
 <?php if ( is_home() || is_front_page() ) { ?>
- <script> var swiper = new Swiper('.swiper-container',
-  { loop: true, pagination: { el:'.swiper-pagination', type: 'bullets', clickable: true, },
-   autoplay: { delay:5000, disableOnInteraction: true } })
- </script>
- <?php } ?>
+<script>
+var swiper = new Swiper('.swiper-container', {
+  loop: true,
+  pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true
+  }
+})
+</script>
+<?php } ?>
 </body>
 <?php wp_footer(); ?>
 </html>

@@ -8,7 +8,7 @@ tags: ['css', 'html']
 
 # summary タグの使い方に注意。構文エラーと iOS バグ。
 
-HTML5 で追加された<summary>タグをご存知でしょうか。CSS すら不要でお手軽にアコーディオンがつくれてしまうタグです。
+HTML5 で追加された\<summary\>タグをご存知でしょうか。CSS すら不要でお手軽にアコーディオンがつくれてしまうタグです。
 
 [http://www.htmq.com/html5/summary.shtml](http://www.htmq.com/html5/summary.shtml)
 
@@ -20,7 +20,7 @@ HTML5 で追加された<summary>タグをご存知でしょうか。CSS すら�
 
 [CodePen.](https://codepen.io/totocalcio/pen/abNXMVz)
 
-高さを固定にする方法です。全ての要素が固定ならそれも可能ですが、例えばサンプルのように Q&amp;A などで答えの文字数（高さ）がばらばらだったりするとそうはいきません。
+「summary　アコーディオン」等で検索して、（アニメーションつけたいな）って考えたらだいたい出てくるのは高さを固定にする方法です。全ての要素が固定ならそれも可能ですが、例えばサンプルのようにQ&Aなどで答えの文字数（高さ）がばらばらだったりするとそうはいきません。
 
 スラスラするアニメーションの設定は面倒なので、そのかわりふわっとしたアニメーションならばうまくごまかせるかもしれません。
 
@@ -45,6 +45,7 @@ HTML5 で追加された<summary>タグをご存知でしょうか。CSS すら�
 ![image](../../../../images/2020/09/IMG_1785.png)
 
 これは iOS のバグのようなので仕方ありません。
+
 参考：[https://github.com/philipwalton/flexbugs#flexbug-9](https://github.com/philipwalton/flexbugs#flexbug-9)
 
 ### バグの解決策

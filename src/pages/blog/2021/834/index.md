@@ -40,12 +40,12 @@ const handleDayPress = (day) => {
 setSelected(day.dateString);
 }
 
-return (
-<View style={{paddingTop:40}}>
-<Calendar
-monthFormat={"yyyy 年 MM 月"}
-current={INITIAL_DATE}
-markedDates={{
+  return (
+    <View style={{paddingTop:40}}>
+     <Calendar
+        monthFormat={"yyyy年 MM月"}
+        current={INITIAL_DATE}
+        markedDates={{
           [selected]: {
             selected: true,
             disableTouchEvent: true,
@@ -53,10 +53,10 @@ markedDates={{
             selectedTextColor: 'white'
           }
         }}
-onDayPress={handleDayPress}
-/>
-</View>
-);
+        onDayPress={handleDayPress}
+      />
+    </View>
+  );
 }
 
 LocaleConfig.locales.jp = {
@@ -82,4 +82,5 @@ react-native-calendars の日付のフォーマットが**'2021-09-26'**なの�
 ### LocaleConfig
 
 カレンダーの日本語化を行っています。こちらの記事を参考にさせていただきました。
+
 参考：[https://tegralsblog.com/react-native-calendars-custom-japanese/](https://tegralsblog.com/react-native-calendars-custom-japanese/)

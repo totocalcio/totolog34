@@ -25,7 +25,7 @@ npm start androidしてみたら
 
 ![image](../../../../images/2020/08/image-31.png)
 
-expo start --androidしてみる
+npm start androidじゃなくてexpo start –androidしてみる
 
 ![image](../../../../images/2020/08/image-32.png)
 
@@ -37,7 +37,7 @@ Android studio もエラーだしてた。前もみたよこのエラー・・�
 
 ![image](../../../../images/2020/08/image-35.png)
 
-adb を再移動した。その後エミュレーターを起動してRun on Android device/emulatorする
+adbを再移動した。その後エミュレーターを起動してexpo startからRun on Android device/emulatorする
 
 ![image](../../../../images/2020/08/image-36.png)
 

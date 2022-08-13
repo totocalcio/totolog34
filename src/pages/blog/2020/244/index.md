@@ -47,9 +47,10 @@ Get Startedをクリックします。
 
 管理画面が表示されるのでこれで登録完了です。
 
-<h2 id="space">スペースの作成
+## スペースの作成
 
-**2020-08-07 現在、無料スペースは１つまで**です。
+無料で作成できるスペースは２つまでという情報を見たことある方もいるかもしれませんが、2020-08-07現在、無料スペースは１つまでです。
+
 アカウント登録時に自動でスペースが作成されるので、そのまま使うか、一旦スペースを削除して作成し直す必要があります。
 
 ### アカウント登録時に作成されたスペースを削除
@@ -87,7 +88,7 @@ Communityをクリック
 
 ![image](../../../../images/2020/08/26-1.jpg)
 
-③Proceed to confirmation をクリック。
+①スペース名を入力し、空のスペースを作成するので、②Create an empty space.を選択し③Proceed to confirmationをクリック。
 
 ![image](../../../../images/2020/08/image-14.png)
 
@@ -109,11 +110,11 @@ Confirm and create spaceをクリック
 
 ![image](../../../../images/2020/08/29.jpg)
 
-Local を②Save をクリック。
+Localを①プルダウンの中からJapanese(japan)(js-JP)を選択し、②Saveをクリック。
 
 ![image](../../../../images/2020/08/30.jpg)
 
-③Got it, change locale をクリック
+①変更前のロケールを②テキストボックスに入力し、③Got it, change localeをクリック
 
 ![image](../../../../images/2020/08/image-16.png)
 

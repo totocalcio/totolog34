@@ -17,42 +17,44 @@ tags: ['css']
 
 ```html
 <p class="title sp">title</p>
-
-  ![image](flex.jpg" alit="" />
-
+<div class="flex">
+  <div class="photo"><img src="flex.jpg" alit=""></div>
+  <div class="textBox">
     <p class="title pc">title</p>
     <p class="text">text text …</p>
+  </div>
+</div>
 ```
 
 ### CSS
 
 ```css
 .flex {
-  display: flex;
+  display:flex;
 }
-.sp {
-  display: none;
+.sp{
+  display:none;
 }
 
 @media all and (max-width: 767px) {
-  .flex {
-    display: block;
+  .flex{
+    display:block;
   }
-  .pc {
-    display: none;
+  .pc{
+    display:none;
   }
-  .sp {
-    display: block;
+  .sp{
+    display:block;
   }
-  .title {
-    text-align: center;
+  .title{
+    text-align:center;
   }
-  .photo {
-    width: 50%;
-    margin: 0 auto;
+  .photo{
+    width:50%;
+    margin:0 auto;
   }
-  .photo img {
-    width: 100%;
+  .photo img{
+    width:100%;
   }
 }
 ```
@@ -64,38 +66,40 @@ flex の場合どうしても PC 用と SP 用でコードを記述しなけれ�
 ### HTML
 
 ```html
-
-  ![image](grid.jpg" alit="" />
+<div class="grid">
+  <div class="photo"><img src="grid.jpg" alit=""></div>
   <p class="title">title</p>
   <p class="text">text text …</p>
-
+</div>
 ```
 
 ### CSS
 
 ```css
 .grid{
-display: grid;
-justify-content: center;
-grid-template-columns: 200px 300px;
-grid-template-rows: 50px auto;
-grid-template-areas:
-"photo title"
-"photo text"
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 200px 300px;
+  grid-template-rows: 50px auto;
+  grid-template-areas:
+    "photo title"
+    "photo text"
 }
 .photo{
-grid-area: photo;
+  grid-area: photo;
 }
 .title{
-grid-area: title;
+  grid-area: title;
 }
 .text{
-grid-area: text;
+  grid-area: text;
 }
 @media all and (max-width: 767px) {
-.grid{
-display:block;
-}
+  .grid{
+    display:block;
+  }
+
+
 ```
 
 grid ではエリアを決めてそこに当てはめていけるので、余計なコードを増やさなくていいい、ということもあるかもしれません。

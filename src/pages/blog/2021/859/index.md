@@ -75,7 +75,9 @@ return (
 ```
 
 特に難しいことはなく、必要なパッケージ(①)と作成したHomeScreen とSettingScreen を import して(②)、createNativeStackNavigator を使えるようにします(③)。
+
 ナビゲーションを管理するために NavigationContainer コンポーネントでラップして(④)、その中に使用する画面を書いておきます(⑤)。
+
 しかし今のままだと処理を移した HomeScreen が呼ばれているだけなので、SettingScreen へ遷移する処理をかいていきます。
 
 ## Header buttons
@@ -87,24 +89,24 @@ return (
 
 ```jsx
 function StackScreen() {
-return (
-<Stack.Navigator>
-<Stack.Screen
-name="Home"
-component={HomeScreen}
-options={{
-  headerTitle: props => <LogoTitle {...props} />,
-  headerRight: () => (
-    <Button
-      onPress={() => alert('This is a button!')}
-      title="Info"
-      color="#fff"
-    />
-  ),
-}}
-/>
-</Stack.Navigator>
-);
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          headerTitle: props => <LogoTitle {...props} />,
+          headerRight: () => (
+            <Button
+              onPress={() => alert('This is a button!')}
+              title="Info"
+              color="#fff"
+            />
+          ),
+        }}
+      />
+    </Stack.Navigator>
+  );
 }
 ```
 

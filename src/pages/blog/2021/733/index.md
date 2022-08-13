@@ -64,7 +64,7 @@ $ tns preview
 -bash: tns: command not found
 ```
 
-ここで[インストールのページ](https://nativescript-vue.org/ja/docs/getting-started/installation/)にとんで NativeScript CLI をインストールする。
+ここで[インストール](https://nativescript-vue.org/ja/docs/getting-started/installation/)のページにとんで NativeScript CLI をインストールする。
 
 ```sh
 $ npm install -g nativescript

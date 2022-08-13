@@ -8,7 +8,7 @@ tags: ['nativescript']
 
 # NativeScript アプリで watchOS を開発する〜プロジェクト作成から Simulator 起動まで
 
-一応[前回の続き](https://totolog34.com/733/)です。
+一応[前回](https://totolog34.com/733/)の続きです。
 
 ## watch アプリの新規作成
 

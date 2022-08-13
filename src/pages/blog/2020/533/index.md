@@ -21,7 +21,7 @@ Android だと何も設定をしなくても TextInput にフォーカスをし�
 
 ![image](../../../../images/2020/10/image-9.png)
 
-**behavior="padding"**を設定したことによって想定外の動きになってしまう。
+**behavior="padding"** を設定したことによって想定外の動きになってしまう。
 想定した動きにするためには iOS で条件分岐し、値を設定する。
 
 ```html

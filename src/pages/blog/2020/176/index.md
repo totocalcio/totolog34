@@ -45,7 +45,7 @@ Google Chrome には一般的に利用されている正式版以外に開発版
 
 > **Chromium**（クロミウム）はオープンソースのウェブブラウザのプロジェクト。[https://ja.wikipedia.org/wiki/Chromium](https://ja.wikipedia.org/wiki/Chromium)</cite>
 
-Micfosoft Edgeも Chromium ベースとなった。全てのブラウザの産みの親。アダムブラウザ。
+Google ChromeはChromiumのソースから作られたし、Operaも2013年7月のバージョン以降Chromiumをベースとしているし、2020年1月以降Micfosoft EdgeもChromiumベースとなった。全てのブラウザの産みの親。アダムブラウザ。
 
 #### ダウンロード
 

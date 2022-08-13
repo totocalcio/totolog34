@@ -39,13 +39,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 
 const IndexPage = () => {
-return (
-<main>
-<CssBaseline />
-<Box component="main">
-</Box>
-</main>
-)
+  return (
+    <main>
+      <CssBaseline />
+      <Box component="main">
+      </Box>
+    </main>
+  )
 }
 
 export default IndexPage
@@ -53,14 +53,14 @@ export default IndexPage
 
 ### レスポンシブ対応とブレークポイント
 
-<code>sx</code> という属性をコンポーネントに指定することでブレークポイントとして扱うことができる。
+sx という属性をコンポーネントに指定することでブレークポイントとして扱うことができる。
 
 ```javascript
-      <AppBar component="nav">
-        <Box sx={{ p: { xs: 0, sm: 1}}}>
-          ...
-        </Box>
-      </AppBar>
+<AppBar component="nav">
+  <Box sx={{ p: { xs: 0, sm: 1}}}>
+    ...
+  </Box>
+</AppBar>
 ```
 
 ```javascript

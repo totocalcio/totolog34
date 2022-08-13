@@ -13,7 +13,8 @@ tags: ['reactnative', 'expo']
 
 ![image](../../../../images/2021/09/2021-09-28-0.37.16.png)
 
-。
+非推奨になっていた。
+
 コミュニティパッケージを使ってくれということなので現在(2021/09/28)も継続的にメンテンスされていて、スター数も一番多い[react-native-async-storage](https://github.com/react-native-async-storage)を使用することにする。
 
 ## インストール
@@ -21,7 +22,7 @@ tags: ['reactnative', 'expo']
 [ドキュメント](https://react-native-async-storage.github.io/async-storage/docs/install/)に沿ってインストールする
 
 ```sh
-＃npm
+#npm
 npm install @react-native-async-storage/async-storage
 #yarn
 yarn add @react-native-async-storage/async-storage
@@ -53,25 +54,24 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 ```javascript
 //文字列
 const storeData = async (value) => {
-try {
-await AsyncStorage.setItem('@storage_Key', value)
-} catch (e) {
-// saving error
-}
+  try {
+    await AsyncStorage.setItem('@storage_Key', value)
+  } catch (e) {
+    // saving error
+  }
 }
 ```
 
 ```javascript
 //オブジェクト
 const storeData = async (value) => {
-try {
-const jsonValue = JSON.stringify(value)
-await AsyncStorage.setItem('@storage_Key', jsonValue)
-} catch (e) {
-// saving error
+  try {
+    const jsonValue = JSON.stringify(value)
+    await AsyncStorage.setItem('@storage_Key', jsonValue)
+  } catch (e) {
+    // saving error
+  }
 }
-}
-
 ```
 
 ### getItem
@@ -79,14 +79,14 @@ await AsyncStorage.setItem('@storage_Key', jsonValue)
 ```javascript
 //文字列
 const getData = async () => {
-try {
-const value = await AsyncStorage.getItem('@storage_Key')
-if(value !== null) {
-// value previously stored
-}
-} catch(e) {
-// error reading value
-}
+  try {
+    const value = await AsyncStorage.getItem('@storage_Key')
+    if(value !== null) {
+      // value previously stored
+    }
+  } catch(e) {
+    // error reading value
+  }
 }
 ```
 
@@ -110,33 +110,31 @@ const getData = async () => {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function App() {
-const [markedDates, setMarkedDates] = useState({});
+  const [markedDates, setMarkedDates] = useState({});
 
-const setStore = async (value) => {
-try {
-const jsonValue = JSON.stringify(value)
-await AsyncStorage.setItem('dates', jsonValue)
-} catch (e) {
-alert(e)
-}
-}
+  const setStore = async (value) => {
+    try {
+      const jsonValue = JSON.stringify(value)
+      await AsyncStorage.setItem('dates', jsonValue)
+    } catch (e) {
+      alert(e)
+    }
+  }
 
-const getStore = async () => {
-try {
-const jsonValue = await AsyncStorage.getItem('dates');
-const result = jsonValue != null ? JSON.parse(jsonValue) : {};
-//return するのではなくsetMarkedDates を更新する
-setMarkedDates(result);
-} catch(e) {
-alert(e)
-}
-}
+  const getStore = async () => {
+    try {
+      const jsonValue = await AsyncStorage.getItem('dates');
+      const result = jsonValue != null ? JSON.parse(jsonValue) : {};
+      //returnするのではなくsetMarkedDatesを更新する
+      setMarkedDates(result);
+    } catch(e) {
+      alert(e)
+    }
+  }
 
-useEffect(()=>{
-getStore()
-},[])
-
+  useEffect(()=>{
+    getStore()
+  },[])
 ```
 
-アプリ起動時に AsyncStorage からデータを取り出したいので、AsyncStorage のデータを画面に表示することにした。
-
+アプリ起動時にAsyncStorageからデータを取り出したいので、useState(getStore())としたいところだが、公式通り非同期にすると取り出す前にuseStateの初期化が走ってしまうため正しい値がセットされない。そのためuseEffectでgetStoreを呼び出し、getStore内では戻り値は設定せずにsetStateすることでAsyncStorageのデータを画面に表示することにした。
