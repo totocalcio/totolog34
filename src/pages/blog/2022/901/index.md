@@ -1,115 +1,89 @@
 ---
 slug: /901
-date: "2022-05-21 01:08:29"
+date: '2022-05-21 01:08:29'
 title: Gatsbyでブログ作る①〜セットアップ
 thumbnail: 1_tsOxXGb20o2zrCh6Sp5PYQ.png
-tags: ["gatsby"]
+tags: ['gatsby']
 ---
-# Gatsbyでブログ作る①〜セットアップ
-<!-- wp:paragraph -->
-<p>リニューアルしようかなと思って。２年ぶりに触ります。</p>
-<!-- /wp:paragraph -->
 
-<!-- wp:embed {"url":"https://totolog34.com/225/","type":"wp-embed","providerNameSlug":"うさ技術"} -->
-<figure class="wp-block-embed is-type-wp-embed is-provider-うさ技術 wp-block-embed-うさ技術"><div class="wp-block-embed__wrapper">
+# Gatsby でブログ作る ①〜セットアップ
+
+リニューアルしようかなと思って。２年ぶりに触ります。
+
+<figure class="wp-block-embed is-type-wp-embed is-provider-うさ技術 wp-block-embed-うさ技術">
 https://totolog34.com/225/
-</div></figure>
-<!-- /wp:embed -->
+```sh
+% gatsby -v
+zsh: command not found: gatsby
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>% gatsby -v
-zsh: command not found: gatsby</code></pre>
-<!-- /wp:code -->
+パソコンも変わっているのでやはり入っていないですね。
 
-<!-- wp:paragraph -->
-<p>パソコンも変わっているのでやはり入っていないですね。</p>
-<!-- /wp:paragraph -->
+## インストール
 
-<!-- wp:heading -->
-<h2>インストール</h2>
-<!-- /wp:heading -->
+[公式](https://www.gatsbyjs.com/docs/tutorial/part-1/)を確認しながら進めていきます。
 
-<!-- wp:paragraph -->
-<p><a href="https://www.gatsbyjs.com/docs/tutorial/part-1/">公式</a>を確認しながら進めていきます。</p>
-<!-- /wp:paragraph -->
+```sh
+% npm install -g gatsby-cli
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>% npm install -g gatsby-cli</code></pre>
-<!-- /wp:code -->
+```sh
+% gatsby -v
+Gatsby CLI version: 4.14.0
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>% gatsby -v
-Gatsby CLI version: 4.14.0</code></pre>
-<!-- /wp:code -->
+インストールできました
 
-<!-- wp:paragraph -->
-<p>インストールできました</p>
-<!-- /wp:paragraph -->
+## プロジェクト作成
 
-<!-- wp:heading -->
-<h2>プロジェクト作成</h2>
-<!-- /wp:heading -->
+```sh
+% gatsby new
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>% gatsby new</code></pre>
-<!-- /wp:code -->
+プロジェクトを作ります。
 
-<!-- wp:paragraph -->
-<p>プロジェクトを作ります。</p>
-<!-- /wp:paragraph -->
+```sh
+What would you like to call your site?
+✔ · totolog34
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>What would you like to call your site?
-✔ · totolog34</code></pre>
-<!-- /wp:code -->
+サイト名を聞かれるので好きな名前を
 
-<!-- wp:paragraph -->
-<p>サイト名を聞かれるので好きな名前を</p>
-<!-- /wp:paragraph -->
+```sh
+What would you like to name the folder where your site will be created?
+✔ Documents/ totolog34
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>What would you like to name the folder where your site will be created?
-✔ Documents/ totolog34</code></pre>
-<!-- /wp:code -->
+作成するディレクトリ名を入力
 
-<!-- wp:paragraph -->
-<p>作成するディレクトリ名を入力</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:code -->
-<pre class="wp-block-code"><code>? Will you be using JavaScript or TypeScript?
+```sh
+? Will you be using JavaScript or TypeScript?
 (Single choice) Arrow keys to move, enter to confirm
 ❯ JavaScript
-  TypeScript</code></pre>
-<!-- /wp:code -->
+  TypeScript
+```
 
-<!-- wp:paragraph -->
-<p>TypeScriptで作る予定だけど、公式を見るとまずはJavaScriptで作ってあとからTypeScriptにしたほうがいいと書いてあるのでそうする。</p>
-<!-- /wp:paragraph -->
+TypeScript で作る予定だけど、公式を見るとまずは JavaScript で作ってあとから TypeScript にしたほうがいいと書いてあるのでそうする。
 
-<!-- wp:quote -->
-<blockquote class="wp-block-quote"><p>TypeScriptを使用する場合は、最初にチュートリアルを実行してから、プロジェクトをTypeScriptに変換することをお勧めします。</p><cite>https://www.gatsbyjs.com/docs/tutorial/part-1/</cite></blockquote>
-<!-- /wp:quote -->
+> TypeScript を使用する場合は、最初にチュートリアルを実行してから、プロジェクトを TypeScript に変換することをお勧めします。[https://www.gatsbyjs.com/docs/tutorial/part-1/](https://www.gatsbyjs.com/docs/tutorial/part-1/)
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>? Will you be using a CMS?
+```sh
+? Will you be using a CMS?
 (Single choice) Arrow keys to move, enter to confirm
 ❯ No (or I'll add it later)
-  –
-  Contentful
-  DatoCMS
-  Netlify CMS
-  Sanity
-  Shopify
-  WordPress</code></pre>
-<!-- /wp:code -->
+–
+Contentful
+DatoCMS
+Netlify CMS
+Sanity
+Shopify
+WordPress
+```
 
-<!-- wp:paragraph -->
-<p>CMSを使うかどうか聞かれるが、「<strong>No (or I'll add it later)</strong>」（いいえ、またはあとで追加します）を選択。</p>
-<!-- /wp:paragraph -->
+CMS を使うかどうか聞かれるが、「**No (or I'll add it later)**」（いいえ、またはあとで追加します）を選択。
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>? Would you like to install a styling system?
+```sh
+? Would you like to install a styling system?
 (Single choice) Arrow keys to move, enter to confirm
 ❯ No (or I'll add it later)
   –
@@ -118,66 +92,49 @@ Gatsby CLI version: 4.14.0</code></pre>
   Sass
   styled-components
   Theme UI
-  vanilla-extract</code></pre>
-<!-- /wp:code -->
+  vanilla-extract
+```
 
-<!-- wp:paragraph -->
-<p>スタイリングシステムを聞かれる。なんでもいいとは思うけど styled-componentsにしました。</p>
-<!-- /wp:paragraph -->
+スタイリングシステムを聞かれる。なんでもいいとは思うけど styled-components にしました。
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>? Would you like to install additional features with other plugins?
+```sh
+? Would you like to install additional features with other plugins?
 (Multiple choice) Use arrow keys to move, spacebar to select, and confirm with an enter on "Done"
- ◯ Add the Google Analytics tracking script
- ◯ Add responsive images
- ◯ Add page meta tags with React Helmet
- ◯ Add an automatic sitemap
- ◯ Generate a manifest file
- ◯ Add Markdown and MDX support
- ◯ Add Markdown support (without MDX)
-  ─────
-❯ Done</code></pre>
-<!-- /wp:code -->
+◯ Add the Google Analytics tracking script
+◯ Add responsive images
+◯ Add page meta tags with React Helmet
+◯ Add an automatic sitemap
+◯ Generate a manifest file
+◯ Add Markdown and MDX support
+◯ Add Markdown support (without MDX)
+─────
+❯ Done
+```
 
-<!-- wp:paragraph -->
-<p>追加でプラグインを入れるか聞かれますが、あとから必要なものを追加していくので一旦何も選ばずに終了します。</p>
-<!-- /wp:paragraph -->
+追加でプラグインを入れるか聞かれますが、あとから必要なものを追加していくので一旦何も選ばずに終了します。
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>Thanks! Here's what we'll now do:
+```sh
+Thanks! Here's what we'll now do:
 
     ?  Create a new Gatsby site in the folder totolog34
     ? Get you set up to use styled-components for styling your site
 
+? Shall we do this? (Y/n) › Yes
+```
 
-? Shall we do this? (Y/n) › Yes</code></pre>
-<!-- /wp:code -->
+内容について確認があります。問題なければ Yes。
 
-<!-- wp:paragraph -->
-<p>内容について確認があります。問題なければYes。</p>
-<!-- /wp:paragraph -->
+## 表示してみる
 
-<!-- wp:heading -->
-<h2>表示してみる</h2>
-<!-- /wp:heading -->
+無事作成ができたら表示してみる。
 
-<!-- wp:paragraph -->
-<p>無事作成ができたら表示してみる。</p>
-<!-- /wp:paragraph -->
+```sh
+% cd totolog34
+% npm run develop
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>% cd totolog34 
-% npm run develop</code></pre>
-<!-- /wp:code -->
+http://localhost:8000/へアクセス
 
-<!-- wp:paragraph -->
-<p>http://localhost:8000/へアクセス</p>
-<!-- /wp:paragraph -->
+![image](../../../../images/2022/05/2022-05-21-1.07.23.png)
 
-<!-- wp:image {"id":903,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="https://totolog34.com/wp/wp-content/uploads/2022/05/スクリーンショット-2022-05-21-1.07.23-1024x881.png" alt="" class="wp-image-903"/></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph -->
-<p>表示されました</p>
-<!-- /wp:paragraph -->
+表示されました

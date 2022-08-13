@@ -1,129 +1,93 @@
 ---
 slug: /907
-date: "2022-07-04 23:46:35"
+date: '2022-07-04 23:46:35'
 title: Gatsbyでブログ作る②〜MaterialUI導入
 thumbnail: 1_tsOxXGb20o2zrCh6Sp5PYQ.png
-tags: ["react","gatsby"]
+tags: ['react', 'gatsby']
 ---
-# Gatsbyでブログ作る②〜MaterialUI導入
-<!-- wp:paragraph -->
-<p><a href="https://totolog34.com/901/">前回</a>の続き。<br>そんなにデザインに凝る予定もないのでstyled-componentsで書こうと思っていたけど、少し触ってみたいという理由でMaterialUIを導入することにした。</p>
-<!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":3} -->
-<h3>前置き</h3>
-<!-- /wp:heading -->
+# Gatsby でブログ作る ②〜MaterialUI 導入
 
-<!-- wp:paragraph -->
-<p>Gatsbyの公式で別のページにあったJS→TSの<a href="https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/#migrating-to-typescript">マイグレーション</a>見たら手間がかかりそうだったのと、<a href="https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/">TypeScriptで初期化</a>について書かれていたのを見たので、結局やり直した。initの選択項目はほぼ一緒。</p>
-<!-- /wp:paragraph -->
+[前回の続き](https://totolog34.com/901/)。
 
-<!-- wp:heading -->
-<h2>MaterialUI導入</h2>
-<!-- /wp:heading -->
+そんなにデザインに凝る予定もないので styled-components で書こうと思っていたけど、少し触ってみたいという理由で MaterialUI を導入することにした。
 
-<!-- wp:embed {"url":"https://mui.com/"} -->
-<figure class="wp-block-embed"><div class="wp-block-embed__wrapper">
-https://mui.com/
-</div></figure>
-<!-- /wp:embed -->
+### 前置き
 
-<!-- wp:paragraph -->
-<p><a href="https://mui.com/material-ui/getting-started/installation/">公式の手順</a>に沿って導入していく</p>
-<!-- /wp:paragraph -->
+Gatsby の公式で別のページにあった JS→TS の[マイグレーション](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/#migrating-to-typescript)見たら手間がかかりそうだったのと、[TypeScript](https://www.gatsbyjs.com/docs/how-to/custom-configuration/typescript/) で初期化について書かれていたのを見たので、結局やり直した。init の選択項目はほぼ一緒。
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>npm install @mui/material @emotion/react @emotion/styled</code></pre>
-<!-- /wp:code -->
+## MaterialUI 導入
 
-<!-- wp:paragraph -->
-<p>これであとはComponentをimportして使っていくだけ。</p>
-<!-- /wp:paragraph -->
+[https://mui.com/](https://mui.com/)
 
-<!-- wp:heading {"level":3} -->
-<h3>リセットCSS</h3>
-<!-- /wp:heading -->
+[公式の手順](https://mui.com/material-ui/getting-started/installation/)に沿って導入していく
 
-<!-- wp:paragraph -->
-<p>リセットCSSも導入の手順が<a href="https://mui.com/material-ui/react-css-baseline/#global-reset">公式</a>にありますが、MUIが提供しているものを使います。中身は<a href="https://github.com/necolas/normalize.css">normalize.css</a>に近いらしい。ルートコンポーネントでMUIのリセットCSSをimportしてJSX内にかくだけでいいようです。</p>
-<!-- /wp:paragraph -->
+```sh
+npm install @mui/material @emotion/react @emotion/styled
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>// Index.tsx
+これであとは Component を import して使っていくだけ。
+
+### リセット CSS
+
+リセット CSS も導入の手順が[公式](https://mui.com/material-ui/react-css-baseline/#global-reset)にありますが、MUI が提供しているものを使います。中身は[normalize.css](https://github.com/necolas/normalize.css)に近いらしい。ルートコンポーネントで MUI のリセット CSS を import して JSX 内にかくだけでいいようです。
+
+```javascript
+// Index.tsx
 import * as React from "react"
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 
-const IndexPage = () =&gt; {
-  return (
-    &lt;main&gt;
-      &lt;CssBaseline /&gt;
-      &lt;Box component="main"&gt;
-      &lt;/Box&gt;
-    &lt;/main&gt;
-  )
+const IndexPage = () => {
+return (
+<main>
+<CssBaseline />
+<Box component="main">
+</Box>
+</main>
+)
 }
 
 export default IndexPage
-</code></pre>
-<!-- /wp:code -->
+```
 
-<!-- wp:heading {"level":3} -->
-<h3>レスポンシブ対応とブレークポイント</h3>
-<!-- /wp:heading -->
+### レスポンシブ対応とブレークポイント
 
-<!-- wp:paragraph -->
-<p><code>sx</code>&nbsp;という属性をコンポーネントに指定することでブレークポイントとして扱うことができる。</p>
-<!-- /wp:paragraph -->
+<code>sx</code> という属性をコンポーネントに指定することでブレークポイントとして扱うことができる。
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>      &lt;AppBar component="nav"&gt;
-        &lt;Box sx={{ p: { xs: 0, sm: 1}}}&gt;
+```javascript
+      <AppBar component="nav">
+        <Box sx={{ p: { xs: 0, sm: 1}}}>
           ...
-        &lt;/Box&gt;
-      &lt;/AppBar&gt;</code></pre>
-<!-- /wp:code -->
+        </Box>
+      </AppBar>
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>&lt;Toolbar sx={{minHeight:{ xs: 32, sm: 56 }}}/&gt;</code></pre>
-<!-- /wp:code -->
+```javascript
+<Toolbar sx={{minHeight:{ xs: 32, sm: 56 }}}/>
+```
 
-<!-- wp:heading {"level":3} -->
-<h3>CSS Modules</h3>
-<!-- /wp:heading -->
+### CSS Modules
 
-<!-- wp:paragraph -->
-<p>MUIコンポーネントの一部を上書きしたいのでCSS Modulesも使うことにした。いつもはstyled-componentsを採用するけど、<a href="https://www.gatsbyjs.com/docs/tutorial/part-2/#style-components-with-css-modules">公式</a>にも書いてあったのでなんとなくCSS Modules。使ったこともなかったし。</p>
-<!-- /wp:paragraph -->
+MUI コンポーネントの一部を上書きしたいので CSS Modules も使うことにした。いつもは styled-components を採用するけど、[公式](https://www.gatsbyjs.com/docs/tutorial/part-2/#style-components-with-css-modules)にも書いてあったのでなんとなく CSS Modules。使ったこともなかったし。
 
-<!-- wp:heading {"level":4} -->
-<h4> 型宣言が見つかりません(ts2307)</h4>
-<!-- /wp:heading -->
+#### 型宣言が見つかりません(ts2307)
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>import { link } from './module/link.module.css'</code></pre>
-<!-- /wp:code -->
+```javascript
+import { link } from './module/link.module.css'
+```
 
-<!-- wp:paragraph -->
-<p>linkコンポーネントの一部のスタイルを書き換えたかったので、link.module.cssファイルを作成し、import。しかしTypeScriptのエラー。</p>
-<!-- /wp:paragraph -->
+link コンポーネントの一部のスタイルを書き換えたかったので、link.module.css ファイルを作成し、import。しかし TypeScript のエラー。
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>モジュール './module/link.module.css' またはそれに対応する型宣言が見つかりません。</code></pre>
-<!-- /wp:code -->
+```sh
+モジュール './module/link.module.css' またはそれに対応する型宣言が見つかりません。
+```
 
-<!-- wp:paragraph -->
-<p>型宣言が見つからないということなので作ります。</p>
-<!-- /wp:paragraph -->
+型宣言が見つからないということなので作ります。
+/src/typings/css.d.ts ファイルを作成し下記のコードを記述
 
-<!-- wp:paragraph -->
-<p>/src/typings/css.d.tsファイルを作成し下記のコードを記述</p>
-<!-- /wp:paragraph -->
+```javascript
+declare module '*.css'
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>declare module '*.css'</code></pre>
-<!-- /wp:code -->
-
-<!-- wp:paragraph -->
-<p>これでエラーが消えました。</p>
-<!-- /wp:paragraph -->
+これでエラーが消えました。

@@ -1,166 +1,133 @@
 ---
 slug: /912
-date: "2022-07-10 11:56:06"
+date: '2022-07-10 11:56:06'
 title: Gatsbyでブログ作る③〜ESLint、Prettier
 thumbnail: 1_tsOxXGb20o2zrCh6Sp5PYQ.png
-tags: ["gatsby"]
+tags: ['gatsby']
 ---
-# Gatsbyでブログ作る③〜ESLint、Prettier
-<!-- wp:heading -->
-<h2>ESLint</h2>
-<!-- /wp:heading -->
 
-<!-- wp:paragraph -->
-<p>探したら<a href="https://www.gatsbyjs.com/docs/how-to/custom-configuration/eslint/">公式</a>に手順が書いてあった。GatsbyにはESLintのセットアップが組み込まれているので、必要に応じて設定を追加するだけでよいらしい。</p>
-<!-- /wp:paragraph -->
+# Gatsby でブログ作る ③〜ESLint、Prettier
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>npm install --save-dev eslint-config-react-app</code></pre>
-<!-- /wp:code -->
+## ESLint
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>touch .eslintrc.js</code></pre>
-<!-- /wp:code -->
+探したら[公式](https://www.gatsbyjs.com/docs/how-to/custom-configuration/eslint/)に手順が書いてあった。Gatsby には ESLint のセットアップが組み込まれているので、必要に応じて設定を追加するだけでよいらしい。
 
-<!-- wp:paragraph -->
-<p><strong>.eslintrc.js</strong></p>
-<!-- /wp:paragraph -->
+```sh
+npm install --save-dev eslint-config-react-app
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>module.exports = {
+```sh
+touch .eslintrc.js
+```
+
+**.eslintrc.js**
+
+```javascript
+module.exports = {
   globals: {
     __PATH_PREFIX__: true,
   },
   extends: `react-app`,
-}</code></pre>
-<!-- /wp:code -->
+}
+```
 
-<!-- wp:heading -->
-<h2>eslint-config-prettier</h2>
-<!-- /wp:heading -->
+## eslint-config-prettier
 
-<!-- wp:paragraph -->
-<p>フォーマットはPrettierにまかせて、ESLintのフォーマットは無効化します。</p>
-<!-- /wp:paragraph -->
+フォーマットは Prettier にまかせて、ESLint のフォーマットは無効化します。
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>npm install --D eslint-config-prettier</code></pre>
-<!-- /wp:code -->
+```sh
+npm install --D eslint-config-prettier
+```
 
-<!-- wp:paragraph -->
-<p>.eslintrc.jsを編集</p>
-<!-- /wp:paragraph -->
+.eslintrc.js を編集
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>module.exports = {
+```javascript
+module.exports = {
   globals: {
     __PATH_PREFIX__: true,
   },
-  extends: &#91;
+  extends: [
     'react-app',
     // prettierを追加。記述は最後にすること
     'prettier',
   ]
-}</code></pre>
-<!-- /wp:code -->
+}
+```
 
-<!-- wp:heading -->
-<h2>Prettier</h2>
-<!-- /wp:heading -->
+## Prettier
 
-<!-- wp:paragraph -->
-<p> 公式のドキュメント内を検索すると、<a href="https://www.gatsbyjs.com/docs/creating-a-starter/#basic-requirements">スターターのドキュメント</a>がひっかかったのですが、スターターキットに設定が含まれているだけ、という内容なのでインストールと設定を追加します。</p>
-<!-- /wp:paragraph -->
+公式のドキュメント内を検索すると、[スターターのドキュメント](https://www.gatsbyjs.com/docs/creating-a-starter/#basic-requirements)がひっかかったのですが、スターターキットに設定が含まれているだけ、という内容なのでインストールと設定を追加します。
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>npm i -D prettier</code></pre>
-<!-- /wp:code -->
+```sh
+npm i -D prettier
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>touch .prettierrc</code></pre>
-<!-- /wp:code -->
+```sh
+touch .prettierrc
+```
 
-<!-- wp:paragraph -->
-<p><strong>.prettierrc</strong></p>
-<!-- /wp:paragraph -->
+**.prettierrc**
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>{
-  "trailingComma": "es5",
-  "tabWidth": 2,
-  "semi": false,
-  "singleQuote": true
-}</code></pre>
-<!-- /wp:code -->
+```javascript
+{
+"trailingComma": "es5",
+"tabWidth": 2,
+"semi": false,
+"singleQuote": true
+}
+```
 
-<!-- wp:paragraph -->
-<p>この設定に関しては個人、もしくはプロジェクトそれぞれだと思うので、<a rel="noreferrer noopener" href="https://prettier.io/docs/en/options.html" target="_blank">公式の設定</a>を見ながら好きなものを設定していくとよいと思います。私の場合は深く考えずずっと同じ設定です。必要になったら随時変更です。</p>
-<!-- /wp:paragraph -->
+この設定に関しては個人、もしくはプロジェクトそれぞれだと思うので、[公式の設定](https://prettier.io/docs/en/options.html)を見ながら好きなものを設定していくとよいと思います。私の場合は深く考えずずっと同じ設定です。必要になったら随時変更です。
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>touch .prettierignore</code></pre>
-<!-- /wp:code -->
+```sh
+touch .prettierignore
+```
 
-<!-- wp:paragraph -->
-<p>次にフォーマットしたくない設定ファイルの作成です。</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><strong>.prettierignore</strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:code -->
-<pre class="wp-block-code"><code>.cache
+次にフォーマットしたくない設定ファイルの作成です。
+**.prettierignore**
+```javascript
+.cache
 package.json
 package-lock.json
 public
 tsconfig.json
 .eslintrc.js
-*.d.ts</code></pre>
-<!-- /wp:code -->
+*.d.ts
+```
 
-<!-- wp:paragraph -->
-<p>フォーマットかけたくないのも個人やプロジェクトによると思うので自由でいいと思います。</p>
-<!-- /wp:paragraph -->
+フォーマットかけたくないのも個人やプロジェクトによると思うので自由でいいと思います。
 
-<!-- wp:heading {"level":3} -->
-<h3>package.json修正</h3>
-<!-- /wp:heading -->
+### package.json 修正
 
-<!-- wp:paragraph -->
-<p>prettierは保存時に自動実行されるわけではないのでpackage.jsonに設定を追加します。<br>（保存時に自動実行する場合はVSCodeなど、エディタ側の設定が必要です）</p>
-<!-- /wp:paragraph -->
+prettier は保存時に自動実行されるわけではないので package.json に設定を追加します。
+（保存時に自動実行する場合は VSCode など、エディタ側の設定が必要です）
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>  "scripts": {
+```javascript
+  "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "fmt": "prettier --write src/**/*.{tsx,ts,css}"
-  },</code></pre>
-<!-- /wp:code -->
+  },
+```
 
-<!-- wp:paragraph -->
-<p>設定を追加したらコマンドを実行します</p>
-<!-- /wp:paragraph -->
+設定を追加したらコマンドを実行します
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>npm run fmt</code></pre>
-<!-- /wp:code -->
+```sh
+npm run fmt
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>> totolog34@1.0.0 fmt
+```sh
+> totolog34@1.0.0 fmt
 > prettier --write src/**/*.{tsx,ts,css}
 
 src/components/header.tsx 377ms
 src/pages/404.tsx 26ms
 src/pages/about.tsx 6ms
 src/pages/index.tsx 21ms
-src/components/css/utility.module.css 54ms</code></pre>
-<!-- /wp:code -->
+src/components/css/utility.module.css 54ms
+```
 
-<!-- wp:paragraph -->
-<p>フォーマットができました。</p>
-<!-- /wp:paragraph -->
+フォーマットができました。

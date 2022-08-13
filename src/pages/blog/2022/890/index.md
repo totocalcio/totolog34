@@ -1,236 +1,193 @@
 ---
 slug: /890
-date: "2022-03-26 00:31:01"
+date: '2022-03-26 00:31:01'
 title: Vue3 + TypeScript チートシートっぽいもの
-thumbnail: 
-tags: ["vue.js"]
+thumbnail:
+tags: ['vue.js']
 ---
+
 # Vue3 + TypeScript チートシートっぽいもの
-<!-- wp:heading -->
-<h2>基本構成</h2>
-<!-- /wp:heading -->
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>&lt;script setup lang="ts"&gt;
+## 基本構成
+
+```javascript
+<script setup lang="ts">
   ...
-&lt;/script&gt;
+</script>
 
-&lt;template&gt;
+<template>
   ...
-&lt;/template&gt;
+</template>
 
-&lt;style scoped&gt;
+<style scoped>
   ...
-&lt;/style&gt;</code></pre>
-<!-- /wp:code -->
+</style>
+```
 
-<!-- wp:heading -->
-<h2>リアクティビティAPI</h2>
-<!-- /wp:heading -->
+## リアクティビティ API
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>&lt;script setup lang="ts"&gt;
+```javascript
+<script setup lang="ts">
 import { ref, reactive, computed, toRefs } from "vue";
-&lt;/script&gt;</code></pre>
-<!-- /wp:code -->
+</script>
+```
 
-<!-- wp:heading {"level":3} -->
-<h3>ref</h3>
-<!-- /wp:heading -->
+### ref
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>const count = ref&lt;number&gt;(0);</code></pre>
-<!-- /wp:code -->
+```javascript
+const count = ref<number>(0);
+```
 
-<!-- wp:heading {"level":3} -->
-<h3>reactive</h3>
-<!-- /wp:heading -->
+### reactive
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>interface State {
-  name: string;
-  age: number;
+```javascript
+interface State {
+name: string;
+age: number;
 }
-const state = reactive&lt;State&gt;({
-  name: "yoshida",
-  age: 36,
-});</code></pre>
-<!-- /wp:code -->
+const state = reactive<State>({
+name: "yoshida",
+age: 36,
+});
+```
 
-<!-- wp:heading {"level":3} -->
-<h3>toRefs</h3>
-<!-- /wp:heading -->
+### toRefs
 
-<!-- wp:paragraph -->
-<p>refを代入すると参照が切れてリアクティブ性が失われるので toRefs</p>
-<!-- /wp:paragraph -->
+ref を代入すると参照が切れてリアクティブ性が失われるので toRefs
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>const { name, age } = toRefs(state);</code></pre>
-<!-- /wp:code -->
+```javascript
+const { name, age } = toRefs(state);
+```
 
-<!-- wp:heading -->
-<h2>computed</h2>
-<!-- /wp:heading -->
+## computed
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>const upperCaseName = computed(() =&gt; state.name.toUpperCase());</code></pre>
-<!-- /wp:code -->
+```javascript
+const upperCaseName = computed(() => state.name.toUpperCase());
+```
 
-<!-- wp:heading -->
-<h2>Template</h2>
-<!-- /wp:heading -->
+## Template
 
-<!-- wp:heading {"level":3} -->
-<h3>変数参照</h3>
-<!-- /wp:heading -->
+### 変数参照
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>&lt;template>
-  &lt;div>名前：{{ state.name }} | {{ upperCaseName }}&lt;/div>
-  &lt;div>名前（toRef） {{ name }}&lt;/div>
-  &lt;div>年齢：{{ state.age }}歳&lt;/div>
-  &lt;div>年齢（toRef） {{ age }}&lt;/div>
-&lt;/template>
-</code></pre>
-<!-- /wp:code -->
+```html
+<template>
+  <div>名前：{{ state.name }} | {{ upperCaseName }}
+  <div>名前（toRef） {{ name }}
+  <div>年齢：{{ state.age }}歳
+  <div>年齢（toRef） {{ age }}
+</template>
 
-<!-- wp:heading {"level":3} -->
-<h3>ディレクティブ</h3>
-<!-- /wp:heading -->
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>&lt;template&gt;
-  &lt;div&gt;{{ count }}&lt;/div&gt;
-  &lt;button type="button" @click="count++"&gt;カウントアップ&lt;/button&gt;
-&lt;/template&gt;
-</code></pre>
-<!-- /wp:code -->
+### ディレクティブ
 
-<!-- wp:heading -->
-<h2>Props</h2>
-<!-- /wp:heading -->
+```html
+<template>
+<div>{{ count }}
+<button type="button" @click="count++">カウントアップ</button>
+</template>
+```
 
-<!-- wp:heading {"level":3} -->
-<h3>親</h3>
-<!-- /wp:heading -->
+## Props
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>&lt;template&gt;
-  &lt;Child label="propsLabel"/&gt;
-&lt;/template&gt;</code></pre>
-<!-- /wp:code -->
+### 親
 
-<!-- wp:heading {"level":3} -->
-<h3>子</h3>
-<!-- /wp:heading -->
+```html
+<template>
+  <Child label="propsLabel"/>
+</template>
+```
 
-<!-- wp:paragraph -->
-<p>コンパイラマクロだからimportは不要</p>
-<!-- /wp:paragraph -->
+### 子
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>&lt;script setup lang="ts"&gt;
+コンパイラマクロだから import は不要
+
+```javascript
+<script setup lang="ts">
 //型定義
 interface Props {
-  label: string;
+label: string;
 }
 //props
-defineProps&lt;Props&gt;();
-&lt;/script&gt;
+defineProps<Props>();
+</script>
 
-&lt;template&gt;
-  &lt;div&gt;{{ label }}&lt;/div&gt;
-&lt;/template&gt;
-</code></pre>
-<!-- /wp:code -->
+<template>
+<div>{{ label }}
+</template>
 
-<!-- wp:heading {"level":4} -->
-<h4>初期値を設定する場合</h4>
-<!-- /wp:heading -->
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>&lt;script setup lang="ts"&gt;
+#### 初期値を設定する場合
+
+```javascript
+<script setup lang="ts">
 //型定義
 interface Props {
   label: string;
 }
 //初期値を設定
-withDefaults(defineProps&lt;Props&gt;(), { label: "defaultLabel" });
-&lt;/script&gt;</code></pre>
-<!-- /wp:code -->
+withDefaults(defineProps<Props>(), { label: "defaultLabel" });
+</script>
+```
 
-<!-- wp:heading -->
-<h2>Emit</h2>
-<!-- /wp:heading -->
+## Emit
 
-<!-- wp:heading {"level":3} -->
-<h3>親</h3>
-<!-- /wp:heading -->
+### 親
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>const changeName = (value: string) =&gt; {
-  state.name = value;
+```javascript
+const changeName = (value: string) => {
+state.name = value;
 };
-const updateName = (value: string) =&gt; {
-  state.name = value;
-};</code></pre>
-<!-- /wp:code -->
+const updateName = (value: string) => {
+state.name = value;
+};
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>  &lt;Child @change="changeName" @update="updateName" label="propsLabel" /&gt;</code></pre>
-<!-- /wp:code -->
+```html
+  <Child @change="changeName" @update="updateName" label="propsLabel" />
+```
 
-<!-- wp:heading {"level":3} -->
-<h3>子</h3>
-<!-- /wp:heading -->
+### 子
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>//型定義
+```javascript
+//型定義
 interface Emits {
-  (event: "change", value: string): void;
-  (event: "update", value: string): void;
+(event: "change", value: string): void;
+(event: "update", value: string): void;
 }
 //Emit
-const emit = defineEmits&lt;Emits&gt;();
-const handleUpdate = () =&gt; {
-  emit("update", "update!");
-};</code></pre>
-<!-- /wp:code -->
+const emit = defineEmits<Emits>();
+const handleUpdate = () => {
+emit("update", "update!");
+};
+```
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>&lt;template&gt;
-  &lt;input type="text" @input="handleInput" /&gt;
-  &lt;button type="button" @click="handleUpdate"&gt;アップデート&lt;/button&gt;
-&lt;/template&gt;</code></pre>
-<!-- /wp:code -->
+```html
+<template>
+  <input type="text" @input="handleInput" />
+  <button type="button" @click="handleUpdate">アップデート</button>
+</template>
+```
 
-<!-- wp:heading {"level":3} -->
-<h3>Event</h3>
-<!-- /wp:heading -->
+### Event
 
-<!-- wp:paragraph -->
-<p>細かいことはおいておいてTypeScriptでEventの扱いはややこしいのでとにかく使い方</p>
-<!-- /wp:paragraph -->
+細かいことはおいておいて TypeScript で Event の扱いはややこしいのでとにかく使い方
 
-<!-- wp:heading {"level":4} -->
-<h4>instanceof で Type Guard</h4>
-<!-- /wp:heading -->
+#### instanceof で Type Guard
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>const handleInput = (e: Event) =&gt; {
-  if (e.target instanceof HTMLInputElement) {
-    emit("change", e.target?.value);
-  }
-};</code></pre>
-<!-- /wp:code -->
+```javascript
+const handleInput = (e: Event) => {
+if (e.target instanceof HTMLInputElement) {
+emit("change", e.target?.value);
+}
+};
+```
 
-<!-- wp:heading {"level":4} -->
-<h4>as でキャスト</h4>
-<!-- /wp:heading -->
+#### as でキャスト
 
-<!-- wp:code -->
-<pre class="wp-block-code"><code>const handleInput = (event: Event) =&gt; {
+```javascript
+const handleInput = (event: Event) => {
   emit("change", (event.target as HTMLInputElement).value);
-};</code></pre>
-<!-- /wp:code -->
+};
+```
