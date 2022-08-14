@@ -1,13 +1,13 @@
-import type { GatsbyConfig } from 'gatsby'
+const siteUrl = process.env.URL || `https://totolog34.com/`
 
-const config: GatsbyConfig = {
+module.exports = {
   siteMetadata: {
     title: `うさ技術`,
     author: {
       name: `totocalcio`,
       summary: `totolog34`,
     },
-    siteUrl: `https://totolog34.com/`,
+    siteUrl: siteUrl,
     social: {
       twitter: `dir20634`,
       github: `totocalcio`,
@@ -20,7 +20,6 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -76,10 +75,38 @@ const config: GatsbyConfig = {
       },
     },
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        output: '/',
+        excludes: ['/404?(.*)'],
+        resolveSiteUrl: () => siteUrl,
+        serialize: ({ path, updatedAt }) =>  {
+          const site = {
+            url: path,
+            changefreq: `daily`,
+            priority: updatedAt ? 0.7 : 0.5,
+          }
+          if (!updatedAt) return site
+
+          const lastmod = { lastmod: updatedAt }
+          return { ...site, ...lastmod }
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://totolog34.com',
-        sitemap: 'https://totolog34.com/sitemap.xml',
+        host: siteUrl,
+        sitemap: `${siteUrl}sitemap-index.xml`,
         env: {
           development: {
             policy: [{ userAgent: '*', disallow: ['/'] }],
@@ -92,5 +119,3 @@ const config: GatsbyConfig = {
     },
   ],
 }
-
-export default config
