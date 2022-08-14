@@ -15,6 +15,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       frontmatter: Frontmatter!
       fields: Slug
       excerpt: String
+      tableOfContents: TableOfContents!
     }
     type Slug {
       slug: String
@@ -26,6 +27,9 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       tags: [String!]
       description: String
       thumbnail: File @fileByRelativePath
+    }
+    type TableOfContents {
+      absolute: Boolean
     }
   `)
   }
