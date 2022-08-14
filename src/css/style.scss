@@ -11,6 +11,14 @@ ul {
 
 }
 
-img {
+// cards
+.cards img {
   object-fit: cover;
+}
+
+// blog-post
+.blog-post-content a{
+  img {
+    object-fit: contain;
+  }
 }

@@ -14,6 +14,7 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
     <Layout>
       <Seo title="" />
       <Box
+        className='cards'
         sx={{
           display: 'grid',
           gridTemplateColumns: {
