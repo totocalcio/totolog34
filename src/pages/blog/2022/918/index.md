@@ -22,8 +22,7 @@ Gatsby ではプラグインを使用して様々な機能を使うことがで�
 [gatsby-plugin-graphql-codegen](https://github.com/d4rekanguok/gatsby-typescript)が使えるとのことで見に行ったら[gatsby-plugin-typegen](https://www.gatsbyjs.com/plugins/gatsby-plugin-typegen/?=gatsby-plugin-typegen)使ってねって言われていた。
 
 > Hi there ? Are you just looking for a way to generate graphql types for your graphql queries?
-> gatsby-plugin-graphql-codegen is what you want. However, other maintainers and I haven't been able to keep this repo up to shape. Please have a look at @cometkim's graphql-plugin-typegen which does almost the same thing &amp; better maintained. Still, ideas &amp; PRs are all welcomed. If you'd like to help maintain this project, please feel free to reach out. Thank you, have a great day
-
+> gatsby-plugin-graphql-codegen is what you want. However, other maintainers and I haven't been able to keep this repo up to shape. Please have a look at @cometkim's graphql-plugin-typegen which does almost the same thing &amp; better maintained. Still, ideas &amp; PRs are all welcomed. If you'd like to help maintain this project, please feel free to reach out. Thank you, have a great day  
 >[https://github.com/d4rekanguok/gatsby-typescript](https://github.com/d4rekanguok/gatsby-typescript)
 
 と、思っていろいろ調べていたら v4.15.0 で[GraphQL Typegen](https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/)の機能として提供されることとなったのらしいので、そちらを使う。

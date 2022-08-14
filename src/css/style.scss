@@ -11,14 +11,37 @@ ul {
 
 }
 
+a {
+  word-break: break-all;
+}
+
+blockquote {
+  position: relative;
+  margin: 0;
+  padding: 1em 40px;
+  background-color: #f5f2f0;
+  &::before {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 16px;
+    content:url(../images/quote.svg);
+  }
+}
+
 // cards
 .cards img {
   object-fit: cover;
 }
 
 // blog-post
-.blog-post-content a{
-  img {
-    object-fit: contain;
+.blog-post-content {
+  a {
+    img {
+      object-fit: contain;
+    }
+  }
+  code[class*="language-"], pre[class*="language-"] {
+    white-space: break-spaces;
   }
 }
