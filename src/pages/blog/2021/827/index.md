@@ -5,9 +5,6 @@ title: 第2回ReactNativeアプリ開発②〜UIコンポーネント選定
 thumbnail: 2021-09-19-11.24.43.png
 tags: ['reactnative', 'expo']
 ---
-
-# 第 2 回 ReactNative アプリ開発 ②〜UI コンポーネント選定
-
 ReactNative では UI コンポーネントのライブラリがいくつかありますが、今回は[Material Kit React Native](https://www.creative-tim.com/product/material-kit-react-native)を使うことにしました。なんとなくデザインが一番しっくりきたからです。
 
 ## テンプレートをダウンロード

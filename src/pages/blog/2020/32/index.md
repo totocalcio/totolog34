@@ -5,9 +5,6 @@ title: WEBフォントの使い方＜サーバー、Adobe、Google＞
 thumbnail:
 tags: ['css']
 ---
-
-# WEB フォントの使い方＜サーバー、Adobe、Google ＞
-
 WEB フォントの使い方について説明します。画像が多めの説明です。
 
 ## サーバーに直接フォントをアップロード

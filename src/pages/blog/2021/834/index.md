@@ -5,9 +5,6 @@ title: 第2回ReactNativeアプリ開発③〜カレンダー実装
 thumbnail: 2021-09-19-11.24.43.png
 tags: ['reactnative']
 ---
-
-# 第 2 回 ReactNative アプリ開発 ③〜カレンダー実装
-
 [前回](https://totolog34.com/827/)で UI コンポーネントのために[Material Kit React Native](https://www.creative-tim.com/product/material-kit-react-native)をいれたのですが、今回は単純なアプリを作ろうと思っていたので、必要なら自前でデザインは作成した方が早い、ディレクトリややこしくなるのがなんだか好きじゃない、という理由で[まっさらな状態](https://totolog34.com/813/)に戻しました。
 
 ## カレンダーのライブラリ「react-native-calendars」を導入

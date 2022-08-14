@@ -5,9 +5,6 @@ title: gulpでscssのコンパイルの階層がうまくいかない
 thumbnail: group1-1.jpg
 tags: ['css']
 ---
-
-# gulp で scss のコンパイルの階層がうまくいかない
-
 今まではvs codeのLive Sass Compilerのプラグインに頼っていたのですが、ファイルが増える度にimport文を毎回足すのが手間で、globを利用してimport文を減らそうと導入を検討しました。
 
 同時にCSS設計はFLOCSSを採用しようとしたところ問題が発生しました。

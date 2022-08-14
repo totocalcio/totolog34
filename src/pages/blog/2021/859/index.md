@@ -5,12 +5,9 @@ title: 第2回ReactNativeアプリ開発⑥〜React Navigation
 thumbnail: 2021-09-19-11.24.43.png
 tags: ['reactnative', 'expo']
 ---
-
-# 第 2 回 ReactNative アプリ開発 ⑥〜React Navigation
-
 今回はさくっとアプリを作ろうと思っていたので、画面遷移なしの１画面でなんとか完結しようと思っていましたが、少しずつ処理も長くなってきてコードの見通しも悪いですし、機能も１画面でおさまりそうもないのでやっぱり分けることにします。
 
-#### 注意
+**注意**
 
 ```html
 記事執筆時、React Navigation Ver:6.xのドキュメントを参考にしています。
@@ -85,7 +82,7 @@ return (
 [Tab navigation](https://reactnavigation.org/docs/tab-based-navigation)でもよかったのですが、今回は設定画面だけなのでなんとなく右上のヘッダーボタンから遷移させようと思います。
 [ドキュメント](https://reactnavigation.org/docs/header-buttons/)を確認すると `options` でいろいろヘッダーをカスタマイズできそうです。
 
-#### サンプルコード
+### サンプルコード
 
 ```jsx
 function StackScreen() {

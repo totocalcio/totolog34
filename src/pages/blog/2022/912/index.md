@@ -5,9 +5,6 @@ title: Gatsbyでブログ作る③〜ESLint、Prettier
 thumbnail: 1_tsOxXGb20o2zrCh6Sp5PYQ.png
 tags: ['gatsby']
 ---
-
-# Gatsby でブログ作る ③〜ESLint、Prettier
-
 ## ESLint
 
 探したら[公式](https://www.gatsbyjs.com/docs/how-to/custom-configuration/eslint/)に手順が書いてあった。Gatsby には ESLint のセットアップが組み込まれているので、必要に応じて設定を追加するだけでよいらしい。

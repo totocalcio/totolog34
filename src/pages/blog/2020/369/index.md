@@ -5,9 +5,6 @@ title: React学習状況⑤
 thumbnail:
 tags: ['道のり', 'react']
 ---
-
-# React 学習状況 ⑤
-
 [前回から](https://totolog34.com/220/)
 
 ## React

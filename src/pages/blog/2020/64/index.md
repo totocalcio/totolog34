@@ -5,9 +5,6 @@ title: 【WordPress】スパム対策に特化したプラグインを入れて�
 thumbnail:
 tags: ['wordpress']
 ---
-
-# 【WordPress】スパム対策に特化したプラグインを入れてみよう
-
 今回入れるプラグインは３つです。
 
 - Akismet Anti-Spam

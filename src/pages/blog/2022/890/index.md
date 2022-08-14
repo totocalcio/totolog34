@@ -5,9 +5,6 @@ title: Vue3 + TypeScript チートシートっぽいもの
 thumbnail:
 tags: ['vue.js']
 ---
-
-# Vue3 + TypeScript チートシートっぽいもの
-
 ## 基本構成
 
 ```javascript

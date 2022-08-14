@@ -5,9 +5,6 @@ title: Gatsbyでブログ作る④〜GraphQL Typegen
 thumbnail: 1_tsOxXGb20o2zrCh6Sp5PYQ.png
 tags: ['gatsby']
 ---
-
-# Gatsby でブログ作る ④〜GraphQL Typegen
-
 詳しくは[公式](https://www.gatsbyjs.com/docs/tutorial/part-3/)
 
 Gatsby ではプラグインを使用して様々な機能を使うことができます。

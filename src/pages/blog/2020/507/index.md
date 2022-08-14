@@ -5,9 +5,6 @@ title: iPhone11だとBottomTabNavigatorが隠れてうまく表示されない
 thumbnail:
 tags: ['reactnative', 'expo']
 ---
-
-# iPhone11 だと BottomTabNavigator が隠れてうまく表示されない
-
 私の環境でのテストが iPhone11 だっただけで、おそらく iPhone11 じゃなくても機種によっては起こりうると思います。
 
 ## BottomTabNavigator が隠れる

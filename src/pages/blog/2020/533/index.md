@@ -5,9 +5,6 @@ title: iOSでTextInputが見えなくならないようにKeyboardAvoidingView�
 thumbnail:
 tags: ['reactnative', 'expo']
 ---
-
-# iOS で TextInput が見えなくならないように KeyboardAvoidingView を設定したら anroid でバグる
-
 Android だと何も設定をしなくても TextInput にフォーカスをしたらキーボードが表示されて、キーボード分せり上がって、入力ボックスが見えるけれど、iOS だと隠れてしまう。そのために KeyboardAvoidingView でラップする必要がある。
 
 ```html

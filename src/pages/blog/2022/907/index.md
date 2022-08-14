@@ -5,9 +5,6 @@ title: Gatsbyでブログ作る②〜MaterialUI導入
 thumbnail: 1_tsOxXGb20o2zrCh6Sp5PYQ.png
 tags: ['react', 'gatsby']
 ---
-
-# Gatsby でブログ作る ②〜MaterialUI 導入
-
 [前回の続き](https://totolog34.com/901/)。
 
 そんなにデザインに凝る予定もないので styled-components で書こうと思っていたけど、少し触ってみたいという理由で MaterialUI を導入することにした。

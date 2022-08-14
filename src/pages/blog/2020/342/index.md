@@ -5,10 +5,7 @@ title: またExpoでエラー。QRコードが表示されない
 thumbnail:
 tags: ['expo']
 ---
-
-# また Expo でエラー。QR コードが表示されない
-
-<p class="is-style-alert-box">試行錯誤の内容も書いてあります。結論は最後に書いてあります。
+試行錯誤の内容も書いてあります。結論は最後に書いてあります。
 
 ![image](../../../../images/2020/08/image-39.png)
 

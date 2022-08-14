@@ -5,9 +5,6 @@ title: React学習状況④
 thumbnail:
 tags: ['道のり', 'react']
 ---
-
-# React 学習状況 ④
-
 [前回](https://totolog34.com/201/)の続き
 
 ## JavaScript

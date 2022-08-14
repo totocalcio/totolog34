@@ -5,9 +5,6 @@ title: 第2回ReactNativeアプリ開発③〜ダイアログ実装
 thumbnail: 2021-09-19-11.24.43.png
 tags: ['reactnative']
 ---
-
-# 第 2 回 ReactNative アプリ開発 ③〜ダイアログ実装
-
 ## ライブラリ選定
 
 ReactNative のダイアログ実装で検索すると有名そうなところで２つひっかかってくる。

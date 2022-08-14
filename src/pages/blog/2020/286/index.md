@@ -5,9 +5,6 @@ title: 【gatsby.js】いい感じのStarterでサイトを作り始める
 thumbnail: 1_tsOxXGb20o2zrCh6Sp5PYQ.png
 tags: ['gatsby']
 ---
-
-# 【gatsby.js】いい感じの Starter でサイトを作り始める
-
 gatsby.js でスターターをいろんなスターターを利用してみます。なお、今回は CMS を使用している Starter は避けておきます。なぜならエラーが出るからです。
 
 ## スターターを探す

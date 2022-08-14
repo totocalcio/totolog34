@@ -5,9 +5,6 @@ title: Contentfulのアカウント登録方法
 thumbnail: start-contentful-800.png
 tags: ['その他', 'gatsby']
 ---
-
-# Contentful のアカウント登録方法
-
 ## Contentful アカウント登録手順
 
 ![image](../../../../images/2020/08/2.jpg)

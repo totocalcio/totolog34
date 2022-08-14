@@ -18,6 +18,7 @@ const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
       <Container maxWidth="md" sx={{ py: 3 }}>
         <Typography variant="h6">{frontmatter.date}</Typography>
         <div className="blog-post-container">
+          <h1>{frontmatter.title}</h1>
           <Toc html={data.markdownRemark?.tableOfContents ?? ""}/>
           <div className="blog-post">
             <div

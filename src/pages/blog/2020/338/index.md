@@ -5,9 +5,6 @@ title: React Nativeでアプリを作る①～導入
 thumbnail:
 tags: ['reactnative']
 ---
-
-# React Native でアプリを作る ① ～導入
-
 現在プログラミングの学習としては JavaScript ばかりをしているけれど、React もモチベーション維持で触りたい、ということで React Native をさわることにした。
 
 ## Expo をつかう

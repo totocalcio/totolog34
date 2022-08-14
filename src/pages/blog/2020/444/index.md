@@ -5,9 +5,6 @@ title: 【CSS】カラーコード＋透過を１６進数(Hex8桁)とrgbaで実
 thumbnail: image-15.png
 tags: ['css']
 ---
-
-# 【CSS】カラーコード＋透過を１６進数(Hex8 桁)と rgba で実装
-
 ## background と opacity を分けるとうまくいかない
 
 ここによくあるボタンのデザインがあります。

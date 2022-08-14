@@ -5,9 +5,6 @@ title: gatsby.jsでとりあえずサイトを作ってみる
 thumbnail: 3.jpg
 tags: ['gatsby']
 ---
-
-# gatsby.js でとりあえずサイトを作ってみる
-
 ## スターターをダウンロードする
 
 ![image1](../../../../images/2020/08/image-5.png)

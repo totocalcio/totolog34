@@ -5,9 +5,6 @@ title: React.jsを学び始める
 thumbnail:
 tags: ['道のり', 'react']
 ---
-
-# React.js を学び始める
-
 [https://note.com/erukiti/m/m586c4ddc9ee1/hashtag/2421](https://note.com/erukiti/m/m586c4ddc9ee1/hashtag/2421)
 
 全部読み終えてしまった。実際に React.js を学び始めようと調べてみると、ある程度の知識を前提とするから、どこから手をつけ始めていいかわからない。

@@ -5,9 +5,6 @@ title: Gatsbyでブログ作る⑤〜エラー集
 thumbnail:
 tags: ['gatsby']
 ---
-
-# Gatsby でブログ作る ⑤〜エラー集
-
 ## 型 'string | null | undefined' を型 'string' に割り当てることはできません。
 
 ### 原因・経緯

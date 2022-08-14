@@ -5,9 +5,6 @@ title: NativeScript-VueでWatchOSアプリ作ろうと思う
 thumbnail:
 tags: ['道のり']
 ---
-
-# NativeScript-Vue で WatchOS アプリ作ろうと思う
-
 お久しぶりです。４月に転職しました。
 転職したのですが Vue.js を扱う企業で現在勉強中です。
 

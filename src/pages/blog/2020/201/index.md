@@ -5,9 +5,6 @@ title: 【React習得に向けて】1ヶ月半くらい経った
 thumbnail:
 tags: ['道のり', 'react']
 ---
-
-# 【React 習得に向けて】1 ヶ月半くらい経った
-
 前回のブログからの進捗を報告
 
 ## JavaScript

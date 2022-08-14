@@ -5,9 +5,6 @@ title: React学習状況⑥～アプリリリース～
 thumbnail:
 tags: ['道のり', 'react', 'reactnative']
 ---
-
-# React 学習状況 ⑥ ～アプリリリース～
-
 **アプリリリースしました！！！**
 
 [前回の続き](https://totolog34.com/369/)

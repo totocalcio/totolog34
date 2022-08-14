@@ -5,9 +5,6 @@ title: ImagePickerでカメラロールのPermissionがgranted：falseなのに�
 thumbnail:
 tags: ['reactnative', 'expo']
 ---
-
-# ImagePicker でカメラロールの Permission が granted：false なのにアクセスできてしまう
-
 ![image](../../../../images/2020/11/image-5.png)
 
 公式ドキュメントを参考にしたはずだけど、初回起動時の Permission で拒否したらずっと alert が出るようになってしまうし、その上拒否したにも関わらず強行突破でカメラロールにアクセスできてしまう。

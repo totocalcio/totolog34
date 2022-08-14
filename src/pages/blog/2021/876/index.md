@@ -5,9 +5,6 @@ title: 第2回ReactNativeアプリ開発⑦〜リリース
 thumbnail: 2021-09-19-11.24.43.png
 tags: ['reactnative']
 ---
-
-# 第 2 回 ReactNative アプリ開発 ⑦〜リリース
-
 [https://apps.apple.com/us/app/%E3%81%95%E3%82%89%E3%81%A1%E3%82%83%E3%82%93%E3%82%84%E3%81%A3%E3%81%9F/id1592878189](https://apps.apple.com/us/app/%E3%81%95%E3%82%89%E3%81%A1%E3%82%83%E3%82%93%E3%82%84%E3%81%A3%E3%81%9F/id1592878189)
 
 まだ少し課題はありますが、一旦リリースすることができました。

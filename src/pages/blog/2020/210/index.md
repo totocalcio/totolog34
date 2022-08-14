@@ -5,11 +5,9 @@ title: Stray start tag script.エラーの解消
 thumbnail:
 tags: ['html']
 ---
-
-# Stray start tag script.エラーの解消
 [W3C](https://validator.w3.org/)の HTML チェックでStray start tag script.のエラーが発生した時の対処法の一つとして紹介しておきます。
 
-#### 確認事項
+**確認事項**
 
 - 開始タグと閉じタグの数は合っている。
 - Swiper を使用している。

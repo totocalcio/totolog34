@@ -5,9 +5,6 @@ title: react-native-sliderの小数点が想定外の表示
 thumbnail: image.png
 tags: ['reactnative']
 ---
-
-# react-native-slider の小数点が想定外の表示
-
 そもそも浮動小数点の問題は多分これです。
 
 [https://stackoverflow.com/questions/2100490/floating-point-inaccuracy-examples/2100502#2100502](https://stackoverflow.com/questions/2100490/floating-point-inaccuracy-examples/2100502#2100502)

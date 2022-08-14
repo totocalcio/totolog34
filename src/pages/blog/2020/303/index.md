@@ -5,9 +5,6 @@ title: React Native + Expoで始めたらPCがクラッシュし続けた
 thumbnail:
 tags: ['reactnative', 'expo']
 ---
-
-# React Native + Expo で始めたら PC がクラッシュし続けた
-
 npm start もしくは expo start を実行すると１００％の確率でモニターがブラックアウト。PC がフリーズ。強制的に電源を落として再起動するしかなくなった。
 
 ## 環境紹介

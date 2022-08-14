@@ -5,15 +5,12 @@ title: 第2回ReactNativeアプリ開発⑤〜expo-notifications
 thumbnail: 2021-09-19-11.24.43.png
 tags: ['reactnative', 'expo']
 ---
-
-# 第 2 回 ReactNative アプリ開発 ⑤〜expo-notifications
-
 通知機能を足したいと思いまして**expo-notifications**を入れることにしました。
 Expo 公式のもので更新頻度は（今のとこ）気にしなくてもよさそうなのでとりあえずドキュメントを見に行きます。
 
 [https://docs.expo.dev/versions/v42.0.0/sdk/notifications/](https://docs.expo.dev/versions/v42.0.0/sdk/notifications/)
 
-#### 注意
+**注意** 
 
 - 本記事で公式ドキュメントへのリンクを度々貼っていますが、導入の際には最新のドキュメントを参考にしてください。
 - ググるといろんな expo-notifications に関するサンプルコードも出てくると思います。（私のように慣れないエンジニアはそのままコピペしたいとこですが、あくまで参考程度にして、最新の公式ドキュメントを見た方がいいです。expo-notifications に限ったことではないですけど。
@@ -135,7 +132,7 @@ async function registerForPushNotificationsAsync() {
 }
 ```
 
-#### 注意
+**注意**
 
 ```html
 この先Simulatorでは通知の確認ができないので実機で確認してください

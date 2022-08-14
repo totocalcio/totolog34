@@ -5,9 +5,6 @@ title: Gatsbyでブログ作る①〜セットアップ
 thumbnail: 1_tsOxXGb20o2zrCh6Sp5PYQ.png
 tags: ['gatsby']
 ---
-
-# Gatsby でブログ作る ①〜セットアップ
-
 リニューアルしようかなと思って。２年ぶりに触ります。
 
 [以前さわった時の記事](https://totolog34.com/225/)

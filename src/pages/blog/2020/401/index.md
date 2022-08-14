@@ -5,9 +5,6 @@ title: summaryタグの使い方に注意。構文エラーとiOSバグ。
 thumbnail:
 tags: ['css', 'html']
 ---
-
-# summary タグの使い方に注意。構文エラーと iOS バグ。
-
 HTML5 で追加された\<summary\>タグをご存知でしょうか。CSS すら不要でお手軽にアコーディオンがつくれてしまうタグです。
 
 [http://www.htmq.com/html5/summary.shtml](http://www.htmq.com/html5/summary.shtml)

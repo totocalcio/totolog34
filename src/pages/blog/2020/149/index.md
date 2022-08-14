@@ -5,9 +5,6 @@ title: 「JavaScriptをはじめよう」をはじめる
 thumbnail:
 tags: ['道のり', 'javascript']
 ---
-
-# 「JavaScript をはじめよう」をはじめる
-
 **_注意：この記事はよくわからないまま進めているポイントがありますが、詰まった部分もあえて共有する目的で公開しています。_**
 
 [https://note.com/erukiti/n/nc716e70fa9a1?magazine_key=m586c4ddc9ee1](https://note.com/erukiti/n/nc716e70fa9a1?magazine_key=m586c4ddc9ee1)
