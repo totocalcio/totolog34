@@ -3,6 +3,7 @@ const siteUrl = process.env.URL || `https://totolog34.com/`
 module.exports = {
   siteMetadata: {
     title: `うさ技術`,
+    description: `うさぎとフロントエンドが好きな技術ブログ。マークアップが一番好き。`,
     author: {
       name: `totocalcio`,
       summary: `totolog34`,

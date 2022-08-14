@@ -12,7 +12,7 @@ const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
 
   return (
     <Layout>
-      <Seo title={frontmatter.title} />
+      <Seo title={frontmatter.title} description={data.markdownRemark?.excerpt ?? ""} />
       <Container maxWidth="md" sx={{ py: 3 }}>
         <Typography variant="h6">{frontmatter.date}</Typography>
         <div className="blog-post-container">
@@ -40,6 +40,7 @@ export const query = graphql`
         title
         tags
       }
+      excerpt(pruneLength: 120)
     }
     site {
       siteMetadata {

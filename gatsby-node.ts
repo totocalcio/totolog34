@@ -14,6 +14,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       html: String!
       frontmatter: Frontmatter!
       fields: Slug
+      excerpt: String
     }
     type Slug {
       slug: String
