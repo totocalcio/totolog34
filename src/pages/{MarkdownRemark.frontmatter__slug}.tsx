@@ -13,15 +13,20 @@ const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
 
   return (
     <Layout>
-      <Seo title={frontmatter.title} description={data.markdownRemark?.excerpt ?? ""} />
+      <Seo
+        title={frontmatter.title}
+        description={data.markdownRemark?.excerpt ?? ''}
+      />
       <Container maxWidth="md" sx={{ py: 3 }}>
         <Typography variant="h6">{frontmatter.date}</Typography>
         <div className="blog-post-container">
           <h1>{frontmatter.title}</h1>
           <ul>
-            { frontmatter.tags?.map((tag:string) => <li key={tag}>{tag}</li>)}
+            {frontmatter.tags?.map((tag: string) => (
+              <li key={tag}>{tag}</li>
+            ))}
           </ul>
-          <Toc html={data.markdownRemark?.tableOfContents ?? ""}/>
+          <Toc html={data.markdownRemark?.tableOfContents ?? ''} />
           <div className="blog-post">
             <div
               className="blog-post-content"
@@ -47,9 +52,7 @@ export const query = graphql`
         tags
       }
       excerpt(pruneLength: 120)
-      tableOfContents(
-        absolute: false
-      )
+      tableOfContents(absolute: false)
     }
     site {
       siteMetadata {
