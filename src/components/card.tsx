@@ -44,6 +44,7 @@ const StyledGatsbyImage = styled(GatsbyImage)`
     display:grid;
     place-items:center;
     img {
+      padding-top: 16px;
       object-fit:contain !important;
     }
   }
