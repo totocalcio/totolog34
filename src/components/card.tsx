@@ -33,13 +33,6 @@ const StyledList = styled('ul')`
   margin-inline: 8px;
 `
 
-const StyledArea = styled(CardActionArea)`
-  &.MuiCardActionArea-root {
-    display: flex;
-    flex-direction: column;
-  }
-`
-
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #fff;
@@ -59,7 +52,7 @@ const StyledGatsbyImage = styled(GatsbyImage)`
 export const Card: React.FC<Props> = ({ post, defaultImage }) => {
   return (
       <StyledGrid>
-        <StyledArea>
+        <CardActionArea href={post.frontmatter.slug} sx={{display: 'flex',flexDirection: 'column'}}>
           <CardMedia sx={{flexGrow:'1',width:'100%',height:'100%'}}>
             <StyledGatsbyImage
               image={getImage(post.frontmatter.thumbnail ?? defaultImage)!}
@@ -71,7 +64,7 @@ export const Card: React.FC<Props> = ({ post, defaultImage }) => {
               {post.frontmatter.title}
             </Typography>
           </CardContent>
-        </StyledArea>
+        </CardActionArea>
         <CardActions>
           <StyledList>
             {post.frontmatter.tags?.map((tag: string) => (
