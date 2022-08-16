@@ -1,9 +1,26 @@
 import * as React from 'react'
-import { graphql, PageProps } from 'gatsby'
+import { graphql, Link, PageProps } from 'gatsby'
+import kebabCase from 'lodash/kebabCase'
 import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
-import { Container, Typography } from '@mui/material'
+import { Button, Container, Typography } from '@mui/material'
 import { Toc } from '../components/toc'
+import styled from 'styled-components'
+
+const StyledList = styled('ul')`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-inline: 8px;
+`
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+`
 
 const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
   data,
@@ -21,11 +38,15 @@ const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
         <Typography variant="h6">{frontmatter.date}</Typography>
         <div className="blog-post-container">
           <h1>{frontmatter.title}</h1>
-          <ul>
+          <StyledList>
             {frontmatter.tags?.map((tag: string) => (
-              <li key={tag}>{tag}</li>
+              <li key={tag}>
+                <Button size="small" variant="contained">
+                  <StyledLink to={`/tags/${kebabCase(tag)}/`}>{tag}</StyledLink>
+                </Button>
+              </li>
             ))}
-          </ul>
+          </StyledList>
           <Toc html={data.markdownRemark?.tableOfContents ?? ''} />
           <div className="blog-post">
             <div
