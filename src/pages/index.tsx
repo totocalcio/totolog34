@@ -14,17 +14,12 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
     <Layout>
       <Seo title="" />
       <Box
-        className='cards'
+        className="cards"
         sx={{
           display: 'grid',
-          gridTemplateColumns: {
-            xs: '1fr',
-            sm: '1fr',
-            md: 'repeat(2, 1fr)',
-            lg: 'repeat(3, 1fr)',
-          },
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: 3,
-          marginTop: 3,
+          marginBlock: 3,
         }}
       >
         {posts.map((post) => {
