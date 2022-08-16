@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import kebabCase from 'lodash/kebabCase'
-import {Card as MuiCard} from '@mui/material'
+import { Card as MuiCard } from '@mui/material'
 import CardActions from '@mui/material/CardActions'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
@@ -18,7 +18,7 @@ type Props = {
 
 const StyledGrid = styled(MuiCard)`
   display: grid;
-  grid-template-rows:subgrid ;
+  grid-template-rows: subgrid;
   grid-row: 2 span;
   gap: 0;
 `
@@ -39,44 +39,47 @@ const StyledLink = styled(Link)`
 `
 
 const StyledGatsbyImage = styled(GatsbyImage)`
-  &.gatsby-image-wrapper{
-    height:100% ;
-    display:grid;
-    place-items:center;
+  &.gatsby-image-wrapper {
+    height: 100%;
+    display: grid;
+    place-items: center;
     img {
       padding-top: 16px;
-      object-fit:contain !important;
+      object-fit: contain !important;
     }
   }
 `
 
 export const Card: React.FC<Props> = ({ post, defaultImage }) => {
   return (
-      <StyledGrid>
-        <CardActionArea href={post.frontmatter.slug} sx={{display: 'flex',flexDirection: 'column'}}>
-          <CardMedia sx={{flexGrow:'1',width:'100%',height:'100%'}}>
-            <StyledGatsbyImage
-              image={getImage(post.frontmatter.thumbnail ?? defaultImage)!}
-              alt=""
-            />
-          </CardMedia>
-          <CardContent>
-            <Typography gutterBottom variant="h6" component="div">
-              {post.frontmatter.title}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <StyledList>
-            {post.frontmatter.tags?.map((tag: string) => (
-              <li key={tag}>
-                <Button size="small" variant="contained">
-                  <StyledLink to={`/tags/${kebabCase(tag)}/`}>{tag}</StyledLink>
-                </Button>
-              </li>
-            ))}
-          </StyledList>
-        </CardActions>
-      </StyledGrid>
+    <StyledGrid>
+      <CardActionArea
+        href={post.frontmatter.slug}
+        sx={{ display: 'flex', flexDirection: 'column' }}
+      >
+        <CardMedia sx={{ flexGrow: '1', width: '100%', height: '100%' }}>
+          <StyledGatsbyImage
+            image={getImage(post.frontmatter.thumbnail ?? defaultImage)!}
+            alt=""
+          />
+        </CardMedia>
+        <CardContent>
+          <Typography gutterBottom variant="h6" component="div">
+            {post.frontmatter.title}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <StyledList>
+          {post.frontmatter.tags?.map((tag: string) => (
+            <li key={tag}>
+              <Button size="small" variant="contained">
+                <StyledLink to={`/tags/${kebabCase(tag)}/`}>{tag}</StyledLink>
+              </Button>
+            </li>
+          ))}
+        </StyledList>
+      </CardActions>
+    </StyledGrid>
   )
 }
