@@ -19,6 +19,7 @@ export const Layout: React.FC<Props> = ({ children }) => {
           title
           social {
             twitter
+            github
           }
         }
       }
@@ -29,6 +30,7 @@ export const Layout: React.FC<Props> = ({ children }) => {
       <Header
         title={site.siteMetadata.title}
         twitter={site.siteMetadata.social.twitter}
+        github={site.siteMetadata.social.github}
       />
       <Box sx={{ px: { xs: 2, md: 4 } }}>
         <CssBaseline />
