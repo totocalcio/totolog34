@@ -20,7 +20,7 @@ export const Seo: React.FC<Props> = ({
   meta = [],
   title,
 }: Props) => {
-  const { site, icon } = useStaticQuery(
+  const { site, icon, allFile } = useStaticQuery(
     graphql`
       query {
         site {
@@ -35,12 +35,22 @@ export const Seo: React.FC<Props> = ({
         icon: file(relativePath: { eq: "icon.png" }) {
           publicURL
         }
+        allFile(
+          filter: { sourceInstanceName: { eq: "font" }, name: { eq: "JKGM" } }
+        ) {
+          edges {
+            node {
+              publicURL
+            }
+          }
+        }
       }
     `
   )
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata.title
+  const fontJKGM = allFile.edges[0].node.publicURL
   let typeSafeMeta: Array<Meta>
   if (meta instanceof Array) {
     typeSafeMeta = meta
@@ -96,15 +106,13 @@ export const Seo: React.FC<Props> = ({
           href: icon.publicURL,
           sizes: `192x192`,
         },
+        {
+          rel: `preload`,
+          href: fontJKGM,
+          as: `font`,
+          type: `font/woff2`,
+        },
       ]}
-      // link={[
-      //   {
-      //     rel: `preload`,
-      //     href: `../font/JKGM.woff2`,
-      //     as: `font`,
-      //     type: `font/woff2`,
-      //   },
-      // ]}
     />
   )
 }
