@@ -87,14 +87,14 @@ export const Seo: React.FC<Props> = ({
         },
         ...typeSafeMeta,
       ]}
-      link={[
-        {
-          rel: `preload`,
-          href: `../font/JKGM.woff2`,
-          as: `font`,
-          type: `font/woff2`,
-        },
-      ]}
+      // link={[
+      //   {
+      //     rel: `preload`,
+      //     href: `../font/JKGM.woff2`,
+      //     as: `font`,
+      //     type: `font/woff2`,
+      //   },
+      // ]}
     />
   )
 }
