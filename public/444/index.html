@@ -1,0 +1,252 @@
+<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="twitter:description" content="background と opacity を分けるとうまくいかない ここによくあるボタンのデザインがあります。  CSS を設定するために数値を見てみます。  。そして   もしもこの…"/><meta data-react-helmet="true" name="twitter:title" content="【CSS】カラーコード＋透過を１６進数(Hex8桁)とrgbaで実装"/><meta data-react-helmet="true" name="twitter:creator" content="dir20634"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:description" content="background と opacity を分けるとうまくいかない ここによくあるボタンのデザインがあります。  CSS を設定するために数値を見てみます。  。そして   もしもこの…"/><meta data-react-helmet="true" property="og:title" content="【CSS】カラーコード＋透過を１６進数(Hex8桁)とrgbaで実装"/><meta data-react-helmet="true" name="description" content="background と opacity を分けるとうまくいかない ここによくあるボタンのデザインがあります。  CSS を設定するために数値を見てみます。  。そして   もしもこの…"/><meta name="generator" content="Gatsby 4.17.2"/><style data-href="/styles.9a63959347db1a1fd2fd.css" data-identity="gatsby-global-css">:root{--header-height-sm:60px;--header-height-xs:44px}@font-face{font-display:swap;font-family:JKGM;src:url(data:font/woff2;base64,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) format("woff2")}body,html{min-height:100vh}body{font-family:Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif}:target{scroll-margin-top:var(--header-height-sm)}@media(width < 600px){:target{scroll-margin-top:var(--header-height-xs)}}#___gatsby,#gatsby-focus-wrapper{min-height:100vh}ul{padding-left:1em}a{word-break:break-all}blockquote{background-color:#f5f2f0;margin:0;padding:1em 40px;position:relative}blockquote:before{content:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGlkPSJwcmVmaXhfX194MzJfIiB4PSIwIiB5PSIwIiBvcGFjaXR5PSIxIiBzdHlsZT0id2lkdGg6MzJweDtoZWlnaHQ6MzJweCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0icmdiKDc1LCA3NSwgNzUpIiBkPSJNMTQ4LjU3IDYzLjYxOUg3Mi4xNjJDMzIuMzEgNjMuNjE5IDAgOTUuOTI5IDAgMTM1Ljc4MXY3Ni40MDhjMCAzOS44NTIgMzIuMzEgNzIuMTYxIDcyLjE2MiA3Mi4xNjFoNy41NTlhMTkuMjYgMTkuMjYgMCAwIDEgMTUuODcgOC4zNjIgMTkuMjQ2IDE5LjI0NiAwIDAgMSAyLjA3NCAxNy44MTFMNTQuNTY4IDQyMi4yMDhhMTkuMjM5IDE5LjIzOSAwIDAgMCAyLjA3NCAxNy44MSAxOS4yNiAxOS4yNiAwIDAgMCAxNS44NyA4LjM2Mmg1MC43MzhjNy4xNTcgMCAxMy43My0zLjk4MSAxNy4wNDEtMTAuMzE4bDYxLjI1Ny0xMTcuMDNhMTY4LjM2OCAxNjguMzY4IDAgMCAwIDE5LjE5OC03OC4wNzJWMTM1Ljc4Yy4wMDItMzkuODUxLTMyLjMyNC03Mi4xNjEtNzIuMTc2LTcyLjE2MXpNNDM5Ljg0IDYzLjYxOWgtNzYuNDFjLTM5Ljg1MiAwLTcyLjE2IDMyLjMxLTcyLjE2IDcyLjE2MnY3Ni40MDhjMCAzOS44NTIgMzIuMzA5IDcyLjE2MSA3Mi4xNiA3Mi4xNjFoNy41NDNhMTkuMjM4IDE5LjIzOCAwIDAgMSAxNS44NyA4LjM2MiAxOS4yNSAxOS4yNSAwIDAgMSAyLjA5MSAxNy44MTFsLTQzLjExMyAxMTEuNjg2YTE5LjE5NyAxOS4xOTcgMCAwIDAgMi4wOSAxNy44MSAxOS4yMTcgMTkuMjE3IDAgMCAwIDE1Ljg3MSA4LjM2Mmg1MC43MjJjNy4xNTcgMCAxMy43My0zLjk4MSAxNy4wNTgtMTAuMzE4bDYxLjI0LTExNy4wM0ExNjguMzcyIDE2OC4zNzIgMCAwIDAgNTEyIDI0Mi45NlYxMzUuNzhjMC0zOS44NTEtMzIuMzA5LTcyLjE2MS03Mi4xNi03Mi4xNjF6IiBjbGFzcz0icHJlZml4X19zdDAiLz48L3N2Zz4=);left:16px;position:absolute;top:16px;width:16px}.cards img{-o-object-fit:cover;object-fit:cover}.blog-post-content a img{-o-object-fit:contain;object-fit:contain}.blog-post-content code[class*=language-],.blog-post-content pre[class*=language-]{white-space:break-spaces}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.utility-module--textDecorationNone--qfbkO{text-decoration:none}</style><style data-styled="" data-styled-version="5.3.5">.BwXkM{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g1[id="header__StyledHeader-sc-1mm3ke2-0"]{content:"BwXkM,"}/*!sc*/
+.gNJRsl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g2[id="header__StyledLogo-sc-1mm3ke2-1"]{content:"gNJRsl,"}/*!sc*/
+.gsRBJZ{position:-webkit-sticky;position:sticky;top:100vh;}/*!sc*/
+data-styled.g3[id="footer__StyledFooter-sc-1fckmp7-0"]{content:"gsRBJZ,"}/*!sc*/
+.vLcnE{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;list-style:none;padding:0;gap:8px;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-inline:8px;}/*!sc*/
+data-styled.g4[id="MarkdownRemarkfrontmatter__slug__StyledList-sc-1whf6kk-0"]{content:"vLcnE,"}/*!sc*/
+.cWFrrb{-webkit-text-decoration:none;text-decoration:none;color:#fff;}/*!sc*/
+data-styled.g5[id="MarkdownRemarkfrontmatter__slug__StyledLink-sc-1whf6kk-1"]{content:"cWFrrb,"}/*!sc*/
+</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><title data-react-helmet="true">【CSS】カラーコード＋透過を１６進数(Hex8桁)とrgbaで実装 | うさ技術</title><link data-react-helmet="true" rel="icon" href="/static/f176e985f3a32857949931dfc3b5c3d1/icon.png" sizes="192x192"/><link data-react-helmet="true" rel="preload" href="/static/05c8988fb0c5d3f2b1daeed08544fbb2/JKGM.woff2" as="font" type="font/woff2"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-PVNPNSX');</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVNPNSX" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css k008qs">.css-k008qs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}</style><div class="MuiBox-root css-k008qs"><style data-emotion="css sa9s">.css-sa9s{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:#ab47bc;color:#fff;}@media print{.css-sa9s{position:absolute;}}</style><style data-emotion="css 1rfdcj8">.css-1rfdcj8{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:#ab47bc;color:#fff;}@media print{.css-1rfdcj8{position:absolute;}}</style><header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1rfdcj8"><style data-emotion="css 1dzxeec">@media (min-width:0px){.css-1dzxeec{padding:0px;}}@media (min-width:600px){.css-1dzxeec{padding:8px;}}</style><div class="header__StyledHeader-sc-1mm3ke2-0 BwXkM MuiBox-root css-1dzxeec"><div class="header__StyledLogo-sc-1mm3ke2-1 gNJRsl MuiBox-root css-0"><a class="utility-module--textDecorationNone--qfbkO" href="/"><style data-emotion="css g29qie">.css-g29qie{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#ab47bc;color:#fff;}.css-g29qie:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(171, 71, 188, 0.04);}@media (hover: none){.css-g29qie:hover{background-color:transparent;}}.css-g29qie.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css 1fdcjbc">.css-1fdcjbc{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#ab47bc;color:#fff;}.css-1fdcjbc::-moz-focus-inner{border-style:none;}.css-1fdcjbc.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1fdcjbc{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1fdcjbc:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(171, 71, 188, 0.04);}@media (hover: none){.css-1fdcjbc:hover{background-color:transparent;}}.css-1fdcjbc.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1fdcjbc" tabindex="0" type="button"><style data-emotion="css 1k0nlww">.css-1k0nlww{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;font-family:JKGM;}</style><div class="MuiTypography-root MuiTypography-h6 css-1k0nlww">うさ技術</div></button></a><style data-emotion="css pld06a">@media (min-width:0px){.css-pld06a{height:30px;}}@media (min-width:600px){.css-pld06a{height:40px;}}</style><img class="MuiBox-root css-pld06a" src="/static/88ec0830000f2627cb16235c2823826c/usagi_momochy.gif" alt=""/></div><div class="MuiBox-root css-0"><style data-emotion="css 2p8pd2">.css-2p8pd2{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(171, 71, 188, 0.4);}.css-2p8pd2:hover{text-decoration-color:inherit;}</style><style data-emotion="css 1n62pqo">.css-1n62pqo{margin:0;color:#ab47bc;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(171, 71, 188, 0.4);}.css-1n62pqo:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1n62pqo" target="_blank" href="https://github.com/totocalcio"><button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1fdcjbc" tabindex="0" type="button"><style data-emotion="css vubbuv">.css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}</style><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="GitHubIcon"><path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path></svg></button></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1n62pqo" target="_blank" href="https://twitter.com/dir20634"><button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1fdcjbc" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="TwitterIcon"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path></svg></button></a></div></div></header></div><style data-emotion="css 1spmd8z">@media (min-width:0px){.css-1spmd8z{padding-left:16px;padding-right:16px;}}@media (min-width:900px){.css-1spmd8z{padding-left:32px;padding-right:32px;}}</style><div class="MuiBox-root css-1spmd8z"><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><style data-emotion="css 1niy7tn">.css-1niy7tn{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-left:16px;padding-right:16px;min-height:56px;}@media (min-width:600px){.css-1niy7tn{padding-left:24px;padding-right:24px;}}@media (min-width:0px){@media (orientation: landscape){.css-1niy7tn{min-height:48px;}}}@media (min-width:600px){.css-1niy7tn{min-height:64px;}}@media (min-width:0px){.css-1niy7tn{min-height:44px;}}@media (min-width:600px){.css-1niy7tn{min-height:60px;}}</style><div class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1niy7tn"></div><main><style data-emotion="css 1bhrb75">.css-1bhrb75{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;padding-top:24px;padding-bottom:24px;}@media (min-width:600px){.css-1bhrb75{padding-left:24px;padding-right:24px;}}@media (min-width:900px){.css-1bhrb75{max-width:900px;}}</style><div class="MuiContainer-root MuiContainer-maxWidthMd css-1bhrb75"><style data-emotion="css 1anx036">.css-1anx036{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;}</style><h6 class="MuiTypography-root MuiTypography-h6 css-1anx036">2020-10-28</h6><div class="blog-post-container"><h1>【CSS】カラーコード＋透過を１６進数(Hex8桁)とrgbaで実装</h1><ul class="MarkdownRemarkfrontmatter__slug__StyledList-sc-1whf6kk-0 vLcnE"><li><style data-emotion="css 1d1ttf5">.css-1d1ttf5{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.8125rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:4px 10px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:#ab47bc;box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);}.css-1d1ttf5:hover{-webkit-text-decoration:none;text-decoration:none;background-color:#773183;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-1d1ttf5:hover{background-color:#ab47bc;}}.css-1d1ttf5:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-1d1ttf5.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-1d1ttf5.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}</style><style data-emotion="css xb2fq2">.css-xb2fq2{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.8125rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:4px 10px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:#ab47bc;box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);}.css-xb2fq2::-moz-focus-inner{border-style:none;}.css-xb2fq2.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-xb2fq2{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-xb2fq2:hover{-webkit-text-decoration:none;text-decoration:none;background-color:#773183;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-xb2fq2:hover{background-color:#ab47bc;}}.css-xb2fq2:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-xb2fq2.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-xb2fq2.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}</style><button class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButtonBase-root  css-xb2fq2" tabindex="0" type="button"><a class="MarkdownRemarkfrontmatter__slug__StyledLink-sc-1whf6kk-1 cWFrrb" href="/tags/css/">css</a></button></li></ul><div class="MuiBox-root css-0"><style data-emotion="css 1avk4q9">.css-1avk4q9{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;margin-top:8px;margin-bottom:8px;}</style><div class="MuiTypography-root MuiTypography-h6 css-1avk4q9">目次</div><style data-emotion="css ampo0q">.css-ampo0q{padding:8px;background-color:#f5f2f0;}</style><div class="MuiBox-root css-ampo0q"><ul>
+<li><a href="#background-%E3%81%A8-opacity-%E3%82%92%E5%88%86%E3%81%91%E3%82%8B%E3%81%A8%E3%81%86%E3%81%BE%E3%81%8F%E3%81%84%E3%81%8B%E3%81%AA%E3%81%84">background と opacity を分けるとうまくいかない</a></li>
+<li><a href="#16%E9%80%B2%E6%95%B0hex%E3%81%A7%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">16進数(Hex)で設定する</a></li>
+<li><a href="#rgba%E3%81%A7%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B">rgbaで設定する</a></li>
+<li><a href="#sass%E3%81%A7%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B%E4%B8%80%E7%95%AA%E7%B0%A1%E5%8D%98">Sassで設定する※一番簡単</a></li>
+</ul></div></div><div class="blog-post"><div class="blog-post-content"><h2 id="background-と-opacity-を分けるとうまくいかない" style="position:relative;"><a href="#background-%E3%81%A8-opacity-%E3%82%92%E5%88%86%E3%81%91%E3%82%8B%E3%81%A8%E3%81%86%E3%81%BE%E3%81%8F%E3%81%84%E3%81%8B%E3%81%AA%E3%81%84" aria-label="background と opacity を分けるとうまくいかない permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>background と opacity を分けるとうまくいかない</h2>
+<p>ここによくあるボタンのデザインがあります。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 208px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2b48c011012f8eedd4c942b19219d0a7/8f2fb/image-19.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 38.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABIElEQVQoz62SwUvDMBTG+9eJtd2oDl2n/4qCNy9eBh4UBdElG6496m5DRIYeRCwMZUMY0yFo0s0KtXOj/SRxpiJ4EPbgx3tJvny88KJhCpEk8SQn0JJ4jGG3gah1jKhdQ9Q+wXvrb8R5Sg3j164yE6G9nW+AkTkwaoIRQ8KpgX7ZxEBQ+UKsBd8aCTXhV/P4eLpWnWq8nJWbvmODV230XRs9soi7vXnc7+fQ3LFU3TnISZ3CXZamwel6+mRp6BQk3LExcAt4JEu4KGZwtmnA27ZwWczgaiuL290FvBzZE70wXIG4H9RXU8OgvgZ2OANW0n8wKzMXEF3VPtF/6XTwioXhQyN9cjwK5UDCmxJCjyL0yD+gGD03VXeyw2l+GzHlT+D3Hr6dae/dAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/2b48c011012f8eedd4c942b19219d0a7/8f2fb/image-19.png"
+        srcset="/static/2b48c011012f8eedd4c942b19219d0a7/8a4e8/image-19.png 150w,
+/static/2b48c011012f8eedd4c942b19219d0a7/8f2fb/image-19.png 208w"
+        sizes="(max-width: 208px) 100vw, 208px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>CSS を設定するために数値を見てみます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 269px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a4374b7fea7dd4b08ff9b873966ac1f8/98fe2/image-24.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 100.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEZklEQVQ4y62Ua0yTZxTH+eK2TFQw2Qe/+GHLNheiS5aYGJk6L5t13jYVFwGjGx1z8zKHWcRtOqouEeOQTFHpWxACKiqgFXGIyqZiDZEAM7OFKFSxrZViX9rSvm3fy29pK7tkl087yT855yTn9+S87/P8kzRNQ1VVYhHLYxqJkfofxd97sUiKwVwuF12dndjt9nhTCoWQJOkpVIWnig/9OVdj9V+hSbEhWVbwBwKEI1Fi5/yb+I98pE6KrxwNQciDJvaiujtRH15H7b2AajuJersMtb0Y5eZuotcLUJrXoVzagKYFkbcUol28SVC08eTWsZGVNWTJhyLaUR61o9qbUa0nUDsOot4woF7ZhHo+C7luEb6GT4gKr6AYX0RVBtAmlkDRbXz9J3l8PPOPbxjyewkP9iE5O5D6WpBs9Uhd5UhtRUhXdyA1b0JqWEOobjlSVTpS9VuoymP8k8NEDkHAdYqBMxsTQEVRED0uRGc3Yl8bYvclxF9qEW+VIbbuR7xSgPjjF4hnP2Lo1ArEytmIVfNBeYzwGrQfBNl9BndDfgIYlWUcD3px3u3Ceecajs5GHG01OFoFHC3f42gqwHFuC47aXJzHM3GUz8dZuQSUAWZM0TCWAJ4LOJt2JYCRSATbr11YO1qxtjVhvV6LtaUS68USrOcLsdZvx3oyD2t1LrajWVgPL6TbtAwiHl7Nh6LLgOty/PA4MHbfLK1XudHSiKX5NJbGSizmw1hq92E5sRNLVT6W8k1YjDlYDmXSWrSQtpIVEPCQ1gvFQ4D9Go7W0gRweDhIg7ke8+kqztUImKt+wFxRiNlkwHwkH/PBzzEX52Let5pzhSs5u1PHhb3LwOcljVaKcUJfB462ygTQ7/dTJpRiLClCOLAHYb8BYd82hD15CN+tR9iZg/BtNsLXGQjbllKaN4fK7UtQh/xM0rIpog4e9PKwvSYBFEWR3bsMFHyzFcNXeRi2bsDwZS6GvLUYNmdh2JiB4bOlGNYtwJA7jx1rp7N343wi3gAZWhrHOAAPH+HoMieAHo+HT9flkrM2G/2aVehXZ6DPeg/9qkXoP9Chz5iLfvks9MvS+fj9aXz47hQ2Z87EN+jnJyZxj2JCzic47zQngG63m8WLF/HOvDno3p6Nbu5MdHPS0c2ehm7WVHQz30A343V0b05mQXoa86a+xErdVAYHfUQ9OuTho/iehHD1diaA/f39TJgwgXFjxzA+ZSyp45JJHTualDHPkzLmOVKSnyU1+RlSR49ifPIokkcl8fLEF3APepH2riD8czVDERXH/Xsjf3mYiooKjEYjJpMJQRAwmQTKywTKTQmZBOH3fmnpEY5VVxGKhNEa69Bst5EB35CYAPI/RtwPo9EoPT09eL1eFFUlMuyj+a6PnPMe1jd5yDYPYPeGAQVFjsbNNRDwY7PZ6L9vR1UUYluOmHPcD4PBILEnmDBLlT5RpsYapL4nRF13EIdfxh9WESUFX1glKicgsbm4W4VCccWAvwHKPR2MF8WYEAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/a4374b7fea7dd4b08ff9b873966ac1f8/98fe2/image-24.png"
+        srcset="/static/a4374b7fea7dd4b08ff9b873966ac1f8/8a4e8/image-24.png 150w,
+/static/a4374b7fea7dd4b08ff9b873966ac1f8/98fe2/image-24.png 269w"
+        sizes="(max-width: 269px) 100vw, 269px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">Hex：#E9952C</code>。そして</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 284px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/445bd0f1ea791deff054bde2d8772437/62f93/image-21.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 33.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAsElEQVQoz6WR2wqEIBiEff936wmUIMsuOlna+WaW+aNlaZcl6GKQ9J/PGVPjOOJTIYRHUn3fo65rtG2LruswTdMjKe89mqYRGKExRjm4Jr8rxZiEEXzHcL2M39u2YVmWA0hYnufIsgzDMGDfd6zr+qXTRMA8z++KbGSMQVEUsq+qqhKgc07WX7LWiiFNUyRJIk/DNISxodZaZgTIH8JhAsuy/CvO0MwmJ5ApmZwwVn4Bv7kU54OSquQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/445bd0f1ea791deff054bde2d8772437/62f93/image-21.png"
+        srcset="/static/445bd0f1ea791deff054bde2d8772437/8a4e8/image-21.png 150w,
+/static/445bd0f1ea791deff054bde2d8772437/62f93/image-21.png 284w"
+        sizes="(max-width: 284px) 100vw, 284px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><code class="language-text">不透明度：80%</code></p>
+<p>もしもこの 2 種類のプロパティを素直にかいた場合、下記のようになるかもしれません。</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span>#E9952C
+<span class="token property">opacity</span><span class="token punctuation">:</span>0.8</code></pre></div>
+<p>しかしこれではテキストも透過されてしまうので、カラーコードに対して透過を設定しないといけません。</p>
+<h2 id="16進数hexで設定する" style="position:relative;"><a href="#16%E9%80%B2%E6%95%B0hex%E3%81%A7%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B" aria-label="16進数hexで設定する permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>16進数(Hex)で設定する</h2>
+<p>デザインソフトでは Hex 値が 6 桁表示になっていますが、8 桁で設定することができます。
+8 桁にすると下二桁は透明度を指します。
+アルファ値の数値はこちらが参考になります。</p>
+<p><a href="https://qiita.com/CUTBOSS/items/6166cf79b9f18c45a010">https://qiita.com/CUTBOSS/items/6166cf79b9f18c45a010</a></p>
+<p>つまり<code class="language-text">#E9952C</code>と<code class="language-text">透明度80%</code>は、<code class="language-text">#E9952C+CC</code>となるので、CSSはこのように設定します。</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span>#E9952CCC</code></pre></div>
+<h2 id="rgbaで設定する" style="position:relative;"><a href="#rgba%E3%81%A7%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B" aria-label="rgbaで設定する permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>rgbaで設定する</h2>
+<p>rgba の場合はデザインソフトで rgb で表示するように切り替えます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 258px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9e4fe4d52b45e773e8404de189621ff3/d9489/image-22.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 138%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFZElEQVRIx6WVe2xTVRzHr3/4ikYeOoyJf5qYmBijiSGKCgKiQgfCeDlARFfo5pL5AKdMjAUCAUF8gKwMhQHyEigwnxgVOzZUjDIqzo1Je7e267a79bHerrf3nvsxpzgyFZXg7+Sb8zuv7/m9co7CX8S27QvqFytKT08PqqrS3NxMOq3nJlOpFEJYYAvsP8HCFn9ANiHOQbbcuo2i6zqR9nYCQRUja+UIDVNu+bvY/zQYoCvnRtIaAzsTR+hd2KkoItGGiJ1FdDcjun5BdDRgt3+PCH+LCB3HRiAaf8VuPoO0Ma0FEVYWxcr2IZIRrM6fEW21iDOHEP4tiBNrEbUViC+KsQ9Pw9zvoHffNKyqWxBvD8WiE2u8GzFtNYbdSWvVOIyeAEo2k8ZMtmN2NWK2Hcds+RTz9E7MHzdiHl+BebQc8zMnRs1skjVOstvvway6DYs2mNQEhb9hiCCRTQ+S7TmLkk4lSWmt6BE/eqAO/ddP0E/tQj9RiV63Cv2rCvRPS9EPzUbf60Dffj+pzcOxUQlMArUQLDtIaFsB2ZiKEu/R6Ao1owV+RGs6inaqBu2HD9COV6IdXY12ZAnaR2VoB55C2zMdrXocnVUjgVbWOWDDDHJ62665ZONtKNFIiEDTSdTT9ag/fY76/X7UY9WoX29APbIK9aMlqN7nUPcUoe54HPX9CZz1PAS0MXkWzHJKwhDqvlKyiTDKby3NNJyoxf/tF/hrD+L/6gP8n2/C//E6/AeX4/9wMf6dZfiri/C/V8ipjfmcXP8o9IVwbIfpe2SdRQgefgkj0Y7ScPInvj5SQ+2RA/g+3oHv4CZ8+97Ct3slvh2v4tuyEF/VM/g2zqP2nZn43sjnm7XjIRZiYg/MiAG9HQQ/W46R7ECp9X3DhzurObj7fbzbN+Ddugbv5uV4K1/Bu2Eh3rdK8a4twrt6Nt6VUzmwdDwHlj4MWgeTqGcG30EyTuDLdRi9XSg1hw+x/s3X2bT+dTzrluFZ8wqeVYvwrCjDs8yF57V5eJYU4llcgKc8n8oXxuJZNBo6E+SzkGl2BfQaBHyVGKlulOrqrSwuf4GlS17E/XIZ7heLcS8swv3cXNxlj+MunYq7ZCJu16O454/ltXn34XbeSzaa4nkmUW7PgJRNoH4bRiqG8sbaNcyZNZMFTz+Bc+5MnHOm4pz9GM7CCThnPoxz+hicU0finDKC+ZOHU5R/J64pdxIL91LPROqZjp2C4In9GHoCpaJiMaNHPcDECY/geGQMjnGjcDx0P46x9+IYMxzHg3fjGHUXjpF34HjgdsaPuJXJo24jEophpYvIJF0YGVBPH8PoS6EUFBRw9VVXctONeQy7YQjDrh/MsKHXkTfkWvKGXEPe4KvJG3QVeYOuYNigy7n+msu4eeiVBMJRjP2LSO0rxwDONp/GyGRQ3l3/DnOffJLikhJcLhcu1wKKi12UFLvO9/14psRF8YL5PFtagqbrsHsz5t73cu9VZ0eUjCRMZvnfMvBlVxpCCcJJEzVmYJoWyYyFrqdpbPyFQCBAe3s7wrKwLAvTNBFCoOspQqEQ0UiYTDqdI4pGoxiGgdIQThDVBcF4FkvYxDI2fZkMjY2NtLa2omlazgJJJCF1eTASidDR0ZFzM5vN5i6X60pLNHHeXDkhX/C+vj4SiT/PD8S/upyIxwmHI5xpaSEej6On07m+u7v7vEUXIhiIgXNKPJGgqamJurq6HIm0ThLK3/CvBy8GSiwWO++KJJNIJpM58ksilN+ozKAk6o+PDLS86FJEkdbIbDU0NOSyJ0WSy49floJc+y/075OhUqRr/ZnsD7Ak9Pv9uVIIBoMXBVlisjJ+B/YBbJIyxADNAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/9e4fe4d52b45e773e8404de189621ff3/d9489/image-22.png"
+        srcset="/static/9e4fe4d52b45e773e8404de189621ff3/8a4e8/image-22.png 150w,
+/static/9e4fe4d52b45e773e8404de189621ff3/d9489/image-22.png 258w"
+        sizes="(max-width: 258px) 100vw, 258px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 276px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a70e79b08b1e48ffdbffbf1191740022/f2d11/image-23.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 122%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEoklEQVQ4y52Va2wUVRTH94tfkJAI8ipVYyDGxBihQoEsRlRi/NCKgOXVkAVpFNLyqEjRuBRjwlMw0IAtCk3BiJVHV6AgBapgV6gN9Mn2kdLdPrYty7ad3W13Z3Zn7v7MbSkWQgz4T/6555w5+d9z7tw5Y9J1nUgkgmEY/ZT2YOxxGQ6HEULQ1dWFKRqN4vF4qKuro6WlBQlNU4mEtX6bqHiIxsAqYYh/c4De3t4BQVmRovjoC6kDecC9VKJD+LA/NC7h9XoHBIWugtYD/haMu9WI9usI1yVEQwHi1lFExXcYZbuJXN+BuLgaUbWfqNeHnppJtNuHUl+I2lFFUNUxCVmhGsBQXBgdNxDOIoTjJ8TNLIQ9E+NSKuJMEuGT7+O3LcPIGolRmIBo9BE1WYm6evGcS6G3/CiqASZ5mGqfgtbtQmuvQHP+jlZXgFaRi1a6B+3qZrSiNNQzywidWoB6eAra5RUYTvA9E0C0grc4nb6aAoIRMBlCoHTdQWlvQHGWodRfQqk6gVJ2CKVkD0pxJsr5dSi25fh+mU/PDzMIXv6EnibYM1zga4Geq1/SW1t4T9AwaG914W6swO34E3fFOdx//4y75Hvcxbtx/7YF9+l03CdScB9bTEvOm/iL1uBywoujIsiL4f9rG4H6i4SkYETXqa+twXGzhNrSCzhKTuIozsNxYT+OsztwnLLiyF+P48cUanOXUp31Dp1n1nPbC0+n6Ti7wX99H4HbV1CloLyUpddKKLl8FnvRceyFedhtB7Af/wb7sa+wH8nAfigNe84K7PuX8MfOOTTkf0qTDiOcEVyGFDyE33WNYNjApGka5wpPU5Cfh+3YQWxH9mI7vB3bwS3YDmRg27cG27cp2HYl8+v2DzlunU1Z7gaaCDGCE7hQ8ZXl42+9MXBtQqEQebmHObB3Fzl7t5G9O5PsnZvI3rqO7K9Xkb1lBdnWpWR/Pp+cTYnsS53JhazPaKKd4ZFpOOnAV34eX1sFugBTX18f27dt5YuMdDZnrMW6YRXW9I+wrl2GNXUR1tXzsH6cgDXlXTavfJuNi17j6Nb1dOJirj6MTprprr6Cr/1W/1dj8gcCrElLJXlJEpbkJCyLP8CyMAFL0ntYFszBMm82lrmzsCTOYHliPIvemsSOjasJ46JUDEOlGU/dDfyeRkJqGJOiKCQmJDA9fiqzZsZjnh6HOX4y5mmvYp76CubXX8Yc9xLmyRN5Y8pE4iaNJG1lMhidBKtmIMLtdLQ46VU8+P0BTN3d3cTFTWHs2DE8/9wEYieMJzZmHLExY4mNGUPs+NHEjn+W2HGjeCFmNCOHP8XCRQug5w7+VWaEt4OOu3cJ9vXS2Ng4cLHr6+upqqp6gNXV1VRWVvavkjJWU1NDeXk5ruZmMHSoqYRwGF0IhGEgux2YNkLwpAiGQkTu2YauI3WCwSAmOQsbGhpobW3tfyjfujwGWb6EHLptbW2oqorT6eyPycksu/J6PP2+rFhWJ3NMj9pd7iaPYrBy6UtKyNigP2jL3Acm9mDyoP0kHArZ3f1fgOz/YeH/wqNy7wvKP1cgEPhfFT5ScOhuQ9fHxVDBfwBPN2qPAUlnrwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/a70e79b08b1e48ffdbffbf1191740022/f2d11/image-23.png"
+        srcset="/static/a70e79b08b1e48ffdbffbf1191740022/8a4e8/image-23.png 150w,
+/static/a70e79b08b1e48ffdbffbf1191740022/f2d11/image-23.png 276w"
+        sizes="(max-width: 276px) 100vw, 276px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>切り替えたらそのまま数値と透明度(今回は 0.8)を設定すればおしまいです。</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span><span class="token function">rgba</span><span class="token punctuation">(</span>233<span class="token punctuation">,</span>149<span class="token punctuation">,</span>44<span class="token punctuation">,</span>0.8<span class="token punctuation">)</span></code></pre></div>
+<h2 id="sassで設定する一番簡単" style="position:relative;"><a href="#sass%E3%81%A7%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B%E4%B8%80%E7%95%AA%E7%B0%A1%E5%8D%98" aria-label="sassで設定する一番簡単 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sassで設定する※一番簡単</h2>
+<p>Hex8 桁はアルファ値を調べないといけないし、rgba はいちいちカラーコードを切り替えないといけない＆手打ちだし、手間がかかります。
+<strong>そんな問題を Sass が解決してくれます。</strong></p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token function">rgba</span><span class="token punctuation">(</span>#E9952C<span class="token punctuation">,</span>0.8<span class="token punctuation">)</span></code></pre></div>
+<p>Sassならばrgbaに16進数を設定しても変換してくれます。
+もちろん変数も使えます。</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css">$<span class="token property">color</span><span class="token punctuation">:</span>#E9952C<span class="token punctuation">;</span>
+$<span class="token property">alpha</span><span class="token punctuation">:</span>0.8<span class="token punctuation">;</span>
+<span class="token function">rgba</span><span class="token punctuation">(</span>$color<span class="token punctuation">,</span>$alpha<span class="token punctuation">)</span></code></pre></div>
+<p>引数だって。</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>$<span class="token property">color</span><span class="token punctuation">:</span>#E9952C<span class="token punctuation">,</span>$<span class="token property">alpha</span><span class="token punctuation">:</span>0.8<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<p>開発環境やプロジェクトによっては Sass が使えないこともあると思うので、その時は手間ですが通常の CSS で設定しましょう。</p></div></div></div></div></main></div><style data-emotion="css 1vjzque">.css-1vjzque{padding:8px;text-align:center;background-color:#ab47bc;color:#fff;}</style><div class="footer__StyledFooter-sc-1fckmp7-0 gsRBJZ MuiBox-root css-1vjzque"><footer>© 2019 うさ技術.</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/444/";window.___webpackCompilationHash="81a65244d1944069afd1";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3c7a835e43cbbd02c769.js"],"app":["/app-463bbd70dff68507aabe.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-6b172a2fccd63fa301f2.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-3bde0e1ba2fc1504240f.js"],"component---src-pages-markdown-remark-frontmatter-slug-tsx":["/component---src-pages-markdown-remark-frontmatter-slug-tsx-e46e15ee889662241896.js"],"component---src-pages-tags-tsx":["/component---src-pages-tags-tsx-cfa3765c2a6aa2fef964.js"]};/*]]>*/</script><script src="/polyfill-3c7a835e43cbbd02c769.js" nomodule=""></script><script src="/app-463bbd70dff68507aabe.js" async=""></script><script src="/framework-4e6393bcb754d628a2a5.js" async=""></script><script src="/webpack-runtime-b55c6e84c1614bdd6a4a.js" async=""></script></body></html>

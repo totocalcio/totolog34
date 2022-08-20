@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://totolog34.com/sitemap-index.xml
+Host: https://totolog34.com
