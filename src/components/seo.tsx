@@ -90,7 +90,7 @@ export const Seo: React.FC<Props> = ({
       link={[
         {
           rel: `preload`,
-          href: `../font/totolog34_JKGL.woff2`,
+          href: `../font/JKGM.woff2`,
           as: `font`,
           type: `font/woff2`,
         },

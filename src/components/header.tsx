@@ -28,7 +28,7 @@ export const Header: React.FC<Props> = ({ title, twitter, github }) => {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ flexGrow: 1, fontFamily: 'JKGL' }}
+                sx={{ flexGrow: 1, fontFamily: 'JKGM' }}
               >
                 {title}
               </Typography>
