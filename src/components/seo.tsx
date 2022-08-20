@@ -20,7 +20,7 @@ export const Seo: React.FC<Props> = ({
   meta = [],
   title,
 }: Props) => {
-  const { site } = useStaticQuery(
+  const { site, icon } = useStaticQuery(
     graphql`
       query {
         site {
@@ -31,6 +31,9 @@ export const Seo: React.FC<Props> = ({
               twitter
             }
           }
+        }
+        icon: file(relativePath: { eq: "icon.png" }) {
+          publicURL
         }
       }
     `
@@ -86,6 +89,13 @@ export const Seo: React.FC<Props> = ({
           content: metaDescription,
         },
         ...typeSafeMeta,
+      ]}
+      link={[
+        {
+          rel: `icon`,
+          href: icon.publicURL,
+          sizes: `192x192`,
+        },
       ]}
       // link={[
       //   {

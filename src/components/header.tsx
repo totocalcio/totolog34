@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link,useStaticQuery,graphql } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import { AppBar, Box, Button, Typography, Link as MuiLink } from '@mui/material'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import GitHubIcon from '@mui/icons-material/GitHub'
@@ -30,13 +30,13 @@ const StyledLogo = styled(Box)`
 `
 
 export const Header: React.FC<Props> = ({ title, twitter, github }) => {
-  const {gif}:Gif = useStaticQuery(graphql`
+  const { gif }: Gif = useStaticQuery(graphql`
     query {
-      gif: file(relativePath: { eq: "usagi_momochy.gif"}) {
+      gif: file(relativePath: { eq: "usagi_momochy.gif" }) {
         publicURL
-            }}
+      }
+    }
   `)
-  console.log(gif.publicURL)
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar>
@@ -53,7 +53,12 @@ export const Header: React.FC<Props> = ({ title, twitter, github }) => {
                 </Typography>
               </Button>
             </Link>
-            <Box component="img" src={gif.publicURL} sx={{height:{xs:'30px',sm:'40px'}}} alt=""/>
+            <Box
+              component="img"
+              src={gif.publicURL}
+              sx={{ height: { xs: '30px', sm: '40px' } }}
+              alt=""
+            />
           </StyledLogo>
           <Box>
             <MuiLink
