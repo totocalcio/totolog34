@@ -18,8 +18,14 @@ type Props = {
 
 const StyledGrid = styled(MuiCard)`
   display: grid;
-  grid-template-rows: subgrid;
-  grid-row: 2 span;
+  grid-template-columns: 1fr;
+  @supports not (grid-template-rows: subgrid){
+    grid-template-rows: 4fr 1fr;
+  }
+  @supports (grid-template-rows: subgrid){
+    grid-template-rows: subgrid;
+    grid-row: 2 span;
+  }
   gap: 0;
 `
 
@@ -49,24 +55,30 @@ const StyledGatsbyImage = styled(GatsbyImage)`
     }
   }
 `
+const StyledTitle = styled(Typography)`
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+`
 
 export const Card: React.FC<Props> = ({ post, defaultImage }) => {
   return (
     <StyledGrid>
       <CardActionArea
         href={post.frontmatter.slug}
-        sx={{ display: 'flex', flexDirection: 'column' }}
+        sx={{ display: 'grid', gridTemplateColumns:'1fr', gridTemplateRows: {xs:'2fr 1fr',sm: '3fr 1fr'}}}
       >
-        <CardMedia sx={{ flexGrow: '1', width: '100%', height: '100%' }}>
+        <CardMedia sx={{ height: '100%' }}>
           <StyledGatsbyImage
             image={getImage(post.frontmatter.thumbnail ?? defaultImage)!}
             alt=""
           />
         </CardMedia>
         <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
+          <StyledTitle sx={{fontSize:{xs:'16px',sm:'20px'}}}>
             {post.frontmatter.title}
-          </Typography>
+          </StyledTitle>
         </CardContent>
       </CardActionArea>
       <CardActions>
