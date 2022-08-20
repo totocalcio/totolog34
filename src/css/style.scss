@@ -3,8 +3,23 @@
   --header-height-xs:44px ;
 }
 
+@font-face {
+  font-family: 'JKGL';
+  src: url('../font/totolog34_JKGL.woff2') format('woff2');
+  font-display: swap;
+}
+
 html,body{
   min-height: 100vh;
+}
+
+body {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
 }
 
 :target {

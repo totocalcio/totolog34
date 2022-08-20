@@ -18,14 +18,18 @@ const StyledBox = styled(Box)`
   align-items: center;
 `
 
-export const Header: React.FC<Props> = ({ title, twitter,github}) => {
+export const Header: React.FC<Props> = ({ title, twitter, github }) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar>
         <StyledBox sx={{ p: { xs: 0, sm: 1 } }}>
           <Link to="/" className={utility.textDecorationNone}>
             <Button sx={{ color: 'primary.contrastText' }}>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{ flexGrow: 1, fontFamily: 'JKGL' }}
+              >
                 {title}
               </Typography>
             </Button>

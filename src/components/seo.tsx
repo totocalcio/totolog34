@@ -87,6 +87,14 @@ export const Seo: React.FC<Props> = ({
         },
         ...typeSafeMeta,
       ]}
+      link={[
+        {
+          rel: `preload`,
+          href: `../font/totolog34_JKGL.woff2`,
+          as: `font`,
+          type: `font/woff2`,
+        },
+      ]}
     />
   )
 }

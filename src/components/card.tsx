@@ -19,10 +19,10 @@ type Props = {
 const StyledGrid = styled(MuiCard)`
   display: grid;
   grid-template-columns: 1fr;
-  @supports not (grid-template-rows: subgrid){
+  @supports not (grid-template-rows: subgrid) {
     grid-template-rows: 4fr 1fr;
   }
-  @supports (grid-template-rows: subgrid){
+  @supports (grid-template-rows: subgrid) {
     grid-template-rows: subgrid;
     grid-row: 2 span;
   }
@@ -67,7 +67,11 @@ export const Card: React.FC<Props> = ({ post, defaultImage }) => {
     <StyledGrid>
       <CardActionArea
         href={post.frontmatter.slug}
-        sx={{ display: 'grid', gridTemplateColumns:'1fr', gridTemplateRows: {xs:'2fr 1fr',sm: '3fr 1fr'}}}
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gridTemplateRows: { xs: '2fr 1fr', sm: '3fr 1fr' },
+        }}
       >
         <CardMedia sx={{ height: '100%' }}>
           <StyledGatsbyImage
@@ -76,7 +80,7 @@ export const Card: React.FC<Props> = ({ post, defaultImage }) => {
           />
         </CardMedia>
         <CardContent>
-          <StyledTitle sx={{fontSize:{xs:'16px',sm:'20px'}}}>
+          <StyledTitle sx={{ fontSize: { xs: '16px', sm: '20px' } }}>
             {post.frontmatter.title}
           </StyledTitle>
         </CardContent>
