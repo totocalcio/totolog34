@@ -104,7 +104,7 @@ export const Seo: React.FC<Props> = ({
         {
           rel: `icon`,
           href: icon.publicURL,
-          sizes: `192x192`,
+          sizes: `32x32`,
         },
         {
           rel: `preload`,
