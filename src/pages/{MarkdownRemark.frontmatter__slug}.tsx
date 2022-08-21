@@ -33,6 +33,7 @@ const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
       <Seo
         title={frontmatter.title}
         description={data.markdownRemark?.excerpt ?? ''}
+        image={frontmatter.thumbnail?.publicURL ?? ''}
       />
       <Container maxWidth="md" sx={{ py: 3 }}>
         <Typography variant="h6">{frontmatter.date}</Typography>
@@ -71,6 +72,9 @@ export const query = graphql`
         slug
         title
         tags
+        thumbnail {
+          publicURL
+        }
       }
       excerpt(pruneLength: 120)
       tableOfContents(absolute: false)

@@ -7,6 +7,7 @@ type Props = {
   lang?: string
   meta?: []
   title: string
+  image?: string
 }
 type Meta = {
   property?: string
@@ -19,8 +20,9 @@ export const Seo: React.FC<Props> = ({
   lang = 'ja',
   meta = [],
   title,
+  image,
 }: Props) => {
-  const { site, icon, allFile } = useStaticQuery(
+  const { site, icon, allFile, defaultImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -33,6 +35,9 @@ export const Seo: React.FC<Props> = ({
           }
         }
         icon: file(relativePath: { eq: "icon.png" }) {
+          publicURL
+        }
+        defaultImage: file(relativePath: { eq: "default.png" }) {
           publicURL
         }
         allFile(
@@ -50,6 +55,7 @@ export const Seo: React.FC<Props> = ({
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata.title
+  const metaImage = image || defaultImage.publicURL
   const fontJKGM = allFile.edges[0].node.publicURL
   let typeSafeMeta: Array<Meta>
   if (meta instanceof Array) {
@@ -71,6 +77,10 @@ export const Seo: React.FC<Props> = ({
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: metaImage,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -81,6 +91,10 @@ export const Seo: React.FC<Props> = ({
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: metaImage,
         },
         {
           name: `twitter:card`,
@@ -97,6 +111,10 @@ export const Seo: React.FC<Props> = ({
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: metaImage,
         },
         ...typeSafeMeta,
       ]}
