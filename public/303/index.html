@@ -1,0 +1,495 @@
+<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="twitter:image" content="/static/19895dbd883ae2f20ce65ac78890af71/default.png"/><meta data-react-helmet="true" name="twitter:description" content="npm start もしくは expo start を実行すると１００％の確率でモニターがブラックアウト。PC がフリーズ。強制的に電源を落として再起動するしかなくなった。 環境紹介 Windows10 wsl Visual Studio…"/><meta data-react-helmet="true" name="twitter:title" content="React Native + Expoで始めたらPCがクラッシュし続けた"/><meta data-react-helmet="true" name="twitter:creator" content="dir20634"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" property="og:image" content="/static/19895dbd883ae2f20ce65ac78890af71/default.png"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:description" content="npm start もしくは expo start を実行すると１００％の確率でモニターがブラックアウト。PC がフリーズ。強制的に電源を落として再起動するしかなくなった。 環境紹介 Windows10 wsl Visual Studio…"/><meta data-react-helmet="true" property="og:title" content="React Native + Expoで始めたらPCがクラッシュし続けた"/><meta data-react-helmet="true" name="image" content="/static/19895dbd883ae2f20ce65ac78890af71/default.png"/><meta data-react-helmet="true" name="description" content="npm start もしくは expo start を実行すると１００％の確率でモニターがブラックアウト。PC がフリーズ。強制的に電源を落として再起動するしかなくなった。 環境紹介 Windows10 wsl Visual Studio…"/><meta name="generator" content="Gatsby 4.17.2"/><style data-href="/styles.9a63959347db1a1fd2fd.css" data-identity="gatsby-global-css">:root{--header-height-sm:60px;--header-height-xs:44px}@font-face{font-display:swap;font-family:JKGM;src:url(data:font/woff2;base64,d09GMgABAAAAAAb8AA4AAAAADtQAAAaoAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABlYATAiEAAmBMxEMCoY4hU4BNgIkAxgLHAAEIAWHdgcgDIUCG1gNERSsoyD74sBu43wAFiw4iDvt5uUn6O9hWqLNyqyAV3VrDhSqhvnSFqujJybKvbhC/MfF9r37403TlGCHEYcBJYHHATceRnSmN7Dd2TcSg/N62XLGZQ648y0PInj4/3s/tdRtgwPyAfyd+0ud0qiU4qWBDDbBsdCUainVEopoQAcxa5yCgYjy7PSyAVHw5y8AlB/QUiCxChgA9Cye+oM4LAAMQ1hFK8o8q36N6IYG1NuIDw0OBdkuWNqAwZYPAtvuhEMAeAgNxWuwYAjU2iYw90ydawwGATp3BD/iLz45vGnmmOPHvBnDf0MEgyOQGJhY2Di4ePhChAoTLkKkKNFixIoTL0GiJMlSpKKkSZchU5ZsOXLlyVegUJFiJQSEREqJSZQpV6FSlWo1atWp16BRk2YtWrWRkpFTUFJR09DS0TMwMjGjWbTr0MnKxs7BqUu3Hr369Bvg4ubh5eM3yGBDDDXMcCOMNMpoY4w1zngTTDTJZFN+UHj9r+goyio10oKFtOIhTUS1Zq5GqnDqjCKkjRnSzErzdbYKp8EpQ9q5IS28tKbBV+H0hlQhHaEhg2GF6Y7wwpKjYflrmyKq/1XjRUcjB8n7AgDAsGB7EHAAAIzX4F4ALoB3ANANwjUCwMSFKhb9PIQcIj0qrJUQMhhMF+LChAMKdx8u3hN74cmL1A3bEw6/fvmyYmXF4IYDsU8CgVeNr0xHtecn8F6ZTa9pHuJvp1en3JFu0pf57tOvX+vXJpwp3xS96dmrV2aXJfkVAQsPcREHOPYozWdlMPUiZz5N3+IuWIPQzRb6jhRxlga4QJWf9fDxDL80nTfLV+iA5fWYsbp/cXCjz1VTBac5PcX74RzEITgk56UJ4+AXc+lAwKK2JavmlyarxRkaTremXy5D74b/DaD8McB1cCd8lZTw/07hfzknFj36d4Mty8XqT/ljV2Qn/cmuq9OyFmIz6rRVnUluokVnrHnNrhj2uSRUWjVGX9Q2J7p/Zo/vG741SYpnqfjOMLlGNC5rbPilSfmDkpZcerTVesbZVqRNcnC482h7br3PZxlqrZ78qeW/WV822t533Qnt2Db9YF+tMkZJ4PSMNH5tztLBBSznu+r/h3UO2+vdW9vEHDpkKGbFZn1uke6YNmSIdHIe1bFBMNs21XimMqdjY+5I6che8VtnHb871itWXvFccRUrBQ3yElFDafv1pJoYe9v83s3WkmaCsH+ak3YxZ/7oujlOj3NBRlN58weuORN/T3S3SbxjRcYZlXzRnajP7ZyoX0rv/XjWFld8JCVgC095JYCM+1SNZYy8vEo72i8GAIAT4CgUrEI4xYCeI4usX2wIy4+M4HlzM1OSQ8WCIcUjP1QADZdStlVYRGZxOwtyyJjo9sQEkrRImETBPr/9BVchRJ+8VCqZyfRkk7uQzz3HxTqSk8i0SHs4ysmwhrIINu5AwKsAAoBA6vfDEmdozW+ABtRXPPs0EAGx+yH8A7wRAJiQW/hBvDMBYqUtH3zeP40xgD4oCQDfwLf8zDsAlRtraGGBDPkZfAgAIArEAbGaojL7XP01yxsIqabJYZgacziSrJloV+dIPIYqg3ZHM7Pe+wx17rl73SrRu5NE7z4SvUdJ9J4i0XueRO9tEt0PAN8zbAAY6yk5hBNZxkRIDGRMcNJFM9HuzZiIy0gyJjhZSDOzdXUtnNFsJRhtHMFo0wlGK6CZaK8KRttCMFobwe/pQPOQoeOGe1zukVRubx4lEgjFlLqAatNqTEbK6use3G2n5ovanIRSKLUsv0NapDL0u0b5u4c3+fSP6P7hIzxDBlPCYoFg4q+4xjA0/5Sax9U9v6u7R6Lk6pWHIvpd7hSjqBVkH9JGS8PEiGLl021wcpkddYZj9GbJWQWlnjovSxVRMejnMopft3to6lA1Ruv/ad7sMcRgFKFigujEbW+KZyn8U68Ewa0gEL50FgVnHUWLjqFprS3HsOkpfAZiJnIWxmxMAgJgIAFRYBrCQFkYB+cRBEQRSUKWURRUFU1D1zEMTBPLwrZxHFwXz8P3CQLCkCgijkkS0pQsI88pCsqSqqKuaRralq6j7xkGxpFpYp5ZFtaVbWPfOQ7Ok+vivnke3pfv4/8FAEFQCBKGRRBRVAwTxyUISVKKkqZlGFlWjpPnFQRFUUlSllUUVVVNU9c1DE1Ty9K2dRxdV8/T9w0Cw9AoMo5NEtPULDPPLQrL0qqyrm0a29aus+8dBsfRaXKeXRbX1W1z3z0Oz9Pr8r59Ht/X75v9/xAA) format("woff2")}body,html{min-height:100vh}body{font-family:Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif}:target{scroll-margin-top:var(--header-height-sm)}@media(width < 600px){:target{scroll-margin-top:var(--header-height-xs)}}#___gatsby,#gatsby-focus-wrapper{min-height:100vh}ul{padding-left:1em}a{word-break:break-all}blockquote{background-color:#f5f2f0;margin:0;padding:1em 40px;position:relative}blockquote:before{content:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGlkPSJwcmVmaXhfX194MzJfIiB4PSIwIiB5PSIwIiBvcGFjaXR5PSIxIiBzdHlsZT0id2lkdGg6MzJweDtoZWlnaHQ6MzJweCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0icmdiKDc1LCA3NSwgNzUpIiBkPSJNMTQ4LjU3IDYzLjYxOUg3Mi4xNjJDMzIuMzEgNjMuNjE5IDAgOTUuOTI5IDAgMTM1Ljc4MXY3Ni40MDhjMCAzOS44NTIgMzIuMzEgNzIuMTYxIDcyLjE2MiA3Mi4xNjFoNy41NTlhMTkuMjYgMTkuMjYgMCAwIDEgMTUuODcgOC4zNjIgMTkuMjQ2IDE5LjI0NiAwIDAgMSAyLjA3NCAxNy44MTFMNTQuNTY4IDQyMi4yMDhhMTkuMjM5IDE5LjIzOSAwIDAgMCAyLjA3NCAxNy44MSAxOS4yNiAxOS4yNiAwIDAgMCAxNS44NyA4LjM2Mmg1MC43MzhjNy4xNTcgMCAxMy43My0zLjk4MSAxNy4wNDEtMTAuMzE4bDYxLjI1Ny0xMTcuMDNhMTY4LjM2OCAxNjguMzY4IDAgMCAwIDE5LjE5OC03OC4wNzJWMTM1Ljc4Yy4wMDItMzkuODUxLTMyLjMyNC03Mi4xNjEtNzIuMTc2LTcyLjE2MXpNNDM5Ljg0IDYzLjYxOWgtNzYuNDFjLTM5Ljg1MiAwLTcyLjE2IDMyLjMxLTcyLjE2IDcyLjE2MnY3Ni40MDhjMCAzOS44NTIgMzIuMzA5IDcyLjE2MSA3Mi4xNiA3Mi4xNjFoNy41NDNhMTkuMjM4IDE5LjIzOCAwIDAgMSAxNS44NyA4LjM2MiAxOS4yNSAxOS4yNSAwIDAgMSAyLjA5MSAxNy44MTFsLTQzLjExMyAxMTEuNjg2YTE5LjE5NyAxOS4xOTcgMCAwIDAgMi4wOSAxNy44MSAxOS4yMTcgMTkuMjE3IDAgMCAwIDE1Ljg3MSA4LjM2Mmg1MC43MjJjNy4xNTcgMCAxMy43My0zLjk4MSAxNy4wNTgtMTAuMzE4bDYxLjI0LTExNy4wM0ExNjguMzcyIDE2OC4zNzIgMCAwIDAgNTEyIDI0Mi45NlYxMzUuNzhjMC0zOS44NTEtMzIuMzA5LTcyLjE2MS03Mi4xNi03Mi4xNjF6IiBjbGFzcz0icHJlZml4X19zdDAiLz48L3N2Zz4=);left:16px;position:absolute;top:16px;width:16px}.cards img{-o-object-fit:cover;object-fit:cover}.blog-post-content a img{-o-object-fit:contain;object-fit:contain}.blog-post-content code[class*=language-],.blog-post-content pre[class*=language-]{white-space:break-spaces}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.utility-module--textDecorationNone--qfbkO{text-decoration:none}</style><style data-styled="" data-styled-version="5.3.5">.BwXkM{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g1[id="header__StyledHeader-sc-1mm3ke2-0"]{content:"BwXkM,"}/*!sc*/
+.gNJRsl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g2[id="header__StyledLogo-sc-1mm3ke2-1"]{content:"gNJRsl,"}/*!sc*/
+.gsRBJZ{position:-webkit-sticky;position:sticky;top:100vh;}/*!sc*/
+data-styled.g3[id="footer__StyledFooter-sc-1fckmp7-0"]{content:"gsRBJZ,"}/*!sc*/
+.vLcnE{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;list-style:none;padding:0;gap:8px;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-inline:8px;}/*!sc*/
+data-styled.g4[id="MarkdownRemarkfrontmatter__slug__StyledList-sc-1whf6kk-0"]{content:"vLcnE,"}/*!sc*/
+.cWFrrb{-webkit-text-decoration:none;text-decoration:none;color:#fff;}/*!sc*/
+data-styled.g5[id="MarkdownRemarkfrontmatter__slug__StyledLink-sc-1whf6kk-1"]{content:"cWFrrb,"}/*!sc*/
+</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><title data-react-helmet="true">React Native + Expoで始めたらPCがクラッシュし続けた | うさ技術</title><link data-react-helmet="true" rel="icon" href="/static/f176e985f3a32857949931dfc3b5c3d1/icon.png" sizes="32x32"/><link data-react-helmet="true" rel="preload" href="/static/05c8988fb0c5d3f2b1daeed08544fbb2/JKGM.woff2" as="font" type="font/woff2"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-PVNPNSX');</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVNPNSX" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css k008qs">.css-k008qs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}</style><div class="MuiBox-root css-k008qs"><style data-emotion="css sa9s">.css-sa9s{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:#ab47bc;color:#fff;}@media print{.css-sa9s{position:absolute;}}</style><style data-emotion="css 1rfdcj8">.css-1rfdcj8{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:#ab47bc;color:#fff;}@media print{.css-1rfdcj8{position:absolute;}}</style><header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1rfdcj8"><style data-emotion="css 1dzxeec">@media (min-width:0px){.css-1dzxeec{padding:0px;}}@media (min-width:600px){.css-1dzxeec{padding:8px;}}</style><div class="header__StyledHeader-sc-1mm3ke2-0 BwXkM MuiBox-root css-1dzxeec"><div class="header__StyledLogo-sc-1mm3ke2-1 gNJRsl MuiBox-root css-0"><a class="utility-module--textDecorationNone--qfbkO" href="/"><style data-emotion="css g29qie">.css-g29qie{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#ab47bc;color:#fff;}.css-g29qie:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(171, 71, 188, 0.04);}@media (hover: none){.css-g29qie:hover{background-color:transparent;}}.css-g29qie.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css 1fdcjbc">.css-1fdcjbc{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#ab47bc;color:#fff;}.css-1fdcjbc::-moz-focus-inner{border-style:none;}.css-1fdcjbc.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1fdcjbc{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1fdcjbc:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(171, 71, 188, 0.04);}@media (hover: none){.css-1fdcjbc:hover{background-color:transparent;}}.css-1fdcjbc.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1fdcjbc" tabindex="0" type="button"><style data-emotion="css 1k0nlww">.css-1k0nlww{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;font-family:JKGM;}</style><div class="MuiTypography-root MuiTypography-h6 css-1k0nlww">うさ技術</div></button></a><style data-emotion="css pld06a">@media (min-width:0px){.css-pld06a{height:30px;}}@media (min-width:600px){.css-pld06a{height:40px;}}</style><img class="MuiBox-root css-pld06a" src="/static/88ec0830000f2627cb16235c2823826c/usagi_momochy.gif" alt=""/></div><div class="MuiBox-root css-0"><style data-emotion="css 2p8pd2">.css-2p8pd2{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(171, 71, 188, 0.4);}.css-2p8pd2:hover{text-decoration-color:inherit;}</style><style data-emotion="css 1n62pqo">.css-1n62pqo{margin:0;color:#ab47bc;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(171, 71, 188, 0.4);}.css-1n62pqo:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1n62pqo" target="_blank" href="https://github.com/totocalcio"><button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1fdcjbc" tabindex="0" type="button"><style data-emotion="css vubbuv">.css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}</style><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="GitHubIcon"><path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path></svg></button></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1n62pqo" target="_blank" href="https://twitter.com/dir20634"><button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1fdcjbc" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="TwitterIcon"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path></svg></button></a></div></div></header></div><style data-emotion="css 1spmd8z">@media (min-width:0px){.css-1spmd8z{padding-left:16px;padding-right:16px;}}@media (min-width:900px){.css-1spmd8z{padding-left:32px;padding-right:32px;}}</style><div class="MuiBox-root css-1spmd8z"><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><style data-emotion="css 1niy7tn">.css-1niy7tn{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-left:16px;padding-right:16px;min-height:56px;}@media (min-width:600px){.css-1niy7tn{padding-left:24px;padding-right:24px;}}@media (min-width:0px){@media (orientation: landscape){.css-1niy7tn{min-height:48px;}}}@media (min-width:600px){.css-1niy7tn{min-height:64px;}}@media (min-width:0px){.css-1niy7tn{min-height:44px;}}@media (min-width:600px){.css-1niy7tn{min-height:60px;}}</style><div class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1niy7tn"></div><main><style data-emotion="css 1bhrb75">.css-1bhrb75{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;padding-top:24px;padding-bottom:24px;}@media (min-width:600px){.css-1bhrb75{padding-left:24px;padding-right:24px;}}@media (min-width:900px){.css-1bhrb75{max-width:900px;}}</style><div class="MuiContainer-root MuiContainer-maxWidthMd css-1bhrb75"><style data-emotion="css 1anx036">.css-1anx036{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;}</style><h6 class="MuiTypography-root MuiTypography-h6 css-1anx036">2020-08-19</h6><div class="blog-post-container"><h1>React Native + Expoで始めたらPCがクラッシュし続けた</h1><ul class="MarkdownRemarkfrontmatter__slug__StyledList-sc-1whf6kk-0 vLcnE"><li><style data-emotion="css 1d1ttf5">.css-1d1ttf5{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.8125rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:4px 10px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:#ab47bc;box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);}.css-1d1ttf5:hover{-webkit-text-decoration:none;text-decoration:none;background-color:#773183;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-1d1ttf5:hover{background-color:#ab47bc;}}.css-1d1ttf5:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-1d1ttf5.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-1d1ttf5.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}</style><style data-emotion="css xb2fq2">.css-xb2fq2{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.8125rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:4px 10px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:#ab47bc;box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);}.css-xb2fq2::-moz-focus-inner{border-style:none;}.css-xb2fq2.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-xb2fq2{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-xb2fq2:hover{-webkit-text-decoration:none;text-decoration:none;background-color:#773183;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-xb2fq2:hover{background-color:#ab47bc;}}.css-xb2fq2:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-xb2fq2.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-xb2fq2.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}</style><button class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButtonBase-root  css-xb2fq2" tabindex="0" type="button"><a class="MarkdownRemarkfrontmatter__slug__StyledLink-sc-1whf6kk-1 cWFrrb" href="/tags/reactnative/">reactnative</a></button></li><li><button class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButtonBase-root  css-xb2fq2" tabindex="0" type="button"><a class="MarkdownRemarkfrontmatter__slug__StyledLink-sc-1whf6kk-1 cWFrrb" href="/tags/expo/">expo</a></button></li></ul><div class="MuiBox-root css-0"><style data-emotion="css 1avk4q9">.css-1avk4q9{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;margin-top:8px;margin-bottom:8px;}</style><div class="MuiTypography-root MuiTypography-h6 css-1avk4q9">目次</div><style data-emotion="css ampo0q">.css-ampo0q{padding:8px;background-color:#f5f2f0;}</style><div class="MuiBox-root css-ampo0q"><ul>
+<li>
+<p><a href="#%E7%92%B0%E5%A2%83%E7%B4%B9%E4%BB%8B">環境紹介</a></p>
+<ul>
+<li><a href="#%E3%81%A9%E3%82%93%E3%81%AA%E7%B5%8C%E7%B7%AF%E3%82%92%E3%81%9F%E3%81%A9%E3%81%A3%E3%81%9F%E3%81%8B">どんな経緯をたどったか</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AE%E5%86%85%E5%AE%B9%EF%BC%91couldnt-start-project-on-android-error-running-adb">エラーの内容１（Couldn't start project on Android: Error running adb）</a></p>
+<ul>
+<li><a href="#%E3%82%A8%E3%83%A9%E3%83%BC%E8%A7%A3%E6%B1%BA%E6%89%8B%E9%A0%86">エラー解決手順</a></li>
+<li><a href="#%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%E3%81%8B%E3%82%89-adb-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B">ターミナルから adb システムのバージョンを確認する</a></li>
+<li><a href="#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%99%E3%82%8B">ディレクトリをコピーする</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AE%E5%86%85%E5%AE%B9%EF%BC%92unable-to-connect-to-adb-daemon-on-port5037">エラーの内容２（Unable to connect to adb daemon on port:5037）</a></p>
+<ul>
+<li><a href="#adb-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E5%86%8D%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B">adb サービスを再起動する</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%E3%81%8A%E3%81%BE%E3%81%91%E3%81%86%E3%81%BE%E3%81%8F%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%8C%E5%8B%95%E3%81%84%E3%81%A6%E3%81%AA%E3%81%84">おまけ：うまくエミュレーターが動いてない</a></p>
+</li>
+</ul></div></div><div class="blog-post"><div class="blog-post-content"><p>npm start もしくは expo start を実行すると１００％の確率でモニターがブラックアウト。PC がフリーズ。強制的に電源を落として再起動するしかなくなった。</p>
+<h2 id="環境紹介" style="position:relative;"><a href="#%E7%92%B0%E5%A2%83%E7%B4%B9%E4%BB%8B" aria-label="環境紹介 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>環境紹介</h2>
+<ul>
+<li>Windows10</li>
+<li>wsl</li>
+<li>Visual Studio Code</li>
+<li>Android Studio</li>
+</ul>
+<h3 id="どんな経緯をたどったか" style="position:relative;"><a href="#%E3%81%A9%E3%82%93%E3%81%AA%E7%B5%8C%E7%B7%AF%E3%82%92%E3%81%9F%E3%81%A9%E3%81%A3%E3%81%9F%E3%81%8B" aria-label="どんな経緯をたどったか permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>どんな経緯をたどったか</h3>
+<p>expo init でプロジェクト作成。npm startを行うとブラウザでExpo Developer Toolsが表示される。そしてその後クラッシュする。以前ためしに公式の手順に従ってreact-native initでプロジェクト作成した時は問題なく表示されていた。しかし、おそらくこの以前プロジェクトを作成していたことがクラッシュの原因。</p>
+<h2 id="エラーの内容１couldnt-start-project-on-android-error-running-adb" style="position:relative;"><a href="#%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AE%E5%86%85%E5%AE%B9%EF%BC%91couldnt-start-project-on-android-error-running-adb" aria-label="エラーの内容１couldnt start project on android error running adb permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>エラーの内容１（Couldn't start project on Android: Error running adb）</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4698d1be0def5c2219196d82f9abd31f/a6b65/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 18%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAEABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAABx4AH/8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQABBQJ//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQAGPwJ//8QAFRABAQAAAAAAAAAAAAAAAAAAEBH/2gAIAQEAAT8hr//aAAwDAQACAAMAAAAQc8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAWEAEBAQAAAAAAAAAAAAAAAAABEDH/2gAIAQEAAT8QU7f/2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/4698d1be0def5c2219196d82f9abd31f/b4294/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg"
+        srcset="/static/4698d1be0def5c2219196d82f9abd31f/75985/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg 150w,
+/static/4698d1be0def5c2219196d82f9abd31f/f93b5/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg 300w,
+/static/4698d1be0def5c2219196d82f9abd31f/b4294/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg 600w,
+/static/4698d1be0def5c2219196d82f9abd31f/8e1fc/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg 900w,
+/static/4698d1be0def5c2219196d82f9abd31f/e5166/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg 1200w,
+/static/4698d1be0def5c2219196d82f9abd31f/a6b65/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg 1603w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Couldn't start project on Android: Error running adb: No Android connected device found, and no emulators could be started automatically.
+Please connect a device or create an emulator (https://docs.expo.io/versions/latest/workflow/android-studio-emulator).
+Then follow the instructions here to enable USB debugging:
+https://developer.android.com/studio/run/device.html#developer-device-options. If you are using Genymotion go to Settings -> ADB, select "Use custom Android SDK tools", and point it at your Android SDK directory.</code></pre></div>
+<p>とりあえず<a href="https://docs.expo.io/workflow/android-studio-emulator/?redirected">リンク先</a>を確認してみる。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/7627e07826d59b14d0a883009458cd50/cd536/image-25.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 6%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVQI1z2IMQ7AMAjE+v9XkiYTU4BDdLsqDBksW35EhGsujvFSVVlVBMAItDOT7kGzg/ff27o9cN9x1ccf9qBMMM0Akm0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/7627e07826d59b14d0a883009458cd50/0a47e/image-25.png"
+        srcset="/static/7627e07826d59b14d0a883009458cd50/8a4e8/image-25.png 150w,
+/static/7627e07826d59b14d0a883009458cd50/5a46d/image-25.png 300w,
+/static/7627e07826d59b14d0a883009458cd50/0a47e/image-25.png 600w,
+/static/7627e07826d59b14d0a883009458cd50/1cfc2/image-25.png 900w,
+/static/7627e07826d59b14d0a883009458cd50/cd536/image-25.png 1114w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>「adb システムに複数のバージョンがあると、エラーが発生する可能性があります」らしい。</p>
+<h3 id="エラー解決手順" style="position:relative;"><a href="#%E3%82%A8%E3%83%A9%E3%83%BC%E8%A7%A3%E6%B1%BA%E6%89%8B%E9%A0%86" aria-label="エラー解決手順 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>エラー解決手順</h3>
+<p>そのまま紹介されている手順通りにすすめる。</p>
+<h3 id="ターミナルから-adb-システムのバージョンを確認する" style="position:relative;"><a href="#%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%E3%81%8B%E3%82%89-adb-%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B" aria-label="ターミナルから adb システムのバージョンを確認する permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ターミナルから adb システムのバージョンを確認する</h3>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token variable">$adb</span> version</code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 400px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a01f4a77273ec59253680c6c1bc848b0/e17e5/SnapCrab_NoName_2020-8-19_19-15-10_No-00.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 18%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAl0lEQVQI14WKUQ6DIBBEuYcRAstKpBKEtVVZbNr7X6rBmv72JbN5mVlhEcFarbU9Lxjzc3PGnLQJoBmANu1BKSWerzfXw48jM3vvM9E0Ba6VKGeiOc20LJkoznEv+7ptayk5peOoxoBwziGitRYRmw+Dcw4ApJRKKnnRf6PU1fR9a0Thcn+sRDll4lpCjNteQrh1XSf/8QH5MCT0rgYNdAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/a01f4a77273ec59253680c6c1bc848b0/e17e5/SnapCrab_NoName_2020-8-19_19-15-10_No-00.png"
+        srcset="/static/a01f4a77273ec59253680c6c1bc848b0/8a4e8/SnapCrab_NoName_2020-8-19_19-15-10_No-00.png 150w,
+/static/a01f4a77273ec59253680c6c1bc848b0/5a46d/SnapCrab_NoName_2020-8-19_19-15-10_No-00.png 300w,
+/static/a01f4a77273ec59253680c6c1bc848b0/e17e5/SnapCrab_NoName_2020-8-19_19-15-10_No-00.png 400w"
+        sizes="(max-width: 400px) 100vw, 400px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">Command 'adb' not found, but can be installed with:
+sudo apt install adb</code></pre></div>
+<p>コマンドが使えないのでadbを「sudo apt install adb」でインストールする。
+インストールできたら再度adb versionをたたく。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 486px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/84aca7848c011764400d3c14c56c6a29/4ee7f/SnapCrab_NoName_2020-8-19_19-19-9_No-00.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 10.666666666666668%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAZ0lEQVQI103LMRKCMBAFUI4BkVBIKmJD1v27jlkECpLB+9/HsdLXv4aZRRWiz2yAZMuJkuojxjjF2zheu7a9fDnnnPd++NOY2VHqum0iastr3fday/k+ATCY7gzITJQSqUgIoe9//wNEmBXlHUF9UQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/84aca7848c011764400d3c14c56c6a29/4ee7f/SnapCrab_NoName_2020-8-19_19-19-9_No-00.png"
+        srcset="/static/84aca7848c011764400d3c14c56c6a29/8a4e8/SnapCrab_NoName_2020-8-19_19-19-9_No-00.png 150w,
+/static/84aca7848c011764400d3c14c56c6a29/5a46d/SnapCrab_NoName_2020-8-19_19-19-9_No-00.png 300w,
+/static/84aca7848c011764400d3c14c56c6a29/4ee7f/SnapCrab_NoName_2020-8-19_19-19-9_No-00.png 486w"
+        sizes="(max-width: 486px) 100vw, 486px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>無事表示された</p>
+<h3 id="ディレクトリをコピーする" style="position:relative;"><a href="#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%99%E3%82%8B" aria-label="ディレクトリをコピーする permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ディレクトリをコピーする</h3>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token builtin class-name">cd</span> ~/Android/sdk/platform-tools</code></pre></div>
+<h2 id="エラーの内容２unable-to-connect-to-adb-daemon-on-port5037" style="position:relative;"><a href="#%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%AE%E5%86%85%E5%AE%B9%EF%BC%92unable-to-connect-to-adb-daemon-on-port5037" aria-label="エラーの内容２unable to connect to adb daemon on port5037 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>エラーの内容２（Unable to connect to adb daemon on port:5037）</h2>
+<p>Android Studio から AMD Manager でエミュレーターを起動してみる。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 299px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2ce31f9b03082dac661625c16ce6ff2f/aeb78/SnapCrab_NoName_2020-8-19_19-42-12_No-00.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 34%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABA0lEQVQY002Pi2rAMAhF+39bm8Qkah4a07Ts//9gtGNscJHj48J1g4QQMyR0IYaYY8a3Umk9U9ld2B0cPrzw6PDwefiEBAm3ue617nXdYqed13leolPU1v1lc8VMAZKDFCCFmD0k/0Km8pjtXDqXDrNzdbUmOmyqnbX10sTWJWrcpMlQm12tNBnz2YaE25in2mwyuPSuJsPUlgxzHv5H3R288PDH7hIyZNp8iO7VGym73/b4hb+Jh58zFyLyG7vpaF27jNKkNKlda5fWRxcrXZpabcK1c5OuA6keHg4PmRgSbciVuFKpMVNCRq5IJVNFrpk4U83ICTlzIa6Q8H0hJKQQ8Ru+II8K8D6mMgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/2ce31f9b03082dac661625c16ce6ff2f/aeb78/SnapCrab_NoName_2020-8-19_19-42-12_No-00.png"
+        srcset="/static/2ce31f9b03082dac661625c16ce6ff2f/8a4e8/SnapCrab_NoName_2020-8-19_19-42-12_No-00.png 150w,
+/static/2ce31f9b03082dac661625c16ce6ff2f/aeb78/SnapCrab_NoName_2020-8-19_19-42-12_No-00.png 299w"
+        sizes="(max-width: 299px) 100vw, 299px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span><figcaption></p>
+</figcaption>
+<h3 id="adb-サービスを再起動する" style="position:relative;"><a href="#adb-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E5%86%8D%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B" aria-label="adb サービスを再起動する permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>adb サービスを再起動する</h3>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">AdbHostServer,cpp:102: Unable to connect to adb daemon on port:5037</code></pre></div>
+<p>ポート：5037が使えない・・・？のでadbサービスを再起動する。</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">adb kill-server</code></pre></div>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">cannot connect to daemon at tcp:5037: Connection refused</code></pre></div>
+<p>エラーが出てしまったので管理者実行する。</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">adb kill-server</code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 569px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d42eb6e242c59b7aa8275f73f0c3d327/854dc/SnapCrab_NoName_2020-8-19_19-56-40_No-00.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 24.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAIAAADKYVtkAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA4klEQVQY0zXLW5KDIBBA0SzEAQRUsLvBByrBR0aTsWay/wVNVSo5X/fnXnSPZfR67Yt9UKPTS1ctoXSLqK/CTqKOwo45JEsBEch5JAQkImKMXSANzc/i/2703GAd4B6bc/PTWTQ3RUvZ7oVfc1ytHxwhEgEiALCXC3b+eP52cxwfW7pv/Rrn85jSN/jRutCEhD4wWami0lpprZVSUsr3XPRk5t7uk33E6trCEas5qDpyO3EzMjtyM+SQDAXniMgZY7Ise8+VNaau0bkaARCbrpVKfjHGRc6E4EK+Iudc8A/28Q+ceDOSiG8EjAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/d42eb6e242c59b7aa8275f73f0c3d327/854dc/SnapCrab_NoName_2020-8-19_19-56-40_No-00.png"
+        srcset="/static/d42eb6e242c59b7aa8275f73f0c3d327/8a4e8/SnapCrab_NoName_2020-8-19_19-56-40_No-00.png 150w,
+/static/d42eb6e242c59b7aa8275f73f0c3d327/5a46d/SnapCrab_NoName_2020-8-19_19-56-40_No-00.png 300w,
+/static/d42eb6e242c59b7aa8275f73f0c3d327/854dc/SnapCrab_NoName_2020-8-19_19-56-40_No-00.png 569w"
+        sizes="(max-width: 569px) 100vw, 569px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>再起動できた。
+Android Studio から AVD Manager でエミュレーターを再度起動する。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/9186e6e9faed6d763ee735b5cec25f46/e2310/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 49.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB4UlEQVQoz2Nw8vR0dnF3dvNwcnFzdHZzdHS1t3dycHIFscHIxdXD1NZ2RcPE/xvPfVp88NOCA+/n7H07Y8/zydsZXN28XN1ByM3D29XV0y0kwG9epXtUiKuLh5unt5uHt6enr6WD04raCX9WnH41c9+LqXueTNz1sG/Hrc7NDBCdUOTq6Rbon9hX6x0W6uzi4eoBEvTw8LF0dFpS0f113qEnk7Y+7t38oHPDnbZ1VxpWomgOCAoNCg7z9w4IDAwJCg13c/eGaLZycl5Y1PJh8uYH7cvvNS+9VbfoatX8cyWzUDS7eXh7ePl6+fi7e/lArHV193L38LZ2cZmaWHGjbO6JnMnHMyYcSu07kNi9M6YNRbOPX6CvX6Cvf5BfQJCXjz9Us7u3jZtbX2Du4Yi+bSFtW0JbN3jWrvKoW+hShaLZ1z8Igjy9/UDhB3GOm5eTt1esTmC055zihBnTa+ZWBiUV6SVGSyahaPbzD/YLCAZr9vXw8kVIeXq6m4Z5GuUHW+TF2RcF2qaGmKRZiASiOtvf39cvEOR4/0C4ZjcPH3sn5/L8hhVT1s7rXTK3d+ncrmVLp69Pcs9DjSok5OLm6eHl5+3r7+Hp6+3vb6xiJcekpcCmrcZjIM2oqidqJsGgBABg+t1IkuA8DgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/9186e6e9faed6d763ee735b5cec25f46/0a47e/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png"
+        srcset="/static/9186e6e9faed6d763ee735b5cec25f46/8a4e8/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png 150w,
+/static/9186e6e9faed6d763ee735b5cec25f46/5a46d/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png 300w,
+/static/9186e6e9faed6d763ee735b5cec25f46/0a47e/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png 600w,
+/static/9186e6e9faed6d763ee735b5cec25f46/1cfc2/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png 900w,
+/static/9186e6e9faed6d763ee735b5cec25f46/e2310/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png 968w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>エラーが消えたことを確認できたので、ここでようやくexpo startをして、Expo Developer ToolsからRun on Android device/emulatorをしてみる。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/bed46d2c4bf5339e5c5663187ca6d6be/b6529/image-26.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA9klEQVQY002MS0sCYRiF50fMtPN955txdC5OQqmb1kEgQasCiwjqX4ZRhJQghP+gWiTpyksXLeeJMYkOPJxzOHCs3eYexbhMkIQElYggjSinMeFmgh8GiAhaEFQEoy6O43C4f8BDp0unfc3tZZu7qxv63R79+x7WTlii5nsr6kWPhu9RzSn6pJ6hokq6pmoMrm1z3jphPB7z+PzEy2DA63DI7P2NXFajIGyLrtj6c6GeZ1UiESJVQhESY1Db5uyoxWwyZTQarY6nkwnz+SfZcolVM4aqKrEqZRHCtec9WeeSyO/musiGw8XxKf+1+M74WGTMv5b8AL1Gq6vfxt2jAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/bed46d2c4bf5339e5c5663187ca6d6be/0a47e/image-26.png"
+        srcset="/static/bed46d2c4bf5339e5c5663187ca6d6be/8a4e8/image-26.png 150w,
+/static/bed46d2c4bf5339e5c5663187ca6d6be/5a46d/image-26.png 300w,
+/static/bed46d2c4bf5339e5c5663187ca6d6be/0a47e/image-26.png 600w,
+/static/bed46d2c4bf5339e5c5663187ca6d6be/1cfc2/image-26.png 900w,
+/static/bed46d2c4bf5339e5c5663187ca6d6be/b6529/image-26.png 1049w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>エラーがでてると思いきや、エミュレーターでUSB debuggingを聞かれているのでAllowを選択する。</p>
+<p>そしてもう一度ブラウザのExpo Developer ToolsでRun on Android device/emulatorをクリックする</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/74172a282efb97c0892f961c558e16e5/2c95d/image-27.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 28.666666666666668%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzElEQVQY032Ra27DIBCEuUcb7w42DwcMrtTWlXr/c00EoZEVKf3xaWDFjnYHE2Jk2jJzzlzXlQBorSWspQUe+op58PfWlEl4vL1zv1xYpom7KKto1w+RzrlWT+dNlVHBqyrDMDU7wF+APwAPgN8i/BThlwiP6c7ZJI3mZrIq6IF+b7hm2FbOW2bKiSldOc8zVZUK3Bkrz6c1W01HLM+YlBJrray1sJTCGCNDCF2ddz3T56b/MjXLsnQD7z29d0N9rznnHp90bnpl2ia8ATi1qif2fsEHAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/74172a282efb97c0892f961c558e16e5/0a47e/image-27.png"
+        srcset="/static/74172a282efb97c0892f961c558e16e5/8a4e8/image-27.png 150w,
+/static/74172a282efb97c0892f961c558e16e5/5a46d/image-27.png 300w,
+/static/74172a282efb97c0892f961c558e16e5/0a47e/image-27.png 600w,
+/static/74172a282efb97c0892f961c558e16e5/1cfc2/image-27.png 900w,
+/static/74172a282efb97c0892f961c558e16e5/2c95d/image-27.png 1099w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>ようやくこれでビルドが完了しました！！！</p>
+<h2 id="おまけうまくエミュレーターが動いてない" style="position:relative;"><a href="#%E3%81%8A%E3%81%BE%E3%81%91%E3%81%86%E3%81%BE%E3%81%8F%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%8C%E5%8B%95%E3%81%84%E3%81%A6%E3%81%AA%E3%81%84" aria-label="おまけうまくエミュレーターが動いてない permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>おまけ：うまくエミュレーターが動いてない</h2>
+<p>エミュレーターを下から上へスワイプするとメニュー画面が出るので、Expoをクリック（タップ）</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/0b268ff39aa6150f61eaea485e059c7c/8ce52/1.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 89.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAIAAADUsmlHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACxUlEQVQ4y4WTTU8bVxSGZ8uClQ0G4nST/ih+AX+EbetVE4+BfRYRlZIIOypuF0ihalOpFVJttyDLwtgz4/Hce+d+nfsx5lQzNKkTpe2jc6WzeXXuez6CKIomk0kURc57a21RFKvVChEPDg42NzcbjUa9Xq/X6lsVZVqrbW1t7ezsPHnyZSClYIwBgHNOCGGtvb+/R8T9/f2NjY3Hj7/Ye9R81Gzu7e01m83d3d3t7e3GTqNWqzUajSDLsundLInjuHyxtRYRlVKHh4dXV1fD4XA8Hk+n09s1JpPJ7e1tq9UKOOeUMqWVVIrlORhAxDzPT45PMsLu5pH3Hj+mKApEvLi4CADAGAPv0VobY9I0/ebZMyGkENIYa61bD4CywJvvzgP9MUopa0yyXL786uvVaASDgRkM3egPOxqZ4cgMh2Y4hMEAZ3f9p0//Vfyi1bofj/14bK9v3M2Nva6iSsyf1xjH/eOTz4j//nY7FEpzqYUGoYBLrcAY78F5BQYRe+f9ANYwxmitACBJkuOjI++cNc5ZW5rnXArBOdcatNKI+P15P8jznBC6zJaEkjRNcy4QkTEWhh0AY60zxgH80zPnvDHlOHu9NwGhNF2mcRQRQgHAOoeIUsow7BBCCKWEUMZy8R7OBaW58/7Vq9cBoSzLlnGSSCkR8WG9hBBhGEZRNJ/P5uWbrTOdTvOcnZ6eBhkhyWKRLBac8w9iKWWncySlVCVaSiWE5FwIIZXSvLJ2dnYWEEKWJVmcLBhjRVFeBaU0DMMPVqVUlDLGcs6FMRaqbne7vQCgHI+S0lnrvX+oTAlpt8Oq/dYYq5Qum6xBKQ1gtIaqcjew3mtr/erhEHH0e/HbLy7ny3XxJ6GqUXW73QDmczWb+TQt0mxFpj88n/S/zaWm7XanWvP/EPcCePtWv3snLi/1zz+Jyx/1r5eoidRQef4f8V++bKTkNGzRDAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/0b268ff39aa6150f61eaea485e059c7c/0a47e/1.png"
+        srcset="/static/0b268ff39aa6150f61eaea485e059c7c/8a4e8/1.png 150w,
+/static/0b268ff39aa6150f61eaea485e059c7c/5a46d/1.png 300w,
+/static/0b268ff39aa6150f61eaea485e059c7c/0a47e/1.png 600w,
+/static/0b268ff39aa6150f61eaea485e059c7c/8ce52/1.png 681w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>ブラウザの<strong>Expo Developer Tools</strong>にある URL をエミュレーターの入力欄にコピペする。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 379px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/d3ccd2c5e607f046b06a5df62b654de2/811d1/image-28.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 216.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAArCAYAAAB4pah1AAAACXBIWXMAAAsTAAALEwEAmpwYAAAEvklEQVRIx81XWU8bVxQe9n1VWNIlaR8q1Ic+9Afw1gf+BeIFqUJil3kAKloJsW9BAgk1PwCJx/SBHUpSqkQEEhMq1DTEy8x4xoY0BNszHpuvOscee2yTlKR9yJU+3Xu+c8435y4z9hXKy8uRk5ODktIyVN6o4jH1ZBcWFoL8hLKyMu4LCgo4Jj8/H3l5eQwaE3f79hcQsrKzUFxcjIrKSlRV16CkpAQ3qqrZLi4uYl8aioo5zkRpaSmLVldXQ2hoaEBXVxdaWlrQ2NiIpqYmtLa2osdmQ3d3N3p6eq6EzWbjnmKam5vR1taG+vp6CAMDP2JmZgYTExMYHR1lTE5OMjc9PX0tUO7s7Cw6Ozsh9PX1MTE2Nobx8XEGjU3x62Jqaioq2N/fzxWRiBWmsLW3wuojQaq0oyNFMDXpuqBcEoxXSOW+K4GWhHAtwd7eXiaGh4cxMjKSBuKHhoYYV/nNGHpge3sHhMHBQSwsLGB+fv5KkG9paQmLi4tvjZmbm8Pduz/DZuuBcHx8jHA4jEAggGAwCE3T4jDtUCjEIDsVmhbExYUf1O7d+wWCKIpsXF5ewmyRSIRx3aYZEegAft3ehuB0OpmkKk0hwzCSbHrYu0Cx1NbXNyC4XK64oBlwlVDqLKy2KbixYRE0BcKXyZWlJl/VEhWuJwQTVeBfpxhHLM8UXF1dS6/wvVrKlNfWLBUa4TB0PQS/PwBN06HpevTIxDYoGNRghAwEtRAM/RxhzZdWYdKUefs1DQdPDvHgt4d4aj/C/oEde4+f4K8XL2G3H+Hhoz38/ugI6osNhI/7Y4KRdEGDKjTC8SNjHhvqqVozIelsXoaSzm1c0O12syFKMlTVC0Xxwuv1wec7har62GaoXvhOzzhOlj2QPSpkWYHHo3J8dA0tm3L+5gInJw643CJEyQOXS8TJSyecLhGS5IHD4YLbLTEvijIcThck2cMx9AqmCeqhENxiNEH2KBwcrUSJc17fKYuxsFviGVGFtDRpx4amQ1OQZIUrfP78hAUokaZJvdd3FnuYArco85JQha9e/c0aKysrllfPMCBLMpwOJxSPAp/XB4/HA1VRIYkSVEXB6ekpfF4v+yiG4v0XF7zT1JaXLYIBPQy/ZnBv4iJoMPc6YOA8mPARF48NRRDQjViFqxBU2Q3pTQSf9tlxs8+OTyy42XeIz384xDdDf+DrwaMYl/B/1n+Iip6n+G72OLEpqizC9TqC7LbHyGjdR1bbPjJjIDu34wBf/fQMXw4cJvkI2e37EL7fw7fDR9FzSIJut4tP/DMpcCUOpQD2XX5Gml8OwC4G8KcSiFZo3eX/1iKJNUx8HCIIRy4/CCEjnH5s3uc35G0f2KQKP1LBlY9ccHV1FYLD4Yjucuyj+iHQdT2xhmdnZ/i/2v37DyDQH6GdnR1sbm7yDzWVvbW1Fcf29jZz9Hm38hS/vLwcz9vd3cWdO7MQBEGAFZWVlUjlqqqq+IqRytfV1SXZdEMQsrOzkZGRwQRdDWpra3lMXGZmJo+JozsKjU2O8kjQmk8PFqwXmNzcXE4wbRPEZWVlJXEUSyLUmxefmppaCPRkIuiGRKCpUU8cXWoqKip4GQg0LioqisebsQQSvnXrFv4BTiWhHMNk5OYAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/d3ccd2c5e607f046b06a5df62b654de2/811d1/image-28.png"
+        srcset="/static/d3ccd2c5e607f046b06a5df62b654de2/8a4e8/image-28.png 150w,
+/static/d3ccd2c5e607f046b06a5df62b654de2/5a46d/image-28.png 300w,
+/static/d3ccd2c5e607f046b06a5df62b654de2/811d1/image-28.png 379w"
+        sizes="(max-width: 379px) 100vw, 379px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>表示できた！</p></div></div></div></div></main></div><style data-emotion="css 1vjzque">.css-1vjzque{padding:8px;text-align:center;background-color:#ab47bc;color:#fff;}</style><div class="footer__StyledFooter-sc-1fckmp7-0 gsRBJZ MuiBox-root css-1vjzque"><footer>© 2019 うさ技術.</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/303/";window.___webpackCompilationHash="cfcb26aa58ddf3e7e1f9";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3c7a835e43cbbd02c769.js"],"app":["/app-463bbd70dff68507aabe.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-6b172a2fccd63fa301f2.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-3bde0e1ba2fc1504240f.js"],"component---src-pages-markdown-remark-frontmatter-slug-tsx":["/component---src-pages-markdown-remark-frontmatter-slug-tsx-6ee2666e79efcf1ea74d.js"],"component---src-pages-tags-tsx":["/component---src-pages-tags-tsx-cfa3765c2a6aa2fef964.js"]};/*]]>*/</script><script src="/polyfill-3c7a835e43cbbd02c769.js" nomodule=""></script><script src="/app-463bbd70dff68507aabe.js" async=""></script><script src="/framework-4e6393bcb754d628a2a5.js" async=""></script><script src="/webpack-runtime-62e310669062de938be6.js" async=""></script></body></html>

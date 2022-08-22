@@ -1,0 +1,745 @@
+<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta data-react-helmet="true" name="twitter:image" content="/static/19895dbd883ae2f20ce65ac78890af71/default.png"/><meta data-react-helmet="true" name="twitter:description" content="今回入れるプラグインは３つです。 Akismet Anti-Spam Wordfence Security SiteGuard WP Plugin Akismet Anti-Spam WordPress…"/><meta data-react-helmet="true" name="twitter:title" content="【WordPress】スパム対策に特化したプラグインを入れてみよう"/><meta data-react-helmet="true" name="twitter:creator" content="dir20634"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" property="og:image" content="/static/19895dbd883ae2f20ce65ac78890af71/default.png"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:description" content="今回入れるプラグインは３つです。 Akismet Anti-Spam Wordfence Security SiteGuard WP Plugin Akismet Anti-Spam WordPress…"/><meta data-react-helmet="true" property="og:title" content="【WordPress】スパム対策に特化したプラグインを入れてみよう"/><meta data-react-helmet="true" name="image" content="/static/19895dbd883ae2f20ce65ac78890af71/default.png"/><meta data-react-helmet="true" name="description" content="今回入れるプラグインは３つです。 Akismet Anti-Spam Wordfence Security SiteGuard WP Plugin Akismet Anti-Spam WordPress…"/><meta name="generator" content="Gatsby 4.17.2"/><style data-href="/styles.9a63959347db1a1fd2fd.css" data-identity="gatsby-global-css">:root{--header-height-sm:60px;--header-height-xs:44px}@font-face{font-display:swap;font-family:JKGM;src:url(data:font/woff2;base64,d09GMgABAAAAAAb8AA4AAAAADtQAAAaoAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABlYATAiEAAmBMxEMCoY4hU4BNgIkAxgLHAAEIAWHdgcgDIUCG1gNERSsoyD74sBu43wAFiw4iDvt5uUn6O9hWqLNyqyAV3VrDhSqhvnSFqujJybKvbhC/MfF9r37403TlGCHEYcBJYHHATceRnSmN7Dd2TcSg/N62XLGZQ648y0PInj4/3s/tdRtgwPyAfyd+0ud0qiU4qWBDDbBsdCUainVEopoQAcxa5yCgYjy7PSyAVHw5y8AlB/QUiCxChgA9Cye+oM4LAAMQ1hFK8o8q36N6IYG1NuIDw0OBdkuWNqAwZYPAtvuhEMAeAgNxWuwYAjU2iYw90ydawwGATp3BD/iLz45vGnmmOPHvBnDf0MEgyOQGJhY2Di4ePhChAoTLkKkKNFixIoTL0GiJMlSpKKkSZchU5ZsOXLlyVegUJFiJQSEREqJSZQpV6FSlWo1atWp16BRk2YtWrWRkpFTUFJR09DS0TMwMjGjWbTr0MnKxs7BqUu3Hr369Bvg4ubh5eM3yGBDDDXMcCOMNMpoY4w1zngTTDTJZFN+UHj9r+goyio10oKFtOIhTUS1Zq5GqnDqjCKkjRnSzErzdbYKp8EpQ9q5IS28tKbBV+H0hlQhHaEhg2GF6Y7wwpKjYflrmyKq/1XjRUcjB8n7AgDAsGB7EHAAAIzX4F4ALoB3ANANwjUCwMSFKhb9PIQcIj0qrJUQMhhMF+LChAMKdx8u3hN74cmL1A3bEw6/fvmyYmXF4IYDsU8CgVeNr0xHtecn8F6ZTa9pHuJvp1en3JFu0pf57tOvX+vXJpwp3xS96dmrV2aXJfkVAQsPcREHOPYozWdlMPUiZz5N3+IuWIPQzRb6jhRxlga4QJWf9fDxDL80nTfLV+iA5fWYsbp/cXCjz1VTBac5PcX74RzEITgk56UJ4+AXc+lAwKK2JavmlyarxRkaTremXy5D74b/DaD8McB1cCd8lZTw/07hfzknFj36d4Mty8XqT/ljV2Qn/cmuq9OyFmIz6rRVnUluokVnrHnNrhj2uSRUWjVGX9Q2J7p/Zo/vG741SYpnqfjOMLlGNC5rbPilSfmDkpZcerTVesbZVqRNcnC482h7br3PZxlqrZ78qeW/WV822t533Qnt2Db9YF+tMkZJ4PSMNH5tztLBBSznu+r/h3UO2+vdW9vEHDpkKGbFZn1uke6YNmSIdHIe1bFBMNs21XimMqdjY+5I6che8VtnHb871itWXvFccRUrBQ3yElFDafv1pJoYe9v83s3WkmaCsH+ak3YxZ/7oujlOj3NBRlN58weuORN/T3S3SbxjRcYZlXzRnajP7ZyoX0rv/XjWFld8JCVgC095JYCM+1SNZYy8vEo72i8GAIAT4CgUrEI4xYCeI4usX2wIy4+M4HlzM1OSQ8WCIcUjP1QADZdStlVYRGZxOwtyyJjo9sQEkrRImETBPr/9BVchRJ+8VCqZyfRkk7uQzz3HxTqSk8i0SHs4ysmwhrIINu5AwKsAAoBA6vfDEmdozW+ABtRXPPs0EAGx+yH8A7wRAJiQW/hBvDMBYqUtH3zeP40xgD4oCQDfwLf8zDsAlRtraGGBDPkZfAgAIArEAbGaojL7XP01yxsIqabJYZgacziSrJloV+dIPIYqg3ZHM7Pe+wx17rl73SrRu5NE7z4SvUdJ9J4i0XueRO9tEt0PAN8zbAAY6yk5hBNZxkRIDGRMcNJFM9HuzZiIy0gyJjhZSDOzdXUtnNFsJRhtHMFo0wlGK6CZaK8KRttCMFobwe/pQPOQoeOGe1zukVRubx4lEgjFlLqAatNqTEbK6use3G2n5ovanIRSKLUsv0NapDL0u0b5u4c3+fSP6P7hIzxDBlPCYoFg4q+4xjA0/5Sax9U9v6u7R6Lk6pWHIvpd7hSjqBVkH9JGS8PEiGLl021wcpkddYZj9GbJWQWlnjovSxVRMejnMopft3to6lA1Ruv/ad7sMcRgFKFigujEbW+KZyn8U68Ewa0gEL50FgVnHUWLjqFprS3HsOkpfAZiJnIWxmxMAgJgIAFRYBrCQFkYB+cRBEQRSUKWURRUFU1D1zEMTBPLwrZxHFwXz8P3CQLCkCgijkkS0pQsI88pCsqSqqKuaRralq6j7xkGxpFpYp5ZFtaVbWPfOQ7Ok+vivnke3pfv4/8FAEFQCBKGRRBRVAwTxyUISVKKkqZlGFlWjpPnFQRFUUlSllUUVVVNU9c1DE1Ty9K2dRxdV8/T9w0Cw9AoMo5NEtPULDPPLQrL0qqyrm0a29aus+8dBsfRaXKeXRbX1W1z3z0Oz9Pr8r59Ht/X75v9/xAA) format("woff2")}body,html{min-height:100vh}body{font-family:Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif}:target{scroll-margin-top:var(--header-height-sm)}@media(width < 600px){:target{scroll-margin-top:var(--header-height-xs)}}#___gatsby,#gatsby-focus-wrapper{min-height:100vh}ul{padding-left:1em}a{word-break:break-all}blockquote{background-color:#f5f2f0;margin:0;padding:1em 40px;position:relative}blockquote:before{content:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIGlkPSJwcmVmaXhfX194MzJfIiB4PSIwIiB5PSIwIiBvcGFjaXR5PSIxIiBzdHlsZT0id2lkdGg6MzJweDtoZWlnaHQ6MzJweCIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0icmdiKDc1LCA3NSwgNzUpIiBkPSJNMTQ4LjU3IDYzLjYxOUg3Mi4xNjJDMzIuMzEgNjMuNjE5IDAgOTUuOTI5IDAgMTM1Ljc4MXY3Ni40MDhjMCAzOS44NTIgMzIuMzEgNzIuMTYxIDcyLjE2MiA3Mi4xNjFoNy41NTlhMTkuMjYgMTkuMjYgMCAwIDEgMTUuODcgOC4zNjIgMTkuMjQ2IDE5LjI0NiAwIDAgMSAyLjA3NCAxNy44MTFMNTQuNTY4IDQyMi4yMDhhMTkuMjM5IDE5LjIzOSAwIDAgMCAyLjA3NCAxNy44MSAxOS4yNiAxOS4yNiAwIDAgMCAxNS44NyA4LjM2Mmg1MC43MzhjNy4xNTcgMCAxMy43My0zLjk4MSAxNy4wNDEtMTAuMzE4bDYxLjI1Ny0xMTcuMDNhMTY4LjM2OCAxNjguMzY4IDAgMCAwIDE5LjE5OC03OC4wNzJWMTM1Ljc4Yy4wMDItMzkuODUxLTMyLjMyNC03Mi4xNjEtNzIuMTc2LTcyLjE2MXpNNDM5Ljg0IDYzLjYxOWgtNzYuNDFjLTM5Ljg1MiAwLTcyLjE2IDMyLjMxLTcyLjE2IDcyLjE2MnY3Ni40MDhjMCAzOS44NTIgMzIuMzA5IDcyLjE2MSA3Mi4xNiA3Mi4xNjFoNy41NDNhMTkuMjM4IDE5LjIzOCAwIDAgMSAxNS44NyA4LjM2MiAxOS4yNSAxOS4yNSAwIDAgMSAyLjA5MSAxNy44MTFsLTQzLjExMyAxMTEuNjg2YTE5LjE5NyAxOS4xOTcgMCAwIDAgMi4wOSAxNy44MSAxOS4yMTcgMTkuMjE3IDAgMCAwIDE1Ljg3MSA4LjM2Mmg1MC43MjJjNy4xNTcgMCAxMy43My0zLjk4MSAxNy4wNTgtMTAuMzE4bDYxLjI0LTExNy4wM0ExNjguMzcyIDE2OC4zNzIgMCAwIDAgNTEyIDI0Mi45NlYxMzUuNzhjMC0zOS44NTEtMzIuMzA5LTcyLjE2MS03Mi4xNi03Mi4xNjF6IiBjbGFzcz0icHJlZml4X19zdDAiLz48L3N2Zz4=);left:16px;position:absolute;top:16px;width:16px}.cards img{-o-object-fit:cover;object-fit:cover}.blog-post-content a img{-o-object-fit:contain;object-fit:contain}.blog-post-content code[class*=language-],.blog-post-content pre[class*=language-]{white-space:break-spaces}code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;-o-tab-size:4;tab-size:4;text-align:left;text-shadow:0 1px #fff;white-space:pre;word-break:normal;word-spacing:normal}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{background:#b3d4fc;text-shadow:none}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:hsla(0,0%,100%,.5);color:#9a6e3a}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.utility-module--textDecorationNone--qfbkO{text-decoration:none}</style><style data-styled="" data-styled-version="5.3.5">.BwXkM{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g6[id="header__StyledHeader-sc-1mm3ke2-0"]{content:"BwXkM,"}/*!sc*/
+.gNJRsl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+data-styled.g7[id="header__StyledLogo-sc-1mm3ke2-1"]{content:"gNJRsl,"}/*!sc*/
+.gsRBJZ{position:-webkit-sticky;position:sticky;top:100vh;}/*!sc*/
+data-styled.g8[id="footer__StyledFooter-sc-1fckmp7-0"]{content:"gsRBJZ,"}/*!sc*/
+.vLcnE{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;list-style:none;padding:0;gap:8px;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-inline:8px;}/*!sc*/
+data-styled.g9[id="MarkdownRemarkfrontmatter__slug__StyledList-sc-1whf6kk-0"]{content:"vLcnE,"}/*!sc*/
+.cWFrrb{-webkit-text-decoration:none;text-decoration:none;color:#fff;}/*!sc*/
+data-styled.g10[id="MarkdownRemarkfrontmatter__slug__StyledLink-sc-1whf6kk-1"]{content:"cWFrrb,"}/*!sc*/
+</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><title data-react-helmet="true">【WordPress】スパム対策に特化したプラグインを入れてみよう | うさ技術</title><link data-react-helmet="true" rel="icon" href="/static/f176e985f3a32857949931dfc3b5c3d1/icon.png" sizes="32x32"/><link data-react-helmet="true" rel="preload" href="/static/05c8988fb0c5d3f2b1daeed08544fbb2/JKGM.woff2" as="font" type="font/woff2"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-PVNPNSX');</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVNPNSX" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css k008qs">.css-k008qs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}</style><div class="MuiBox-root css-k008qs"><style data-emotion="css sa9s">.css-sa9s{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:#ab47bc;color:#fff;}@media print{.css-sa9s{position:absolute;}}</style><style data-emotion="css 1rfdcj8">.css-1rfdcj8{background-color:#fff;color:rgba(0, 0, 0, 0.87);-webkit-transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:100%;box-sizing:border-box;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;position:fixed;z-index:1100;top:0;left:auto;right:0;background-color:#ab47bc;color:#fff;}@media print{.css-1rfdcj8{position:absolute;}}</style><header class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed css-1rfdcj8"><style data-emotion="css 1dzxeec">@media (min-width:0px){.css-1dzxeec{padding:0px;}}@media (min-width:600px){.css-1dzxeec{padding:8px;}}</style><div class="header__StyledHeader-sc-1mm3ke2-0 BwXkM MuiBox-root css-1dzxeec"><div class="header__StyledLogo-sc-1mm3ke2-1 gNJRsl MuiBox-root css-0"><a class="utility-module--textDecorationNone--qfbkO" href="/"><style data-emotion="css g29qie">.css-g29qie{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#ab47bc;color:#fff;}.css-g29qie:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(171, 71, 188, 0.04);}@media (hover: none){.css-g29qie:hover{background-color:transparent;}}.css-g29qie.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><style data-emotion="css 1fdcjbc">.css-1fdcjbc{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.875rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:6px 8px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#ab47bc;color:#fff;}.css-1fdcjbc::-moz-focus-inner{border-style:none;}.css-1fdcjbc.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-1fdcjbc{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-1fdcjbc:hover{-webkit-text-decoration:none;text-decoration:none;background-color:rgba(171, 71, 188, 0.04);}@media (hover: none){.css-1fdcjbc:hover{background-color:transparent;}}.css-1fdcjbc.Mui-disabled{color:rgba(0, 0, 0, 0.26);}</style><button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1fdcjbc" tabindex="0" type="button"><style data-emotion="css 1k0nlww">.css-1k0nlww{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;font-family:JKGM;}</style><div class="MuiTypography-root MuiTypography-h6 css-1k0nlww">うさ技術</div></button></a><style data-emotion="css pld06a">@media (min-width:0px){.css-pld06a{height:30px;}}@media (min-width:600px){.css-pld06a{height:40px;}}</style><img class="MuiBox-root css-pld06a" src="/static/88ec0830000f2627cb16235c2823826c/usagi_momochy.gif" alt=""/></div><div class="MuiBox-root css-0"><style data-emotion="css 2p8pd2">.css-2p8pd2{-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(171, 71, 188, 0.4);}.css-2p8pd2:hover{text-decoration-color:inherit;}</style><style data-emotion="css 1n62pqo">.css-1n62pqo{margin:0;color:#ab47bc;-webkit-text-decoration:underline;text-decoration:underline;text-decoration-color:rgba(171, 71, 188, 0.4);}.css-1n62pqo:hover{text-decoration-color:inherit;}</style><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1n62pqo" target="_blank" href="https://github.com/totocalcio"><button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1fdcjbc" tabindex="0" type="button"><style data-emotion="css vubbuv">.css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}</style><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="GitHubIcon"><path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"></path></svg></button></a><a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1n62pqo" target="_blank" href="https://twitter.com/dir20634"><button class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1fdcjbc" tabindex="0" type="button"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="TwitterIcon"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path></svg></button></a></div></div></header></div><style data-emotion="css 1spmd8z">@media (min-width:0px){.css-1spmd8z{padding-left:16px;padding-right:16px;}}@media (min-width:900px){.css-1spmd8z{padding-left:32px;padding-right:32px;}}</style><div class="MuiBox-root css-1spmd8z"><style data-emotion="css-global o6gwfi">html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;box-sizing:border-box;-webkit-text-size-adjust:100%;}*,*::before,*::after{box-sizing:inherit;}strong,b{font-weight:700;}body{margin:0;color:rgba(0, 0, 0, 0.87);font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1rem;line-height:1.5;letter-spacing:0.00938em;background-color:#fff;}@media print{body{background-color:#fff;}}body::backdrop{background-color:#fff;}</style><style data-emotion="css 1niy7tn">.css-1niy7tn{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-left:16px;padding-right:16px;min-height:56px;}@media (min-width:600px){.css-1niy7tn{padding-left:24px;padding-right:24px;}}@media (min-width:0px){@media (orientation: landscape){.css-1niy7tn{min-height:48px;}}}@media (min-width:600px){.css-1niy7tn{min-height:64px;}}@media (min-width:0px){.css-1niy7tn{min-height:44px;}}@media (min-width:600px){.css-1niy7tn{min-height:60px;}}</style><div class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1niy7tn"></div><main><style data-emotion="css 1bhrb75">.css-1bhrb75{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;padding-top:24px;padding-bottom:24px;}@media (min-width:600px){.css-1bhrb75{padding-left:24px;padding-right:24px;}}@media (min-width:900px){.css-1bhrb75{max-width:900px;}}</style><div class="MuiContainer-root MuiContainer-maxWidthMd css-1bhrb75"><style data-emotion="css 1anx036">.css-1anx036{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;}</style><h6 class="MuiTypography-root MuiTypography-h6 css-1anx036">2020-05-21</h6><div class="blog-post-container"><h1>【WordPress】スパム対策に特化したプラグインを入れてみよう</h1><ul class="MarkdownRemarkfrontmatter__slug__StyledList-sc-1whf6kk-0 vLcnE"><li><style data-emotion="css 1d1ttf5">.css-1d1ttf5{font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.8125rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:4px 10px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:#ab47bc;box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);}.css-1d1ttf5:hover{-webkit-text-decoration:none;text-decoration:none;background-color:#773183;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-1d1ttf5:hover{background-color:#ab47bc;}}.css-1d1ttf5:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-1d1ttf5.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-1d1ttf5.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}</style><style data-emotion="css xb2fq2">.css-xb2fq2{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;box-sizing:border-box;-webkit-tap-highlight-color:transparent;background-color:transparent;outline:0;border:0;margin:0;border-radius:0;padding:0;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;vertical-align:middle;-moz-appearance:none;-webkit-appearance:none;-webkit-text-decoration:none;text-decoration:none;color:inherit;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:0.8125rem;line-height:1.75;letter-spacing:0.02857em;text-transform:uppercase;min-width:64px;padding:4px 10px;border-radius:4px;-webkit-transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;color:#fff;background-color:#ab47bc;box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);}.css-xb2fq2::-moz-focus-inner{border-style:none;}.css-xb2fq2.Mui-disabled{pointer-events:none;cursor:default;}@media print{.css-xb2fq2{-webkit-print-color-adjust:exact;color-adjust:exact;}}.css-xb2fq2:hover{-webkit-text-decoration:none;text-decoration:none;background-color:#773183;box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);}@media (hover: none){.css-xb2fq2:hover{background-color:#ab47bc;}}.css-xb2fq2:active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);}.css-xb2fq2.Mui-focusVisible{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.css-xb2fq2.Mui-disabled{color:rgba(0, 0, 0, 0.26);box-shadow:none;background-color:rgba(0, 0, 0, 0.12);}</style><button class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButtonBase-root  css-xb2fq2" tabindex="0" type="button"><a class="MarkdownRemarkfrontmatter__slug__StyledLink-sc-1whf6kk-1 cWFrrb" href="/tags/wordpress/">wordpress</a></button></li></ul><div class="MuiBox-root css-0"><style data-emotion="css 1avk4q9">.css-1avk4q9{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:500;font-size:1.25rem;line-height:1.6;letter-spacing:0.0075em;margin-top:8px;margin-bottom:8px;}</style><div class="MuiTypography-root MuiTypography-h6 css-1avk4q9">目次</div><style data-emotion="css ampo0q">.css-ampo0q{padding:8px;background-color:#f5f2f0;}</style><div class="MuiBox-root css-ampo0q"><ul>
+<li>
+<p><a href="#akismet-anti-spam">Akismet Anti-Spam</a></p>
+<ul>
+<li>
+<p><a href="#akismet%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B"><strong>Akismet</strong>のアカウントを設定する</a></p>
+<ul>
+<li><a href="#your-email-address">Your Email Address</a></li>
+<li><a href="#first-name--last-name">First Name 　/　 Last Name</a></li>
+<li><a href="#personal-site-url-where-you-will-use-akismet">Personal Site URL where you will use Akismet:</a></li>
+<li><a href="#%EF%BC%93%E3%81%A4%E3%81%AE%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9">３つのチェックボックス</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#%E8%AA%8D%E8%A8%BC%E3%82%B3%E3%83%BC%E3%83%89%E5%85%A5%E5%8A%9B">認証コード入力</a></p>
+</li>
+<li>
+<p><a href="#wordpress-%E5%81%B4%E3%81%AB-api-key-%E3%82%92%E8%A8%AD%E5%AE%9A">WordPress 側に API KEY を設定</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#wordfence-security">Wordfence Security</a></p>
+</li>
+<li>
+<p><a href="#siteguard-wp-plugin">SiteGuard WP Plugin</a></p>
+<ul>
+<li>
+<ul>
+<li><a href="#%E9%80%9A%E7%9F%A5%E3%82%92%E6%B6%88%E3%81%99">通知を消す</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div></div><div class="blog-post"><div class="blog-post-content"><p>今回入れるプラグインは３つです。</p>
+<ul>
+<li>Akismet Anti-Spam</li>
+<li>Wordfence Security</li>
+<li>SiteGuard WP Plugin</li>
+</ul>
+<h2 id="akismet-anti-spam" style="position:relative;"><a href="#akismet-anti-spam" aria-label="akismet anti spam permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Akismet Anti-Spam</h2>
+<p>WordPress をインストールすると最初からインストールされている Akismet ですが、無料の範囲内でできるとこまで設定します。</p>
+<h3 id="akismetのアカウントを設定する" style="position:relative;"><a href="#akismet%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B" aria-label="akismetのアカウントを設定する permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Akismet</strong>のアカウントを設定する</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/727a364cfa533681984691b27e5534a1/914ae/image-11.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 41.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtklEQVQoz23LS2sTYRTG8flELlyolaL4CUQQbRsVv4IoRcVCESp2oVCKUBSxC6UWxoaWaG+2VRRx5cJCsWkQzSTN3PPOO8lcG/8y0xiiuPjxHM55jlL+ViZwLFqWjmXaVGoGSUtCGBAH/FeSCf+WhnAQgVL6vMy1jXVub71ndHOLG283ufXuI6PrRZ5tXObx2hWerF1lZuUSMyuFPB+9GWG6NMR0aZippYtMLQ7xYOE8k+o5FPXDImfnixReLTOivqaglhhWV7nwcpaHS6e4v3CayeIZ7qmDTKgnmVAHuTs/wPjcCcbnBhh7cYw7z49zc/Yo158eQdne/oq0q+w3quj6Ic+tE0oTISRCeH1kL7187kvPR3o+yu5uGdO0qRsOlYaL05RIv4UnW0gpc7708XvzP/yM3+sqO+UKQRjRFIJ2GBEnKWGUZYJlOwTZnKb5PskzyUXxHzFhFHf3KcqnnQq6DNjTdOqmg+E0adguutPEcAXftX32fmhUdRNL+NRMh7p1eM96mm6i6VbedWQb5cvPBn7SQYQJQdohOviVizsgWgGmKzC6j3Y7RvcCaiIgzHqdPt2/31DQM9mx59sZAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/727a364cfa533681984691b27e5534a1/0a47e/image-11.png"
+        srcset="/static/727a364cfa533681984691b27e5534a1/8a4e8/image-11.png 150w,
+/static/727a364cfa533681984691b27e5534a1/5a46d/image-11.png 300w,
+/static/727a364cfa533681984691b27e5534a1/0a47e/image-11.png 600w,
+/static/727a364cfa533681984691b27e5534a1/914ae/image-11.png 860w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>プラグインの画面で大きく目立つアカウント設定ボタンがあるのでクリック。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/47d433e01fd08453d7e62b8a37ff1544/d44c9/image-12.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 32.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA9klEQVQoz32RW27CMBBF2Q0f7U832wV0ES1CbTdSkYSkQEEiJvUjNn6cCpdIKYKONLqW5sz1jD0BSCkxxPj8X9ziJkNxyFM4Z1mt1nw2DYvFgrquqaqKoigoyxKlNNf6Tjrh6k0JpRRCHNjvW1oh2O527NsWIQTOHW9OnCf03qO1pu97nHMorQneZ+MUPKR4zkQMIXNSSqx1mY8xjiYEQvAYYzJorc1wpwxbafjqFLuRdtpgtM5M31tsby8ML1aOZ30qv5k+L3mYN9zNau5nNdOXJY8fhz/c1ZXHjxvPhUYdeV0r3jcq69tGMV9JSul+DUc940/5AStTHNj/WZ+1AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/47d433e01fd08453d7e62b8a37ff1544/0a47e/image-12.png"
+        srcset="/static/47d433e01fd08453d7e62b8a37ff1544/8a4e8/image-12.png 150w,
+/static/47d433e01fd08453d7e62b8a37ff1544/5a46d/image-12.png 300w,
+/static/47d433e01fd08453d7e62b8a37ff1544/0a47e/image-12.png 600w,
+/static/47d433e01fd08453d7e62b8a37ff1544/d44c9/image-12.png 722w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>そのまま「Akismet アカウントを設定」へ進みます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/ed4dcf382e730f4982ac1e8cfe5d228d/2bef9/image-13.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABl0lEQVQoz4WRz27TQBCHc6anHkA8QPsKPfAGIN6AIFFRjnDgKZBQEKhcQBW3VkLiQI9NgB5QJS6gtClpVTXdWA3U9q69m6TEFrH9Ia/5k0BCRvp2d3bmtzujKd15epl7zxe5+2yBW4/nKVcucPPR3G9uVP5QHrnPKVfmWH4yz8rqJW6vXrTn0p6o0Wi/odF+y66osSuqYzSdGgdOlQNni4aoUj8Zj+f6UUrMsMMYPp0XxMy2UpIOmQSkCGX40FZsnzpUxTb1rx7CfAMSpulshVmWjZGmqf1t39W0Tvs05A7vOmVetU54sN/NFSRp9o/OVvjrMMkSYJhCnEQMEokTDRH971Pz87dshcZofN9HKUUYhnbPfV8GKBXQ7fYJZBepNMrzkVKhpMTzPFzXtbmDQVRUmC9RFGGMQWuD0RqtNUGoCLUkCH1CI3H9DirwOPO+2Fiv17OaQqeJ43hay4W/4z1k7XCJ9eOrlo3WNTaOr/Pi6Apbnfv/b3lsIFkxkE7vI3v+Sz6r1zTVJs2fe34nzHubk+f+PZQfjYrNnujsSIgAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/ed4dcf382e730f4982ac1e8cfe5d228d/0a47e/image-13.png"
+        srcset="/static/ed4dcf382e730f4982ac1e8cfe5d228d/8a4e8/image-13.png 150w,
+/static/ed4dcf382e730f4982ac1e8cfe5d228d/5a46d/image-13.png 300w,
+/static/ed4dcf382e730f4982ac1e8cfe5d228d/0a47e/image-13.png 600w,
+/static/ed4dcf382e730f4982ac1e8cfe5d228d/1cfc2/image-13.png 900w,
+/static/ed4dcf382e730f4982ac1e8cfe5d228d/2bef9/image-13.png 1024w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>「SET UP YOUR AKISMET ACCOUNT」をクリック</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5a405643eed674dbb727c90a20f76b89/e4900/image-14.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 64.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACC0lEQVQ4y3VTy27TQBT19yJYsASBBJ+BqMSqgnZDxYZCtiC6o1JTcJUYnHcJfsQe2/PwzBx0r2uTIDHSUUb3ca7PPZOgrmv0qKpq+E2TBGmaIssyJEkygGJpkh7U7nMEFNgHBcuyxHQ6xXQaYbFYIIoiTCYTRNEPLJdLhGGILM/RNA3+7Q/22fchJRULVFWJqhYHIKL/9QVaa3jvoY1EIwWccwwhSoh6B2MUxwnaKFR1gVIUcNbBWstxqWo452GMQUBBpRTvKs8yFEUBOkSotOR7vys6NECIAvDgwXmeQwjBOeIKiJVO27Y8gYp6QqmagxwdGkKEpIpq9/uYkCQbo6F7aM1FoirRyIqLlVbQDM3yKEc1pIxi+i7fSW4tT2YJd9fuCwsexF9oPAOuk8WSAbgWsC3lHLwFvAOC+eY7Xr17iOP3j3A6eo6jswf4+OUFbAt8DUc4OruP4/PHeH3+BC/f3sPny1Me/OnyhHMno2d48+Ep32/iCwTk5OL2GvFqjHh1jXh9hd/ZjI1I8hXmQ26M+WaMbTrjZ5Pu1pitrzBbf2PMb8coREouu0Gyd38llweSHYzu9tHaFqXYDT3dOrpG79G57HznFsHalh2kxZu2I1RSQ0rFDURIL4BcJRPp8dd1NfSyy5Qk4t5herS0+M32J34lMearG8TLkO/rbYSizEHKqLb/u/YcfwDRgd4li8Gi5AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/5a405643eed674dbb727c90a20f76b89/0a47e/image-14.png"
+        srcset="/static/5a405643eed674dbb727c90a20f76b89/8a4e8/image-14.png 150w,
+/static/5a405643eed674dbb727c90a20f76b89/5a46d/image-14.png 300w,
+/static/5a405643eed674dbb727c90a20f76b89/0a47e/image-14.png 600w,
+/static/5a405643eed674dbb727c90a20f76b89/1cfc2/image-14.png 900w,
+/static/5a405643eed674dbb727c90a20f76b89/e4900/image-14.png 988w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>「Get Personal」をクリック</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/cf148f9e27534b10ff8db38b2a344be1/aa08e/image-15.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABd0lEQVQoz41TwU7CQBDtR+vR+Al604PI12iUGwoJXkyMiEKp0NJ2d2d2+8xMKRQB40tedrudfTNvpo2892hYVRVCCHuUc2KL3KTIyxSFycCe9U47Tp4jYkZZGpTGgn8F1PQQ5EWGOJmgsCKYruMD2pDEERGhLEulIzpYpZwJhm8vuO120bnpYDKZaEXGGDATjH1FCIzIOYcsy1SQmTeZ2hR4z5jGMzwPBhiNRiokqBMGEKW6j8SmcwQiVjYVtSsUiBNTFBt7RA7WGFhrN0lVUALFaoOtDd6psDAG03mCaTzXdZYsME++sVgskCSJutQeykXJIsLN1Hant7YcKlgOIB/gfNA967vd9kTGWiTLJdJVDuNIg3zYn94xVL+nDP0sfOs4gG2uonW1Yn1/UO12tNfoKc5x2Z/hehDjahjjoj/FcJ7X0kdEjgnrUHqfKU7v3nH++IGzhzFO7sfofa3qvv1h9aD92jKvLTcMkDYYx2De/pb/oQz4ByiPqA2X7XvyAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/cf148f9e27534b10ff8db38b2a344be1/0a47e/image-15.png"
+        srcset="/static/cf148f9e27534b10ff8db38b2a344be1/8a4e8/image-15.png 150w,
+/static/cf148f9e27534b10ff8db38b2a344be1/5a46d/image-15.png 300w,
+/static/cf148f9e27534b10ff8db38b2a344be1/0a47e/image-15.png 600w,
+/static/cf148f9e27534b10ff8db38b2a344be1/1cfc2/image-15.png 900w,
+/static/cf148f9e27534b10ff8db38b2a344be1/aa08e/image-15.png 967w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>右側の金額のスライダーを￥０に動かします。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1136f24d77a9e474116d0e2ec1b6aba0/aa08e/image-16.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 65.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABr0lEQVQ4y41T247TMBDtj8MjtwXEC/0NPoAPWCS0hZV4WR6oVK3UJN3YcXyJ7dg5aCZ1SZdVtSOdjJOxzjkZj1fTNCHnzKD1U6BwXkPqCr1toV2HOCaklLlW9hDHahxHWOcweI+UEhcpL8GEg4WQB6i+Q6ckvA//CdPeVYwRWhso1cMYA2vtSbG4p7i7+42rq/dYr9fQvUYMAeEIMjUMw+yQCImECrQO3sOHcGpDIez7HtvtFk3TsJOcz1tFmR3SgxTKB1oTcXkvbkPwsMZwdtQiZ09/RPtnkWMPjbVsmQoxhjOBQqitw/4gULcCjehQtxKt7KCUghCCRWbCGGCMZqWCUjydMmXqKeZYrpfBvyxMQttpGK2hteZehRgejRGf0Ex8zHg8XmVsdiJhV0tIKfDQCjwIAakUpOox5n9zdmlGS2aHSCPg3YzgMA0WiA4YHajmxnPSp+KM8Edj8eqmwqfbBh9+1ozPvw74eFvj607NN+CCw6UQE17vNV58u8e7TYXXN3u83VR4s6nw8vseX/7IIyGeFdxD5ATkMCMFYBqBia5b5rOk+7oc8kugcfsLfEHyEH8GY8gAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/1136f24d77a9e474116d0e2ec1b6aba0/0a47e/image-16.png"
+        srcset="/static/1136f24d77a9e474116d0e2ec1b6aba0/8a4e8/image-16.png 150w,
+/static/1136f24d77a9e474116d0e2ec1b6aba0/5a46d/image-16.png 300w,
+/static/1136f24d77a9e474116d0e2ec1b6aba0/0a47e/image-16.png 600w,
+/static/1136f24d77a9e474116d0e2ec1b6aba0/1cfc2/image-16.png 900w,
+/static/1136f24d77a9e474116d0e2ec1b6aba0/aa08e/image-16.png 967w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<h4 id="your-email-address" style="position:relative;"><a href="#your-email-address" aria-label="your email address permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Your Email Address</h4>
+<p>認証コードが届きますのでメールアドレスを設定</p>
+<h4 id="first-name--last-name" style="position:relative;"><a href="#first-name--last-name" aria-label="first name  last name permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>First Name 　/　 Last Name</h4>
+<p>名前を入力</p>
+<h4 id="personal-site-url-where-you-will-use-akismet" style="position:relative;"><a href="#personal-site-url-where-you-will-use-akismet" aria-label="personal site url where you will use akismet permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Personal Site URL where you will use Akismet:</h4>
+<p>今回 Akismet を登録するサイトの URL を設定</p>
+<h4 id="３つのチェックボックス" style="position:relative;"><a href="#%EF%BC%93%E3%81%A4%E3%81%AE%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" aria-label="３つのチェックボックス permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>３つのチェックボックス</h4>
+<p>全てにチェックを入れます。入れないと登録できません。もしもチェック項目に該当する場合は有料の商用プランを選択する必要があります。</p>
+<ul>
+<li>I don’t have ads on my site ＝ サイトに広告がない</li>
+<li>I don’t sell products/services on my site ＝ サイトで商品やサービスを販売していない</li>
+<li>I don’t promote a business on my site ＝ サイトでビジネスの宣伝をしていない</li>
+</ul>
+<p>全ての項目が記入できたら「CONTINUE WITH PERSONAL SUBSCRIPTION」をクリックします。</p>
+<h3 id="認証コード入力" style="position:relative;"><a href="#%E8%AA%8D%E8%A8%BC%E3%82%B3%E3%83%BC%E3%83%89%E5%85%A5%E5%8A%9B" aria-label="認証コード入力 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>認証コード入力</h3>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/97e264a64cd698e5faecdae2f502b49d/a6d30/2-1.jpg"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 84.66666666666669%; position: relative; bottom: 0; left: 0; background-image: url('data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAARABQDASIAAhEBAxEB/8QAGAABAQADAAAAAAAAAAAAAAAAAAIBAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB7eZmzaJQAP/EABkQAQACAwAAAAAAAAAAAAAAAAEAEQIQIP/aAAgBAQABBQJGA6blZc//xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAwEBPwFj/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAHRAAAQIHAAAAAAAAAAAAAAAAABEhAQIQIDEyof/aAAgBAQAGPwJooZo0yG/Lf//EAB4QAAEDBAMAAAAAAAAAAAAAAAEAESEQIDFhcYGR/9oACAEBAAE/ISRHyDphLjQTydFs+Lf/2gAMAwEAAgADAAAAELMPPP/EABcRAQADAAAAAAAAAAAAAAAAAAEgUbH/2gAIAQMBAT8QVWQ//8QAFhEBAQEAAAAAAAAAAAAAAAAAMQEg/9oACAECAQE/EGOP/8QAHRABAQACAgMBAAAAAAAAAAAAAREAITFRIEGRof/aAAgBAQABPxAk9hyv0wQNBtkuSaxQQQ4C37grocCwrX29+H//2Q=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/97e264a64cd698e5faecdae2f502b49d/b4294/2-1.jpg"
+        srcset="/static/97e264a64cd698e5faecdae2f502b49d/75985/2-1.jpg 150w,
+/static/97e264a64cd698e5faecdae2f502b49d/f93b5/2-1.jpg 300w,
+/static/97e264a64cd698e5faecdae2f502b49d/b4294/2-1.jpg 600w,
+/static/97e264a64cd698e5faecdae2f502b49d/a6d30/2-1.jpg 674w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>上記の画面に遷移したら先程入力したメール BOX を開きます。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 568px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/03a82d6bd8628e969e0561fdb0dcc490/10e91/2.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 42%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABiklEQVQY04WNOywDcRzHT2weEZW0qAG7hFHChMTM0Ei0nKpLsGERi8fkUb22J12Q6KBLH9TmsVBRdGArSppWT0nlevdPw/9VyRUhBp98hu/w+eXHTG+1DtgqLM7qYYf2U6eOE2osDp3ZXsXyGpavZHmN2a79DizOatNq+dx2FzPjbh+yV3Fr+hGhlhP0Zod2arNlxd+75OuZ93TOejqW/T223b6JjaZhh25EULO1ukG+csHTzUyuNxsWi43Wsv6VkoIsr+EE/ZirgVPTUVf9uKuR5TX91hKjtdRoLTWtlhsWi2bcbczV/f5lbCcS24vEgpG7YCQWvLgNhKO+s6g3HPWpesNR7/lN4OJ259vwje/64YhBEKfFTFrMvDy9PibSz0+ZHIDwjeT/A2PCSNLrweF+6PQkFDo+VEdWlvJ5igkiBBGKSWH88f39jQEAJBKJZDIpimI8Hk+lUgAAWZZzuRwAIJvNKooiy7KiKJTSn58RQgyEEAAgSVLhBiFEKcUYE0KwCvmC/gZC+AE1A1eOxJMD8AAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/03a82d6bd8628e969e0561fdb0dcc490/10e91/2.png"
+        srcset="/static/03a82d6bd8628e969e0561fdb0dcc490/8a4e8/2.png 150w,
+/static/03a82d6bd8628e969e0561fdb0dcc490/5a46d/2.png 300w,
+/static/03a82d6bd8628e969e0561fdb0dcc490/10e91/2.png 568w"
+        sizes="(max-width: 568px) 100vw, 568px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>届いたメールに書いてあるコードを入力します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 569px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/897aa8607b0708614b9c2e71f14321a8/854dc/3.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAABo0lEQVQoz2WOS0wTURSG75oGE0gm2hKDhpi4d83WhMCCGMOK+ghlahASl65YsEBhMQqdEaR0cGNIoMTErU7bndGF0pkm0LRYKY/AQuZx750wnfsgM0Ws+OXPud/iPycXzGbvPZrrePLmelLpuogox4KpREdTVxMpYWReEOVoa6EZMLM++PD1laQSE+VrohxNpIRn6dsv1vtfZgem1/om3/fObgxKH+4/f3cnEZ4Ia+cBU6t3h2bAg1ftcSkSlyLDUtvjuc6xhRtjC91PF2+KSmx8sWdi6dbIvDAstf3pRJoCvpU/ftp8WzBW8oaa19VQMloxrRXTn4tLmr6s6YHk9OWCsVIw1LyhFgw1p2dyegYQn3DOKeGMcs44p5yRIIGwv85Zi1DeBHiNU8YpwtCBNsYIIce0TmzHdKCFMDSt30HME4Sh7VgIORDaENqUEcoIcF3X87xGyPnr+4RQSpjfIJQwShgJ3G+04IUACCH6j/3jnepuqVYvl38WK79K+0c7wUcQvlQLlvG/IAxrh0Zl73vt0Niuf93a/VI9+GE7povdS80zLwyNgs3jKLsAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/897aa8607b0708614b9c2e71f14321a8/854dc/3.png"
+        srcset="/static/897aa8607b0708614b9c2e71f14321a8/8a4e8/3.png 150w,
+/static/897aa8607b0708614b9c2e71f14321a8/5a46d/3.png 300w,
+/static/897aa8607b0708614b9c2e71f14321a8/854dc/3.png 569w"
+        sizes="(max-width: 569px) 100vw, 569px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>メール BOX を更新すると API KEY が届いています。</p>
+<h3 id="wordpress-側に-api-key-を設定" style="position:relative;"><a href="#wordpress-%E5%81%B4%E3%81%AB-api-key-%E3%82%92%E8%A8%AD%E5%AE%9A" aria-label="wordpress 側に api key を設定 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WordPress 側に API KEY を設定</h3>
+<p>ここまできてようやく WordPress の管理画面に戻ります。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/25e9b127108daf395dcdd13f064c9b4e/d54e4/image-17.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 59.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABTklEQVQoz52S2U6EQBBF+SITE9989G/9AjUmmqiJH6FOgFlgJgOh9/2abnACiPNgJYdqmluX6iXL9x/YHnPEXBw+YZ1FCIAPAeEfZIRLjKFCJebzS5o5TChkxjroMcam7APgfOjzQD8OvWaBaJphIULwaNsWlBA0TYOu6xJxjhCC5ZoAJgfD+DL/uNlsUdc18qJAWa7xtVqhKNeoqmqq7Qt+GxpjoLWGsRZK6yQalUx+JqWEtRY2bo33yx0KwcE5h1IKlFIQytByiYbyxJFytIxDCJGWHbVx7JxLhn5sOA4/5NuC4uIux/Vjicv7AlcPBW6e1mi1P7+HznlY507EU4f32DCN5x3DW83wWjO8VAzvew5pXOrKTvCp7nRt5ujBNPUbRsCnfdNLNeeuzU8cmcKuE6hJjzDuT+1pyfERW015jFDgUk9gkSXtoI8dfgNt5KS2DY/VZQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/25e9b127108daf395dcdd13f064c9b4e/0a47e/image-17.png"
+        srcset="/static/25e9b127108daf395dcdd13f064c9b4e/8a4e8/image-17.png 150w,
+/static/25e9b127108daf395dcdd13f064c9b4e/5a46d/image-17.png 300w,
+/static/25e9b127108daf395dcdd13f064c9b4e/0a47e/image-17.png 600w,
+/static/25e9b127108daf395dcdd13f064c9b4e/d54e4/image-17.png 747w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Manually enter an API keyをクリックし、先程の API KEY を入力します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/5a0054dda96720ffd6222524b957c839/3c051/4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 109.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAIAAABPIytRAAAACXBIWXMAAAsTAAALEwEAmpwYAAACuklEQVQ4y51TTWsVSRTtX+AfGERwRnGjqxn8B679B251UAMyA4FhMAZm7UrUBAfUjUn8CTpq+uk2Y3QWszCJoOZ92F3V1VV16966VaXV7z19fhDEw6WpvnDqnr7ndOHIvale1209lIOhHHr26ZtR9MXuxosHT7cebbx48O/Ww82dMtf2+tPtR892epvb690zd7oqN7fL/14+ebZTbu0+L9afr52+8sP5pUN/3Do+t3zk7LUf55YPX7hxdP7mL79ePTC3fOTM1f3nln6av/nzb38fO3v94NzS4VOX9538q1i8c6L4/9XGrfvzq+XC3d7iSrmwUl5cKRfWepfWHl9aKS+udp3V3Flc63Wd3sKd9T9v//P7vY0bBSB7Tt8BDqkAJGMNEYYQLECrNTjnmX0H8kQ8PRB578MU5H0B5JVSAJBS0to0SjVNo7UxxlhrEclaq7VGJObM+TDZc8hkB84hppQQ0TnXNI2oRXeFBoC2VY1sACCEOJ75kew8DwYDrXVKSbXtoN8fDod1VUkhjdGj0VsppQUrhGjb1mhtrZ2ZjDR+IQ6y1bWQb4XMw4WshajrWkophMBO2iwmsq21SqkYIxEpC8oAOAcWENEC1B2apmHmL8hI48U6z5VUOmtrR6NRv9+vqirv0mY458bkEAIzxxA+kZ1SAmtEVQkhlVKj4UjKpqpqIYRSSmstZe6PDWPmCRmIW0ca/agFYSBOkLcaZzBeNTNrYx3iR3ID2FjclVaYvJjYCYkzX/jh7JCGVd20mpgLA+gwS+kMzBNyvPaqEFMKMTriwiJ1ZE5fTJtFjLMVY5xumz0jIhEhInegiQN+mnAfQvyUP/UZIPs8zjAR5VQba7tsA2SnjDHe+6+FBMk5MNqMQxtj0MZ8yy/5uc9Z2Z6IMVpwxkL+SOYJeZa2xxUxRocE2WR+T34HFFLKhcMQ+CoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/5a0054dda96720ffd6222524b957c839/0a47e/4.png"
+        srcset="/static/5a0054dda96720ffd6222524b957c839/8a4e8/4.png 150w,
+/static/5a0054dda96720ffd6222524b957c839/5a46d/4.png 300w,
+/static/5a0054dda96720ffd6222524b957c839/0a47e/4.png 600w,
+/static/5a0054dda96720ffd6222524b957c839/3c051/4.png 760w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>これで設定完了です。</p>
+<h2 id="wordfence-security" style="position:relative;"><a href="#wordfence-security" aria-label="wordfence security permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wordfence Security</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 541px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/72a2858fba86dd49649852c7486d0352/9d576/image-18.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 63.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACPUlEQVQ4y4WTz27TQBDG/T6ceAaOvAcX7ggBNyTOCAmOXHoGhLhAi4pUgaCHAipp0pS0SRPbcbz+G8fr9SbxD+2mLWkBMdKn2Z2Znfl2Z9bhiiwWC2qtUVqj9Zz5fIVaz62vWa78U6ksCqnIy8quTZzzdn/A3Ze7PNz+yc4gQS+WdPyE76eC/VFEd5xatNyYyVSybBqmVU1vHDEUqUWQ5ET5DDVf4Fy7v8HNx2+48XyX608/cRyXhHnJUZByEub0wpyun9AXOadRQZCVNA0USlPWmlzWdLyYlhtZMs7tjQ/ce/GZO5tH3Hrdpp+UzLKUNE2JIkGWJMhZgZKSsiiY5hmllJeeaaa0LWDYOw9efeHJ1jeefezy6H2b3LxJnjEJQ0QUE4YCISKyaYHr+QSTEM/zkbKyyRpDd02crSOfncMBe1/3aP3YJ0tT4jjG9Tz6gwHD4YhQCMbjgG73iIODDn4wuUhk9Dqcq102RhFFDEcurutyOhxZhkmSWtaGsen+39hZhsvl0t7d6OZMF0VhGSVZRpxm5NPC2teL/gt/MDQiwpAoTkmlJioqmotE/FecxVyzQm0H1zAx+nygz2Fs6zC2qqpQSqG1pq7r1WDX/jt0sM082CQXfYJJZANNwDqUqqgqaROYvZSSTrtNp3NI/6RPr3dsfY7vDshTQZ6GjH3PNiIIAnvIVNa1tl9tPBkzGpkGCTujZhqSJMFzXVqtlvWZM46slP2nqtaoCzbqd8Kz66haXfLVa7Erm4HmF7Yu2rjEjswXAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/72a2858fba86dd49649852c7486d0352/9d576/image-18.png"
+        srcset="/static/72a2858fba86dd49649852c7486d0352/8a4e8/image-18.png 150w,
+/static/72a2858fba86dd49649852c7486d0352/5a46d/image-18.png 300w,
+/static/72a2858fba86dd49649852c7486d0352/9d576/image-18.png 541w"
+        sizes="(max-width: 541px) 100vw, 541px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>プラグインを検索してインストールし、有効化します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/84c918517b68ff123cc9147cb5db8668/636c2/image-21.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABbklEQVQoz22RO0/DMBSF+6OZmPgjDEwMDKAOCIm14t2hFTCAqNq05NE6TVPHj8Z2DrKJk5Ri6eg+Yp98vu4BQFVV8NHnSc6x2DCwncJOGeyUQlmWMEZDa713pht7qJc3q+r6pP+Mo+t3nL1McDGa4vz+FZc3txgMBhgOhzDGHEA4w790vp5EBG+zCKt0jfl3iOA7xudsjlkQIMuyA7M9wm4zy9buwJoQJFGIMAyRRBGSOMYySRDHMQghbo+NSqnWsKpaQiElGOPgXEBpDW0MjPklMFaubmXnaIXaqCH0if0T57wjASGEy230srWUsqkZF6BCHhpu8xwpIcjzHIwxFEXRiFIb2579TimFUQpfMcFx/xFbWbaGVlorR+lf799V7/XXdi1dgteEVu5R7LzGi5UjYTWBo6EUG8qQFwzplqGQpZunv9XTdInThw9cjacQpd5/5YLvz6s7S8a5UyEkpNINcJAVuJskGC1SqJr4B+8vBT8yFbWJAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/84c918517b68ff123cc9147cb5db8668/0a47e/image-21.png"
+        srcset="/static/84c918517b68ff123cc9147cb5db8668/8a4e8/image-21.png 150w,
+/static/84c918517b68ff123cc9147cb5db8668/5a46d/image-21.png 300w,
+/static/84c918517b68ff123cc9147cb5db8668/0a47e/image-21.png 600w,
+/static/84c918517b68ff123cc9147cb5db8668/1cfc2/image-21.png 900w,
+/static/84c918517b68ff123cc9147cb5db8668/636c2/image-21.png 911w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>メールアドレスの登録を促されるので登録します。
+WordPress や Wordfence のニュースを受け取るかどうか選びます。どちらでもいいです。
+プライバシーポリシーにはチェックを入れましょう。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f714d09c967d33f260ea43f84e29e31e/8b69f/image-22.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 44.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWklEQVQoz22Rz0scMRTH599rz/1jevTes9hLoTfP6kHLQsEfFMSD4CxqF8RFsbKzs+7MziSZJJN8ysRNiWu/8CUvyXvfvG9eRgLvfeCAi/uC47s5k6Lmz0ryWFbMZjPqqqKu6395cY3I/ieG93w5umRrdMve+IGDfMruryv2Rz85Pjkhz/M3Nalolh6ml857bN8j6iXLxZzqZUH5sqR3LrUU8t2aQ5yxAe8dUkqkFEghaNqWtm1pmpa2aRBCIKUKq0vF0w67TqOUotM6JEX2SbzJ2GmxEmyfXrNzdo0y9lXQWosxBmPse7Fg/XUfvyTeBzfa8HtWMSmqcJZtTindO6txw0NaB5vBherw6+42a99MeUC/Tvh+PuHD1x98+jbi484hn/fPEUozLSrmK0EtNdL06WyI2tlgN3Kw7fqe52VD/lRy87xg/FQyLWuMtSht0MagtKbThrQ28i/H7rYrnprAEQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/f714d09c967d33f260ea43f84e29e31e/0a47e/image-22.png"
+        srcset="/static/f714d09c967d33f260ea43f84e29e31e/8a4e8/image-22.png 150w,
+/static/f714d09c967d33f260ea43f84e29e31e/5a46d/image-22.png 300w,
+/static/f714d09c967d33f260ea43f84e29e31e/0a47e/image-22.png 600w,
+/static/f714d09c967d33f260ea43f84e29e31e/1cfc2/image-22.png 900w,
+/static/f714d09c967d33f260ea43f84e29e31e/8b69f/image-22.png 912w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>「CONTINUE」をクリックするとライセンスキーの入力の画面に遷移しますが、持っていないので「No Thanks」を選びます。</p>
+<p>以上でインストールは完了ですが、インストール後の詳細設定はこちらの記事が参考になります。</p>
+<p><a href="https://easy-wordpress.work/wordpress/security-wordfence/">https://easy-wordpress.work/wordpress/security-wordfence/</a></p>
+<h2 id="siteguard-wp-plugin" style="position:relative;"><a href="#siteguard-wp-plugin" aria-label="siteguard wp plugin permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SiteGuard WP Plugin</h2>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 564px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/cb3e29548ed336751564336a5a716470/ba4d9/image-23.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 43.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABv0lEQVQoz22QOY4TQRSGLXEXMtI5BycAbsAJSAmISPBoJETAGcg8IiKcCNmD7RmNDV56qa6lu3qtbveHqkYOEPNLv1T16tX3lsnpdMKrLhWuTsPZx1TZYuoO2ziEbUiLOtxP4xhyyrYjKypUWQfrsqHuHBMYaR3Mvn0m+foc9JYB2KaaTWr4k+UcTclBl6wiRdM5GEfSvGIdSX4Ln6e4iySZrT0QVvdb3r19ze7VM/r1TQDKNCE3mjiKOB4PSCHYbh7Y7Q9kUiJExlm26VjFGlm1j8AoU7y8eMHyzYUfOCRlmUQqTZIkWGsxJkdkksJaqrqmaRrGcfzPk8VizuXllI8f3vPlasrV9BPyuENpE1y0Pd0w8pQ8wO/7H+DhEHP9/QfL+x2L5QPXsxlSSqqqwpYVRdNRty58HIYh+Hx+ShOchGEJ1U9o7sLIp9FXP9H3PUPv6J3Dde4RNgyP8WHAGMN6vSYVAq0VeZ4zMdmeeHNDHs/J0zX73ZY0FaFL50HOA3uariVJYqIoRikd9iqEYLN54PbXLfP5AqkUkzy3KFOR2yZYG4PWOtiPfbYtS5SSoZDvzHdTFEV4kzILcF/kL0WKpNUA09ZaAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/cb3e29548ed336751564336a5a716470/ba4d9/image-23.png"
+        srcset="/static/cb3e29548ed336751564336a5a716470/8a4e8/image-23.png 150w,
+/static/cb3e29548ed336751564336a5a716470/5a46d/image-23.png 300w,
+/static/cb3e29548ed336751564336a5a716470/ba4d9/image-23.png 564w"
+        sizes="(max-width: 564px) 100vw, 564px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>プラグインを検索してインストールし、有効化します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f29e08f9ee088dc4043901f659115d67/c6d67/image-24.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 12.666666666666668%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAyElEQVQI112NQUvCYACG91+NDoEuxeoiVAyDki4dZyBzOn+D4vZtzdVWnrt0aHSpixLihwluj3xLLx4e3veFB17t9ztlMfth+vHJe/rFZjknl3PWcs1KZqzkhj+ZHZDv+N/K2aM1xiGGeOHai7h0I27DBCNI6Dy1cISOE5xji1N6fo2+X6cnanQ9vUB1W1QLZxBc0A/O0K78iLtJjPk25SF+5f455iaMaftNbPcEy6vQGassY7llHkfHmMMS7eFR0RWWWykOlLsFp6PAVipAvlIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/f29e08f9ee088dc4043901f659115d67/0a47e/image-24.png"
+        srcset="/static/f29e08f9ee088dc4043901f659115d67/8a4e8/image-24.png 150w,
+/static/f29e08f9ee088dc4043901f659115d67/5a46d/image-24.png 300w,
+/static/f29e08f9ee088dc4043901f659115d67/0a47e/image-24.png 600w,
+/static/f29e08f9ee088dc4043901f659115d67/c6d67/image-24.png 734w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>プラグインを有効化すると強制的にログインページの URL が変更されます。
+個人のブログでは問題ないのですが、客先等で共有している場合は変更しない方がいいかもしれません。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/2c45b3da15e16796151c7ffdb4242cb5/41be6/5.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 43.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/klEQVQoz42R206EMBCGeWT3Nd0LDVcQhAV6LtPptIQLCVFDi8rujX5pJtNp/jm1AOeEEJwxrQ1zwYDTWsc4r+v6/hdFWZZKKZ9AT34/nojCPyguT5fr9ZkoxBhjSDY5mXjPo7iqqrqum6YZhkEqxRjr+55xrpSSUnLOx3G83W51XXddlyb6TVHsFzo4Z30o9fN6jhcvr2Xz1o5pYf0wxBg/Ex/35Ei227YdYm3MBIDOee8BYJ7nyVqpVIgBEYkIAIhIJYwx3tOyLIc495M7yRYRrbUA4L5BxOzkIOLxHUXb7ms4T0shtAlrjeCCc26tnaZJay2E1FpLKcG5GMIXS7301qHyLtgAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/2c45b3da15e16796151c7ffdb4242cb5/0a47e/5.png"
+        srcset="/static/2c45b3da15e16796151c7ffdb4242cb5/8a4e8/5.png 150w,
+/static/2c45b3da15e16796151c7ffdb4242cb5/5a46d/5.png 300w,
+/static/2c45b3da15e16796151c7ffdb4242cb5/0a47e/5.png 600w,
+/static/2c45b3da15e16796151c7ffdb4242cb5/41be6/5.png 638w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>左のメニューから「SiteGuard」→「ログインページ変更」→「ON/OFF」で変更できます。また、このページではログインページの URL も確認できます。</p>
+<p>SiteGuard の詳細設定はこちらが参考になります。</p>
+<p><a href="https://webst8.com/blog/wordpress-siteguard/">https://webst8.com/blog/wordpress-siteguard/</a></p>
+<h4 id="通知を消す" style="position:relative;"><a href="#%E9%80%9A%E7%9F%A5%E3%82%92%E6%B6%88%E3%81%99" aria-label="通知を消す permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>通知を消す</h4>
+<p>常時表示されているのは気になるので消します。</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/84d241d7bb285b62c8776073a672bdb9/1c3a5/6.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 28.666666666666668%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4UlEQVQY022O22rDMAyG/f7vtYteDDba0hA22rDEi+PEtg52LIfA8MJuRj+Ejr9kK+LIRMSVv1gTQkTA6hGPvkO2gSwnN4z+5UTth+K41jFW9QxkA6V1LduW9132XYrknEXKVgqtAimDbGSX9HZeH53SWhs7n7uxnxwSBUBkZmNS08T7nWt1PF/PV0Oof80ZY1QewC3LtDjnA0DwiKHv/enVamNvrX+/zJwkS/mHSBFRejRfox3MZOwc/C/O+aZ115u/XH0/OAAEwGcorb8/te3MDBCgiqoOItcFZiQ6+k/5AYoXUSQaTCgsAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image"
+        title="image"
+        src="/static/84d241d7bb285b62c8776073a672bdb9/0a47e/6.png"
+        srcset="/static/84d241d7bb285b62c8776073a672bdb9/8a4e8/6.png 150w,
+/static/84d241d7bb285b62c8776073a672bdb9/5a46d/6.png 300w,
+/static/84d241d7bb285b62c8776073a672bdb9/0a47e/6.png 600w,
+/static/84d241d7bb285b62c8776073a672bdb9/1cfc2/6.png 900w,
+/static/84d241d7bb285b62c8776073a672bdb9/1c3a5/6.png 981w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>「DISMISS」と「Yes. enable auto update」を選択すると表示が消えます。</p></div></div></div></div></main></div><style data-emotion="css 1vjzque">.css-1vjzque{padding:8px;text-align:center;background-color:#ab47bc;color:#fff;}</style><div class="footer__StyledFooter-sc-1fckmp7-0 gsRBJZ MuiBox-root css-1vjzque"><footer>© 2019 うさ技術.</footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/64/";window.___webpackCompilationHash="cfcb26aa58ddf3e7e1f9";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-3c7a835e43cbbd02c769.js"],"app":["/app-463bbd70dff68507aabe.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-6b172a2fccd63fa301f2.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-3bde0e1ba2fc1504240f.js"],"component---src-pages-markdown-remark-frontmatter-slug-tsx":["/component---src-pages-markdown-remark-frontmatter-slug-tsx-6ee2666e79efcf1ea74d.js"],"component---src-pages-tags-tsx":["/component---src-pages-tags-tsx-cfa3765c2a6aa2fef964.js"]};/*]]>*/</script><script src="/polyfill-3c7a835e43cbbd02c769.js" nomodule=""></script><script src="/app-463bbd70dff68507aabe.js" async=""></script><script src="/framework-4e6393bcb754d628a2a5.js" async=""></script><script src="/webpack-runtime-62e310669062de938be6.js" async=""></script></body></html>
