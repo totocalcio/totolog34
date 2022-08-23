@@ -21,4 +21,4 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           LOCAL_DIR: ./public/
           REMOTE_DIR: ${{ secrets.FTP_SERVER_DIR }}
-          ARGS: --delete --parallel=10	# ARGSでparallelを設定する
+          ARGS: --delete --parallel=10
