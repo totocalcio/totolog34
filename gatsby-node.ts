@@ -48,7 +48,12 @@ exports.createPages = async ({
   graphql,
   reporter,
 }: PropsCreatePages) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  createRedirect({
+    fromPath: `/category/*`,
+    toPath: `/tags/*`,
+  })
 
   const tagTemplate = path.resolve('src/pages/tags.tsx')
 
