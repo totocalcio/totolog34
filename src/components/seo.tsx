@@ -55,6 +55,7 @@ export const Seo: React.FC<Props> = ({
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata.title
+  const metaTitle = title || defaultTitle
   const metaImage = image || defaultImage.publicURL
   const fontJKGM = allFile.edges[0].node.publicURL
   let typeSafeMeta: Array<Meta>
@@ -69,7 +70,7 @@ export const Seo: React.FC<Props> = ({
       htmlAttributes={{
         lang,
       }}
-      title={title || defaultTitle}
+      title={metaTitle}
       titleTemplate={title ? `${title} | ${defaultTitle}` : undefined}
       meta={[
         {
@@ -82,7 +83,7 @@ export const Seo: React.FC<Props> = ({
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -106,7 +107,7 @@ export const Seo: React.FC<Props> = ({
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
