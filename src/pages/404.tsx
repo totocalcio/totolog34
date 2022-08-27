@@ -3,7 +3,7 @@ import * as React from 'react'
 import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
 
-const NotFound:React.FC = () => {
+const NotFound: React.FC = () => {
   return (
     <Layout>
       <Seo title="404: Not Found" />

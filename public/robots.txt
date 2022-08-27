@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /404.html
+Disallow: /tags/index.html
 Sitemap: https://totolog34.com/sitemap-index.xml
 Host: https://totolog34.com
