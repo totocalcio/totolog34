@@ -10,6 +10,7 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
     type SiteMetadata {
       title: String!
       description: String
+      siteUrl: String!
     }
     type MarkdownRemark {
       html: String!
