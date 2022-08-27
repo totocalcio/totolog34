@@ -64,16 +64,24 @@ export const Header: React.FC<Props> = ({ title, twitter, github }) => {
             <MuiLink
               target="_blank"
               href={`https://github.com/${github || ``}`}
+              aria-label="GitHub Link"
             >
-              <Button sx={{ color: 'primary.contrastText' }}>
+              <Button 
+                sx={{ color: 'primary.contrastText' }}
+                aria-label="GitHub LinkButton"
+              >
                 <GitHubIcon />
               </Button>
             </MuiLink>
             <MuiLink
               target="_blank"
               href={`https://twitter.com/${twitter || ``}`}
+              aria-label="Twitter Link"
             >
-              <Button sx={{ color: 'primary.contrastText' }}>
+              <Button
+                sx={{ color: 'primary.contrastText' }}
+                aria-label="Twitter LinkButton"
+              >
                 <TwitterIcon />
               </Button>
             </MuiLink>
