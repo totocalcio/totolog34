@@ -1,4 +1,5 @@
 import { GatsbyNode } from 'gatsby'
+import { getTagPath } from './src/script/common'
 
 export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] =
   ({ actions }) => {
@@ -35,7 +36,6 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
   }
 
 const path = require('path')
-const _ = require('lodash')
 
 type PropsCreatePages = {
   actions: any
@@ -48,7 +48,12 @@ exports.createPages = async ({
   graphql,
   reporter,
 }: PropsCreatePages) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
+
+  createRedirect({
+    fromPath: `/category/*`,
+    toPath: `/tags/*`,
+  })
 
   const tagTemplate = path.resolve('src/pages/tags.tsx')
 
@@ -90,7 +95,7 @@ exports.createPages = async ({
   if (tags.length > 0) {
     tags.forEach((tag: { fieldValue: string }) => {
       createPage({
-        path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+        path: `/tags/${getTagPath(tag.fieldValue)}/`,
         component: tagTemplate,
         context: {
           tag: tag.fieldValue,

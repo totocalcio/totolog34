@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import kebabCase from 'lodash/kebabCase'
 import { Card as MuiCard } from '@mui/material'
 import CardActions from '@mui/material/CardActions'
 import CardActionArea from '@mui/material/CardActionArea'
@@ -10,6 +9,7 @@ import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import styled from 'styled-components'
+import { getTagPath } from '../script/common'
 
 type Props = {
   post: any
@@ -90,7 +90,7 @@ export const Card: React.FC<Props> = ({ post, defaultImage }) => {
           {post.frontmatter.tags?.map((tag: string) => (
             <li key={tag}>
               <Button size="small" variant="contained">
-                <StyledLink to={`/tags/${kebabCase(tag)}/`}>{tag}</StyledLink>
+                <StyledLink to={`/tags/${getTagPath(tag)}/`}>{tag}</StyledLink>
               </Button>
             </li>
           ))}
