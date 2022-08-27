@@ -32,6 +32,7 @@ export const Seo: React.FC<Props> = ({
             social {
               twitter
             }
+            siteUrl
           }
         }
         icon: file(relativePath: { eq: "icon.png" }) {
@@ -56,7 +57,9 @@ export const Seo: React.FC<Props> = ({
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata.title
   const metaTitle = title || defaultTitle
-  const metaImage = image || defaultImage.publicURL
+  const metaImage = `${site.siteMetadata.siteUrl}${
+    image || defaultImage.publicURL
+  }`
   const fontJKGM = allFile.edges[0].node.publicURL
   let typeSafeMeta: Array<Meta>
   if (meta instanceof Array) {

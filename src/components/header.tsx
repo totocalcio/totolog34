@@ -66,7 +66,7 @@ export const Header: React.FC<Props> = ({ title, twitter, github }) => {
               href={`https://github.com/${github || ``}`}
               aria-label="GitHub Link"
             >
-              <Button 
+              <Button
                 sx={{ color: 'primary.contrastText' }}
                 aria-label="GitHub LinkButton"
               >
