@@ -131,14 +131,11 @@ module.exports = {
       options: {
         host: siteUrl,
         sitemap: `${siteUrl}sitemap-index.xml`,
-        env: {
-          development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-          },
-          production: {
-            policy: [{ userAgent: '*', allow: '/' }],
-          },
-        },
+        policy: [{ 
+          userAgent: '*',
+          allow: '/',
+          disallow: ['/404.html', '/tags/index.html']
+        }],
       },
     },
   ],
