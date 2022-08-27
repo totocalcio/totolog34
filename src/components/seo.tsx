@@ -29,6 +29,9 @@ export const Seo: React.FC<Props> = ({
           siteMetadata {
             title
             description
+            author {
+              summary
+            }
             social {
               twitter
             }
@@ -94,20 +97,24 @@ export const Seo: React.FC<Props> = ({
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: `article`,
         },
         {
           property: `og:image`,
           content: metaImage,
         },
         {
+          name: `twitter:site`,
+          content: `@${site.siteMetadata?.author?.summary}` || ``,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
-        },
+        // {
+        //   name: `twitter:creator`,
+        //   content: site.siteMetadata?.social?.twitter || ``,
+        // },
         {
           name: `twitter:title`,
           content: metaTitle,
