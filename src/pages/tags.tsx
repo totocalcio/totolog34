@@ -11,7 +11,7 @@ type Tag = {
 }
 
 const StyledH1 = styled(Typography)`
-  &.MuiTypography-h1{
+  &.MuiTypography-h1 {
     font-size: 2rem;
     margin-top: 2rem;
     margin-inline: 1rem;
@@ -31,7 +31,7 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
     const tagHeader = `"${tag}" (0記事)`
     return (
       <Layout>
-        <StyledH1 variant='h1'>{tagHeader}</StyledH1>
+        <StyledH1 variant="h1">{tagHeader}</StyledH1>
         <Seo title={tagHeader} />
         <p>該当するタグの投稿記事がありません。</p>
       </Layout>
@@ -42,7 +42,7 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
 
   return (
     <Layout>
-      <StyledH1 variant='h1'>{tagHeader || 'Tag'}</StyledH1>
+      <StyledH1 variant="h1">{tagHeader || 'Tag'}</StyledH1>
       <Seo title={tagHeader || 'Tag'} />
       <Box
         sx={{

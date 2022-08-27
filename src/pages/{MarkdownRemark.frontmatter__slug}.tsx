@@ -6,6 +6,7 @@ import { Seo } from '../components/seo'
 import { Button, Container, Typography } from '@mui/material'
 import { Toc } from '../components/toc'
 import styled from 'styled-components'
+import { getTagPath } from '../script/common'
 
 const StyledList = styled('ul')`
   display: flex;
@@ -43,7 +44,9 @@ const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
             {frontmatter.tags?.map((tag: string) => (
               <li key={tag}>
                 <Button size="small" variant="contained">
-                  <StyledLink to={`/tags/${kebabCase(tag)}/`}>{tag}</StyledLink>
+                  <StyledLink to={`/tags/${getTagPath(kebabCase(tag))}/`}>
+                    {tag}
+                  </StyledLink>
                 </Button>
               </li>
             ))}
