@@ -5,7 +5,7 @@ title: WordPressのブログをGatsbyでリニューアルした
 thumbnail: renewal-gatsby-thumb.webp
 tags: ['日記','gatsby']
 ---
-タイトルの通り、もともとWordPressだったブログをGatsbyでリニューアルしました。
+タイトルの通り、もともとWordPressだったブログをGatsbyでリニューアルしました。  
 ※一覧のサムネは `Midjourney` で作りました
 
 ## 背景
