@@ -138,5 +138,62 @@ module.exports = {
         }],
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                const frontmatter = node.frontmatter
+                return Object.assign({}, frontmatter, {
+                  description: node.excerpt,
+                  date: frontmatter.date,
+                  url: site.siteMetadata.siteUrl + frontmatter.slug,
+                  guid: site.siteMetadata.siteUrl + frontmatter.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                      slug
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/feed/rss.xml",
+            title: "totolog34 Feed",
+            feed_url: "https://totolog34.com/feed/rss.xml",
+            site_url: "https://totolog34.com/",
+          },
+        ],
+      },
+    },
   ],
 }
