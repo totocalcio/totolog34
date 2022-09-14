@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import { AppBar, Box, Button, Typography, Link as MuiLink } from '@mui/material'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import GitHubIcon from '@mui/icons-material/GitHub'
+import RssFeed from '@mui/icons-material/RssFeed'
 import * as utility from '../css/utility.module.css'
 import styled from 'styled-components'
 
@@ -61,6 +62,18 @@ export const Header: React.FC<Props> = ({ title, twitter, github }) => {
             />
           </StyledLogo>
           <Box>
+            <MuiLink
+              target="_blank"
+              href="https://totolog34.com/feed/rss.xml"
+              aria-label="RSS Feed Link"
+            >
+              <Button
+                sx={{ color: 'primary.contrastText' }}
+                aria-label="RSS Feed LinkButton"
+              >
+                <RssFeed />
+              </Button>
+            </MuiLink>
             <MuiLink
               target="_blank"
               href={`https://github.com/${github || ``}`}
