@@ -11,6 +11,7 @@ Webサービスでもなくブログでもない、普通の個人のホーム�
 ## 事前にやったこと
 - [Next.js公式チュートリアル](https://nextjs.org/learn/basics/create-nextjs-app)
 - [[Zenn]出来る100%TypeScript 作って学ぶNext.js + GraphQL + Prisma(上) - GCP編](https://zenn.dev/oubakiou/books/181b750dfb6838)
+- [[書籍]実践TypeScript](https://book.mynavi.jp/ec/products/detail/id=104703)
 
 ## プロジェクト作成
 [公式](https://nextjs.org/docs/getting-started#automatic-setup)をみながら進めます。
