@@ -107,7 +107,7 @@ yarn add --save-dev @typescript-eslint/eslint-plugin prettier eslint-config-pret
 ```
 
 ### VSCode
-最後に自動フォーマットなどの設定をします。`.vscode/settings.json` を作成して編集します。
+自動フォーマットなどの設定をします。`.vscode/settings.json` を作成して編集します。
 
 ```json
 {
@@ -129,3 +129,35 @@ yarn add --save-dev @typescript-eslint/eslint-plugin prettier eslint-config-pret
   "typescript.preferences.importModuleSpecifier": "non-relative"
 }
 ```
+
+### 不要ファイルの削除
+消したあとに「やっぱり使う」とディレクトリを再度作成となるかもしれませんが、現時点では不要なので削除します。
+
+- pages/api
+- public/vercel.svg
+- styles/Home.Module.css
+
+※ `pages/index.tsx` 内の関係するコードも削除しておきます
+
+### scssに切り替え
+`scss` が `install` されていれば特に設定はいりません。`install` されていなかったらします。
+```sh
+./styles/globals.scss
+To use Next.js' built-in Sass support, you first need to install `sass`.
+Run `npm i sass` or `yarn add sass` inside your workspace.
+
+Learn more: https://nextjs.org/docs/messages/install-sass
+```
+```sh
+yarn add sass
+```
+次にファイル名と `import` のパスを変更します
+
+**ファイル名**  
+styles/globals.css
+→ styles/globals.scss
+
+**pages/_app.tsx**  
+import '../styles/globals.css'
+→ import '../styles/globals.scss'
+
