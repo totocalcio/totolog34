@@ -1,4 +1,125 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[totolog34 Feed]]></title><description><![CDATA[うさぎとフロントエンドが好きな技術ブログ。マークアップが一番好き。]]></description><link>https://totolog34.com/</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 14 Sep 2022 13:13:00 GMT</lastBuildDate><atom:link href="https://totolog34.com/feed/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[WordPressのブログをGatsbyでリニューアルした]]></title><description><![CDATA[タイトルの通り、もともとWordPressだったブログをGatsbyでリニューアルしました。 ※一覧のサムネは  で作りました 背景 リニューアルのきっかけ、及びモチベーション フロントエンドエンジニアなんだからJavaScriptのフレームワーク使いたい WordPress…]]></description><link>https://totolog34.com/renewal-gatsby</link><guid isPermaLink="false">https://totolog34.com/renewal-gatsby</guid><pubDate>Sat, 03 Sep 2022 05:23:00 GMT</pubDate><content:encoded>&lt;p&gt;タイトルの通り、もともとWordPressだったブログをGatsbyでリニューアルしました。&lt;br&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[totolog34 Feed]]></title><description><![CDATA[うさぎとフロントエンドが好きな技術ブログ。マークアップが一番好き。]]></description><link>https://totolog34.com/</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 17 Sep 2022 02:09:54 GMT</lastBuildDate><atom:link href="https://totolog34.com/feed/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Next.jsでWebサイトを作る①〜プロジェクト作成からプラグイン設定など]]></title><description><![CDATA[Webサービスでもなくブログでもない、普通の個人のホームページをNext.jsで作ろうと思います。
+ただのWebサイトにNext.jsが必要かどうかは考えないこととします。 事前にやったこと Next.js公式チュートリアル [Zenn]出来る100%TypeScript…]]></description><link>https://totolog34.com/nextjs-website-tutorial</link><guid isPermaLink="false">https://totolog34.com/nextjs-website-tutorial</guid><pubDate>Sat, 17 Sep 2022 02:08:00 GMT</pubDate><content:encoded>&lt;p&gt;Webサービスでもなくブログでもない、普通の個人のホームページをNext.jsで作ろうと思います。
+ただのWebサイトにNext.jsが必要かどうかは考えないこととします。&lt;/p&gt;
+&lt;h2 id=&quot;事前にやったこと&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BA%8B%E5%89%8D%E3%81%AB%E3%82%84%E3%81%A3%E3%81%9F%E3%81%93%E3%81%A8&quot; aria-label=&quot;事前にやったこと permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;事前にやったこと&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://nextjs.org/learn/basics/create-nextjs-app&quot;&gt;Next.js公式チュートリアル&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://zenn.dev/oubakiou/books/181b750dfb6838&quot;&gt;[Zenn]出来る100%TypeScript 作って学ぶNext.js + GraphQL + Prisma(上) - GCP編&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;プロジェクト作成&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%BD%9C%E6%88%90&quot; aria-label=&quot;プロジェクト作成 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;プロジェクト作成&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/getting-started#automatic-setup&quot;&gt;公式&lt;/a&gt;をみながら進めます。
+TypeScriptで始めていきます。必要かどうかは/&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;npx create-next-app@latest --typescript&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ここからは対話式に進んでいきます。とは言ってもすぐ終わります。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;Need to &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; the following packages:
+  create-next-app@latest
+Ok to proceed? &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;そのままEnter&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;? What is your project named? › my-app&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;プロジェクト名を入力してEnter。あとは待つだけです。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;Success&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt; Created sara-website at /Users/xxx/yyy/my-app&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;OK！&lt;/p&gt;
+&lt;h3 id=&quot;起動してみる&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%B5%B7%E5%8B%95%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B&quot; aria-label=&quot;起動してみる permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;起動してみる&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; my-app
+&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;作成したプロジェクトのディレクトリに移動して、&lt;code class=&quot;language-text&quot;&gt;npm run dev&lt;/code&gt; します。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; my-app@0.1.0 dev
+&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; next dev
+
+ready - started server on &lt;span class=&quot;token number&quot;&gt;0.0&lt;/span&gt;.0.0:3000, url: http://localhost:3000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ローカルサーバーが起動したら &lt;code class=&quot;language-text&quot;&gt;http://localhost:3000&lt;/code&gt; を開いてみます。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; 
+                margin-inline: 0;
+              &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/64f5ebe83cb53dd6da3360fbd0b809a6/62da8/2022-09-16-18.33.47.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABDklEQVQoz62SsU/CQBSHX9trSyHRMOliUWpTmrbBpE0sMtjJFWPYxKkau5IwNAwO/OOfKSqKEhYZvry7312+vHs5MQwDpRSWZWGa5h4slDIx/qC+q2EgIsKBEVzXZTabURQF4/GYJEkIw5A8z0nTlH7fYzTKcXsXyPkdcnaLdH3kNEOOeshJinQvt4Wr1Yq6rlksFpRlSVVVzOdzlsslk8mEl+eS+4cpEj4iN2/I1SsSPSHBFLmuP6Rfwt80s9B1fWe+2Wuf59YxoqvtJx98hj8ZDAYEQcBwOCSKInzfJ8syPM8jjmPiJFnX5l6TbXW9S9h8kVarheM42La9plk3WafT2dBut9e5pmn7hf/lHcO91NVKEihIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image&quot;
+        title=&quot;image&quot;
+        src=&quot;/static/64f5ebe83cb53dd6da3360fbd0b809a6/0a47e/2022-09-16-18.33.47.png&quot;
+        srcset=&quot;/static/64f5ebe83cb53dd6da3360fbd0b809a6/8a4e8/2022-09-16-18.33.47.png 150w,
+/static/64f5ebe83cb53dd6da3360fbd0b809a6/5a46d/2022-09-16-18.33.47.png 300w,
+/static/64f5ebe83cb53dd6da3360fbd0b809a6/0a47e/2022-09-16-18.33.47.png 600w,
+/static/64f5ebe83cb53dd6da3360fbd0b809a6/1cfc2/2022-09-16-18.33.47.png 900w,
+/static/64f5ebe83cb53dd6da3360fbd0b809a6/c1b63/2022-09-16-18.33.47.png 1200w,
+/static/64f5ebe83cb53dd6da3360fbd0b809a6/62da8/2022-09-16-18.33.47.png 1262w&quot;
+        sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+表示されればOKです。&lt;/p&gt;
+&lt;h2 id=&quot;ツールプラグインなどの準備&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%83%84%E3%83%BC%E3%83%AB%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AA%E3%81%A9%E3%81%AE%E6%BA%96%E5%82%99&quot; aria-label=&quot;ツールプラグインなどの準備 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ツール・プラグインなどの準備&lt;/h2&gt;
+&lt;h3 id=&quot;volta&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#volta&quot; aria-label=&quot;volta permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;volta&lt;/h3&gt;
+&lt;p&gt;voltaの記事は書いてないと思うので、参考記事を貼っておきます。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zenn.dev/taichifukumoto/articles/how-to-use-volta&quot;&gt;[Zenn]Node.jsのバージョン管理にVoltaを推したい&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;volta pin node@latest
+volta pin npm@latest&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;新規作成のプロジェクトなのでlatestでいいでしょう（多分）&lt;/p&gt;
+&lt;h3 id=&quot;eslint&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#eslint&quot; aria-label=&quot;eslint permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ESLint&lt;/h3&gt;
+&lt;p&gt;このあとPrettierの設定もするので、先にインストールしておきます。
+いつもは &lt;code class=&quot;language-text&quot;&gt;npm&lt;/code&gt; 使うんですけど、プロジェクト作成の時に &lt;code class=&quot;language-text&quot;&gt;yarn.lock&lt;/code&gt; ファイルが自動的にできていたので &lt;code class=&quot;language-text&quot;&gt;yarn&lt;/code&gt; を使っていきます。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; --save-dev @typescript-eslint/eslint-plugin prettier eslint-config-prettier&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;インストールできたらESLintの設定をします。
+ルートディレクトリの &lt;code class=&quot;language-text&quot;&gt;.eslintrc.json&lt;/code&gt; を編集。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;  &lt;span class=&quot;token property&quot;&gt;&quot;extends&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;next/core-web-vitals&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;plugin:@typescript-eslint/recommended&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;prettier&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;prettier&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#prettier&quot; aria-label=&quot;prettier permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Prettier&lt;/h3&gt;
+&lt;p&gt;ルートディレクトリに &lt;code class=&quot;language-text&quot;&gt;.prettierrc.json&lt;/code&gt; を作成して編集&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;singleQuote&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;semi&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;vscode&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vscode&quot; aria-label=&quot;vscode permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;VSCode&lt;/h3&gt;
+&lt;p&gt;最後に自動フォーマットなどの設定をします。&lt;code class=&quot;language-text&quot;&gt;.vscode/settings.json&lt;/code&gt; を作成して編集します。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// デフォルトフォーマットをPrettierにする&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;editor.defaultFormatter&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;esbenp.prettier-vscode&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// TypeScriptのフォーマット設定&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;[typescript]&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;&quot;editor.defaultFormatter&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;esbenp.prettier-vscode&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// .tsxファイルのフォーマット設定&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;[typescriptreact]&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;&quot;editor.defaultFormatter&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;esbenp.prettier-vscode&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// ファイル保存時の自動フォーマットを有効化&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;editor.formatOnSave&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// ファイル保存時にeslintのコードアクションを実行&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;editor.codeActionsOnSave&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;source.fixAll.eslint&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// node_modulesにインストールしたTypeScriptを利用する&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;typescript.tsdk&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./node_modules/typescript/lib&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// auto importを相対パスではなく絶対パスにする&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;typescript.preferences.importModuleSpecifier&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;non-relative&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;パスエイリアス&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%83%91%E3%82%B9%E3%82%A8%E3%82%A4%E3%83%AA%E3%82%A2%E3%82%B9&quot; aria-label=&quot;パスエイリアス permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;パスエイリアス&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;tsconfig.json&lt;/code&gt; を開いてパスエイリアスの設定をします。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;compilerOptions&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    ...
+    &lt;span class=&quot;token property&quot;&gt;&quot;baseUrl&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;@/*&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;components/*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  ...
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[WordPressのブログをGatsbyでリニューアルした]]></title><description><![CDATA[タイトルの通り、もともとWordPressだったブログをGatsbyでリニューアルしました。 ※一覧のサムネは  で作りました 背景 リニューアルのきっかけ、及びモチベーション フロントエンドエンジニアなんだからJavaScriptのフレームワーク使いたい WordPress…]]></description><link>https://totolog34.com/renewal-gatsby</link><guid isPermaLink="false">https://totolog34.com/renewal-gatsby</guid><pubDate>Sat, 03 Sep 2022 05:23:00 GMT</pubDate><content:encoded>&lt;p&gt;タイトルの通り、もともとWordPressだったブログをGatsbyでリニューアルしました。&lt;br&gt;
 ※一覧のサムネは &lt;code class=&quot;language-text&quot;&gt;Midjourney&lt;/code&gt; で作りました&lt;/p&gt;
 &lt;h2 id=&quot;背景&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%83%8C%E6%99%AF&quot; aria-label=&quot;背景 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;背景&lt;/h2&gt;
 &lt;p&gt;リニューアルのきっかけ、及びモチベーション&lt;/p&gt;
