@@ -50,6 +50,7 @@ ready - started server on 0.0.0.0:3000, url: http://localhost:3000
 ローカルサーバーが起動したら `http://localhost:3000` を開いてみます。
 
 ![image](../../../../images/2022/09/2022-09-16-18.33.47.png)
+
 表示されればOKです。
 
 ## ツール・プラグインなどの準備
@@ -89,6 +90,22 @@ yarn add --save-dev @typescript-eslint/eslint-plugin prettier eslint-config-pret
 }
 ```
 
+### パスエイリアス
+`tsconfig.json` を開いてパスエイリアスの設定をします。
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["components/*"]
+    }
+  },
+  ...
+}
+```
+
 ### VSCode
 最後に自動フォーマットなどの設定をします。`.vscode/settings.json` を作成して編集します。
 
@@ -110,21 +127,5 @@ yarn add --save-dev @typescript-eslint/eslint-plugin prettier eslint-config-pret
   "typescript.tsdk": "./node_modules/typescript/lib",
   // auto importを相対パスではなく絶対パスにする
   "typescript.preferences.importModuleSpecifier": "non-relative"
-}
-```
-
-### パスエイリアス
-`tsconfig.json` を開いてパスエイリアスの設定をします。
-
-```json
-{
-  "compilerOptions": {
-    ...
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["components/*"]
-    }
-  },
-  ...
 }
 ```
