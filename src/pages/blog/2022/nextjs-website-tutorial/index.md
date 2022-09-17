@@ -11,6 +11,7 @@ Webサービスでもなくブログでもない、普通の個人のホーム�
 ## 事前にやったこと
 - [Next.js公式チュートリアル](https://nextjs.org/learn/basics/create-nextjs-app)
 - [[Zenn]出来る100%TypeScript 作って学ぶNext.js + GraphQL + Prisma(上) - GCP編](https://zenn.dev/oubakiou/books/181b750dfb6838)
+- [[書籍]実践TypeScript](https://book.mynavi.jp/ec/products/detail/id=104703)
 
 ## プロジェクト作成
 [公式](https://nextjs.org/docs/getting-started#automatic-setup)をみながら進めます。
@@ -50,6 +51,7 @@ ready - started server on 0.0.0.0:3000, url: http://localhost:3000
 ローカルサーバーが起動したら `http://localhost:3000` を開いてみます。
 
 ![image](../../../../images/2022/09/2022-09-16-18.33.47.png)
+
 表示されればOKです。
 
 ## ツール・プラグインなどの準備
@@ -89,8 +91,24 @@ yarn add --save-dev @typescript-eslint/eslint-plugin prettier eslint-config-pret
 }
 ```
 
+### パスエイリアス
+`tsconfig.json` を開いてパスエイリアスの設定をします。
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["components/*"]
+    }
+  },
+  ...
+}
+```
+
 ### VSCode
-最後に自動フォーマットなどの設定をします。`.vscode/settings.json` を作成して編集します。
+自動フォーマットなどの設定をします。`.vscode/settings.json` を作成して編集します。
 
 ```json
 {
@@ -113,18 +131,34 @@ yarn add --save-dev @typescript-eslint/eslint-plugin prettier eslint-config-pret
 }
 ```
 
-### パスエイリアス
-`tsconfig.json` を開いてパスエイリアスの設定をします。
+### 不要ファイルの削除
+消したあとに「やっぱり使う」とディレクトリを再度作成となるかもしれませんが、現時点では不要なので削除します。
 
-```json
-{
-  "compilerOptions": {
-    ...
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["components/*"]
-    }
-  },
-  ...
-}
+- pages/api
+- public/vercel.svg
+- styles/Home.Module.css
+
+※ `pages/index.tsx` 内の関係するコードも削除しておきます
+
+### scssに切り替え
+`scss` が `install` されていれば特に設定はいりません。`install` されていなかったらします。
+```sh
+./styles/globals.scss
+To use Next.js' built-in Sass support, you first need to install `sass`.
+Run `npm i sass` or `yarn add sass` inside your workspace.
+
+Learn more: https://nextjs.org/docs/messages/install-sass
 ```
+```sh
+yarn add sass
+```
+次にファイル名と `import` のパスを変更します
+
+**ファイル名**  
+styles/globals.css
+→ styles/globals.scss
+
+**pages/_app.tsx**  
+import '../styles/globals.css'
+→ import '../styles/globals.scss'
+
