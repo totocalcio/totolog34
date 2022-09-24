@@ -1,6 +1,10 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const siteUrl = process.env.URL || `https://totolog34.com/`
 
-module.exports = {
+const config = {
   siteMetadata: {
     title: `うさ技術`,
     description: `うさぎとフロントエンドが好きな技術ブログ。マークアップが一番好き。`,
@@ -198,3 +202,16 @@ module.exports = {
     },
   ],
 }
+
+if ( process.env.NODE_ENV !== 'production' ) {
+  const draftConfig = {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `${__dirname}/src/pages/draft`,
+      name: `draft`,
+    },
+  }
+  config.plugins.push(draftConfig)
+}
+
+module.exports = config
