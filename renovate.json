@@ -10,5 +10,7 @@
   // オートマージの有効化
   "automerge": true,
   // ブランチに対して作成する Pull Request 数の制限を無効化
-  "branchConcurrentLimit": 0
+  "branchConcurrentLimit": 0,
+  // FTPデプロイのGithubActionは無視する
+  "ignorePaths": [".github/workflows/ftp_deploy.yml"]
 }
