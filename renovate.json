@@ -8,7 +8,7 @@
   // バージョンアップしたほうが良い情報を無効化
   "dependencyDashboard": false,
   // オートマージの有効化
-  // "automerge": true,
+  "automerge": true,
   // ブランチに対して作成する Pull Request 数の制限を無効化
   "branchConcurrentLimit": 0
 }
