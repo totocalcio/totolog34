@@ -5,7 +5,7 @@ title: Next.jsでWebサイトを作る②〜トップページ・サブページ
 thumbnail: nextjs-logo.png
 tags: ['next.js']
 ---
-[前回](nextjs-website-tutorial)の続き
+[前回](/nextjs-website-tutorial)の続き
 
 ## トップページを編集
 トップページは `pages/index.tsx` のファイルになります。とりあえずプロジェクト作成時のコードを削除して簡単な内容を表示します。

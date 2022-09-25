@@ -5,7 +5,7 @@ title: Next.jsでWebサイトを作る③〜コンポーネント開発
 thumbnail: nextjs-logo.png
 tags: ['next.js']
 ---
-[前回](nextjs-website-tutorial2)の続き
+[前回](/nextjs-website-tutorial2)の続き
 
 ## コンポーネント設計
 コンポーネント設計ですが、以下の２つを検討しました。
