@@ -29,12 +29,18 @@ body {
   }
 }
 
-:where(:is(h2,h3,h4,h5,h6):not([id=""])) > a{
+:where(:is(h2,h3,h4,h5,h6):not([id=""])) {
   margin-top: calc(-1 * var(--header-height-sm));
   padding-top: var(--header-height-sm);
+  > a {
+    padding-top: var(--header-height-sm);
+  }
   @media (width < 600px) {
     margin-top: calc(-1 * var(--header-height-xs));
     padding-top: var(--header-height-xs);
+    > a {
+      padding-top: var(--header-height-xs);
+    }
   }
 }
 
