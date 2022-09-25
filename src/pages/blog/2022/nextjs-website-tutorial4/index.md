@@ -5,7 +5,7 @@ title: Next.jsでWebサイトを作る④〜ページ遷移時のアニメーシ
 thumbnail: nextjs-logo.png
 tags: ['next.js','react']
 ---
-[前回](nextjs-website-tutorial3)の続き  
+[前回](/nextjs-website-tutorial3)の続き  
 ページ遷移時にアニメーションをつけたいと思って、いろいろ探しているうちに[React Transition Group](https://reactcommunity.org/react-transition-group/)へたどり着きました。
 
 ## 実現するまでに躓いたこと

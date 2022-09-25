@@ -29,7 +29,7 @@ body {
   }
 }
 
-:where(:is(h2,h3,h4,h5,h6):not([id=""])) {
+:where(:is(h2,h3,h4,h5,h6):not([id=""])) > a{
   margin-top: calc(-1 * var(--header-height-sm));
   padding-top: var(--header-height-sm);
   @media (width < 600px) {

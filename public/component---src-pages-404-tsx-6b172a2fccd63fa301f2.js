@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktotolog34=self.webpackChunktotolog34||[]).push([[218],{7735:function(e,t,l){l.r(t);var n=l(1597),u=l(7294),o=l(8745),r=l(6969);t.default=function(){return u.createElement(o.A,null,u.createElement(r.p,{title:"404: Not Found"}),u.createElement("h1",null,"404"),u.createElement("p",null,"ページが見つかりませんでした"),u.createElement(n.rU,{to:"/"},"TOPへ戻る"))}}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-6b172a2fccd63fa301f2.js.map
