@@ -1,6 +1,6 @@
 ---
 slug: /nextjs-website-tutorial4
-date: '2022-09-25 15:49'
+date: '2022-09-26 15:49'
 title: Next.jsでWebサイトを作る④〜ページ遷移時のアニメーション
 thumbnail: nextjs-logo.png
 tags: ['next.js','react']
@@ -161,7 +161,7 @@ export default Sub
 
 今回のサンプルコードでは`background-color: yellow`から`background-color: #fff`に変化するようにしています。
 
-## 参考サイト一覧
+## 参考
 - [Next.jsのルーティング(公式)](https://nextjs-ja-translation-docs.vercel.app/docs/routing/introduction)
 - [Next.jsにおけるSPA的遷移の考え方](https://zenn.dev/ichigo_dev/articles/2b8c0b05cc6f74a5a507)
 - [React Transition Group(公式)](https://reactcommunity.org/react-transition-group/)
