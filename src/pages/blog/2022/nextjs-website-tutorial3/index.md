@@ -39,7 +39,7 @@ const Button: React.FC = () => {
 export default Button
 ```
 
-次にStorybookで表示するために `Button.stories.tsx` を作成しますが、その前にStorybookでパスエイリアスの設定をします。[以前](nextjs-website-tutorial/#パスエイリアス)`tsconfig.json` でエイリアスの設定をしましたが、Storybookのバンドルの設定は独立して存在しているので、Storybook側の設定、`.storybook/main.js` を変更する必要があります。
+次にStorybookで表示するために `Button.stories.tsx` を作成しますが、その前にStorybookでパスエイリアスの設定をします。[以前](/nextjs-website-tutorial/#パスエイリアス)`tsconfig.json` でエイリアスの設定をしましたが、Storybookのバンドルの設定は独立して存在しているので、Storybook側の設定、`.storybook/main.js` を変更する必要があります。
 
 ※　とても参考にしました  
 [TypeScript + Gatsby + Storybook環境でimport aliasを利用する](https://tamalog.szmd.jp/storybook-absolute-imports/  )
