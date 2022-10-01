@@ -1,16 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
-  // 1 時間あたりに 2 Pull Request までに抑える処理を無効化
   "ignorePresets": [":prHourlyLimit2"],
-  // タイムゾーンを Asia/Tokyo に指定
   "timezone": "Asia/Tokyo",
-  // バージョンアップしたほうが良い情報を無効化
   "dependencyDashboard": false,
-  // オートマージの有効化
   "automerge": true,
-  // ブランチに対して作成する Pull Request 数の制限を無効化
   "branchConcurrentLimit": 0,
-  // FTPデプロイのGithubActionは無視する
   "ignorePaths": [".github/workflows/ftp_deploy.yml"],
 }
