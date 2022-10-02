@@ -6,5 +6,5 @@
   "dependencyDashboard": false,
   "automerge": true,
   "branchConcurrentLimit": 0,
-  "ignorePaths": [".github/workflows/ftp_deploy.yml"],
+  "ignorePaths": [".github/workflows/ftp_deploy.yml"]
 }
