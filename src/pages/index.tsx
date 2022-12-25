@@ -38,45 +38,35 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
 
 export default IndexPage
 
-export const query = graphql`
-  query IndexPage {
-    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
-      nodes {
-        excerpt
-        frontmatter {
-          date
-          title
-          slug
-          tags
-          thumbnail {
-            childImageSharp {
-              gatsbyImageData(
-                width: 200
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
+export const query = graphql`query IndexPage {
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    nodes {
+      excerpt
+      frontmatter {
+        date
+        title
+        slug
+        tags
+        thumbnail {
+          childImageSharp {
+            gatsbyImageData(width: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
         }
       }
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
     }
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    defaultImage: file(relativePath: { eq: "default.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 200
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
-      }
+    group(field: {frontmatter: {tags: SELECT}}) {
+      fieldValue
+      totalCount
     }
   }
-`
+  site {
+    siteMetadata {
+      title
+    }
+  }
+  defaultImage: file(relativePath: {eq: "default.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+    }
+  }
+}`
