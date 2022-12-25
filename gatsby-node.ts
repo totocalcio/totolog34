@@ -53,29 +53,24 @@ exports.createPages = async ({
 
   const tagTemplate = path.resolve('src/pages/tags.tsx')
 
-  const result = await graphql(`
-    {
-      postsRemark: allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___date] }
-        limit: 2000
-      ) {
-        nodes {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            tags
-          }
-        }
+  const result = await graphql(`{
+  postsRemark: allMarkdownRemark(sort: {frontmatter: {date: ASC}}, limit: 2000) {
+    nodes {
+      id
+      fields {
+        slug
       }
-      tagsGroup: allMarkdownRemark(limit: 2000) {
-        group(field: frontmatter___tags) {
-          fieldValue
-        }
+      frontmatter {
+        tags
       }
     }
-  `)
+  }
+  tagsGroup: allMarkdownRemark(limit: 2000) {
+    group(field: {frontmatter: {tags: SELECT}}) {
+      fieldValue
+    }
+  }
+}`)
 
   // handle errors
   if (result.errors) {

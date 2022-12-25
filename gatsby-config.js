@@ -18,6 +18,7 @@ const config = {
       github: `totocalcio`,
     },
   },
+  trailingSlash: `always`,
   graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-sass`,
@@ -172,26 +173,22 @@ const config = {
                 })
               })
             },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                ) {
-                  nodes {
-                    excerpt
-                    html
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      date
-                      slug
-                    }
-                  }
-                }
-              }
-            `,
+            query: `{
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    nodes {
+      excerpt
+      html
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        date
+        slug
+      }
+    }
+  }
+}`,
             output: "/feed/rss.xml",
             title: "totolog34 Feed",
             feed_url: "https://totolog34.com/feed/rss.xml",
