@@ -3,6 +3,7 @@ slug: /v4-to-v5
 date: '2022-12-25 16:44'
 title: Gatsbyをv4からv5に移行するのにやったこと
 thumbnail: gatsby-logo.png
+description: 記事を読んだところ特に大きく問題となるところは見当たらなかったので、v5へアップグレードする。
 tags: ['gatsby']
 ---
 ## マイグレーションガイド
@@ -35,8 +36,35 @@ Class constructor GraphQLList cannot be invoked without 'new'
 
 `gatsby-*`のバージョンが5を超えていたら、`gatsby-*-next`に変更、5に達していない場合`gatsby-*-next.5`に変更。`package.json`を修正したら、関連プラグインをアップデートする。
 
-### 他のエラーに対応・・・するはずだった
-他にもいくつかエラーが出ていたが、上記対応ですべて解決してしまった。
+### gatsby-cliが古い
+ここでめちゃくちゃはまった。何をしてもビルドが通らない。graphqlの自動型生成がうまくいっていないみたい。  
+調べていたところグローバルにインストールされている`gatsby-cli`が古いということがわかった。  
+まずグローバルのnodeをインストールする
+```
+volta install node
+```
+そして`gatsby-cli`をアップデート
+```
+npm i -g gatsby-cli
+```
+`volta list all`で確認
+```
+gatsby-cli@5.3.1 (default)
+    binary tools: gatsby
+    platform:
+      runtime: node@18.9.1
+      package manager: npm@built-in
+```
+更新されている…（ここまで3日かかった）
+
+### graphqlのバリデーションにひっかかる
+#### descriptionがない
+`gatsby-plugin-react-helmet`が入っていたので使用していたが、`gatsby-source-filesystem`が指しているパスのいずれにも含まれていないからエラーらしい。最低一つでもマークダウンファイルに存在している必要がある。
+[参考](https://stackoverflow.com/questions/62209671/gatsby-keeps-complaining-cannot-query-field-fields-on-type-markdownremark-wh)
+
+#### fieldValue.slugがとれない
+構造が変わったのか、チェックが厳密になったのかよくわからなかったが、いらないなと思ったので削除して対応した
 
 ## 結論
 関連プラグインも全てアップデートしよう。
+グローバルにインストールされているパッケージも忘れずに（忘れずに）
