@@ -2,12 +2,20 @@ import * as React from 'react'
 import { graphql, PageProps } from 'gatsby'
 import { Card } from '../components/card'
 import { Layout } from '../components/layout'
+import { Pagination } from '../components/pagination'
 import { Seo } from '../components/seo'
 import { Box } from '@mui/material'
 
-const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
+const IndexPage = ({
   data,
-}: PageProps<Queries.IndexPageQuery>) => {
+  pageContext,
+}: PageProps<
+  Queries.IndexPageQuery,
+  Queries.IndexPageQueryVariables & {
+    numPages: number
+    currentPage: number
+  }
+>) => {
   const posts = data.allMarkdownRemark.nodes
   const defaultImage = data.defaultImage
   return (
@@ -32,6 +40,12 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
           )
         })}
       </Box>
+      <div>
+        <Pagination
+          currentPage={pageContext.currentPage}
+          pageSum={pageContext.numPages}
+        />
+      </div>
     </Layout>
   )
 }
@@ -39,8 +53,12 @@ const IndexPage: React.FC<PageProps<Queries.IndexPageQuery>> = ({
 export default IndexPage
 
 export const query = graphql`
-  query IndexPage {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+  query IndexPage($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      limit: $limit
+      skip: $skip
+    ) {
       nodes {
         excerpt
         frontmatter {
