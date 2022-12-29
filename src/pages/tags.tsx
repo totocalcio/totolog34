@@ -57,7 +57,7 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
             <Card
               post={post}
               defaultImage={defaultImage}
-              key={post.frontmatter.slug}
+              key={post.frontmatter!.slug}
             />
           )
         })}
@@ -68,37 +68,47 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
 
 export default TagsPage
 
-export const query = graphql`query TagsPage($tag: String) {
-  site {
-    siteMetadata {
-      title
-    }
-  }
-  allMarkdownRemark(
-    limit: 2000
-    sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {tags: {in: [$tag]}}}
-  ) {
-    totalCount
-    nodes {
-      excerpt
-      frontmatter {
-        date
+export const query = graphql`
+  query TagsPage($tag: String) {
+    site {
+      siteMetadata {
         title
-        slug
-        description
-        tags
-        thumbnail {
-          childImageSharp {
-            gatsbyImageData(width: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+    allMarkdownRemark(
+      limit: 2000
+      sort: { frontmatter: { date: DESC } }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
+    ) {
+      totalCount
+      nodes {
+        excerpt
+        frontmatter {
+          date
+          title
+          slug
+          description
+          tags
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
           }
         }
       }
     }
-  }
-  defaultImage: file(relativePath: {eq: "default.png"}) {
-    childImageSharp {
-      gatsbyImageData(width: 200, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+    defaultImage: file(relativePath: { eq: "default.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 200
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
     }
   }
-}`
+`
