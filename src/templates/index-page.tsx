@@ -18,9 +18,10 @@ const IndexPage = ({
 >) => {
   const posts = data.allMarkdownRemark.nodes
   const defaultImage = data.defaultImage
+  const siteUrl = data.site?.siteMetadata?.siteUrl ? `${data.site.siteMetadata.siteUrl}/` : ''
   return (
     <Layout>
-      <Seo title="" />
+      <Seo title="" url={ siteUrl }/>
       <Box
         className="cards"
         sx={{
@@ -85,6 +86,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     defaultImage: file(relativePath: { eq: "default.png" }) {

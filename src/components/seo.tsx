@@ -8,6 +8,7 @@ type Props = {
   meta?: []
   title: string
   image?: string
+  url?: string
 }
 type Meta = {
   property?: string
@@ -15,12 +16,21 @@ type Meta = {
   content: string
 }
 
+type Link = {
+  rel: string;
+  href: any;
+  sizes?: string | undefined;
+  as?: string | undefined;
+  type?: string |undefined;
+}[]
+
 export const Seo: React.FC<Props> = ({
   description = '',
   lang = 'ja',
   meta = [],
   title,
   image,
+  url
 }: Props) => {
   const { site, icon, allFile, defaultImage } = useStaticQuery(
     graphql`
@@ -69,6 +79,27 @@ export const Seo: React.FC<Props> = ({
     typeSafeMeta = meta
   } else {
     typeSafeMeta = []
+  }
+
+  const metaUrl = !url || url?.length > 0 ? url : ''
+  const link:Link = [
+    {
+      rel: `icon`,
+      href: icon.publicURL,
+      sizes: `32x32`,
+    },
+    {
+      rel: `preload`,
+      href: fontJKGM,
+      as: `font`,
+      type: `font/woff2`,
+    },
+  ];
+  if(metaUrl && metaUrl?.length > 0) {
+    link.push({
+      rel: `canonical`,
+      href: metaUrl
+    })
   }
 
   return (
@@ -129,19 +160,7 @@ export const Seo: React.FC<Props> = ({
         },
         ...typeSafeMeta,
       ]}
-      link={[
-        {
-          rel: `icon`,
-          href: icon.publicURL,
-          sizes: `32x32`,
-        },
-        {
-          rel: `preload`,
-          href: fontJKGM,
-          as: `font`,
-          type: `font/woff2`,
-        },
-      ]}
+      link={ link }
     />
   )
 }
