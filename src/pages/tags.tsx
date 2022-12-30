@@ -5,6 +5,7 @@ import { Layout } from '../components/layout'
 import { Seo } from '../components/seo'
 import { Box, Typography } from '@mui/material'
 import styled from 'styled-components'
+import { getTagPath } from '..//script/common'
 
 type Tag = {
   tag?: string
@@ -26,6 +27,8 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
   const defaultImage = data.defaultImage
   const { totalCount } = data.allMarkdownRemark
   const { tag }: Tag = pageContext
+  const siteUrl = data.site?.siteMetadata?.siteUrl && tag ?
+  `${data.site.siteMetadata.siteUrl}/tags/${getTagPath(tag)}/` : ''
 
   if (posts.length === 0) {
     const tagHeader = `"${tag}" (0記事)`
@@ -43,7 +46,7 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
   return (
     <Layout>
       <StyledH1 variant="h1">{tagHeader || 'Tag'}</StyledH1>
-      <Seo title={tagHeader || 'Tag'} />
+      <Seo title={tagHeader || 'Tag'} url={ siteUrl } />
       <Box
         sx={{
           display: 'grid',
@@ -73,6 +76,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     allMarkdownRemark(
