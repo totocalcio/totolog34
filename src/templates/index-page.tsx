@@ -56,14 +56,14 @@ const IndexPage = ({
           component="h1"
           sx={{
             textAlign: 'center',
-            fontSize: { xs: '0.875rem', sm: '1.125rem' },
+            fontSize: { xs: '0.9375rem', sm: '1.125rem' },
             p: { xs: 2, sm: 4 },
             whiteSpace:{xs:'pre-wrap',sm:'normal'}
           }}
         >
           うさぎが好きなエンジニアのブログ
           {isMobile ? <br /> : ":  "}
-          <Typography component='small' sx={{fontSize: { xs: '0.5rem',sm:'0.875rem'}}}>
+          <Typography component='small' sx={{fontSize: { xs: '0.8125rem',sm:'0.9375rem'}}}>
             React / Vue.js / jQuery / HTML / CSS
           </Typography>
         </Typography>
