@@ -21,6 +21,13 @@ export const theme = createTheme({
     sans-serif`,
   },
   components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none',
+        }
+      }
+    },
     MuiPagination: {
       styleOverrides: {
         ul: {
