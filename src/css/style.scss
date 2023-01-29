@@ -58,14 +58,16 @@ blockquote {
 
 // cards
 .cards img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 // blog-post
 .blog-post-content {
   a {
     img {
-      object-fit: contain;
+      -o-object-fit: contain;
+         object-fit: contain;
     }
   }
   code[class*="language-"], pre[class*="language-"] {

@@ -2,6 +2,8 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Card as MuiCard } from '@mui/material'
+import { styled as MuiStyled } from '@mui/system'
+import { useStyles } from 'tss-react/mui'
 import CardActions from '@mui/material/CardActions'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
@@ -31,30 +33,34 @@ const StyledGrid = styled(MuiCard)`
 
 const StyledList = styled('ul')`
   display: flex;
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0;
-  gap: 8px;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-inline: 8px;
+  margin: 0 0.5rem 1rem;
 `
-
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #fff;
+  color: #000;
 `
 
-const StyledGatsbyImage = styled(GatsbyImage)`
-  &.gatsby-image-wrapper {
-    height: 100%;
-    display: grid;
-    place-items: center;
-    img {
-      padding-top: 16px;
-      object-fit: contain !important;
-    }
-  }
-`
+const StyledGatsbyImage = MuiStyled(GatsbyImage)(({ theme }) => ({
+  '&.gatsby-image-wrapper': {
+    height: '100%',
+    display: 'grid',
+    placeItems: 'center',
+    '& img': {
+      paddingBlock: '0.5rem',
+      objectFit: 'contain !important',
+      [theme.breakpoints.up('sm')]: {
+        paddingBlock: '1rem',
+      },
+    },
+  },
+}))
+
 const StyledTitle = styled(Typography)`
   display: -webkit-box;
   overflow: hidden;
@@ -63,11 +69,21 @@ const StyledTitle = styled(Typography)`
 `
 
 export const Card: React.FC<Props> = ({ post, defaultImage }) => {
+  const { css } = useStyles()
   return (
-    <StyledGrid>
+    <StyledGrid
+      classes={{
+        root: css({
+          border: '1px solid #000',
+          borderRadius: 8,
+          boxShadow: 'none',
+        }),
+      }}
+    >
       <CardActionArea
         href={post.frontmatter.slug}
         sx={{
+          p: '1rem',
           display: 'grid',
           gridTemplateColumns: '1fr',
           gridTemplateRows: { xs: '2fr 1fr', sm: '3fr 1fr' },
@@ -79,18 +95,26 @@ export const Card: React.FC<Props> = ({ post, defaultImage }) => {
             alt=""
           />
         </CardMedia>
-        <CardContent>
-          <StyledTitle sx={{ fontSize: { xs: '16px', sm: '20px' } }}>
+        <CardContent sx={{ p: 0 }}>
+          <StyledTitle
+            sx={{ fontSize: { xs: '1rem', sm: '1.25rem' }, fontWeight: '700' }}
+          >
             {post.frontmatter.title}
           </StyledTitle>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions sx={{ justifyContent: 'center' }}>
         <StyledList>
           {post.frontmatter.tags?.map((tag: string) => (
             <li key={tag}>
-              <Button size="small" variant="contained">
-                <StyledLink to={`/tags/${getTagPath(tag)}/`}>{tag}</StyledLink>
+              <Button
+                size="small"
+                variant="contained"
+                sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
+              >
+                <StyledLink to={`/tags/${getTagPath(tag)}/`}>
+                  <span>{tag}</span>
+                </StyledLink>
               </Button>
             </li>
           ))}
