@@ -4,7 +4,7 @@ import { Card } from '../components/card'
 import { Layout } from '../components/layout'
 import { Pagination } from '../components/pagination'
 import { Seo } from '../components/seo'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 const IndexPage = ({
   data,
@@ -17,18 +17,76 @@ const IndexPage = ({
   }
 >) => {
   const posts = data.allMarkdownRemark.nodes
+  const heroPath = data.file?.publicURL
   const defaultImage = data.defaultImage
-  const siteUrl = data.site?.siteMetadata?.siteUrl ? `${data.site.siteMetadata.siteUrl}/` : ''
+  const siteUrl = data.site?.siteMetadata?.siteUrl
+    ? `${data.site.siteMetadata.siteUrl}/`
+    : ''
   return (
     <Layout>
-      <Seo title="" url={ siteUrl }/>
+      <Seo title="" url={siteUrl} />
+      {heroPath && (
+        <Box
+          component="img"
+          src={heroPath}
+          alt=""
+          aria-hidden="true"
+          sx={{
+            maxHeight: '700px',
+            verticalAlign: 'middle',
+            objectFit: 'cover',
+            width: '100vw',
+            minWidth: '100%',
+            marginLeft: 'calc(-1 * (100vw - 100%)/2)',
+          }}
+        />
+      )}
+      <Box
+        sx={{
+          backgroundColor: 'primary.main',
+          width: '100vw',
+          minWidth: '100%',
+          marginLeft: 'calc(-1 * (100vw - 100%)/2)',
+          marginBottom: { xs: '50px', sm: '100px' },
+        }}
+      >
+        <Typography
+          component="h1"
+          sx={{
+            textAlign: 'center',
+            fontSize: { xs: '1rem', sm: '1.125rem' },
+            p: { xs: 2, sm: 4 },
+          }}
+        >
+          うさぎが好きなエンジニアのブログサイト
+        </Typography>
+      </Box>
+      <Box sx={{ lineHeight: '1.6' }}>
+        <Typography
+          component="h2"
+          sx={{
+            fontSize: { xs: '1.75rem', sm: '3rem' },
+            fontWeight: '700',
+            textAlign: 'center',
+          }}
+        >
+          Article{' '}
+          <Typography
+            component="small"
+            sx={{ display: 'block', fontSize: '0.875rem', textAlign: 'center' }}
+          >
+            記事
+          </Typography>
+        </Typography>
+      </Box>
+
       <Box
         className="cards"
         sx={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: 3,
-          marginBlock: 3,
+          marginTop: { xs: 3, md: 10 },
         }}
       >
         {posts.map((post) => {
@@ -41,12 +99,12 @@ const IndexPage = ({
           )
         })}
       </Box>
-      <div>
+      <Box sx={{ marginBlock: { xs: 5, md: 10 } }}>
         <Pagination
           currentPage={pageContext.currentPage}
           pageSum={pageContext.numPages}
         />
-      </div>
+      </Box>
     </Layout>
   )
 }
@@ -97,6 +155,9 @@ export const query = graphql`
           formats: [AUTO, WEBP, AVIF]
         )
       }
+    }
+    file(name: { eq: "hero" }) {
+      publicURL
     }
   }
 `

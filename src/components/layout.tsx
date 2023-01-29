@@ -6,10 +6,16 @@ import * as constants from '../script/constants'
 import { theme } from '../script/theme'
 import { Header } from './header'
 import { Footer } from './footer'
+import styled from 'styled-components'
 
 type Props = {
   children: React.ReactNode
 }
+
+const Main = styled('main')`
+  max-width: 1140px;
+  margin-inline: auto;
+`
 
 export const Layout: React.FC<Props> = ({ children }) => {
   const { site } = useStaticQuery(graphql`
@@ -28,14 +34,14 @@ export const Layout: React.FC<Props> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <Header
-        title={site.siteMetadata.title}
+        title="USA GIJUTSU"
         twitter={site.siteMetadata.social.twitter}
         github={site.siteMetadata.social.github}
       />
-      <Box sx={{ px: { xs: 2, md: 4 } }}>
+      <Box sx={{ px: { xs: 2, md: 4 }, overflowX: 'hidden' }}>
         <CssBaseline />
         <Toolbar sx={constants.toolbarProps} />
-        <main>{children}</main>
+        <Main>{children}</Main>
       </Box>
       <Footer />
     </ThemeProvider>

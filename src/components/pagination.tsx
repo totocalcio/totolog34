@@ -16,7 +16,7 @@ export const Pagination: React.FC<Props> = ({ currentPage, pageSum }) => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        mb: '24px',
+        mb: '1.5rem',
       }}
       renderItem={(item) => (
         <MuiPaginationItem

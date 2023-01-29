@@ -13,9 +13,10 @@ type Tag = {
 
 const StyledH1 = styled(Typography)`
   &.MuiTypography-h1 {
-    font-size: 2rem;
     margin-top: 2rem;
-    margin-inline: 1rem;
+    margin-bottom: 0.5rem;
+    margin-inline: auto;
+    text-align: center;
   }
 `
 
@@ -27,8 +28,10 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
   const defaultImage = data.defaultImage
   const { totalCount } = data.allMarkdownRemark
   const { tag }: Tag = pageContext
-  const siteUrl = data.site?.siteMetadata?.siteUrl && tag ?
-  `${data.site.siteMetadata.siteUrl}/tags/${getTagPath(tag)}/` : ''
+  const siteUrl =
+    data.site?.siteMetadata?.siteUrl && tag
+      ? `${data.site.siteMetadata.siteUrl}/tags/${getTagPath(tag)}/`
+      : ''
 
   if (posts.length === 0) {
     const tagHeader = `"${tag}" (0記事)`
@@ -41,18 +44,27 @@ const TagsPage: React.FC<PageProps<Queries.TagsPageQuery>> = ({
     )
   }
 
-  const tagHeader = `"${tag}" (${totalCount}記事)`
+  const tagHeader = tag?.charAt(0).toUpperCase() + (tag?.slice(1) ?? '')
+  const tagHeaderSmall = `(${totalCount}記事)`
 
   return (
     <Layout>
-      <StyledH1 variant="h1">{tagHeader || 'Tag'}</StyledH1>
-      <Seo title={tagHeader || 'Tag'} url={ siteUrl } />
+      <StyledH1 variant="h1" sx={{ fontSize: { xs: '1.75rem', sm: '3rem' } }}>
+        {tagHeader || 'Tag'}
+      </StyledH1>
+      <Typography
+        component="small"
+        sx={{ display: 'block', fontSize: '0.875rem', textAlign: 'center' }}
+      >
+        {tagHeaderSmall}
+      </Typography>
+      <Seo title={tagHeader || 'Tag'} url={siteUrl} />
       <Box
         sx={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: 3,
-          marginBlock: 3,
+          marginBlock: { xs: 3, sm: 10 },
         }}
       >
         {posts.map((post) => {
