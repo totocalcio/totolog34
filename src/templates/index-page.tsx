@@ -4,7 +4,7 @@ import { Card } from '../components/card'
 import { Layout } from '../components/layout'
 import { Pagination } from '../components/pagination'
 import { Seo } from '../components/seo'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 
 const IndexPage = ({
   data,
@@ -22,6 +22,8 @@ const IndexPage = ({
   const siteUrl = data.site?.siteMetadata?.siteUrl
     ? `${data.site.siteMetadata.siteUrl}/`
     : ''
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
   return (
     <Layout>
       <Seo title="" url={siteUrl} />
@@ -54,11 +56,16 @@ const IndexPage = ({
           component="h1"
           sx={{
             textAlign: 'center',
-            fontSize: { xs: '1rem', sm: '1.125rem' },
+            fontSize: { xs: '0.875rem', sm: '1.125rem' },
             p: { xs: 2, sm: 4 },
+            whiteSpace:{xs:'pre-wrap',sm:'normal'}
           }}
         >
-          うさぎが好きなエンジニアのブログサイト
+          うさぎが好きなエンジニアのブログ
+          {isMobile ? <br /> : ":  "}
+          <Typography component='small' sx={{fontSize: { xs: '0.5rem',sm:'0.875rem'}}}>
+            React / Vue.js / jQuery / HTML / CSS
+          </Typography>
         </Typography>
       </Box>
       <Box sx={{ lineHeight: '1.6' }}>
