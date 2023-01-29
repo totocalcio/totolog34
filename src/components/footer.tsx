@@ -11,13 +11,14 @@ export const Footer: React.FC = () => {
   return (
     <StyledFooter
       sx={{
-        p: 1,
+        p: { xs: 1, sm: 2 },
+        fontSize: '0.85rem',
         textAlign: 'center',
         backgroundColor: 'primary.main',
         color: 'primary.contrastText',
       }}
     >
-      <footer>© 2019 うさ技術.</footer>
+      <footer>© 2019 USA GIJUTSU.</footer>
     </StyledFooter>
   )
 }

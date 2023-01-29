@@ -99,6 +99,19 @@ const config = {
       },
     },
     {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Not Sans JP`,
+            file: `https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap`,
+          },
+        ],
+      },
+    },
+    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-PVNPNSX",

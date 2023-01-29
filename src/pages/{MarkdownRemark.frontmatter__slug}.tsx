@@ -13,14 +13,14 @@ const StyledList = styled('ul')`
   align-items: center;
   list-style: none;
   padding: 0;
-  gap: 8px;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  margin-inline: 8px;
+  margin-inline: 0.5rem;
 `
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #fff;
+  color: #000;
 `
 
 const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
@@ -28,29 +28,49 @@ const Template: React.FC<PageProps<Queries.TemplateQuery>> = ({
 }: PageProps<Queries.TemplateQuery>) => {
   const frontmatter = data.markdownRemark!.frontmatter
   const html = data.markdownRemark!.html
+  const tags = frontmatter?.tags
 
   return (
     <Layout>
       <Seo
-        title={frontmatter.title}
+        title={frontmatter?.title ?? ''}
         description={data.markdownRemark?.excerpt ?? ''}
-        image={frontmatter.thumbnail?.publicURL ?? ''}
+        image={frontmatter?.thumbnail?.publicURL ?? ''}
       />
       <Container maxWidth="md" sx={{ py: 3 }}>
-        <Typography variant="h6">{frontmatter.date}</Typography>
+        <Typography variant="h6">{frontmatter!.date}</Typography>
         <div className="blog-post-container">
-          <h1>{frontmatter.title}</h1>
-          <StyledList>
-            {frontmatter.tags?.map((tag: string) => (
-              <li key={tag}>
-                <Button size="small" variant="contained">
-                  <StyledLink to={`/tags/${getTagPath(kebabCase(tag))}/`}>
-                    {tag}
-                  </StyledLink>
-                </Button>
-              </li>
-            ))}
-          </StyledList>
+          <h1>{frontmatter!.title}</h1>
+          {tags && (
+            <StyledList>
+              {frontmatter.tags?.map((value: string | null) => {
+                if (!value) {
+                  return undefined
+                }
+                return (
+                  <li key={value}>
+                    <Button size="small" variant="contained">
+                      <StyledLink to={`/tags/${getTagPath(kebabCase(value))}/`}>
+                        {value}
+                      </StyledLink>
+                    </Button>
+                  </li>
+                )
+              })}
+            </StyledList>
+          )}
+          {/* <StyledList>
+              {frontmatter.tags?.map((tag: string) => (
+                <li key={tag}>
+                  <Button size="small" variant="contained">
+                    <StyledLink to={`/tags/${getTagPath(kebabCase(tag))}/`}>
+                      {tag}
+                    </StyledLink>
+                  </Button>
+                </li>
+              )
+              )}
+            </StyledList> */}
           <Toc html={data.markdownRemark?.tableOfContents ?? ''} />
           <div className="blog-post">
             <div

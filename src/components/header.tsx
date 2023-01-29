@@ -1,9 +1,7 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import { SnsIcon } from './snsIcon'
 import { AppBar, Box, Button, Typography, Link as MuiLink } from '@mui/material'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import RssFeed from '@mui/icons-material/RssFeed'
 import * as utility from '../css/utility.module.css'
 import styled from 'styled-components'
 
@@ -13,10 +11,8 @@ type Props = {
   github: string
 }
 
-type Gif = {
-  gif: {
-    publicURL: string
-  }
+type Node = {
+  publicURL: string
 }
 
 const StyledHeader = styled(Box)`
@@ -31,47 +27,55 @@ const StyledLogo = styled(Box)`
 `
 
 export const Header: React.FC<Props> = ({ title, twitter, github }) => {
-  const { gif }: Gif = useStaticQuery(graphql`
+  const files = useStaticQuery(graphql`
     query {
-      gif: file(relativePath: { eq: "usagi_momochy.gif" }) {
-        publicURL
+      allFile(filter: { extension: { eq: "svg" } }) {
+        nodes {
+          publicURL
+        }
       }
     }
   `)
+  const nodes = files?.allFile?.nodes
+  const getIconPath = (arr: Node[], name: string) => {
+    const file = arr.find((file) => file.publicURL.includes(name))
+    return file ? file.publicURL : ''
+  }
+
+  const feedIconPath = getIconPath(nodes, 'feed')
+  const githubIconPath = getIconPath(nodes, 'github')
+  const twitterIconPath = getIconPath(nodes, 'twitter')
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar>
-        <StyledHeader sx={{ p: { xs: 0, sm: 1 } }}>
+        <StyledHeader sx={{ p: { xs: 0, sm: 3, lg: 5 } }}>
           <StyledLogo>
             <Link to="/" className={utility.textDecorationNone}>
               <Button sx={{ color: 'primary.contrastText' }}>
                 <Typography
-                  variant="h6"
                   component="div"
-                  sx={{ flexGrow: 1, fontFamily: 'JKGM' }}
+                  sx={{
+                    flexGrow: 1,
+                    fontWeight: 700,
+                    fontSize: { xs: '1.125rem', sm: '1.5rem' },
+                  }}
                 >
                   {title}
                 </Typography>
               </Button>
             </Link>
-            <Box
-              component="img"
-              src={gif.publicURL}
-              sx={{ height: { xs: '30px', sm: '40px' } }}
-              alt=""
-            />
           </StyledLogo>
-          <Box>
+          <Box sx={{ display: 'flex', gap: { xs: '0', sm: '0.625rem' } }}>
             <MuiLink
               target="_blank"
               href="https://totolog34.com/feed/rss.xml"
               aria-label="RSS Feed Link"
             >
               <Button
-                sx={{ color: 'primary.contrastText' }}
+                sx={{ color: 'primary.contrastText', minWidth: '50px' }}
                 aria-label="RSS Feed LinkButton"
               >
-                <RssFeed />
+                <SnsIcon src={feedIconPath} alt="RSS Feed アイコン" />
               </Button>
             </MuiLink>
             <MuiLink
@@ -80,10 +84,10 @@ export const Header: React.FC<Props> = ({ title, twitter, github }) => {
               aria-label="GitHub Link"
             >
               <Button
-                sx={{ color: 'primary.contrastText' }}
+                sx={{ color: 'primary.contrastText', minWidth: '50px' }}
                 aria-label="GitHub LinkButton"
               >
-                <GitHubIcon />
+                <SnsIcon src={githubIconPath} alt="Github アイコン" />
               </Button>
             </MuiLink>
             <MuiLink
@@ -92,10 +96,10 @@ export const Header: React.FC<Props> = ({ title, twitter, github }) => {
               aria-label="Twitter Link"
             >
               <Button
-                sx={{ color: 'primary.contrastText' }}
+                sx={{ color: 'primary.contrastText', minWidth: '50px' }}
                 aria-label="Twitter LinkButton"
               >
-                <TwitterIcon />
+                <SnsIcon src={twitterIconPath} alt="Twitter アイコン" />
               </Button>
             </MuiLink>
           </Box>
