@@ -20,7 +20,7 @@
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
     "@mui/icons-material": "5.11.0",
-    "@mui/material": "5.11.5",
+    "@mui/material": "5.11.6",
     "@mui/styled-engine-sc": "5.11.0",
     "babel-plugin-styled-components": "2.0.7",
     "gatsby": "^5.3.3",
@@ -64,6 +64,6 @@
   },
   "volta": {
     "node": "18.13.0",
-    "npm": "9.2.0"
+    "npm": "9.4.0"
   }
 }
