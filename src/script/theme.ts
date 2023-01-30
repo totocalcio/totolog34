@@ -25,8 +25,8 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           boxShadow: 'none',
-        }
-      }
+        },
+      },
     },
     MuiPagination: {
       styleOverrides: {
