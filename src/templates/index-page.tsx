@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { graphql, PageProps } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import { Card } from '../components/card'
 import { Layout } from '../components/layout'
 import { Pagination } from '../components/pagination'
@@ -17,7 +18,6 @@ const IndexPage = ({
   }
 >) => {
   const posts = data.allMarkdownRemark.nodes
-  const heroPath = data.file?.publicURL
   const defaultImage = data.defaultImage
   const siteUrl = data.site?.siteMetadata?.siteUrl
     ? `${data.site.siteMetadata.siteUrl}/`
@@ -27,22 +27,6 @@ const IndexPage = ({
   return (
     <Layout>
       <Seo title="" url={siteUrl} />
-      {heroPath && (
-        <Box
-          component="img"
-          src={heroPath}
-          alt=""
-          aria-hidden="true"
-          sx={{
-            maxHeight: '700px',
-            verticalAlign: 'middle',
-            objectFit: 'cover',
-            width: '100vw',
-            minWidth: '100%',
-            marginLeft: 'calc(-1 * (100vw - 100%)/2)',
-          }}
-        />
-      )}
       <Box
         sx={{
           backgroundColor: 'primary.main',
@@ -52,6 +36,11 @@ const IndexPage = ({
           marginBottom: { xs: '50px', sm: '100px' },
         }}
       >
+        <StaticImage
+          src="../images/hero.jpg"
+          alt=""
+          style={{maxHeight:'700px',width: '100vw'}}
+        />
         <Typography
           component="h1"
           sx={{
@@ -162,9 +151,6 @@ export const query = graphql`
           formats: [AUTO, WEBP, AVIF]
         )
       }
-    }
-    file(name: { eq: "hero" }) {
-      publicURL
     }
   }
 `
