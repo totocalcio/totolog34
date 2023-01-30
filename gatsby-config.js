@@ -109,6 +109,7 @@ const config = {
             file: `https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap`,
           },
         ],
+        prefetch: [`Not Sans JP`]
       },
     },
     {
