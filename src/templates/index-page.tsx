@@ -5,7 +5,8 @@ import { Card } from '../components/card'
 import { Layout } from '../components/layout'
 import { Pagination } from '../components/pagination'
 import { Seo } from '../components/seo'
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Typography } from '@mui/material'
+import { useIsMobile } from '../hooks/useDevice'
 
 const IndexPage = ({
   data,
@@ -22,8 +23,6 @@ const IndexPage = ({
   const siteUrl = data.site?.siteMetadata?.siteUrl
     ? `${data.site.siteMetadata.siteUrl}/`
     : ''
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <Layout>
       <Seo title="" url={siteUrl} />
@@ -51,7 +50,7 @@ const IndexPage = ({
           }}
         >
           うさぎが好きなエンジニアのブログ
-          {isMobile ? <br /> : ':  '}
+          {useIsMobile() ? <br /> : ':  '}
           <Typography
             component="small"
             sx={{ fontSize: { xs: '0.8125rem', sm: '0.9375rem' } }}

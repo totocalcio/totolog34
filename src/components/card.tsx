@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Card as MuiCard } from '@mui/material'
 import { styled as MuiStyled } from '@mui/system'
 import { useStyles } from 'tss-react/mui'
+import { useIsMobile } from '../hooks/useDevice'
 import CardActions from '@mui/material/CardActions'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
@@ -82,6 +83,7 @@ export const Card: React.FC<Props> = ({ post, defaultImage }) => {
     >
       <CardActionArea
         href={post.frontmatter.slug}
+        {...(useIsMobile() ? {disableRipple:true} : {})}
         sx={{
           p: '1rem',
           display: 'grid',
