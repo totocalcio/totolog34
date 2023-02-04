@@ -5,7 +5,8 @@ import { Card } from '../components/card'
 import { Layout } from '../components/layout'
 import { Pagination } from '../components/pagination'
 import { Seo } from '../components/seo'
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Typography } from '@mui/material'
+import { useIsMobile } from '../hooks/useDevice'
 
 const IndexPage = ({
   data,
@@ -22,8 +23,6 @@ const IndexPage = ({
   const siteUrl = data.site?.siteMetadata?.siteUrl
     ? `${data.site.siteMetadata.siteUrl}/`
     : ''
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"))
   return (
     <Layout>
       <Seo title="" url={siteUrl} />
@@ -39,7 +38,7 @@ const IndexPage = ({
         <StaticImage
           src="../images/hero.jpg"
           alt=""
-          style={{maxHeight:'700px',width: '100vw'}}
+          style={{ maxHeight: '700px', width: '100vw' }}
         />
         <Typography
           component="h1"
@@ -47,12 +46,15 @@ const IndexPage = ({
             textAlign: 'center',
             fontSize: { xs: '0.9375rem', sm: '1.125rem' },
             p: { xs: 2, sm: 4 },
-            whiteSpace:{xs:'pre-wrap',sm:'normal'}
+            whiteSpace: { xs: 'pre-wrap', sm: 'normal' },
           }}
         >
           うさぎが好きなエンジニアのブログ
-          {isMobile ? <br /> : ":  "}
-          <Typography component='small' sx={{fontSize: { xs: '0.8125rem',sm:'0.9375rem'}}}>
+          {useIsMobile() ? <br /> : ':  '}
+          <Typography
+            component="small"
+            sx={{ fontSize: { xs: '0.8125rem', sm: '0.9375rem' } }}
+          >
             React / Vue.js / jQuery / HTML / CSS
           </Typography>
         </Typography>
