@@ -47,7 +47,7 @@
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
     "sass": "1.60.0",
-    "styled-components": "5.3.6"
+    "styled-components": "5.3.11"
   },
   "devDependencies": {
     "@types/node": "18.11.18",
