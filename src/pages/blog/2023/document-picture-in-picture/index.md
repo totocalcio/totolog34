@@ -1,6 +1,6 @@
 ---
 slug: /document-picture-in-picture
-date: '2023-09-10 14:38'
+date: '2023-09-10 19:01'
 title: 'Document Picture-in-Picture APIで簡単なWebアプリを作成'
 thumbnail: pip.png
 tags: ['Vue']
@@ -91,10 +91,10 @@ const onOpen = async () => {
 - [CodeSandBox(demo)](https://nrhln8-5173.csb.app/)
 
 ### 注意点
-`Picture in Picture`ウィンドウは元ウィンドウからCSSは引き継がれません。そのため`JavaScript`で`CSS`をコピーする必要があります。
+`Picture in Picture`ウィンドウは元ウィンドウからCSSが引き継がれません。そのため`JavaScript`で`CSS`をコピーする必要があります。
 - [参考](https://developer.chrome.com/docs/web-platform/document-picture-in-picture/#copy-style-sheets-to-the-picture-in-picture-window)
 
-以前はオプションで`copyStyleSheets`を指定するのみでよかったのですが、議論の末に削除された経緯があり、現在は使用することができません。
+以前はオプションで`copyStyleSheets`を指定するのみでよかったのですが、議論の末に削除されたという経緯があります。
 - [Remove copyStyleSheets](https://github.com/WICG/document-picture-in-picture/pull/79)
 
 ## まとめ
