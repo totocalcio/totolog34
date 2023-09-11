@@ -97,6 +97,11 @@ const onOpen = async () => {
 以前はオプションで`copyStyleSheets`を指定するのみでよかったのですが、議論の末に削除されたという経緯があります。
 - [Remove copyStyleSheets](https://github.com/WICG/document-picture-in-picture/pull/79)
 
+## 実現できていないこと・課題
+
+- ウィンドウが300 ✕ 300 より小さくはならない
+- Picture in Pictureのキーボード操作を理解していない。
+
 ## まとめ
 Chrome116で実装された`Document Picture-in-Picture API`について紹介しました。  
 現在はChrome,Edgeのみしか使用できませんが、helpやtipsなどの表示であったり、今回作成したWebアプリのように、常にデスクトップの見える位置に配置するといった使い方で、利用価値のある場面もあるのかなと思いました。
