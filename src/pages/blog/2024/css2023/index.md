@@ -37,7 +37,7 @@ tags: ['CSS']
 ```
 
 ### @layer を使ってみて
-安易に使おうとすると今後自分の首を締めることになりそうだし、実務で使おうものなら、考えてCSS設計しないと大きな負債となりそうと感じて、なかなか使う機会がこなかった。使用しているサイトもなかなかお目にかかることはないけど、唯一脳死でやってしまってもいいかなと考えてるのが `base` レイヤーとして設定すること。リセットCSSであったり、`FLOCSS` でいう `Foundation` レイヤーにあたるものはレイヤー設定して、レイヤー未設定CSSが詳細度を気にせず必ず勝てるようにする。
+安易に使おうとすると今後自分の首を締めることになりそうだし、実務で使おうものなら、考えてCSS設計しないと大きな負債となりそうと感じて、なかなか使う機会がこなかった。使用しているサイトもなかなかお目にかかることはないけど、唯一脳死でやってしまってもいいかなと考えてるのが `base` レイヤーとして設定すること。リセットCSSであったり、`FLOCSS` でいう `Foundation` レイヤーにあたるものはレイヤー設定して、レイヤー未設定CSSが必ず適用されるようにする。
 
 ## @scope
 [CSS Cascading and Inheritance Level 6 / W3C](https://drafts.csswg.org/css-cascade-6/#scoped-styles)  
@@ -66,7 +66,7 @@ tags: ['CSS']
     container-name: monsterBall;
   }
   // ここのコンテナクエリは後述
-  @container monsterBall (max-width: 100vw) {
+  @container monsterBall (width > 0px) {
     .top {
       ...
     }
@@ -99,7 +99,7 @@ background-color: color-mix(in srgb, $bg_color_top, black 10%);
 ```
 
 ### color-mix() を使ってみて
-`color-mix()` は[以前の記事](./color-mix)でも紹介したけど、個人的にめちゃくちゃ使いやすい。気軽に使えるのでとても重宝している。今回みたいに「もうちょっと色を明るくしたい、暗くしたい」という時に `#fff` や `#000` を混ぜて調整したり、`opacity` で薄くしたり使うときもある。但し、デザインがしっかり決まっていればこんな小細工する必要はない…
+`color-mix()` は[以前の記事](/color-mix)でも紹介したけど、個人的にめちゃくちゃ使いやすい。気軽に使えるので重宝している。今回みたいに「もうちょっと色を明るくしたい、暗くしたい」という時に `#fff` や `#000` を混ぜて調整したり、`opacity` で薄くしたり使うときもある。但し、デザインがしっかり決まっていればこんな小細工する必要はない…
 
 ## Trigonometric functions
 [Trigonometric functions in CSS / web.dev](https://web.dev/articles/css-trig-functions)  
@@ -118,7 +118,7 @@ background-color: color-mix(in srgb, $bg_color_top, black 10%);
 ```
 ```css
 @scope (.monster-ball-menu-list) {
-  @container layout (max-width:100vw) {
+  @container layout (width > 0px) {
     .item {
       ...
       &.is-open {
@@ -155,7 +155,7 @@ CSS三角関数は、今のところ円形上に要素を配置する以外の�
 
 ## Container Queries
 [CSS コンテナークエリー / MDN](https://developer.mozilla.org/ja/docs/Web/CSS/CSS_container_queries)  
-全ブラウザで使用可能・
+全ブラウザで使用可能。
 
 ### Container Queries 実装例
 [該当ソースコード](https://github.com/totocalcio/pokemiku-fun-site/blob/f8da4b3791a41dff1a8194536b3a1b9480a1cf8e/components/MonsterBall/MonsterBall.vue#L105)
@@ -170,7 +170,7 @@ $button_inner_size: 18cqmin;
     container-type: size;
     container-name: monsterBall;
   }
-  @container monsterBall (max-width: 100vw) {
+  @container monsterBall (width > 0px) {
     ...
     .button {
       background-color: $bg_color_bottom;
@@ -202,7 +202,7 @@ $button_inner_size: 18cqmin;
 ### Container Queries 使ってみて
 - せっかくコンテナクエリを使ったので、レスポンシブで確認しようとしたけど、@scopeを使用したために、スマホでも見ることができなくなって、今回はいいかと諦めた。
 - `vmin` であったり今回の `cqmin` は正円や正方形の場合に使う時がある。
-- コンテナ単位使いたいだけだったので仕方なく `(max-width: 100vw)` としたけど、いい方法があれば知りたい。
+- コンテナ単位使いたいだけだったので仕方なく `(width > 0px)` としたけど、いい方法があれば知りたい。
 
 ### Container Queries 注意点
 何も考えずにコンテナクエリー使うとツールチップ等の併用で事故る可能性がある。（実務で使用して事故った。）
