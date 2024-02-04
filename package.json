@@ -17,8 +17,8 @@
     "lint": "eslint src/**/*.{tsx,ts}"
   },
   "dependencies": {
-    "@emotion/react": "11.10.6",
-    "@emotion/styled": "11.10.6",
+    "@emotion/react": "11.11.3",
+    "@emotion/styled": "11.11.0",
     "@mui/icons-material": "5.15.7",
     "@mui/material": "5.15.7",
     "@mui/styled-engine-sc": "5.14.12",
