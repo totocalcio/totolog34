@@ -5,34 +5,34 @@ const { data: blogPost } = await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
 })
 
-const getDate = (dateTime) => {
-  if (!dateTime) {
+const getDate = (datetime) => {
+  if (!datetime) {
     return ''
   }
-  return dateTime.split(' ')[0]
+  return datetime.split(' ')[0]
 }
 </script>
 
 <template>
   <v-container fluid class="article-detail-container">
-    <v-row>
-      <v-col cols="12">
-        <p>{{ getDate(blogPost.date) }}</p>
-        <h1>{{ blogPost.title }}</h1>
-        <div v-if="blogPost.tags" class="tag-list">
-          <v-btn
-            v-for="tag in blogPost.tags"
-            :key="tag"
-            variant="tonal"
-            density="compact"
-            :to="tag"
-          >
-            {{ tag }}
-          </v-btn>
-        </div>
-        <ContentDoc />
-      </v-col>
-    </v-row>
+    <div>
+      <time :datetime="getDate(blogPost.date)">{{
+        getDate(blogPost.date)
+      }}</time>
+    </div>
+    <h1>{{ blogPost.title }}</h1>
+    <div v-if="blogPost.tags" class="tag-list">
+      <v-btn
+        v-for="tag in blogPost.tags"
+        :key="tag"
+        variant="tonal"
+        density="compact"
+        :to="tag"
+      >
+        {{ tag }}
+      </v-btn>
+    </div>
+    <ContentDoc />
   </v-container>
 </template>
 
@@ -47,9 +47,15 @@ const getDate = (dateTime) => {
   color: #000;
   text-decoration: none;
 }
-:deep(ul) {
+:deep(:is(ul, ol)) {
   margin-left: 1em;
-  margin-bottom: 1rem;
+  margin-block: 1rem;
+  font-style: italic;
+}
+:deep(pre) {
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: rgb(var(--v-theme-primary));
 }
 .article-detail-container {
   width: min(900px, 100%) !important;
