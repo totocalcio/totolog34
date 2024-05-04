@@ -17,7 +17,7 @@ const { smAndUp } = useDisplay()
 <template>
   <v-card class="card" flat>
     <nuxt-link
-      :to="`/${_path}`"
+      :to="_path"
       class="card-link"
       :class="{ 'card-link--mobile': !smAndUp }"
     >
