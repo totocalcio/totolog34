@@ -2,7 +2,7 @@
 slug: /93
 date: '2020-05-22 18:59:04'
 title: ウィンドウサイズが可変で要素を中央維持する（左右）
-thumbnail: 2-2.jpg
+thumbnail: /img/blog/2020/93/2-2.jpg
 tags: ['css']
 ---
 CSS を学び始めた初期で躓いたやつです。

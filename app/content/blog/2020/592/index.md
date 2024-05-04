@@ -2,7 +2,7 @@
 slug: /592
 date: '2020-10-29 20:20:00'
 title: 【CSS】デザインで1px以下のborderが指定された時の対処法
-thumbnail: image-30.png
+thumbnail: /img/blog/2020/592/image-30.png
 tags: ['css']
 ---
 css で border に 1px 以下の値を設定できないのはご存知でしょうか。

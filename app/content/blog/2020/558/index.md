@@ -2,7 +2,7 @@
 slug: /558
 date: '2020-11-04 13:34:13'
 title: react-native-sliderの小数点が想定外の表示
-thumbnail: image.png
+thumbnail: /img/blog/2020/558/image.png
 tags: ['reactnative']
 ---
 そもそも浮動小数点の問題は多分これです。

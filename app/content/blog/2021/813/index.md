@@ -2,7 +2,7 @@
 slug: /813
 date: '2021-09-20 01:00:00'
 title: 第2回ReactNativeアプリ開発①〜Expoでプロジェクトを作成
-thumbnail: 2021-09-19-12.43.48.png
+thumbnail: /img/blog/2021/813/2021-09-19-12.43.48.png
 tags: ['reactnative', 'expo']
 ---
 まずは[最新のドキュメント](https://reactnative.dev/docs/environment-setup)を確認すると、ExpoCLI か ReactNativeCLI で始めることは１年前と変わらないみたい。どちらで始めようか悩んだが、必要となったら eject すればいいやと expo ではじめることにした。

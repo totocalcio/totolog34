@@ -46,7 +46,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/custom.css'],
   content: {
     highlight: {
-      langs: ['html', 'javascript', 'css', 'vue'],
+      langs: ['html', 'javascript', 'css', 'vue', 'shell', 'sh', 'jsx'],
     },
   },
 })

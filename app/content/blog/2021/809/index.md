@@ -2,7 +2,7 @@
 slug: /809
 date: '2021-09-19 11:17:42'
 title: 性懲りもなくReactNativeでアプリ作ろうと思う
-thumbnail: 2021-09-19-11.24.43.png
+thumbnail: /img/blog/2021/809/2021-09-19-11.24.43.png
 tags: ['日記', 'reactnative']
 ---
 だいたい一年前に[アプリをリリース](https://totolog34.com/631/)しました。

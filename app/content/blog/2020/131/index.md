@@ -2,7 +2,7 @@
 slug: /131
 date: '2020-05-27 15:04:27'
 title: 【CSS】flexかgridか。レスポンシブデザインで不要なコードを増やさないために。
-thumbnail: 1.jpg
+thumbnail: /img/blog/2020/131/1.jpg
 tags: ['css']
 ---
 アイキャッチ画像のようなデザインをコーディングする際、どのようにコードを書きますか？flex と grid でそれぞれ考えてみます。

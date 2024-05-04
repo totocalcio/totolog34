@@ -2,7 +2,7 @@
 slug: /876
 date: '2021-11-07 13:11:37'
 title: 第2回ReactNativeアプリ開発⑦〜リリース
-thumbnail: 2021-09-19-11.24.43.png
+thumbnail: /img/blog/2021/876/2021-09-19-11.24.43.png
 tags: ['reactnative']
 ---
 [https://apps.apple.com/us/app/%E3%81%95%E3%82%89%E3%81%A1%E3%82%83%E3%82%93%E3%82%84%E3%81%A3%E3%81%9F/id1592878189](https://apps.apple.com/us/app/%E3%81%95%E3%82%89%E3%81%A1%E3%82%83%E3%82%93%E3%82%84%E3%81%A3%E3%81%9F/id1592878189)

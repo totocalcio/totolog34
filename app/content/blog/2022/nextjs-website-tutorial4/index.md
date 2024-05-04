@@ -2,7 +2,7 @@
 slug: /nextjs-website-tutorial4
 date: '2022-09-26 15:49'
 title: Next.jsでWebサイトを作る④〜ページ遷移時のアニメーション
-thumbnail: nextjs-logo.png
+thumbnail: /img/blog/2022/nextjs-website-tutorial4/nextjs-logo.png
 tags: ['next.js','react']
 ---
 [前回](/nextjs-website-tutorial3)の続き  

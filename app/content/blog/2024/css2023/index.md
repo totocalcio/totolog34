@@ -2,7 +2,7 @@
 slug: /css2023
 date: '2024-01-15 15:07'
 title: '2023年実装されたCSSの機能をいろいろ使ってみた'
-thumbnail: css2023.png
+thumbnail: /img/blog/2024/css2023/css2023.png
 tags: ['CSS']
 ---
 ## 概要

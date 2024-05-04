@@ -57,7 +57,7 @@ const { smAndUp } = useDisplay()
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: subgrid;
-  grid-row: 2 span;
+  grid-row: 3 span;
   gap: 0;
   border: 1px solid #000;
   border-radius: 8px;
@@ -66,7 +66,8 @@ const { smAndUp } = useDisplay()
 
 .card-link {
   display: grid;
-  grid-template-rows: 3fr auto;
+  grid-template-rows: subgrid;
+  grid-row: 2 span;
   padding: 1rem;
   text-decoration: none;
   color: #000;
@@ -75,7 +76,9 @@ const { smAndUp } = useDisplay()
   }
 }
 .card-link--mobile {
-  grid-template-rows: 2fr auto;
+  :deep(.v-row) {
+    margin: 0;
+  }
 }
 
 .card-title {
