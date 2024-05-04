@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { siteTitle, socialInfoList } from '../utils/constants'
 import { useDisplay } from 'vuetify'
 
 const { smAndUp } = useDisplay()

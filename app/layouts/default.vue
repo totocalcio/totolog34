@@ -16,9 +16,9 @@ const toolbarProps = ref({})
   <v-theme-provider>
     <v-layout>
       <Header />
-      layout
-
-      <slot />
+      <v-main>
+        <slot />
+      </v-main>
     </v-layout>
   </v-theme-provider>
 </template>
