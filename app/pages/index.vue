@@ -13,14 +13,14 @@ const { smAndUp } = useDisplay()
     }"
   >
     <v-img src="/img/hero.jpg" max-height="700" cover />
-    <h1 class="site-title" :class="{ 'site-title--is-mobile': !smAndUp }">
+    <h1 class="site-title" :class="{ 'site-title--mobile': !smAndUp }">
       うさぎが好きなエンジニアのブログ
       <br v-if="!smAndUp" />
       <small> Nuxt / Vue.js / jQuery / HTML / CSS </small>
     </h1>
   </v-container>
   <PageTitleContainer en="Article" ja="記事" />
-  <div>test</div>
+  <BlogPostList />
 </template>
 
 <style scoped>
@@ -38,7 +38,7 @@ const { smAndUp } = useDisplay()
     font-size: 0.75em;
   }
 }
-.site-title--is-mobile {
+.site-title--mobile {
   font-size: 1rem;
   padding: 1rem;
 }

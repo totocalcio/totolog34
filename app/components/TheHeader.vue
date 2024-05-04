@@ -30,16 +30,14 @@ const getStyleSnsLinkContainer = () => {
       <div class="header-logo">
         <nuxt-link to="/">
           <v-btn variant="text" color="primary">
-            <v-typography
-              class="header-title"
-              :class="smAndUp ? 'text-h5' : 'text-h6'"
-              >{{ siteTitle }}</v-typography
-            >
+            <div class="header-title" :class="smAndUp ? 'text-h5' : 'text-h6'">
+              {{ SITE_TITLE }}
+            </div>
           </v-btn>
         </nuxt-link>
       </div>
       <div class="sns-links">
-        <template v-for="(socialInfo, i) in socialInfoList" :key="i">
+        <template v-for="(socialInfo, i) in SOCIAL_INFO_LIST" :key="i">
           <v-btn
             variant="text"
             color="primary"

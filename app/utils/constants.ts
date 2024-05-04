@@ -1,11 +1,11 @@
-export const siteTitle = 'うさ技術'
+export const SITE_TITLE = 'うさ技術'
 
-export const description =
+export const DESCRIPTION =
   'うさぎとフロントエンドが好きな技術ブログ。マークアップが一番好き。'
 
-export const siteUrl = 'https://totolog34.com/'
+export const SITE_URL = 'https://totolog34.com/'
 
-export const socialInfoList = {
+export const SOCIAL_INFO_LIST = {
   rss: {
     url: 'https://totolog34.com/feed/rss.xml',
     img: {
@@ -29,3 +29,5 @@ export const socialInfoList = {
     },
   },
 }
+
+export const DEFAULT_IMAGE_PATH = '/img/default.png'
