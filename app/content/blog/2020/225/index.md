@@ -2,7 +2,7 @@
 slug: /225
 date: '2020-08-06 12:05:50'
 title: gatsby.jsでとりあえずサイトを作ってみる
-thumbnail: /img/blog/2020/225/3.jpg
+thumbnail: /img/blog/thumbnail/2020/225/3.jpg
 tags: ['gatsby']
 ---
 ## スターターをダウンロードする

@@ -2,7 +2,7 @@
 slug: /color-mix
 date: '2023-07-23 09:27'
 title: 'color-mix() の有効的な使い方'
-thumbnail: /img/blog/2023/color-mix/caniuse.png
+thumbnail: /img/blog/thumbnail/2023/color-mix/caniuse.png
 tags: ['CSS']
 ---
 去年の段階で[CSS Color Module Level 5](https://www.w3.org/TR/css-color-5/)の仕様の中には `color-mix()`、`color()`、`device-cmyk()`、`color-contrast()`([CSS Color Module Level 6](https://drafts.csswg.org/css-color-6/)に移動し関数名は`contrast-color()` に変更)と、多くの色に関する新しい機能の検討がされていて、目にする度に _「んー、でも使い方よくわからない。デザイナーじゃないし」_ と、思っていました。

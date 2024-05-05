@@ -2,7 +2,7 @@
 slug: /912
 date: '2022-07-10 11:56:06'
 title: Gatsbyでブログ作る③〜ESLint、Prettier
-thumbnail: /img/blog/2022/912/1_tsOxXGb20o2zrCh6Sp5PYQ.png
+thumbnail: /img/blog/thumbnail/2022/912/1_tsOxXGb20o2zrCh6Sp5PYQ.png
 tags: ['gatsby']
 ---
 ## ESLint

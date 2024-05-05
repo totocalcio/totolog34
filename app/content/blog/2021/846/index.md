@@ -2,7 +2,7 @@
 slug: /846
 date: '2021-09-30 00:07:34'
 title: 第2回ReactNativeアプリ開発④〜AsyncStorage
-thumbnail: /img/blog/2021/846/2021-09-19-11.24.43.png
+thumbnail: /img/blog/thumbnail/2021/846/2021-09-19-11.24.43.png
 tags: ['reactnative', 'expo']
 ---
 初心者にとっての山場…AsyncStorage。

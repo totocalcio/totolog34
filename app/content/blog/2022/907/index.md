@@ -2,7 +2,7 @@
 slug: /907
 date: '2022-07-04 23:46:35'
 title: Gatsbyでブログ作る②〜MaterialUI導入
-thumbnail: /img/blog/2022/907/1_tsOxXGb20o2zrCh6Sp5PYQ.png
+thumbnail: /img/blog/thumbnail/2022/907/1_tsOxXGb20o2zrCh6Sp5PYQ.png
 tags: ['react', 'gatsby']
 ---
 [前回の続き](https://totolog34.com/901/)。

@@ -2,7 +2,7 @@
 slug: /renewal-gatsby
 date: '2022-09-03 14:23'
 title: WordPressのブログをGatsbyでリニューアルした
-thumbnail: /img/blog/2022/renewal-gatsby/renewal-gatsby-thumb.webp
+thumbnail: /img/blog/thumbnail/2022/renewal-gatsby/renewal-gatsby-thumb.webp
 tags: ['日記','gatsby']
 ---
 タイトルの通り、もともとWordPressだったブログをGatsbyでリニューアルしました。  

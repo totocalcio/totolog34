@@ -2,7 +2,7 @@
 slug: /nextjs-website-tutorial2
 date: '2022-09-18 13:08'
 title: Next.jsでWebサイトを作る②〜トップページ・サブページ・エラーページ
-thumbnail: /img/blog/2022/nextjs-website-tutorial2/nextjs-logo.png
+thumbnail: /img/blog/thumbnail/2022/nextjs-website-tutorial2/nextjs-logo.png
 tags: ['next.js']
 ---
 [前回](/nextjs-website-tutorial)の続き

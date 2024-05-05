@@ -2,7 +2,7 @@
 slug: /resolution-2023
 date: '2023-02-04 16:52'
 title: '新年抱負 2023'
-thumbnail: /img/blog/2023/resolution-2023/
+thumbnail: /img/blog/thumbnail/2023/resolution-2023/
 tags: ['日記']
 ---
 [去年の抱負](/882)
