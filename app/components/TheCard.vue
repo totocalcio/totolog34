@@ -112,4 +112,7 @@ const { smAndUp } = useDisplay()
   flex-wrap: wrap;
   margin: 0 0.5rem 1rem;
 }
+.tag-button {
+  text-transform: none;
+}
 </style>
