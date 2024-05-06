@@ -9,15 +9,15 @@ tags: ['css']
 
 ここによくあるボタンのデザインがあります。
 
-![image](../../../../images/2020/10/image-19.png)
+![image](/img/blog/contents/2020/10/image-19.png)
 
 CSS を設定するために数値を見てみます。
 
-![image](../../../../images/2020/10/image-24.png)
+![image](/img/blog/contents/2020/10/image-24.png)
 
 `Hex：#E9952C`。そして
 
-![image](../../../../images/2020/10/image-21.png)
+![image](/img/blog/contents/2020/10/image-21.png)
 
 `不透明度：80%`
 
@@ -45,9 +45,9 @@ background-color:#E9952CCC
 
 rgba の場合はデザインソフトで rgb で表示するように切り替えます。
 
-![image](../../../../images/2020/10/image-22.png)
+![image](/img/blog/contents/2020/10/image-22.png)
 
-![image](../../../../images/2020/10/image-23.png)
+![image](/img/blog/contents/2020/10/image-23.png)
 
 切り替えたらそのまま数値と透明度(今回は 0.8)を設定すればおしまいです。
 

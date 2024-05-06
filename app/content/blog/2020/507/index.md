@@ -9,7 +9,7 @@ tags: ['reactnative', 'expo']
 
 ## BottomTabNavigator が隠れる
 
-![image](../../../../images/2020/10/Simulator-Screen-Shot-iPhone-11-Pro-Max-2020-10-06-at-18.46.26.png)
+![image](/img/blog/contents/2020/10/Simulator-Screen-Shot-iPhone-11-Pro-Max-2020-10-06-at-18.46.26.png)
 
 隠れるというよりは高さの領域が足りていない感じです。
 
@@ -22,7 +22,7 @@ tags: ['reactnative', 'expo']
 ```
 SafeAreaViewを足すだけだとこのようになります。
 
-![image](../../../../images/2020/10/Simulator-Screen-Shot-iPhone-11-2020-10-07-at-20.18.42.png)
+![image](/img/blog/contents/2020/10/Simulator-Screen-Shot-iPhone-11-2020-10-07-at-20.18.42.png)
 
 BottomTab の領域の確保はできましたが、SafeAreaView の領域が空白になってしまいっているのでデザインの調整として style で backgroundCoror を指定します。
 
@@ -33,6 +33,6 @@ BottomTab の領域の確保はできましたが、SafeAreaView の領域が空
 </View>
 ```
 
-![image](../../../../images/2020/10/Simulator-Screen-Shot-iPhone-11-2020-10-07-at-20.27.26-1.png)
+![image](/img/blog/contents/2020/10/Simulator-Screen-Shot-iPhone-11-2020-10-07-at-20.27.26-1.png)
 
 調整ができました。

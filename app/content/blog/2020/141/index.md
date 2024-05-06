@@ -5,7 +5,7 @@ title: 少しずつでも目標に向かって進もう
 thumbnail:
 tags: ['道のり']
 ---
-![image](../../../../images/2020/05/image-33.png)
+![image](/img/blog/contents/2020/05/image-33.png)
 
 HTML と CSS は毎日書いてるのでよしとしよう。
 問題は JavaScript だ。JavaScript は本を２冊くらい読んだはいいが、実践ではほぼ使っておらず、実際の業務では jQuery に頼ってる部分が大きい。そして React にいたっては任天堂の求人で初めて存在を知ったレベル。

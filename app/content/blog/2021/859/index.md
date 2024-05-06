@@ -19,7 +19,7 @@ tags: ['reactnative', 'expo']
 ついでに、追加画面の `SetttingScreen.tsx` も作成しておきます。
 現在のディレクトリ構成はこちらです。
 
-![image](../../../../images/2021/10/2021-10-03-23.04.18.png)
+![image](/img/blog/contents/2021/10/2021-10-03-23.04.18.png)
 
 ### インストール
 

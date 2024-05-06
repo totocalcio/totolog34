@@ -20,7 +20,7 @@ expo init でプロジェクト作成。npm startを行うとブラウザでExpo
 
 ## エラーの内容１（Couldn't start project on Android: Error running adb）
 
-![image](../../../../images/2020/08/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg)
+![image](/img/blog/contents/2020/08/SnapCrab_NoName_2020-8-18_18-21-50_No-00.jpg)
 
 ```
 Couldn't start project on Android: Error running adb: No Android connected device found, and no emulators could be started automatically.
@@ -31,7 +31,7 @@ https://developer.android.com/studio/run/device.html#developer-device-options. I
 
 とりあえず[リンク先](https://docs.expo.io/workflow/android-studio-emulator/?redirected)を確認してみる。
 
-![image](../../../../images/2020/08/image-25.png)
+![image](/img/blog/contents/2020/08/image-25.png)
 
 「adb システムに複数のバージョンがあると、エラーが発生する可能性があります」らしい。
 
@@ -45,7 +45,7 @@ https://developer.android.com/studio/run/device.html#developer-device-options. I
 $adb version
 ```
 
-![image](../../../../images/2020/08/SnapCrab_NoName_2020-8-19_19-15-10_No-00.png)
+![image](/img/blog/contents/2020/08/SnapCrab_NoName_2020-8-19_19-15-10_No-00.png)
 
 ```
 Command 'adb' not found, but can be installed with:
@@ -55,7 +55,7 @@ sudo apt install adb
 コマンドが使えないのでadbを「sudo apt install adb」でインストールする。
 インストールできたら再度adb versionをたたく。
 
-![image](../../../../images/2020/08/SnapCrab_NoName_2020-8-19_19-19-9_No-00.png)
+![image](/img/blog/contents/2020/08/SnapCrab_NoName_2020-8-19_19-19-9_No-00.png)
 
 無事表示された
 
@@ -69,7 +69,7 @@ cd ~/Android/sdk/platform-tools
 
 Android Studio から AMD Manager でエミュレーターを起動してみる。
 
-![image](../../../../images/2020/08/SnapCrab_NoName_2020-8-19_19-42-12_No-00.png)<figcaption>
+![image](/img/blog/contents/2020/08/SnapCrab_NoName_2020-8-19_19-42-12_No-00.png)<figcaption>
 </figcaption>
 
 ### adb サービスを再起動する
@@ -93,22 +93,22 @@ cannot connect to daemon at tcp:5037: Connection refused
 adb kill-server
 ```
 
-![image](../../../../images/2020/08/SnapCrab_NoName_2020-8-19_19-56-40_No-00.png)
+![image](/img/blog/contents/2020/08/SnapCrab_NoName_2020-8-19_19-56-40_No-00.png)
 
 再起動できた。
 Android Studio から AVD Manager でエミュレーターを再度起動する。
 
-![image](../../../../images/2020/08/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png)
+![image](/img/blog/contents/2020/08/SnapCrab_NoName_2020-8-19_20-1-59_No-00.png)
 
 エラーが消えたことを確認できたので、ここでようやくexpo startをして、Expo Developer ToolsからRun on Android device/emulatorをしてみる。
 
-![image](../../../../images/2020/08/image-26.png)
+![image](/img/blog/contents/2020/08/image-26.png)
 
 エラーがでてると思いきや、エミュレーターでUSB debuggingを聞かれているのでAllowを選択する。
 
 そしてもう一度ブラウザのExpo Developer ToolsでRun on Android device/emulatorをクリックする
 
-![image](../../../../images/2020/08/image-27.png)
+![image](/img/blog/contents/2020/08/image-27.png)
 
 ようやくこれでビルドが完了しました！！！
 
@@ -116,10 +116,10 @@ Android Studio から AVD Manager でエミュレーターを再度起動する�
 
 エミュレーターを下から上へスワイプするとメニュー画面が出るので、Expoをクリック（タップ）
 
-![image](../../../../images/2020/08/1.png)
+![image](/img/blog/contents/2020/08/1.png)
 
 ブラウザの**Expo Developer Tools**にある URL をエミュレーターの入力欄にコピペする。
 
-![image](../../../../images/2020/08/image-28.png)
+![image](/img/blog/contents/2020/08/image-28.png)
 
 表示できた！

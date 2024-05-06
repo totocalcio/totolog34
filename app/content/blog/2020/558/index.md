@@ -11,7 +11,7 @@ tags: ['reactnative']
 
 ## Slider の設定を確認する
 
-![image](../../../../images/2020/10/image-11.png)
+![image](/img/blog/contents/2020/10/image-11.png)
 
 ```jsx
 <Slider
@@ -26,7 +26,7 @@ value={weight}
 />
 ```
 
-![image](../../../../images/2020/10/image-12.png)
+![image](/img/blog/contents/2020/10/image-12.png)
 
 ## setWeight のタイミングで調整してみる
 
@@ -52,13 +52,13 @@ const calcWeight = (weight) => weight / 10
 
 weight で呼び出していたところを関数呼び出しに変更
 
-![image](../../../../images/2020/10/image-13.png)
+![image](/img/blog/contents/2020/10/image-13.png)
 
-![image](../../../../images/2020/10/image-14.png)
+![image](/img/blog/contents/2020/10/image-14.png)
 
 weightの部分をcalcWeight(weight)に書き換えた。
 
-![image](../../../../images/2020/10/image-15.png)
+![image](/img/blog/contents/2020/10/image-15.png)
 
 想定通りの表示を実現することができた。
 
@@ -66,10 +66,10 @@ weightの部分をcalcWeight(weight)に書き換えた。
 
 解決できたとおもわれたがしぶとく残っていた。
 
-![image](../../../../images/2020/10/image-16.png)
+![image](/img/blog/contents/2020/10/image-16.png)
 
 Math.floor をつけて制御する。
 
-![image](../../../../images/2020/10/image-18.png)
+![image](/img/blog/contents/2020/10/image-18.png)
 
 きっともっとスマートな解決法はあると思うけれど、一旦は解決した。解決はしたが、全てに Math.floor をつけるという、力技のように思えるので、またリファクタリングすることにする。

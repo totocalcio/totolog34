@@ -41,7 +41,7 @@ tags: ['道のり', 'react']
 
 まだ買っていない。買ってはいないが・・・
 
-![image](../../../../images/2020/07/image.png)
+![image](/img/blog/contents/2020/07/image.png)
 
 買う準備はできている。。。
 

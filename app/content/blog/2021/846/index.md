@@ -8,7 +8,7 @@ tags: ['reactnative', 'expo']
 初心者にとっての山場…AsyncStorage。
 使い方も完全に忘れているのでドキュメント確認しようと[サイト](https://reactnative.dev/docs/asyncstorage)を開いてみると
 
-![image](../../../../images/2021/09/2021-09-28-0.37.16.png)
+![image](/img/blog/contents/2021/09/2021-09-28-0.37.16.png)
 
 非推奨になっていた。
 

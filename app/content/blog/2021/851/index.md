@@ -138,11 +138,11 @@ async function registerForPushNotificationsAsync() {
 この先Simulatorでは通知の確認ができないので実機で確認してください
 ```
 
-![image](../../../../images/2021/10/IMG_3694.jpg)
+![image](/img/blog/contents/2021/10/IMG_3694.jpg)
 
 Press to scheduls a notificationをタップします。
 
-![image](../../../../images/2021/10/IMG_3695.jpg)
+![image](/img/blog/contents/2021/10/IMG_3695.jpg)
 
 通知がきました。ここから少しカスタマイズしていきます。
 

@@ -11,7 +11,7 @@ tags: ['css']
 
 ## text-decoration
 
-![image](../../../../images/2020/05/image-26.png)
+![image](/img/blog/contents/2020/05/image-26.png)
 
 ```css
 text-decoration: underline;
@@ -30,7 +30,7 @@ text-decoration: underline;
 ### text-decoration のオプション
 
 これをオプションと呼んでいいのかはわかりませんが（多分間違っている）紹介します。
-![image](../../../../images/2020/05/image-27.png)
+![image](/img/blog/contents/2020/05/image-27.png)
 
 ```css
 text-decoration-color: red;
@@ -38,7 +38,7 @@ text-decoration-color: red;
 
 色が変えられます。
 
-![image](../../../../images/2020/05/image-28.png)
+![image](/img/blog/contents/2020/05/image-28.png)
 
 ```css
 text-decoration-style: dashed;
@@ -48,7 +48,7 @@ text-decoration-style: dashed;
 
 ## border-bottom
 
-![image](../../../../images/2020/05/image-29.png)
+![image](/img/blog/contents/2020/05/image-29.png)
 
 ```css
 border-bottom: 1px solid #000;
@@ -71,7 +71,7 @@ width: 150px;
 
 ### 複数行での border-bottom
 
-![image](../../../../images/2020/05/image-30.png)
+![image](/img/blog/contents/2020/05/image-30.png)
 
 ```html
 <p>テスト<br />テスト２</p>
@@ -85,7 +85,7 @@ p {
 block に対する枠線なので、複数行の場合想定した動きにならない時がある。
 そんな時は inline 要素に変更する。
 
-![image](../../../../images/2020/05/image-31.png)
+![image](/img/blog/contents/2020/05/image-31.png)
 
 ```css
 p {
@@ -107,7 +107,7 @@ p span{
 
 ## background
 
-![image](../../../../images/2020/05/image-32.png)
+![image](/img/blog/contents/2020/05/image-32.png)
 
 ```html
 <p><span>テスト</span></p>

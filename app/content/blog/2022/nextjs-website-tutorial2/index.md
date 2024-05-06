@@ -31,7 +31,7 @@ export default Home
 ```
 `yarn dev` で確認
 
-![image](../../../../images/2022/09/2022-09-17-14.20.01.png)
+![image](/img/blog/contents/2022/09/2022-09-17-14.20.01.png)
 
 問題なく表示されています。
 
@@ -60,7 +60,7 @@ const Sub: NextPage = () => {
 export default Sub
 ```
 `http://localhost:3000/sub` へアクセスしてみます
-![image](../../../../images/2022/09/2022-09-17-14.47.58.png)
+![image](/img/blog/contents/2022/09/2022-09-17-14.47.58.png)
 
 表示できました。
 

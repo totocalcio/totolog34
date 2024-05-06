@@ -18,16 +18,16 @@ tags: ['css']
 現在の挙動はこのようになっています。
 
 
-![image](../../../../images/2021/02/1.jpg)
+![image](/img/blog/contents/2021/02/1.jpg)
 
 style.scss では project ディレクトリ以外の scss を import して style.css を出力しています。
 
-![image](../../../../images/2021/02/image-4.png)
+![image](/img/blog/contents/2021/02/image-4.png)
 
 project ディレクトリの scss は単体で css を出力します。その時 project ディレクトリも css の下に作られてしまいます。
 期待する動きは下記のように css の下にはディレクトリを作らず css ファイルが並ぶ形です。
 
-![image](../../../../images/2021/02/1-6.jpg)
+![image](/img/blog/contents/2021/02/1-6.jpg)
 
 ## gulp-rename を使う
 
@@ -79,8 +79,8 @@ exports.default = series(compileScss)
 想定通りの動きをしています。
 gulp.watch で監視していますが、更新時も問題なく動きました。
 
-![image](../../../../images/2021/02/image-2.png)
+![image](/img/blog/contents/2021/02/image-2.png)
 
-![image](../../../../images/2021/02/image-3.png)
+![image](/img/blog/contents/2021/02/image-3.png)
 
 初めての導入で、様々な情報を元に環境を整えようとしましたが、gulp3 と gulp4 では、gulp.task が非推奨だったりコールバック関数を返さないといけなかったり、desc なしでも watch が css を出力したり…と戸惑いましたがなんとか期待通りの動きを実現できました。

@@ -47,6 +47,11 @@ const getDate = (datetime) => {
   color: #000;
   text-decoration: none;
 }
+:deep(img) {
+  max-width: 100%;
+  object-fit: contain;
+  margin-block: 1rem;
+}
 :deep(:is(ul, ol)) {
   margin-left: 1em;
   margin-block: 1rem;

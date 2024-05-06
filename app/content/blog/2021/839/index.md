@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-![image](../../../../images/2021/09/2021-09-26-20.02.16.png)
+![image](/img/blog/contents/2021/09/2021-09-26-20.02.16.png)
 
 これで基本となるダイアログの実装ができた
 
@@ -172,6 +172,6 @@ LocaleConfig.defaultLocale = "jp";
 
 ````
 
-![image](../../../../images/2021/09/2021-09-26-20.19.32.png)
+![image](/img/blog/contents/2021/09/2021-09-26-20.19.32.png)
 
 日付を選択するとダイアログが表示する機能の実装ができました。

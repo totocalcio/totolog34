@@ -13,23 +13,23 @@ css で border に 1px 以下の値を設定できないのはご存知でしょ
 
 ### ノーマルな border
 
-![image](../../../../images/2020/10/image-25.png)
+![image](/img/blog/contents/2020/10/image-25.png)
 
 画像なので環境によっては見え方が違うと思いますがこれがまず普通の 1px border です。
 
 ### 0.5px border
 
-![image](../../../../images/2020/10/image-27.png)
+![image](/img/blog/contents/2020/10/image-27.png)
 
 これが 0.5px border です。やっぱり細い。この見た目を実現したい。
 
 ## 錯覚で細くする(hex)
 
-![image](../../../../images/2020/10/image-28.png)
+![image](/img/blog/contents/2020/10/image-28.png)
 
 若干細くなる
 
-![image](../../../../images/2020/10/image-29.png)
+![image](/img/blog/contents/2020/10/image-29.png)
 
 たしかに 0.5px に近づいているように見える。
 ただこれは#000 だから簡単なだけで、普通のカラーだったら毎回近い色を探してられません。そんな時におすすめなのが **透過設定法** です。
@@ -40,7 +40,7 @@ css で border に 1px 以下の値を設定できないのはご存知でしょ
 結局これも錯覚によるものですが、この方法の良いところはどんな色のデザインを渡されても、何も考えずに設定できるところです。
 方法は簡単。border の幅の数値をアルファ値に入れるだけ！
 
-![image](../../../../images/2020/10/image-30.png)
+![image](/img/blog/contents/2020/10/image-30.png)
 
 一緒！！！！もう一緒！！！もちろん[前回](https://totolog34.com/444/)の 16 進数(Hex)8 桁で設定しても構いません。
 これでもう 1px 以下の border にも困りませんね(\*´∀ ｀)

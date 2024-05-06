@@ -50,7 +50,7 @@ ready - started server on 0.0.0.0:3000, url: http://localhost:3000
 ```
 ローカルサーバーが起動したら `http://localhost:3000` を開いてみます。
 
-![image](../../../../images/2022/09/2022-09-16-18.33.47.png)
+![image](/img/blog/contents/2022/09/2022-09-16-18.33.47.png)
 
 表示されればOKです。
 

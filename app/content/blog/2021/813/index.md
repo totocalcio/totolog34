@@ -39,7 +39,7 @@ $ expo init sample
 
 expo init "プロジェクト名"で実行するとテンプレートを選べます。
 
-![image](../../../../images/2021/09/2021-09-19-12.18.45.png)
+![image](/img/blog/contents/2021/09/2021-09-19-12.18.45.png)
 
 今回はblank(TypeScript)にしました。
 
@@ -56,25 +56,25 @@ $yarn start
 
 ### 使用可能なデータが見つかりません
 
-![image](../../../../images/2021/09/IMG_3521.jpg)
+![image](/img/blog/contents/2021/09/IMG_3521.jpg)
 
 なにせ１年程近く触ってないので記憶が曖昧。試しに iOS シュミレーターの起動をしてみる。
 
-![image](../../../../images/2021/09/2021-09-19-12.31.12.png)
+![image](/img/blog/contents/2021/09/2021-09-19-12.31.12.png)
 
-![image](../../../../images/2021/09/2021-09-19-12.31.20.png)
+![image](/img/blog/contents/2021/09/2021-09-19-12.31.20.png)
 
-![image](../../../../images/2021/09/2021-09-19-12.33.12.png)
+![image](/img/blog/contents/2021/09/2021-09-19-12.33.12.png)
 
 普通に起動した
 
 そういえばシュミレーターの時 Expo のアプリ起動してたな、と思って実機 iPhone 確認
 
-![image](../../../../images/2021/09/IMG_3522.jpg)
+![image](/img/blog/contents/2021/09/IMG_3522.jpg)
 
 アンインストールしてますね…もう使わないと思ったんでしょう。
 再インストールして、もう一度 QR コードを読み取ってみます。
 
-![image](../../../../images/2021/09/IMG_3524.png)
+![image](/img/blog/contents/2021/09/IMG_3524.png)
 
 無事起動できました。

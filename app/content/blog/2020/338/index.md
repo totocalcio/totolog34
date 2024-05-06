@@ -24,7 +24,7 @@ React Native Cli でもできますが、Expo にしました。公式も Expo C
 
 ## Glitch をつかう
 
-![image](../../../../images/2020/08/image-41.png)<figcaption>ここまで作ってだいぶイメージわくようになった</figcaption>
+![image](/img/blog/contents/2020/08/image-41.png)<figcaption>ここまで作ってだいぶイメージわくようになった</figcaption>
 
 デザイン力が思った以上に無さすぎて、Material Desigin のサイトを眺めていたら、Build a Material Theme を知り、[Glitch](https://glitch.com/)というサービスを使うことにしました
 

@@ -132,6 +132,6 @@ Thanks! Here's what we'll now do:
 
 http\://localhost:8000/へアクセス
 
-![image](../../../../images/2022/05/2022-05-21-1.07.23.png)
+![image](/img/blog/contents/2022/05/2022-05-21-1.07.23.png)
 
 表示されました

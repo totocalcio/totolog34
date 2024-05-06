@@ -68,7 +68,7 @@ LocaleConfig.defaultLocale = "jp";
 
 ひとまず最小限、タップした日付にスタイルがあたるような機能を実装しました。
 
-![image](../../../../images/2021/09/2021-09-26-9.09.30.png)
+![image](/img/blog/contents/2021/09/2021-09-26-9.09.30.png)
 
 ## コード詳細
 
