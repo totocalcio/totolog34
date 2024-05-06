@@ -1,10 +1,27 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
 
+const PER_PAGE = 5
+
 const { mdAndUp } = useDisplay()
 
-const { data: blogPostList } = useAsyncData('blogPostList', () => {
-  return queryContent('/blog').limit(5).find()
+const currentPage = ref(1)
+const blogPostList = ref([])
+
+const { refresh } = useAsyncData('blogPostList', async () => {
+  const data = await queryContent('/blog')
+    .sort({ date: -1 })
+    .limit(PER_PAGE)
+    .skip(PER_PAGE * (currentPage.value - 1))
+    .find()
+  blogPostList.value = data
+})
+
+const blogPostListAll = await queryContent('/blog').find()
+const pagenationLength = Math.ceil(blogPostListAll.length / PER_PAGE)
+
+watchEffect(() => {
+  refresh()
 })
 </script>
 
@@ -20,6 +37,7 @@ const { data: blogPostList } = useAsyncData('blogPostList', () => {
       :="blogPost"
     />
   </v-container>
+  <ThePagenation v-model="currentPage" :length="pagenationLength" />
 </template>
 
 <style>
@@ -30,5 +48,6 @@ const { data: blogPostList } = useAsyncData('blogPostList', () => {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
   margin-top: var(--margin-top-card-list);
+  margin-bottom: 1rem;
 }
 </style>

@@ -15,3 +15,8 @@ html {
   font-family: 'Noto Sans JP', sans-serif;
 }
 </style>
+<style scoped>
+:deep(.v-main) {
+  padding-bottom: 3rem;
+}
+</style>

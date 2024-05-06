@@ -27,7 +27,10 @@ const { smAndUp } = useDisplay()
             :src="thumbnail || DEFAULT_IMAGE_PATH"
             height="100%"
             class="card-image"
-            :class="{ 'card-image--mobile': !smAndUp }"
+            :class="{
+              'card-image--mobile': !smAndUp,
+              'card-image--default': !thumbnail,
+            }"
           />
         </v-row>
       </v-container>
@@ -96,10 +99,13 @@ const { smAndUp } = useDisplay()
 .card-image {
   padding-block: 1rem;
   object-fit: contain;
-  max-width: 200px;
+  max-width: 300px;
 }
 .card-image--mobile {
   padding-block: 0.5rem;
+}
+.card-image--default {
+  max-width: 200px;
 }
 
 .tag-list {
