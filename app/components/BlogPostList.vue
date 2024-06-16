@@ -2,8 +2,6 @@
 import { useDisplay } from 'vuetify'
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
-const PER_PAGE = 7
-
 const { mdAndUp } = useDisplay()
 
 const currentPage = ref(1)

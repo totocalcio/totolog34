@@ -31,3 +31,5 @@ export const SOCIAL_INFO_LIST = {
 }
 
 export const DEFAULT_IMAGE_PATH = '/img/default.png'
+
+export const PER_PAGE = 10

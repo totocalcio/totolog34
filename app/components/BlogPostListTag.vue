@@ -2,8 +2,6 @@
 import { useDisplay } from 'vuetify'
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
-const PER_PAGE = 7
-
 const route = useRoute()
 const { mdAndUp } = useDisplay()
 
