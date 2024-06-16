@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const { path } = useRoute()
 
-const { data: blogPost } = await useAsyncData(`content-${path}`, () => {
+const { data: blogPost } = await useAsyncData<any>(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
 })
 
-const getDate = (datetime) => {
+const getDate = (datetime: any) => {
   if (!datetime) {
     return ''
   }

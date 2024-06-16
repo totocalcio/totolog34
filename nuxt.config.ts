@@ -49,4 +49,5 @@ export default defineNuxtConfig({
       langs: ['html', 'javascript', 'css', 'vue', 'shell', 'sh', 'jsx'],
     },
   },
+  devtools: { enabled: true },
 })
