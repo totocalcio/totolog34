@@ -3,7 +3,7 @@ slug: /647
 date: '2020-11-19 15:11:17'
 title: ImagePickerでカメラロールのPermissionがgranted：falseなのにアクセスできてしまう
 thumbnail:
-tags: ['reactnative', 'expo']
+tags: ['ReactNative', 'Expo']
 ---
 ![image](/img/blog/contents/2020/11/image-5.png)
 

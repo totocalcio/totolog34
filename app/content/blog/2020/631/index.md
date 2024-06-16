@@ -3,7 +3,7 @@ slug: /631
 date: '2020-11-06 17:56:08'
 title: React学習状況⑥～アプリリリース～
 thumbnail:
-tags: ['道のり', 'react', 'reactnative']
+tags: ['学習', 'React', 'ReactNative']
 ---
 **アプリリリースしました！！！**
 

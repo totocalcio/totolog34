@@ -3,7 +3,7 @@ slug: /286
 date: '2020-08-11 18:25:38'
 title: 【gatsby.js】いい感じのStarterでサイトを作り始める
 thumbnail: /img/blog/thumbnail/2020/286/1_tsOxXGb20o2zrCh6Sp5PYQ.png
-tags: ['gatsby']
+tags: ['Gatsby']
 ---
 gatsby.js でスターターをいろんなスターターを利用してみます。なお、今回は CMS を使用している Starter は避けておきます。なぜならエラーが出るからです。
 

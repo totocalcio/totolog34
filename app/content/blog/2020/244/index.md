@@ -3,7 +3,7 @@ slug: /244
 date: '2020-08-07 11:57:44'
 title: Contentfulのアカウント登録方法
 thumbnail: /img/blog/thumbnail/2020/244/start-contentful-800.png
-tags: ['その他', 'gatsby']
+tags: ['その他', 'Gatsby']
 ---
 ## Contentful アカウント登録手順
 

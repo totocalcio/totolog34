@@ -15,8 +15,6 @@ const { smAndUp } = useDisplay()
     <v-img src="/img/hero.jpg" max-height="700" cover />
     <h1 class="site-title" :class="{ 'site-title--mobile': !smAndUp }">
       うさぎが好きなエンジニアのブログ
-      <br />
-      <small> Nuxt / Vue.js / jQuery / HTML / CSS </small>
     </h1>
   </v-container>
   <PageTitleContainer en="Article" ja="記事" />

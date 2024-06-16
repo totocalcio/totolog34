@@ -2,7 +2,7 @@
 slug: /493
 date: "2020-10-22 12:59:17"
 title: 'Invariant Violation: Tried to register two views with the same name RNCSafeAreaProvider'
-tags: ["reactnative","expo"]
+tags: ['ReactNative', 'Expo']
 ---
 react-native-safe-area-context がうまくいってないというケースが多いみたいです。そしてこうなったら一旦 react-native-safe-area-context を全部削除して入れ直します。
 

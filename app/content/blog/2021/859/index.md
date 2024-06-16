@@ -3,7 +3,7 @@ slug: /859
 date: '2021-10-04 00:37:56'
 title: 第2回ReactNativeアプリ開発⑥〜React Navigation
 thumbnail: /img/blog/thumbnail/2021/859/2021-09-19-11.24.43.png
-tags: ['reactnative', 'expo']
+tags: ['ReactNative', 'Expo']
 ---
 今回はさくっとアプリを作ろうと思っていたので、画面遷移なしの１画面でなんとか完結しようと思っていましたが、少しずつ処理も長くなってきてコードの見通しも悪いですし、機能も１画面でおさまりそうもないのでやっぱり分けることにします。
 

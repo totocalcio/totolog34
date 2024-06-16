@@ -3,7 +3,7 @@ slug: /733
 date: '2021-05-18 21:22:23'
 title: NativeScript-Vueの開発環境を整える
 thumbnail:
-tags: ['nativescript', 'vue.js']
+tags: ['NativeScript', 'Vue.js']
 ---
 いろんなサイトで紹介されていると思いますが、情報が古かったり環境が違ったりするので、こういうものはとにかく公式ドキュメントを読んで進めたほうがいいと思います。
 

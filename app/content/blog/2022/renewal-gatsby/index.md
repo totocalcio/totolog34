@@ -3,7 +3,7 @@ slug: /renewal-gatsby
 date: '2022-09-03 14:23'
 title: WordPressのブログをGatsbyでリニューアルした
 thumbnail: /img/blog/thumbnail/2022/renewal-gatsby/renewal-gatsby-thumb.webp
-tags: ['日記','gatsby']
+tags: ['日記','Gatsby']
 ---
 タイトルの通り、もともとWordPressだったブログをGatsbyでリニューアルしました。  
 ※一覧のサムネは `Midjourney` で作りました

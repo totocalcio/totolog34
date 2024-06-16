@@ -3,7 +3,7 @@ slug: /369
 date: '2020-08-26 13:14:48'
 title: React学習状況⑤
 thumbnail:
-tags: ['道のり', 'react']
+tags: ['学習', 'React']
 ---
 [前回から](https://totolog34.com/220/)
 

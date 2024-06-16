@@ -3,7 +3,7 @@ slug: /918
 date: '2022-07-24 11:10:06'
 title: Gatsbyでブログ作る④〜GraphQL Typegen
 thumbnail: /img/blog/thumbnail/2022/918/1_tsOxXGb20o2zrCh6Sp5PYQ.png
-tags: ['gatsby']
+tags: ['Gatsby']
 ---
 詳しくは[公式](https://www.gatsbyjs.com/docs/tutorial/part-3/)
 

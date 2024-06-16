@@ -3,7 +3,7 @@ slug: /401
 date: '2020-09-29 17:19:01'
 title: summaryタグの使い方に注意。構文エラーとiOSバグ。
 thumbnail:
-tags: ['css', 'html']
+tags: ['CSS', 'html']
 ---
 HTML5 で追加された\<summary\>タグをご存知でしょうか。CSS すら不要でお手軽にアコーディオンがつくれてしまうタグです。
 

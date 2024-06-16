@@ -3,7 +3,7 @@ slug: /851
 date: '2021-10-02 14:34:47'
 title: 第2回ReactNativeアプリ開発⑤〜expo-notifications
 thumbnail: /img/blog/thumbnail/2021/851/2021-09-19-11.24.43.png
-tags: ['reactnative', 'expo']
+tags: ['ReactNative', 'Expo']
 ---
 通知機能を足したいと思いまして**expo-notifications**を入れることにしました。
 Expo 公式のもので更新頻度は（今のとこ）気にしなくてもよさそうなのでとりあえずドキュメントを見に行きます。

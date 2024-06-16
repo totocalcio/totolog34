@@ -3,7 +3,7 @@ slug: /901
 date: '2022-05-21 01:08:29'
 title: Gatsbyでブログ作る①〜セットアップ
 thumbnail: /img/blog/thumbnail/2022/901/1_tsOxXGb20o2zrCh6Sp5PYQ.png
-tags: ['gatsby']
+tags: ['Gatsby']
 ---
 リニューアルしようかなと思って。２年ぶりに触ります。
 

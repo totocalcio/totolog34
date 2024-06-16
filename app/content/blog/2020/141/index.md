@@ -3,7 +3,7 @@ slug: /141
 date: '2020-05-28 17:13:01'
 title: 少しずつでも目標に向かって進もう
 thumbnail:
-tags: ['道のり']
+tags: ['学習']
 ---
 ![image](/img/blog/contents/2020/05/image-33.png)
 

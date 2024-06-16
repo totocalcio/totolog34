@@ -3,7 +3,7 @@ slug: /nextjs-website-tutorial
 date: '2022-09-17 11:08'
 title: Next.jsでWebサイトを作る①〜プロジェクト作成からプラグイン設定など
 thumbnail: /img/blog/thumbnail/2022/nextjs-website-tutorial/nextjs-logo.png
-tags: ['next.js']
+tags: ['Next.js']
 ---
 Webサービスでもなくブログでもない、普通の個人のホームページをNext.jsで作ろうと思います。
 ただのWebサイトにNext.jsが必要かどうかは考えないこととします。

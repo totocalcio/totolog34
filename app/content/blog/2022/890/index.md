@@ -3,7 +3,7 @@ slug: /890
 date: '2022-03-26 00:31:01'
 title: Vue3 + TypeScript チートシートっぽいもの
 thumbnail:
-tags: ['vue.js']
+tags: ['Vue.js']
 ---
 ## 基本構成
 

@@ -3,7 +3,7 @@ slug: /185
 date: '2020-06-03 17:40:52'
 title: React.jsを学び始める
 thumbnail:
-tags: ['道のり', 'react']
+tags: ['学習', 'React']
 ---
 [https://note.com/erukiti/m/m586c4ddc9ee1/hashtag/2421](https://note.com/erukiti/m/m586c4ddc9ee1/hashtag/2421)
 

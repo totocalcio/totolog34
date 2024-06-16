@@ -4,7 +4,7 @@ date: '2022-12-25 16:44'
 title: Gatsbyをv4からv5に移行するのにやったこと
 thumbnail: /img/blog/thumbnail/2022/v4-to-v5/gatsby-logo.png
 description: 記事を読んだところ特に大きく問題となるところは見当たらなかったので、v5へアップグレードする。
-tags: ['gatsby']
+tags: ['Gatsby']
 ---
 ## マイグレーションガイド
 公式が公開している記事を読む。([公式](https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v4-to-v5/))

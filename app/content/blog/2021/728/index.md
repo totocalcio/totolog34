@@ -3,7 +3,7 @@ slug: /728
 date: '2021-05-18 01:38:54'
 title: NativeScript-VueでWatchOSアプリ作ろうと思う
 thumbnail:
-tags: ['道のり']
+tags: ['学習']
 ---
 お久しぶりです。４月に転職しました。
 転職したのですが Vue.js を扱う企業で現在勉強中です。

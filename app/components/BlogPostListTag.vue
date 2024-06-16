@@ -4,6 +4,7 @@ import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
 const PER_PAGE = 7
 
+const route = useRoute()
 const { mdAndUp } = useDisplay()
 
 const currentPage = ref(1)
@@ -14,11 +15,14 @@ const { refresh } = useAsyncData('blogPostList', async () => {
     .sort({ date: -1 })
     .limit(PER_PAGE)
     .skip(PER_PAGE * (currentPage.value - 1))
+    .where({ tags: { $contains: getTagName(route.params.tag as string) } })
     .find()
   blogPostList.value = data
 })
 
-const blogPostListAll = await queryContent('/blog').find()
+const blogPostListAll = await queryContent('/blog')
+  .where({ tags: { $contains: getTagName(route.params.tag as string) } })
+  .find()
 const pagenationLength = Math.ceil(blogPostListAll.length / PER_PAGE)
 
 watchEffect(() => {

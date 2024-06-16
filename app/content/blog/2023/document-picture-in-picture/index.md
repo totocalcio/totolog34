@@ -3,7 +3,7 @@ slug: /document-picture-in-picture
 date: '2023-09-10 19:01'
 title: 'Document Picture-in-Picture APIで簡単なWebアプリを作成'
 thumbnail: /img/blog/thumbnail/2023/document-picture-in-picture/pip.png
-tags: ['Vue']
+tags: ['Vue.js']
 ---
 ## Document Picture-in-Picture APIについて
 

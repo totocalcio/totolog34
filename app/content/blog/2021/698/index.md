@@ -3,7 +3,7 @@ slug: /698
 date: '2021-02-08 12:49:22'
 title: gulpでscssのコンパイルの階層がうまくいかない
 thumbnail: /img/blog/thumbnail/2021/698/group1-1.jpg
-tags: ['css']
+tags: ['CSS']
 ---
 今まではvs codeのLive Sass Compilerのプラグインに頼っていたのですが、ファイルが増える度にimport文を毎回足すのが手間で、globを利用してimport文を減らそうと導入を検討しました。
 

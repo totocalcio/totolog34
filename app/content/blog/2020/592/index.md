@@ -3,7 +3,7 @@ slug: /592
 date: '2020-10-29 20:20:00'
 title: 【CSS】デザインで1px以下のborderが指定された時の対処法
 thumbnail: /img/blog/thumbnail/2020/592/image-30.png
-tags: ['css']
+tags: ['CSS']
 ---
 css で border に 1px 以下の値を設定できないのはご存知でしょうか。
 それでも Photoshop などでは 1px 以下を設定できてしまうので、デザイナーは何も気にせず 1px 以下を設定してくることがあります。

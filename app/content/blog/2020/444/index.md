@@ -3,7 +3,7 @@ slug: /444
 date: '2020-10-28 17:32:14'
 title: 【CSS】カラーコード＋透過を１６進数(Hex8桁)とrgbaで実装
 thumbnail: /img/blog/thumbnail/2020/444/image-15.png
-tags: ['css']
+tags: ['CSS']
 ---
 ## background と opacity を分けるとうまくいかない
 

@@ -3,7 +3,7 @@ slug: /740
 date: '2021-05-21 02:01:39'
 title: NativeScriptアプリでwatchOSを開発する〜プロジェクト作成からSimulator起動まで
 thumbnail:
-tags: ['nativescript']
+tags: ['NativeScript']
 ---
 一応[前回](https://totolog34.com/733/)の続きです。
 

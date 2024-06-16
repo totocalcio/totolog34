@@ -46,7 +46,7 @@ const { smAndUp } = useDisplay()
         v-for="tag in tags"
         :key="tag"
         variant="tonal"
-        to="`/tags/${tag}/`"
+        :to="`/tags/${getTagSlug(tag)}/`"
         class="tag-button"
       >
         {{ tag }}

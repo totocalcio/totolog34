@@ -3,7 +3,7 @@ slug: /839
 date: '2021-09-27 01:00:00'
 title: 第2回ReactNativeアプリ開発③〜ダイアログ実装
 thumbnail: /img/blog/thumbnail/2021/839/2021-09-19-11.24.43.png
-tags: ['reactnative']
+tags: ['ReactNative']
 ---
 ## ライブラリ選定
 

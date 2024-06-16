@@ -3,7 +3,7 @@ slug: /201
 date: '2020-07-16 18:25:14'
 title: 【React習得に向けて】1ヶ月半くらい経った
 thumbnail:
-tags: ['道のり', 'react']
+tags: ['学習', 'React']
 ---
 前回のブログからの進捗を報告
 

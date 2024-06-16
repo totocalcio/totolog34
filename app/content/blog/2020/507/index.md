@@ -3,7 +3,7 @@ slug: /507
 date: '2020-10-27 12:30:40'
 title: iPhone11だとBottomTabNavigatorが隠れてうまく表示されない
 thumbnail:
-tags: ['reactnative', 'expo']
+tags: ['ReactNative', 'Expo']
 ---
 私の環境でのテストが iPhone11 だっただけで、おそらく iPhone11 じゃなくても機種によっては起こりうると思います。
 

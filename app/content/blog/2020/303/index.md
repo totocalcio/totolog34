@@ -3,7 +3,7 @@ slug: /303
 date: '2020-08-19 22:51:47'
 title: React Native + Expoで始めたらPCがクラッシュし続けた
 thumbnail:
-tags: ['reactnative', 'expo']
+tags: ['ReactNative', 'Expo']
 ---
 npm start もしくは expo start を実行すると１００％の確率でモニターがブラックアウト。PC がフリーズ。強制的に電源を落として再起動するしかなくなった。
 

@@ -3,7 +3,7 @@ slug: /338
 date: '2020-08-25 11:37:33'
 title: React Nativeでアプリを作る①～導入
 thumbnail:
-tags: ['reactnative']
+tags: ['ReactNative']
 ---
 現在プログラミングの学習としては JavaScript ばかりをしているけれど、React もモチベーション維持で触りたい、ということで React Native をさわることにした。
 

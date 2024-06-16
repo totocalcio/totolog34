@@ -3,7 +3,7 @@ slug: /32
 date: '2020-05-20 18:45:40'
 title: WEBフォントの使い方＜サーバー、Adobe、Google＞
 thumbnail:
-tags: ['css']
+tags: ['CSS']
 ---
 WEB フォントの使い方について説明します。画像が多めの説明です。
 

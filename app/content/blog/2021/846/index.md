@@ -3,7 +3,7 @@ slug: /846
 date: '2021-09-30 00:07:34'
 title: 第2回ReactNativeアプリ開発④〜AsyncStorage
 thumbnail: /img/blog/thumbnail/2021/846/2021-09-19-11.24.43.png
-tags: ['reactnative', 'expo']
+tags: ['ReactNative', 'Expo']
 ---
 初心者にとっての山場…AsyncStorage。
 使い方も完全に忘れているのでドキュメント確認しようと[サイト](https://reactnative.dev/docs/asyncstorage)を開いてみると
