@@ -21,7 +21,7 @@ const { smAndUp } = useDisplay()
       class="card-link"
       :class="{ 'card-link--mobile': !smAndUp }"
     >
-      <v-container class="pa-0">
+      <v-container class="pa-0 card-container">
         <v-row justify="center">
           <v-img
             :src="thumbnail || DEFAULT_IMAGE_PATH"
@@ -56,6 +56,11 @@ const { smAndUp } = useDisplay()
 </template>
 
 <style scoped>
+.card-container {
+  display: flex;
+  place-content: center;
+}
+
 .card {
   display: grid;
   grid-template-columns: 1fr;
@@ -65,6 +70,9 @@ const { smAndUp } = useDisplay()
   border: 1px solid #000;
   border-radius: 8px;
   box-shadow: none;
+  &:has(.card-link:focus-visible) {
+    overflow: visible;
+  }
 }
 
 .card-link {
