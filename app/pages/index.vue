@@ -2,6 +2,16 @@
 import { useDisplay } from 'vuetify'
 
 const { smAndUp } = useDisplay()
+useHead({
+  title: SITE_TITLE,
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: SITE_DESCRIPTION,
+    },
+  ],
+})
 </script>
 
 <template>

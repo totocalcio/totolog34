@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const { path } = useRoute()
+import type { MarkdownRoot } from '@nuxt/content/dist/runtime/types'
+
+const MAX_DESCRIPTION_LENGTH = 100
 
 const { data: blogPost } = await useAsyncData<any>(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
@@ -11,6 +14,33 @@ const getDate = (datetime: any) => {
   }
   return datetime.split(' ')[0]
 }
+
+blogPost.value.title += ` | ${SITE_TITLE}`
+if (!blogPost.value.description) {
+  const firstPElement = (blogPost.value.body as MarkdownRoot).children.find(
+    (element) => element.type === 'element' && element.tag === 'p'
+  )
+
+  if (firstPElement && firstPElement.children) {
+    const textContent = firstPElement.children
+      .map((child) => {
+        if (child.type === 'text') {
+          return child.value
+        } else if (
+          child.type === 'element' &&
+          child.children &&
+          child.children.length > 0
+        ) {
+          return child.children.map((grandchild) => grandchild.value).join('')
+        }
+        return ''
+      })
+      .join('')
+
+    blogPost.value.description = textContent.slice(0, MAX_DESCRIPTION_LENGTH)
+  }
+}
+useContentHead(blogPost)
 </script>
 
 <template>

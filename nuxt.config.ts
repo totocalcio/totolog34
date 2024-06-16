@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-import { SITE_TITLE, DESCRIPTION } from './app/utils/constants'
+import { SITE_TITLE, SITE_DESCRIPTION } from './app/utils/constants'
 
 export default defineNuxtConfig({
   srcDir: 'app/',
@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       title: SITE_TITLE,
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: DESCRIPTION },
+        { hid: 'description', name: 'description', content: SITE_DESCRIPTION },
       ],
       htmlAttrs: {
         lang: 'ja',
@@ -48,6 +48,13 @@ export default defineNuxtConfig({
     highlight: {
       langs: ['html', 'javascript', 'css', 'vue', 'shell', 'sh', 'jsx'],
     },
+    contentHead: false,
   },
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
 })

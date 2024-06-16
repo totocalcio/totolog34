@@ -1,6 +1,6 @@
 export const SITE_TITLE = 'うさ技術'
 
-export const DESCRIPTION =
+export const SITE_DESCRIPTION =
   'うさぎとフロントエンドが好きな技術ブログ。マークアップが一番好き。'
 
 export const SITE_URL = 'https://totolog34.com/'
