@@ -1,34 +1,34 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-import { SITE_TITLE, SITE_DESCRIPTION } from './app/utils/constants'
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+import { SITE_TITLE, SITE_DESCRIPTION } from "./app/utils/constants";
 
 export default defineNuxtConfig({
-  srcDir: 'app/',
+  srcDir: "app/",
   app: {
-    buildAssetsDir: '/_nuxt/',
+    buildAssetsDir: "/_nuxt/",
     head: {
       title: SITE_TITLE,
       meta: [
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: SITE_DESCRIPTION },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { hid: "description", name: "description", content: SITE_DESCRIPTION },
       ],
       htmlAttrs: {
-        lang: 'ja',
+        lang: "ja",
       },
     },
   },
   build: {
-    transpile: ['vuetify'],
+    transpile: ["vuetify"],
   },
   modules: [
-    '@nuxt/content',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/device',
+    "@nuxt/content",
+    "@nuxtjs/google-fonts",
+    "@nuxtjs/device",
     (_options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
+      nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error
-        config.plugins.push(vuetify({ autoImport: true }))
-      })
+        config.plugins.push(vuetify({ autoImport: true }));
+      });
     },
   ],
   vite: {
@@ -40,15 +40,15 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'Noto+Sans+JP': [400, 700],
+      "Noto+Sans+JP": [400, 700],
     },
   },
-  css: ['~/assets/css/custom.css'],
+  css: ["~/assets/css/custom.css"],
   content: {
     highlight: {
-      langs: ['html', 'javascript', 'css', 'vue', 'shell', 'sh', 'jsx'],
+      langs: ["html", "javascript", "css", "vue", "shell", "sh", "jsx"],
     },
-    contentHead: false,
+    // contentHead: false,
   },
   devtools: {
     enabled: true,
@@ -57,4 +57,4 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-})
+});
