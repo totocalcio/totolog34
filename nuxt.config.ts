@@ -48,7 +48,7 @@ export default defineNuxtConfig({
     highlight: {
       langs: ["html", "javascript", "css", "vue", "shell", "sh", "jsx"],
     },
-    // contentHead: false,
+    contentHead: false,
   },
   devtools: {
     enabled: true,
