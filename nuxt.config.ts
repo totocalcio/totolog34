@@ -57,4 +57,22 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  hooks: {
+    'prerender:routes': (context) => {
+      for (const path of [...context.routes]) {
+        if (!path.endsWith('.html') && path !== '/') {
+          context.routes.delete(path)
+          context.routes.add(`${path}/`)
+        }
+      }
+    },
+  },
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        componentName: 'NuxtLink',
+        trailingSlash: 'append',
+      },
+    },
+  },
 })
