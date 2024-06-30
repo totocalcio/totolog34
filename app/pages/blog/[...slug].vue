@@ -69,7 +69,8 @@ useSeoMeta({
         :key="tag"
         variant="tonal"
         density="compact"
-        :to="tag"
+        :to="`/tags/${getTagSlug(tag)}/`"
+        class="tag-button"
       >
         {{ tag }}
       </v-btn>
@@ -111,5 +112,8 @@ useSeoMeta({
   display: flex;
   gap: 0.5rem;
   margin-bottom: 2rem;
+}
+.tag-button {
+  text-transform: none;
 }
 </style>
