@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import { useDisplay } from 'vuetify'
+import { useDisplay } from "vuetify";
 
-const { smAndUp } = useDisplay()
-const route = useRoute()
-const pageTitle = getTagName(route.params.tag as string)
-const blogPostListAll = await queryContent('/blog')
+const { smAndUp } = useDisplay();
+const route = useRoute();
+const pageTitle = getTagName(route.params.tag as string);
+
+const blogPostListAll = await queryContent("/blog")
   .where({ tags: { $contains: getTagName(route.params.tag as string) } })
-  .find()
+  .find();
 
-useHead({
+useSeoMeta({
   title: `${pageTitle} | ${SITE_TITLE}`,
-})
+  ogTitle: `${pageTitle} | ${SITE_TITLE}`,
+  description: `${pageTitle}の記事一覧`,
+  ogDescription: `${pageTitle}の記事一覧`,
+  ogImage: DEFAULT_IMAGE_PATH,
+});
 </script>
 
 <template>

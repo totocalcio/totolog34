@@ -2,15 +2,12 @@
 import { useDisplay } from 'vuetify'
 
 const { smAndUp } = useDisplay()
-useHead({
+useSeoMeta({
   title: SITE_TITLE,
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content: SITE_DESCRIPTION,
-    },
-  ],
+  ogTitle: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  ogDescription: SITE_DESCRIPTION,
+  ogImage: DEFAULT_IMAGE_PATH,
 })
 </script>
 
