@@ -1,6 +1,6 @@
 export default defineNuxtRouteMiddleware((to) => {
-  if (!to.path.endsWith('/')) {
-    const path = `${to.path}/`
-    return { path }
+  if (!to.path.endsWith("/")) {
+    const path = `${to.path}/`;
+    return { path };
   }
-})
+});
