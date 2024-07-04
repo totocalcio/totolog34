@@ -7,6 +7,7 @@ interface Props extends ParsedContent {
   date: string;
   thumbnail?: string;
   tags?: string[];
+  slug: string;
 }
 
 defineProps<Props>();
@@ -17,7 +18,7 @@ const { smAndUp } = useDisplay();
 <template>
   <v-card class="card" flat>
     <nuxt-link
-      :to="_path"
+      :to="slug"
       class="card-link"
       :class="{ 'card-link--mobile': !smAndUp }"
     >
