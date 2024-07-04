@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import { useDisplay } from 'vuetify'
+import { useDisplay } from "vuetify";
 
 type Props = {
-  src: string
-  alt: string
-}
+  src: string;
+  alt: string;
+};
 
-defineProps<Props>()
+defineProps<Props>();
 
-const { smAndUp } = useDisplay()
+const { smAndUp } = useDisplay();
 
 const getWidthSnsIcon = () => {
   if (smAndUp.value) {
-    return '1.5rem'
+    return "1.5rem";
   }
-  return '1.25rem'
-}
+  return "1.25rem";
+};
 </script>
 
 <template>

@@ -8,6 +8,6 @@
 
 <style>
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 </style>

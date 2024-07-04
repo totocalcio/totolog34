@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { useDisplay } from 'vuetify'
+import { useDisplay } from "vuetify";
 
-const { smAndUp } = useDisplay()
+const { smAndUp } = useDisplay();
 useSeoMeta({
   title: SITE_TITLE,
   ogTitle: SITE_TITLE,
   description: SITE_DESCRIPTION,
   ogDescription: SITE_DESCRIPTION,
   ogImage: DEFAULT_IMAGE_PATH,
-})
+});
 </script>
 
 <template>

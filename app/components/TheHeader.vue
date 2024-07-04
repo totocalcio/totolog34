@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { useDisplay } from 'vuetify'
+import { useDisplay } from "vuetify";
 
-const { smAndUp } = useDisplay()
+const { smAndUp } = useDisplay();
 
 const getDensity = () => {
   if (smAndUp.value) {
-    return 'default'
+    return "default";
   }
-  return 'compact'
-}
+  return "compact";
+};
 
 const getStyleSnsLinkContainer = () => {
   if (smAndUp.value) {
     return {
-      '--min-width-sns-link-container': '4rem',
-      '--padding-sns-link-container': '1rem',
-    }
+      "--min-width-sns-link-container": "4rem",
+      "--padding-sns-link-container": "1rem",
+    };
   }
   return {
-    '--min-width-sns-link-container': '2rem',
-    '--padding-sns-link-container': '0.5rem',
-  }
-}
+    "--min-width-sns-link-container": "2rem",
+    "--padding-sns-link-container": "0.5rem",
+  };
+};
 </script>
 
 <template>

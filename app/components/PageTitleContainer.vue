@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { useDisplay } from 'vuetify'
+import { useDisplay } from "vuetify";
 
-const { smAndUp } = useDisplay()
+const { smAndUp } = useDisplay();
 
 type Props = {
-  en: string
-  ja: string
-}
+  en: string;
+  ja: string;
+};
 
-const props = defineProps<Props>()
+const props = defineProps<Props>();
 </script>
 
 <template>

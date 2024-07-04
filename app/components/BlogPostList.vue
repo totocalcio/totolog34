@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { useDisplay } from 'vuetify'
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import { useDisplay } from "vuetify";
+import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
 
-const { mdAndUp } = useDisplay()
+const { mdAndUp } = useDisplay();
 
-const currentPage = ref(1)
-const blogPostList = ref([] as ParsedContent[])
+const currentPage = ref(1);
+const blogPostList = ref([] as ParsedContent[]);
 
-const { refresh } = useAsyncData('blogPostList', async () => {
-  const data = await queryContent('/blog')
+const { refresh } = useAsyncData("blogPostList", async () => {
+  const data = await queryContent("/blog")
     .sort({ date: -1 })
     .limit(PER_PAGE)
     .skip(PER_PAGE * (currentPage.value - 1))
-    .find()
-  blogPostList.value = data
-})
+    .find();
+  blogPostList.value = data;
+});
 
-const blogPostListAll = await queryContent('/blog').find()
-const pagenationLength = Math.ceil(blogPostListAll.length / PER_PAGE)
+const blogPostListAll = await queryContent("/blog").find();
+const pagenationLength = Math.ceil(blogPostListAll.length / PER_PAGE);
 
 watchEffect(() => {
-  refresh()
-})
+  refresh();
+});
 </script>
 
 <template>

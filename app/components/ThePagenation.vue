@@ -1,10 +1,10 @@
 <script setup lang="ts">
 type Props = {
-  length: number
-}
+  length: number;
+};
 
-defineProps<Props>()
-const model = defineModel()
+defineProps<Props>();
+const model = defineModel();
 </script>
 
 <template>

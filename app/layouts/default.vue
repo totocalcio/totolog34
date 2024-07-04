@@ -12,7 +12,7 @@
 <style>
 html {
   font-size: 16px;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 </style>
 <style scoped>
