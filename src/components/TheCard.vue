@@ -2,7 +2,7 @@
 import type { ParsedContent } from "@nuxt/content";
 import { useDisplay } from "vuetify";
 
-interface Props extends ParsedContent {
+interface Props extends /* @vue-ignore */ ParsedContent {
   title: string;
   date: string;
   thumbnail?: string;
