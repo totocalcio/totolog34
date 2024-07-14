@@ -83,7 +83,7 @@ export const Card: React.FC<Props> = ({ post, defaultImage }) => {
     >
       <CardActionArea
         href={post.frontmatter.slug}
-        {...(useIsMobile() ? {disableRipple:true} : {})}
+        {...(useIsMobile() ? { disableRipple: true } : {})}
         sx={{
           p: '1rem',
           display: 'grid',

@@ -1,5 +1,4 @@
-import { useTheme,useMediaQuery } from "@mui/material"
-
+import { useTheme, useMediaQuery } from '@mui/material'
 
 function useIsMobile() {
   const theme = useTheme()
@@ -7,4 +6,4 @@ function useIsMobile() {
   return isMobile
 }
 
-export {useIsMobile}
+export { useIsMobile }

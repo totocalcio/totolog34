@@ -1,8 +1,0 @@
-.cache
-package.json
-package-lock.json
-public
-tsconfig.json
-.eslintrc.js
-*.d.ts
-*.md
