@@ -1,9 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
-import { SITE_TITLE, SITE_DESCRIPTION } from "./app/utils/constants";
+import { SITE_TITLE, SITE_DESCRIPTION } from "./src/utils/constants";
 
 export default defineNuxtConfig({
-  srcDir: "app/",
+  srcDir: "src/",
   app: {
     buildAssetsDir: "/_nuxt/",
     head: {
