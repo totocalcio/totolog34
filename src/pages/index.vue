@@ -12,18 +12,20 @@ useSeoMeta({
 </script>
 
 <template>
-  <v-container
-    fluid
-    class="pa-0 site-title-container"
-    :style="{
-      '--margin-bottom-site-title-container': smAndUp ? '6.25rem' : '3.125rem',
-    }"
-  >
-    <v-img src="/img/hero.jpg" max-height="700" cover />
-    <h1 class="site-title" :class="{ 'site-title--mobile': !smAndUp }">
-      うさぎが好きなエンジニアのブログ
-    </h1>
-  </v-container>
+  <client-only>
+    <v-container
+      fluid
+      class="pa-0 site-title-container"
+      :style="{
+        '--margin-bottom-site-title-container': smAndUp ? '6.25rem' : '3.125rem',
+      }"
+    >
+      <v-img src="/img/hero.jpg" max-height="700" cover />
+      <h1 class="site-title" :class="{ 'site-title--mobile': !smAndUp }">
+        うさぎが好きなエンジニアのブログ
+      </h1>
+    </v-container>
+  </client-only>
   <PageTitleContainer en="Article" ja="記事" />
   <BlogPostList />
 </template>

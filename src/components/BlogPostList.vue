@@ -25,18 +25,20 @@ watchEffect(() => {
 </script>
 
 <template>
-  <v-container
-    class="pa-o card-list"
-    fluid
-    :style="{ '--margin-top-card-list': mdAndUp ? '2.5rem' : '1rem' }"
-  >
-    <TheCard
-      v-for="blogPost in blogPostList"
-      :key="blogPost._path"
-      :="blogPost"
-    />
-  </v-container>
-  <ThePagenation v-model="currentPage" :length="pagenationLength" />
+  <client-only>
+    <v-container
+      class="pa-o card-list"
+      fluid
+      :style="{ '--margin-top-card-list': mdAndUp ? '2.5rem' : '1rem' }"
+    >
+      <TheCard
+        v-for="blogPost in blogPostList"
+        :key="blogPost._path"
+        :="blogPost"
+      />
+    </v-container>
+    <ThePagenation v-model="currentPage" :length="pagenationLength" />
+  </client-only>
 </template>
 
 <style>

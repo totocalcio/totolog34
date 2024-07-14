@@ -12,13 +12,15 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <v-container
-    class="page-title-container"
-    fluid
-    :class="{ 'page-title-container--mobile': !smAndUp }"
-  >
-    <PageTitle :="props" />
-  </v-container>
+  <client-only>
+    <v-container
+      class="page-title-container"
+      fluid
+      :class="{ 'page-title-container--mobile': !smAndUp }"
+    >
+      <PageTitle :="props" />
+    </v-container>
+  </client-only>
 </template>
 
 <style scoped>
