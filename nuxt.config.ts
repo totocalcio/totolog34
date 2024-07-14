@@ -37,6 +37,13 @@ export default defineNuxtConfig({
         transformAssetUrls,
       },
     },
+    server: {
+      hmr: {
+        clientPort: 3000,
+        port: 24678,
+        protocol: "ws",
+      },
+    },
   },
   css: ["~/assets/css/custom.css"],
   googleFonts: {
