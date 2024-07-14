@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import type { ParsedContent } from "@nuxt/content";
 import { useDisplay } from "vuetify";
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
 
 const { mdAndUp } = useDisplay();
 

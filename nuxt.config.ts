@@ -38,12 +38,12 @@ export default defineNuxtConfig({
       },
     },
   },
+  css: ["~/assets/css/custom.css"],
   googleFonts: {
     families: {
       "Noto+Sans+JP": [400, 700],
     },
   },
-  css: ["~/assets/css/custom.css"],
   content: {
     highlight: {
       langs: ["html", "javascript", "css", "vue", "shell", "sh", "jsx"],

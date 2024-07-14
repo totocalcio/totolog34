@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "nuxt": "nuxt dev",
+    "dev": "nuxt dev",
     "build": "nuxi build",
     "cleanup": "nuxt cleanup",
     "generate": "nuxi generate",

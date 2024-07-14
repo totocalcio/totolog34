@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { MarkdownRoot } from "@nuxt/content/dist/runtime/types";
+import type { MarkdownRoot } from "@nuxt/content";
 
 const { path } = useRoute();
 
