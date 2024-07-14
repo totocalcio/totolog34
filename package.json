@@ -9,17 +9,11 @@
   ],
   "scripts": {
     "nuxt": "nuxt dev",
-    "build:nuxt": "nuxi build",
+    "build": "nuxi build",
     "cleanup": "nuxt cleanup",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
-    "dev": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "fmt": "prettier --write app/**/*.{vue,ts,css}",
-    "lint": "eslint app/**/*.{ts,vue}"
+    "tsc": "nuxi typecheck"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.22.2",
