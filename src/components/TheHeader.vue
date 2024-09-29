@@ -2,15 +2,9 @@
 import { useDisplay } from "vuetify";
 
 const { smAndUp } = useDisplay();
+const density = ref("default");
 
-const getDensity = () => {
-  if (smAndUp.value) {
-    return "default";
-  }
-  return "compact";
-};
-
-const getStyleSnsLinkContainer = () => {
+const getStyleSnsLinkContainer = computed(() => {
   if (smAndUp.value) {
     return {
       "--min-width-sns-link-container": "4rem",
@@ -21,11 +15,47 @@ const getStyleSnsLinkContainer = () => {
     "--min-width-sns-link-container": "2rem",
     "--padding-sns-link-container": "0.5rem",
   };
-};
+});
+
+onMounted(() => {
+  density.value = smAndUp.value ? "default" : "comfortable";
+});
 </script>
 
 <template>
-  <v-app-bar color="primary" elevation="0" :density="getDensity()">
+  <v-app-bar color="primary" elevation="0" :density>
+    <div class="header-content">
+      <div class="header-logo">
+        <nuxt-link to="/">
+          <v-btn variant="text" color="primary">
+            <v-img src="/img/hero.jpg" max-height="700" cover />
+            <client-only>
+              <div class="header-title" :class="smAndUp ? 'text-h5' : 'text-h6'">
+                {{ SITE_TITLE }}
+              </div>
+            </client-only>
+          </v-btn>
+        </nuxt-link>
+      </div>
+      <div class="sns-links">
+        <template v-for="(socialInfo, i) in SOCIAL_INFO_LIST" :key="i">
+          <client-only>
+            <v-btn
+              variant="text"
+              color="primary"
+              class="sns-link-container"
+              :style="{ ...getStyleSnsLinkContainer }"
+              :href="socialInfo.url"
+              target="_blank"
+            >
+              <SnsIcon :src="socialInfo.img.path" :alt="socialInfo.img.alt" />
+            </v-btn>
+          </client-only>
+        </template>
+      </div>
+    </div>
+  </v-app-bar>
+  <!-- <v-app-bar color="primary" elevation="0" :density="getDensity()">
     <div class="header-content">
       <div class="header-logo">
         <nuxt-link to="/">
@@ -51,7 +81,7 @@ const getStyleSnsLinkContainer = () => {
         </template>
       </div>
     </div>
-  </v-app-bar>
+  </v-app-bar> -->
 </template>
 
 <style scoped>
