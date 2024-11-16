@@ -1,11 +1,20 @@
-export const SITE_TITLE = "うさ技術";
+export const SITE_TITLE: string = "うさ技術";
 
-export const SITE_DESCRIPTION =
-  "うさぎとフロントエンドが好きな技術ブログ。マークアップが一番好き。";
+export const SITE_DESCRIPTION: string
+  = "うさぎとフロントエンドが好きな技術ブログ。マークアップが一番好き。";
 
-export const SITE_URL = "https://totolog34.com/";
+export const SITE_URL: string = "https://totolog34.com/";
 
-export const SOCIAL_INFO_LIST = {
+type SocialInfo = {
+  url: string;
+  img: {
+    path: string;
+    alt: string;
+  };
+  id?: string;
+}
+
+export const SOCIAL_INFO_LIST: { [key: string]: SocialInfo } = {
   rss: {
     url: "https://totolog34.com/feed/rss.xml",
     img: {
@@ -30,6 +39,6 @@ export const SOCIAL_INFO_LIST = {
   },
 };
 
-export const DEFAULT_IMAGE_PATH = "/img/default.png";
+export const DEFAULT_IMAGE_PATH: string = "/img/default.png";
 
-export const PER_PAGE = 10;
+export const PER_PAGE: number = 10;

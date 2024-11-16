@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import type { VAppBar } from "vuetify/components";
 import { useDisplay } from "vuetify";
 
+type Density = VAppBar["density"];
+
 const { smAndUp } = useDisplay();
-const density = ref("default");
+const density = ref<Extract<Density, "default" | "comfortable">>("default");
 
 const getStyleSnsLinkContainer = computed(() => {
   if (smAndUp.value) {

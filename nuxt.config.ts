@@ -1,9 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
-import { SITE_TITLE, SITE_DESCRIPTION } from "./src/utils/constants";
+import { SITE_DESCRIPTION, SITE_TITLE } from "./src/utils/constants";
 
 export default defineNuxtConfig({
   srcDir: "src/",
+
   app: {
     buildAssetsDir: "/_nuxt/",
     head: {
@@ -17,20 +18,23 @@ export default defineNuxtConfig({
       },
     },
   },
+
   build: {
     transpile: ["vuetify"],
   },
+
   modules: [
     "@nuxt/content",
     "@nuxtjs/google-fonts",
     "@nuxtjs/device",
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
-        // @ts-expect-error
+        // @ts-expect-error: vuetify plugin type mismatch
         config.plugins.push(vuetify({ autoImport: true }));
       });
     },
   ],
+
   vite: {
     vue: {
       template: {
@@ -45,18 +49,22 @@ export default defineNuxtConfig({
       },
     },
   },
+
   css: ["~/assets/css/custom.css"],
+
   googleFonts: {
     families: {
       "Noto+Sans+JP": [400, 700],
     },
   },
+
   content: {
     highlight: {
       langs: ["html", "javascript", "css", "vue", "shell", "sh", "jsx"],
     },
     contentHead: false,
   },
+
   devtools: {
     enabled: true,
 
@@ -64,4 +72,6 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+
+  compatibilityDate: "2024-11-16",
 });

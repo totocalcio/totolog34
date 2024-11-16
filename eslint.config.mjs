@@ -6,6 +6,9 @@ export default antfu({
   vuejsAccessibility,
   stylistic: {
     semi: true,
-    quotes: 'double',
+    quotes: "double",
+  },
+  rules: {
+    consistentTypeDefinitions: false,
   },
 });
