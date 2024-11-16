@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import type { ParsedContent } from "@nuxt/content";
 import { useDisplay } from "vuetify";
 
-/* @vue-ignore */
-interface Props extends ParsedContent {
+type Props = {
   title: string;
   date: string;
   thumbnail?: string;
   tags?: string[];
   slug: string;
 }
+
 
 defineProps<Props>();
 
