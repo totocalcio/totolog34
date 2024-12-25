@@ -19,8 +19,8 @@
   "dependencies": {
     "@emotion/react": "11.11.3",
     "@emotion/styled": "11.11.0",
-    "@mui/icons-material": "5.15.7",
-    "@mui/material": "5.15.7",
+    "@mui/icons-material": "5.16.13",
+    "@mui/material": "5.16.13",
     "@mui/styled-engine-sc": "5.14.12",
     "babel-plugin-styled-components": "2.0.7",
     "gatsby": "^5.3.3",
