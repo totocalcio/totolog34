@@ -12,7 +12,7 @@ type SocialInfo = {
     alt: string;
   };
   id?: string;
-}
+};
 
 export const SOCIAL_INFO_LIST: { [key: string]: SocialInfo } = {
   rss: {

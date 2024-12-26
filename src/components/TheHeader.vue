@@ -58,33 +58,6 @@ onMounted(() => {
       </div>
     </div>
   </v-app-bar>
-  <!-- <v-app-bar color="primary" elevation="0" :density="getDensity()">
-    <div class="header-content">
-      <div class="header-logo">
-        <nuxt-link to="/">
-          <v-btn variant="text" color="primary">
-            <div class="header-title" :class="smAndUp ? 'text-h5' : 'text-h6'">
-              {{ SITE_TITLE }}
-            </div>
-          </v-btn>
-        </nuxt-link>
-      </div>
-      <div class="sns-links">
-        <template v-for="(socialInfo, i) in SOCIAL_INFO_LIST" :key="i">
-          <v-btn
-            variant="text"
-            color="primary"
-            class="sns-link-container"
-            :style="{ ...getStyleSnsLinkContainer() }"
-            :href="socialInfo.url"
-            target="_blank"
-          >
-            <SnsIcon :src="socialInfo.img.path" :alt="socialInfo.img.alt" />
-          </v-btn>
-        </template>
-      </div>
-    </div>
-  </v-app-bar> -->
 </template>
 
 <style scoped>
@@ -112,6 +85,5 @@ onMounted(() => {
 }
 .header-title {
   color: #000;
-  /* font-weight: 700; */
 }
 </style>

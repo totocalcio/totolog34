@@ -13,21 +13,21 @@ const { data: blogPost } = await useAsyncData<any>(
     return queryContent()
       .where({ slug: { $eq: removedTrailingSlashPath } })
       .findOne();
-  }
+  },
 );
 
-const getDate = (datetime: any) => {
+function getDate(datetime: any) {
   if (!datetime) {
     return "";
   }
   return datetime.split(" ")[0];
-};
+}
 
 const metaTitle = `${blogPost.value.title} | ${SITE_TITLE}`;
 
 if (!blogPost.value.description) {
   const firstPElement = (blogPost.value.body as MarkdownRoot).children.find(
-    (element) => element.type === "element" && element.tag === "p"
+    element => element.type === "element" && element.tag === "p",
   );
 
   if (firstPElement && firstPElement.children) {
@@ -35,12 +35,13 @@ if (!blogPost.value.description) {
       .map((child) => {
         if (child.type === "text") {
           return child.value;
-        } else if (
-          child.type === "element" &&
-          child.children &&
-          child.children.length > 0
+        }
+        else if (
+          child.type === "element"
+          && child.children
+          && child.children.length > 0
         ) {
-          return child.children.map((grandchild) => grandchild.value).join("");
+          return child.children.map(grandchild => grandchild.value).join("");
         }
         return "";
       })

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { useDisplay } from "vuetify";
-
-const { smAndUp } = useDisplay();
 const route = useRoute();
 const pageTitle = getTagName(route.params.tag as string);
 

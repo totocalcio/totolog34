@@ -9,7 +9,6 @@ type Props = {
   slug: string;
 }
 
-
 defineProps<Props>();
 
 const { smAndUp } = useDisplay();

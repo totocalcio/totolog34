@@ -9,6 +9,8 @@ export default antfu({
     quotes: "double",
   },
   rules: {
-    consistentTypeDefinitions: false,
+    "ts/consistent-type-definitions": "off",
+    "style/quote-props": "off",
   },
+  ignores: ["**/*.md"],
 });
