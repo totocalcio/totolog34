@@ -6,6 +6,11 @@ export default antfu({
   vuejsAccessibility,
   stylistic: {
     semi: true,
-    quotes: true,
+    quotes: "double",
   },
+  rules: {
+    "ts/consistent-type-definitions": "off",
+    "style/quote-props": "off",
+  },
+  ignores: ["**/*.md"],
 });
