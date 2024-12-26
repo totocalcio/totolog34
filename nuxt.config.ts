@@ -4,8 +4,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "./src/utils/constants";
 
 export default defineNuxtConfig({
   srcDir: "src/",
-
+  ssr: true,
   app: {
+    baseURL: "/",
     buildAssetsDir: "/_nuxt/",
     head: {
       title: SITE_TITLE,
