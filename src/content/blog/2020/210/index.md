@@ -1,5 +1,5 @@
 ---
-slug: /210
+_path: "/210"
 date: '2020-08-03 13:27:00'
 title: Stray start tag script.エラーの解消
 thumbnail:

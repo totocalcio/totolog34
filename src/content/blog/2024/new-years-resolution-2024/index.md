@@ -1,5 +1,5 @@
 ---
-slug: /new-years-resolution-2024
+_path: "/new-years-resolution-2024"
 date: '2024-02-04 15:14'
 title: '新年抱負 2024'
 tags: ['日記']

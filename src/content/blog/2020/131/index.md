@@ -1,5 +1,5 @@
 ---
-slug: /131
+_path: "/131"
 date: '2020-05-27 15:04:27'
 title: 【CSS】flexかgridか。レスポンシブデザインで不要なコードを増やさないために。
 thumbnail: /img/blog/thumbnail/2020/131/1.jpg

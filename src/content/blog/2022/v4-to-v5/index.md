@@ -1,5 +1,5 @@
 ---
-slug: /v4-to-v5
+_path: "/v4-to-v5"
 date: '2022-12-25 16:44'
 title: Gatsbyをv4からv5に移行するのにやったこと
 thumbnail: /img/blog/thumbnail/2022/v4-to-v5/gatsby-logo.png

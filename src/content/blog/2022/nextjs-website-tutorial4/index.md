@@ -1,5 +1,5 @@
 ---
-slug: /nextjs-website-tutorial4
+_path: "/nextjs-website-tutorial4"
 date: '2022-09-26 15:49'
 title: Next.jsでWebサイトを作る④〜ページ遷移時のアニメーション
 thumbnail: /img/blog/thumbnail/2022/nextjs-website-tutorial4/nextjs-logo.png

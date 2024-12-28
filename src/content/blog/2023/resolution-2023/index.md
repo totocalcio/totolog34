@@ -1,5 +1,5 @@
 ---
-slug: /resolution-2023
+_path: "/resolution-2023"
 date: '2023-02-04 16:52'
 title: '新年抱負 2023'
 thumbnail: 

@@ -1,5 +1,5 @@
 ---
-slug: /149
+_path: "/149"
 date: '2020-05-31 15:44:04'
 title: 「JavaScriptをはじめよう」をはじめる
 thumbnail:

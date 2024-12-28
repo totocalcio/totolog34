@@ -1,5 +1,5 @@
 ---
-slug: /nextjs-website-tutorial3
+_path: "/nextjs-website-tutorial3"
 date: '2022-09-25 12:41'
 title: Next.jsでWebサイトを作る③〜コンポーネント開発
 thumbnail: /img/blog/thumbnail/2022/nextjs-website-tutorial3/nextjs-logo.png

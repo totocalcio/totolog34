@@ -1,5 +1,5 @@
 ---
-slug: /733
+_path: "/733"
 date: '2021-05-18 21:22:23'
 title: NativeScript-Vueの開発環境を整える
 thumbnail:

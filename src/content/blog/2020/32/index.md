@@ -1,5 +1,5 @@
 ---
-slug: /32
+_path: "/32"
 date: '2020-05-20 18:45:40'
 title: WEBフォントの使い方＜サーバー、Adobe、Google＞
 thumbnail:

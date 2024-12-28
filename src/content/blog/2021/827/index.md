@@ -1,5 +1,5 @@
 ---
-slug: /827
+_path: "/827"
 date: '2021-09-21 01:09:00'
 title: 第2回ReactNativeアプリ開発②〜UIコンポーネント選定
 thumbnail: /img/blog/thumbnail/2021/827/2021-09-19-11.24.43.png

@@ -1,5 +1,5 @@
 ---
-slug: /592
+_path: "/592"
 date: '2020-10-29 20:20:00'
 title: 【CSS】デザインで1px以下のborderが指定された時の対処法
 thumbnail: /img/blog/thumbnail/2020/592/image-30.png

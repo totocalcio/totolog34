@@ -1,5 +1,5 @@
 ---
-slug: /185
+_path: "/185"
 date: '2020-06-03 17:40:52'
 title: React.jsを学び始める
 thumbnail:

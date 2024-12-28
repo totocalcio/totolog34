@@ -1,5 +1,5 @@
 ---
-slug: /220
+_path: "/220"
 date: '2020-08-04 12:32:06'
 title: React学習状況④
 thumbnail:

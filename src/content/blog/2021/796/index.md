@@ -1,5 +1,5 @@
 ---
-slug: /796
+_path: "/796"
 date: '2021-09-05 13:57:48'
 title: PHP7技術者認定初級試験に合格した
 thumbnail: /img/blog/thumbnail/2021/796/2021-09-05-13.24.42.png

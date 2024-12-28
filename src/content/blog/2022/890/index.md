@@ -1,5 +1,5 @@
 ---
-slug: /890
+_path: "/890"
 date: '2022-03-26 00:31:01'
 title: Vue3 + TypeScript チートシートっぽいもの
 thumbnail:

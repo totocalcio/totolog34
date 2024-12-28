@@ -1,5 +1,5 @@
 ---
-slug: /728
+_path: "/728"
 date: '2021-05-18 01:38:54'
 title: NativeScript-VueでWatchOSアプリ作ろうと思う
 thumbnail:

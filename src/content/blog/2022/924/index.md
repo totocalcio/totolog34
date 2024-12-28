@@ -1,5 +1,5 @@
 ---
-slug: /924
+_path: "/924"
 date: '2022-07-24 11:11:06'
 title: Gatsbyでブログ作る⑤〜エラー集
 thumbnail:

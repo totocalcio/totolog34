@@ -1,5 +1,5 @@
 ---
-slug: /102
+_path: "/102"
 date: '2020-05-26 12:03:56'
 title: 【CSS】下線の作り方と特徴
 thumbnail:

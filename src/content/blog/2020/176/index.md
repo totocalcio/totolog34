@@ -1,5 +1,5 @@
 ---
-slug: /176
+_path: "/176"
 date: '2020-06-02 16:26:10'
 title: 複数のGoogleアカウントを毎回切り替えるのが面倒だから併用して使う
 thumbnail: /img/blog/thumbnail/2020/176/9aa4cabab39f677a68bbfe14d4ac321f_2.jpg

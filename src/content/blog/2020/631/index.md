@@ -1,5 +1,5 @@
 ---
-slug: /631
+_path: "/631"
 date: '2020-11-06 17:56:08'
 title: React学習状況⑥～アプリリリース～
 thumbnail:

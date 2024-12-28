@@ -1,5 +1,5 @@
 ---
-slug: /876
+_path: "/876"
 date: '2021-11-07 13:11:37'
 title: 第2回ReactNativeアプリ開発⑦〜リリース
 thumbnail: /img/blog/thumbnail/2021/876/2021-09-19-11.24.43.png

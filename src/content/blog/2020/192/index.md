@@ -1,5 +1,5 @@
 ---
-slug: /192
+_path: "/192"
 date: '2020-06-08 19:18:49'
 title: Reactわかんないって…
 thumbnail:

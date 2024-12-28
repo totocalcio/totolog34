@@ -1,5 +1,5 @@
 ---
-slug: /813
+_path: "/813"
 date: '2021-09-20 01:00:00'
 title: 第2回ReactNativeアプリ開発①〜Expoでプロジェクトを作成
 thumbnail: /img/blog/thumbnail/2021/813/2021-09-19-12.43.48.png

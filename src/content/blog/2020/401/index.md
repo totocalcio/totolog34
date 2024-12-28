@@ -1,5 +1,5 @@
 ---
-slug: /401
+_path: "/401"
 date: "2020-09-29 17:19:01"
 title: summaryタグの使い方に注意。構文エラーとiOSバグ。
 thumbnail:

@@ -1,5 +1,5 @@
 ---
-slug: /918
+_path: "/918"
 date: '2022-07-24 11:10:06'
 title: Gatsbyでブログ作る④〜GraphQL Typegen
 thumbnail: /img/blog/thumbnail/2022/918/1_tsOxXGb20o2zrCh6Sp5PYQ.png

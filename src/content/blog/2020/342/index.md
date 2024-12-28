@@ -1,5 +1,5 @@
 ---
-slug: /342
+_path: "/342"
 date: '2020-08-25 10:53:45'
 title: またExpoでエラー。QRコードが表示されない
 thumbnail:

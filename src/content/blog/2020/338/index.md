@@ -1,5 +1,5 @@
 ---
-slug: /338
+_path: "/338"
 date: '2020-08-25 11:37:33'
 title: React Nativeでアプリを作る①～導入
 thumbnail:

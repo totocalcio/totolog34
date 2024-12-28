@@ -1,5 +1,5 @@
 ---
-slug: /740
+_path: "/740"
 date: '2021-05-21 02:01:39'
 title: NativeScriptアプリでwatchOSを開発する〜プロジェクト作成からSimulator起動まで
 thumbnail:

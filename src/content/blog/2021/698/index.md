@@ -1,5 +1,5 @@
 ---
-slug: /698
+_path: "/698"
 date: '2021-02-08 12:49:22'
 title: gulpでscssのコンパイルの階層がうまくいかない
 thumbnail: /img/blog/thumbnail/2021/698/group1-1.jpg

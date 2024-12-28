@@ -1,5 +1,5 @@
 ---
-slug: /507
+_path: "/507"
 date: '2020-10-27 12:30:40'
 title: iPhone11だとBottomTabNavigatorが隠れてうまく表示されない
 thumbnail:

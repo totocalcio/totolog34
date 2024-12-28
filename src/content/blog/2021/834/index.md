@@ -1,5 +1,5 @@
 ---
-slug: /834
+_path: "/834"
 date: '2021-09-26 09:37:54'
 title: 第2回ReactNativeアプリ開発③〜カレンダー実装
 thumbnail: /img/blog/thumbnail/2021/834/2021-09-19-11.24.43.png

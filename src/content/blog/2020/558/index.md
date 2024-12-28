@@ -1,5 +1,5 @@
 ---
-slug: /558
+_path: "/558"
 date: '2020-11-04 13:34:13'
 title: react-native-sliderの小数点が想定外の表示
 thumbnail: /img/blog/thumbnail/2020/558/image.png

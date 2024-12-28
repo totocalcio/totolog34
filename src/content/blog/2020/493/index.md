@@ -1,5 +1,5 @@
 ---
-slug: /493
+_path: "/493"
 date: "2020-10-22 12:59:17"
 title: 'Invariant Violation: Tried to register two views with the same name RNCSafeAreaProvider'
 tags: ['ReactNative', 'Expo']

@@ -1,5 +1,5 @@
 ---
-slug: /303
+_path: "/303"
 date: '2020-08-19 22:51:47'
 title: React Native + Expoで始めたらPCがクラッシュし続けた
 thumbnail:

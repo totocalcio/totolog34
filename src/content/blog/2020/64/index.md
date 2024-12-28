@@ -1,5 +1,5 @@
 ---
-slug: /64
+_path: "/64"
 date: '2020-05-21 19:00:26'
 title: 【WordPress】スパム対策に特化したプラグインを入れてみよう
 thumbnail:

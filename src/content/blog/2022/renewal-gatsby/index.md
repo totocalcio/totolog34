@@ -1,5 +1,5 @@
 ---
-slug: /renewal-gatsby
+_path: "/renewal-gatsby"
 date: '2022-09-03 14:23'
 title: WordPressのブログをGatsbyでリニューアルした
 thumbnail: /img/blog/thumbnail/2022/renewal-gatsby/renewal-gatsby-thumb.webp

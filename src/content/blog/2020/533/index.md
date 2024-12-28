@@ -1,5 +1,5 @@
 ---
-slug: /533
+_path: "/533"
 date: '2020-10-26 17:19:08'
 title: iOSでTextInputが見えなくならないようにKeyboardAvoidingViewを設定したらanroidでバグる
 thumbnail:

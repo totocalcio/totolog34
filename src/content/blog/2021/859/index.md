@@ -1,5 +1,5 @@
 ---
-slug: /859
+_path: "/859"
 date: '2021-10-04 00:37:56'
 title: 第2回ReactNativeアプリ開発⑥〜React Navigation
 thumbnail: /img/blog/thumbnail/2021/859/2021-09-19-11.24.43.png

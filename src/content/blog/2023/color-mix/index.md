@@ -1,5 +1,5 @@
 ---
-slug: /color-mix
+_path: "/color-mix"
 date: '2023-07-23 09:27'
 title: 'color-mix() の有効的な使い方'
 thumbnail: /img/blog/thumbnail/2023/color-mix/caniuse.png

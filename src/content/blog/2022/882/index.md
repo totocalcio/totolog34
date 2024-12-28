@@ -1,5 +1,5 @@
 ---
-slug: /882
+_path: "/882"
 date: '2022-02-20 11:29:27'
 title: 新年抱負
 thumbnail:
