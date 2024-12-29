@@ -14,9 +14,14 @@ const { refresh } = useAsyncData("blogPostList", async () => {
     .skip(PER_PAGE * (currentPage.value - 1))
     .find();
   blogPostList.value = data;
+  console.log("blogPostList", blogPostList.value);
 });
 
-const blogPostListAll = await queryContent().find();
+const blogPostListAll = await queryContent()
+  .where({
+    _original_dir: { $eq: "/blog" },
+  })
+  .find();
 const pagenationLength = Math.ceil(blogPostListAll.length / PER_PAGE);
 
 watchEffect(() => {
@@ -25,18 +30,20 @@ watchEffect(() => {
 </script>
 
 <template>
-  <v-container
-    class="pa-o card-list"
-    fluid
-    :style="{ '--margin-top-card-list': mdAndUp ? '2.5rem' : '1rem' }"
-  >
-    <TheCard
-      v-for="blogPost in blogPostList"
-      :key="blogPost._path"
-      :="blogPost"
-    />
-  </v-container>
-  <ThePagenation v-model="currentPage" :length="pagenationLength" />
+  <client-only>
+    <v-container
+      class="pa-o card-list"
+      fluid
+      :style="{ '--margin-top-card-list': mdAndUp ? '2.5rem' : '1rem' }"
+    >
+      <TheCard
+        v-for="blogPost in blogPostList"
+        :key="blogPost._path"
+        :="blogPost"
+      />
+    </v-container>
+    <ThePagenation v-model="currentPage" :length="pagenationLength" />
+  </client-only>
 </template>
 
 <style>
