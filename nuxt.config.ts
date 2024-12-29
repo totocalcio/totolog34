@@ -4,7 +4,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "./src/utils/constants";
 
 export default defineNuxtConfig({
   srcDir: "src/",
-  ssr: true,
   app: {
     baseURL: "/",
     buildAssetsDir: "/_nuxt/",
@@ -77,7 +76,6 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "cloudflare-pages",
-    routes: ["/api/_content/**"],
   },
 
   compatibilityDate: "2024-11-16",

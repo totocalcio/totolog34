@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxi build",
+    "build:cloudflare": "nuxi build --preset=cloudflare_pages",
     "cleanup": "nuxt cleanup",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
