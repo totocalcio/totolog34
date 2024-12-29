@@ -2,7 +2,7 @@
 const route = useRoute();
 const pageTitle = getTagName(route.params.tag as string);
 
-const blogPostListAll = await queryContent("/blog")
+const blogPostListAll = await queryContent()
   .where({ tags: { $contains: getTagName(route.params.tag as string) } })
   .find();
 

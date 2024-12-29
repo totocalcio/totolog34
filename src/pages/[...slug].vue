@@ -5,13 +5,11 @@ const { path } = useRoute();
 
 const MAX_DESCRIPTION_LENGTH = 120;
 
-const removedTrailingSlashPath = path.replace(/\/$/, "");
-
 const { data: blogPost } = await useAsyncData<any>(
-  `content-${removedTrailingSlashPath}`,
+  `content-${path}`,
   () => {
     return queryContent()
-      .where({ slug: { $eq: removedTrailingSlashPath } })
+      .where({ _path: path })
       .findOne();
   },
 );
@@ -73,13 +71,13 @@ useSeoMeta({
         :key="tag"
         variant="tonal"
         density="compact"
-        :to="`/tags/${getTagSlug(tag)}/`"
+        :to="`/tags/${getTagSlug(tag)}`"
         class="tag-button"
       >
         {{ tag }}
       </v-btn>
     </div>
-    <ContentDoc path="/blog/2024/new-years-resolution-2024" />
+    <ContentDoc />
   </v-container>
 </template>
 

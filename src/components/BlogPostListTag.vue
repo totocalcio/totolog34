@@ -9,7 +9,7 @@ const currentPage = ref(1);
 const blogPostList = ref([] as ParsedContent[]);
 
 const { refresh } = useAsyncData("blogPostList", async () => {
-  const data = await queryContent("/blog")
+  const data = await queryContent()
     .sort({ date: -1 })
     .limit(PER_PAGE)
     .skip(PER_PAGE * (currentPage.value - 1))
@@ -18,7 +18,7 @@ const { refresh } = useAsyncData("blogPostList", async () => {
   blogPostList.value = data;
 });
 
-const blogPostListAll = await queryContent("/blog")
+const blogPostListAll = await queryContent()
   .where({ tags: { $contains: getTagName(route.params.tag as string) } })
   .find();
 const pagenationLength = Math.ceil(blogPostListAll.length / PER_PAGE);

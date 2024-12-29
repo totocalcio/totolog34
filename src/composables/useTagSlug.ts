@@ -23,13 +23,13 @@ const convertTagList: ConvertTagList = {
   html: "HTML",
 };
 
-export const getTagSlug = (tag: string) => {
+export function getTagSlug(tag: string) {
   const tagPath = Object.keys(convertTagList).find(
-    (key) => convertTagList[key] === tag
+    key => convertTagList[key] === tag,
   );
   return tagPath ? kebabCase(tagPath) : kebabCase(tag);
-};
+}
 
-export const getTagName = (tag: string) => {
+export function getTagName(tag: string) {
   return convertTagList[tag.replace(/-/g, ".")];
-};
+}

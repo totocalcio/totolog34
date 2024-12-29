@@ -1,13 +1,11 @@
 <script setup lang="ts">
+import type { ParsedContent } from "@nuxt/content";
 import { useDisplay } from "vuetify";
 
 type Props = {
-  title: string;
-  date: string;
   thumbnail?: string;
   tags?: string[];
-  slug: string;
-}
+} & ParsedContent;
 
 defineProps<Props>();
 
@@ -17,7 +15,7 @@ const { smAndUp } = useDisplay();
 <template>
   <v-card class="card" flat>
     <nuxt-link
-      :to="slug"
+      :to="_path"
       class="card-link"
       :class="{ 'card-link--mobile': !smAndUp }"
     >
@@ -46,7 +44,7 @@ const { smAndUp } = useDisplay();
         v-for="tag in tags"
         :key="tag"
         variant="tonal"
-        :to="`/tags/${getTagSlug(tag)}/`"
+        :to="`/tags/${getTagSlug(tag)}`"
         class="tag-button"
       >
         {{ tag }}
