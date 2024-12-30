@@ -14,9 +14,9 @@
     "dev": "nuxt dev",
     "build": "nuxi build",
     "build:cloudflare": "nuxi build --preset=cloudflare_pages",
-    "cleanup": "nuxt cleanup",
+    "clean": "nuxt cleanup",
     "generate": "nuxi generate",
-    "preview": "nuxi preview",
+    "preview": "npx wrangler pages dev dist/",
     "tsc": "nuxi typecheck",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
