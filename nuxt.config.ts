@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
-import { SITE_DESCRIPTION, SITE_TITLE } from "./src/utils/constants";
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "./src/utils/constants";
 
 export default defineNuxtConfig({
   srcDir: "src/",
@@ -29,6 +29,8 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/google-fonts",
     "@nuxtjs/device",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error: vuetify plugin type mismatch
@@ -68,6 +70,13 @@ export default defineNuxtConfig({
     experimental: {
       clientDB: true,
     },
+    documentDriven: true,
+  },
+
+  site: {
+    url: SITE_URL,
+    name: SITE_TITLE,
+    trailingSlash: true,
   },
 
   devtools: {
