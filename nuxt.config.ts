@@ -4,6 +4,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "./src/utils/constants";
 
 export default defineNuxtConfig({
   srcDir: "src/",
+  ssr: false,
   app: {
     baseURL: "/",
     buildAssetsDir: "/_nuxt/",
@@ -64,6 +65,9 @@ export default defineNuxtConfig({
       langs: ["html", "javascript", "css", "vue", "shell", "sh", "jsx"],
     },
     contentHead: false,
+    experimental: {
+      clientDB: true,
+    },
   },
 
   devtools: {
