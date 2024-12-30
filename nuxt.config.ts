@@ -22,7 +22,6 @@ export default defineNuxtConfig({
 
   build: {
     transpile: ["vuetify"],
-    analyze: false,
   },
 
   modules: [
