@@ -5,11 +5,13 @@ const { path } = useRoute();
 
 const MAX_DESCRIPTION_LENGTH = 120;
 
+const removedTrailingSlashPath = path.replace(/\/$/, "");
+
 const { data: blogPost } = await useAsyncData<any>(
-  `content-${path}`,
+  `content-${removedTrailingSlashPath}`,
   () => {
     return queryContent()
-      .where({ _path: path })
+      .where({ _path: { $eq: removedTrailingSlashPath } })
       .findOne();
   },
 );
