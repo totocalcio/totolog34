@@ -4,7 +4,7 @@ type Props = {
 };
 
 defineProps<Props>();
-const model = defineModel();
+const model = defineModel<number>();
 </script>
 
 <template>
