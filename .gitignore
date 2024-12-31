@@ -5,3 +5,9 @@ todo.md
 .vscode/settings.json
 .DS_Store
 .env*
+.nuxt
+copy-image.md
+.output
+dist
+domain-move.md
+.wrangler
