@@ -108,6 +108,7 @@ useSeoMeta({
   padding: 1rem;
   margin-top: 1rem;
   background-color: rgb(var(--v-theme-primary));
+  white-space: pre-wrap;
 }
 .article-detail-container {
   width: min(900px, 100%) !important;
