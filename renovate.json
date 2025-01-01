@@ -4,7 +4,6 @@
   "ignorePresets": [":prHourlyLimit2"],
   "timezone": "Asia/Tokyo",
   "dependencyDashboard": false,
-  "automerge": true,
-  "branchConcurrentLimit": 0,
-  "ignorePaths": [".github/workflows/ftp_deploy.yml"]
+  "automerge": false,
+  "branchConcurrentLimit": 0
 }
