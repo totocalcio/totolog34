@@ -20,7 +20,7 @@ useSeoMeta({
         '--margin-bottom-site-title-container': smAndUp ? '6.25rem' : '3.125rem',
       }"
     >
-      <v-img src="/img/hero.jpg" max-height="700" cover />
+      <v-img src="/img/hero.jpg" max-height="700" cover alt="トップ画像 Nuphy Air60キーボードにモノクロのフィルターがかかっている " />
       <h1 class="site-title" :class="{ 'site-title--mobile': !smAndUp }">
         うさぎが好きなエンジニアのブログ
       </h1>
