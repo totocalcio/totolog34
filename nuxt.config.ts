@@ -88,6 +88,9 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "cloudflare-pages",
+    prerender: {
+      routes: ["/rss.xml"],
+    },
   },
 
   compatibilityDate: "2024-11-16",

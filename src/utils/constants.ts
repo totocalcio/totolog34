@@ -16,7 +16,7 @@ type SocialInfo = {
 
 export const SOCIAL_INFO_LIST: { [key: string]: SocialInfo } = {
   rss: {
-    url: "https://totolog34.com/feed/rss.xml",
+    url: "rss.xml",
     img: {
       path: "/img/feed_icon.svg",
       alt: "RSS Feed アイコン",
