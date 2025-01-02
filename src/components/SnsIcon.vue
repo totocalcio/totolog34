@@ -10,17 +10,17 @@ defineProps<Props>();
 
 const { smAndUp } = useDisplay();
 
-const getWidthSnsIcon = () => {
+function getWidthSnsIcon() {
   if (smAndUp.value) {
     return "1.5rem";
   }
   return "1.25rem";
-};
+}
 </script>
 
 <template>
   <div class="sns-icon" :style="{ '--width-sns-icon': getWidthSnsIcon() }">
-    <img :src="src" :alt="alt" />
+    <img :src="src" :alt="alt">
   </div>
 </template>
 
