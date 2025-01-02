@@ -3,7 +3,7 @@ export const SITE_TITLE: string = "うさ技術";
 export const SITE_DESCRIPTION: string
   = "うさぎとフロントエンドが好きな技術ブログ。マークアップが一番好き。";
 
-export const SITE_URL: string = "https://totolog34.com/";
+export const SITE_URL: string = "https://totolog34.com";
 
 type SocialInfo = {
   url: string;
