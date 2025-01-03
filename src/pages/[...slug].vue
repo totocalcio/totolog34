@@ -103,7 +103,6 @@ useSeoMeta({
 :deep(:is(ul, ol)) {
   margin-left: 1em;
   margin-block: 1rem;
-  font-style: italic;
 }
 :deep(pre) {
   padding: 1rem;
