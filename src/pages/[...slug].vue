@@ -113,6 +113,17 @@ useSeoMeta({
 :deep(code:not(pre code)) {
   font-weight: bold;
 }
+:deep(blockquote) {
+  background-color: rgb(var(--v-theme-primary));
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  &::before {
+    content: ">";
+  }
+}
+
 .article-detail-container {
   width: min(900px, 100%);
 }
