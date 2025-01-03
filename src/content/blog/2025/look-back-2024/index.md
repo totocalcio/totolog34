@@ -66,6 +66,8 @@ tags: ['日記']
 ## 8月
 - [ウェブアクセシビリティLT&交流会 vol.3](https://a11y-discord.connpass.com/event/326526/)登壇
   - スライド：[アクセシブルなトグルスイッチを作る](https://totocalcio-slidev.netlify.app/1)
+- 会社のイベントへ登壇
+  - スライド：[新たな顧客課題に挑む17年目の進化とモダナイゼーション](https://speakerdeck.com/rakus_dev/rakustechcon2024-haihaimail)
 - 仕事ではまだコード書いていない。
 
 ## 9月
