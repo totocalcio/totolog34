@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { useDisplay } from "vuetify";
 
-defineProps<Props>();
-
-const { smAndUp } = useDisplay();
-
 type Props = {
   en: string;
   ja: string;
 };
+
+const _props = defineProps<Props>();
+
+const { smAndUp } = useDisplay();
 </script>
 
 <template>
@@ -18,7 +18,7 @@ type Props = {
       fluid
       :class="{ 'page-title-container--mobile': !smAndUp }"
     >
-      <PageTitle :="props" />
+      <PageTitle :="_props" />
     </v-container>
   </client-only>
 </template>
