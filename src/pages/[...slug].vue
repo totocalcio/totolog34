@@ -89,8 +89,9 @@ useSeoMeta({
 }
 :deep(:is(h1, h2, h3, h4, h5, h6)) {
   margin-block: 1em;
+  scroll-margin-top: 4rem;
 }
-:deep(a) {
+:deep(a[href^="#"]) {
   color: #000;
   text-decoration: none;
 }
@@ -109,6 +110,9 @@ useSeoMeta({
   margin-top: 1rem;
   background-color: rgb(var(--v-theme-primary));
   white-space: pre-wrap;
+}
+:deep(code:not(pre code)) {
+  font-weight: bold;
 }
 .article-detail-container {
   width: min(900px, 100%) !important;
