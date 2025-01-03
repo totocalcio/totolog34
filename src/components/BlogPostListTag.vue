@@ -49,9 +49,10 @@ watch(
   --margin-top-card-list: 2.5rem;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 16px;
   margin-top: var(--margin-top-card-list);
   margin-bottom: 1rem;
+  width: min(900px, 100%);
 }
 </style>

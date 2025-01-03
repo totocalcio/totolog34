@@ -115,7 +115,7 @@ useSeoMeta({
   font-weight: bold;
 }
 .article-detail-container {
-  width: min(900px, 100%) !important;
+  width: min(900px, 100%);
 }
 .tag-list {
   display: flex;
