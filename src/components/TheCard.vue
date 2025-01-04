@@ -25,6 +25,7 @@ const { smAndUp } = useDisplay();
             :src="thumbnail || DEFAULT_IMAGE_PATH"
             height="100%"
             class="card-image"
+            alt=""
             :class="{
               'card-image--mobile': !smAndUp,
               'card-image--default': !thumbnail,
