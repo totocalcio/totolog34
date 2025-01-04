@@ -8,16 +8,6 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/",
     buildAssetsDir: "/_nuxt/",
-    head: {
-      title: SITE_TITLE,
-      meta: [
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { hid: "description", name: "description", content: SITE_DESCRIPTION },
-      ],
-      htmlAttrs: {
-        lang: "ja",
-      },
-    },
   },
 
   build: {
@@ -66,7 +56,6 @@ export default defineNuxtConfig({
     highlight: {
       langs: ["html", "javascript", "css", "vue", "shell", "sh", "jsx"],
     },
-    contentHead: false,
     experimental: {
       clientDB: true,
     },
