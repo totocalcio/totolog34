@@ -39,6 +39,6 @@ export const SOCIAL_INFO_LIST: { [key: string]: SocialInfo } = {
   },
 };
 
-export const DEFAULT_IMAGE_PATH: string = "/img/default.png";
+export const DEFAULT_IMAGE_PATH: string = "/img/default.jpg";
 
 export const PER_PAGE: number = 10;
