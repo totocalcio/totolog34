@@ -33,6 +33,7 @@
     "@nuxtjs/robots": "^5.1.0",
     "@nuxtjs/sitemap": "^7.0.1",
     "@types/rss": "^0.0.32",
+    "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "eslint": "^9.15.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "nuxt": "^3.12.3",

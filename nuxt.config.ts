@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
+    "@zadigetvoltaire/nuxt-gtm",
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error: vuetify plugin type mismatch
@@ -91,6 +92,10 @@ export default defineNuxtConfig({
     prerender: {
       routes: ["/rss.xml"],
     },
+  },
+
+  gtm: {
+    id: "GTM-PVNPNSX",
   },
 
   compatibilityDate: "2024-11-16",
