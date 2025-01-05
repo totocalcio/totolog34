@@ -25,38 +25,39 @@ function getDate(datetime: any) {
 
 const metaTitle = `${blogPost.value.title} | ${SITE_TITLE}`;
 
-if (!blogPost.value.description) {
-  const firstPElement = (blogPost.value.body as MarkdownRoot).children.find(
-    element => element.type === "element" && element.tag === "p",
-  );
+// if (!blogPost.value.description) {
+//   const firstPElement = (blogPost.value.body as MarkdownRoot).children.find(
+//     element => element.type === "element" && element.tag === "p",
+//   );
 
-  if (firstPElement && firstPElement.children) {
-    const textContent = firstPElement.children
-      .map((child) => {
-        if (child.type === "text") {
-          return child.value;
-        }
-        else if (
-          child.type === "element"
-          && child.children
-          && child.children.length > 0
-        ) {
-          return child.children.map(grandchild => grandchild.value).join("");
-        }
-        return "";
-      })
-      .join("");
+//   if (firstPElement && firstPElement.children) {
+//     const textContent = firstPElement.children
+//       .map((child) => {
+//         if (child.type === "text") {
+//           return child.value;
+//         }
+//         else if (
+//           child.type === "element"
+//           && child.children
+//           && child.children.length > 0
+//         ) {
+//           return child.children.map(grandchild => grandchild.value).join("");
+//         }
+//         return "";
+//       })
+//       .join("");
 
-    blogPost.value.description = textContent.slice(0, MAX_DESCRIPTION_LENGTH);
-  }
-}
-useSeoMeta({
-  title: () => metaTitle,
-  ogTitle: () => metaTitle,
-  description: () => blogPost.value.description,
-  ogDescription: () => blogPost.value.description,
-  ogImage: () => blogPost.value.thumbnail ?? DEFAULT_IMAGE_PATH,
-});
+//     blogPost.value.description = textContent.slice(0, MAX_DESCRIPTION_LENGTH);
+//   }
+// }
+console.log(1);
+// useSeoMeta({
+//   title: () => metaTitle,
+//   ogTitle: () => metaTitle,
+//   description: () => blogPost.value.description,
+//   ogDescription: () => blogPost.value.description,
+//   ogImage: () => blogPost.value.thumbnail ?? DEFAULT_IMAGE_PATH,
+// });
 </script>
 
 <template>
