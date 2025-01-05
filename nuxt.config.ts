@@ -7,33 +7,24 @@ export default defineNuxtConfig({
   ssr: false,
   app: {
     baseURL: "/",
-    buildAssetsDir: "/_nuxt/",
     head: {
       title: SITE_TITLE,
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        // { hid: "og:site_name", name: "og:site_name", content: SITE_TITLE },
-        // { hid: "og:type", name: "og:type", content: "website" },
-        // { hid: "og:url", name: "og:url", content: SITE_URL },
-        // { hid: "og:image:secure_url", name: "og:image:secure_url", content: `${SITE_URL}${DEFAULT_IMAGE_PATH}` },
+        { hid: "og:site_name", name: "og:site_name", content: SITE_TITLE },
+        { hid: "og:type", name: "og:type", content: "website" },
+        { hid: "og:url", name: "og:url", content: SITE_URL },
+        { hid: "og:image:secure_url", name: "og:image:secure_url", content: `${SITE_URL}${DEFAULT_IMAGE_PATH}` },
         { hid: "twitter:card", name: "twitter:card", content: "summary" },
 
-        // { hid: "og:title", name: "og:title", content: SITE_TITLE },
-        // { hid: "description", name: "description", content: SITE_DESCRIPTION },
-        // { hid: "og:description", name: "og:description", content: SITE_DESCRIPTION },
-        // { hid: "og:image", name: "og:image", content: `${SITE_URL}${DEFAULT_IMAGE_PATH}` },
-        // { hid: "og:image:alt", name: "og:image:alt", content: SITE_TITLE },
+        { hid: "og:title", name: "og:title", content: SITE_TITLE },
+        { hid: "description", name: "description", content: SITE_DESCRIPTION },
+        { hid: "og:description", name: "og:description", content: SITE_DESCRIPTION },
+        { hid: "og:image", name: "og:image", content: `${SITE_URL}${DEFAULT_IMAGE_PATH}` },
+        { hid: "og:image:alt", name: "og:image:alt", content: SITE_TITLE },
       ],
       htmlAttrs: {
         lang: "ja",
-      },
-    },
-  },
-
-  runtimeConfig: {
-    public: {
-      content: {
-        host: SITE_URL,
       },
     },
   },
@@ -88,8 +79,6 @@ export default defineNuxtConfig({
       clientDB: true,
     },
     documentDriven: true,
-    host: SITE_URL,
-    trailingSlash: true,
   },
 
   site: {
