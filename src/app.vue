@@ -4,6 +4,7 @@ useHead({
   meta: [
     { name: "viewport", content: "width=device-width, initial-scale=1" },
     { hid: "description", name: "description", content: SITE_DESCRIPTION },
+    { name: "google-site-verification", content: "reBh-QcphMhoGYPoAyvzLUFlQNUQVKGdYZPi3qvIbUE" },
   ],
   htmlAttrs: {
     lang: "ja",
