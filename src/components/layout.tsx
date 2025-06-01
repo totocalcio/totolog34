@@ -24,7 +24,7 @@ export const Layout: React.FC<Props> = ({ children }) => {
         siteMetadata {
           title
           social {
-            twitter
+            x
             github
           }
         }
@@ -34,8 +34,8 @@ export const Layout: React.FC<Props> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <Header
-        title="USA GIJUTSU"
-        twitter={site.siteMetadata.social.twitter}
+        title="うさ技術"
+        x={site.siteMetadata.social.x}
         github={site.siteMetadata.social.github}
       />
       <Box sx={{ px: { xs: 2, md: 4 }, overflowX: 'hidden' }}>

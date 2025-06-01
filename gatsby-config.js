@@ -14,7 +14,7 @@ const config = {
     },
     siteUrl: siteUrl,
     social: {
-      twitter: `dir20634`,
+      x: `dir20634`,
       github: `totocalcio`,
     },
   },
@@ -151,7 +151,7 @@ const config = {
       options: {
         host: siteUrl,
         sitemap: `${siteUrl}sitemap-index.xml`,
-        policy: [{ 
+        policy: [{
           userAgent: '*',
           allow: '/',
           disallow: ['/404.html', '/tags/index.html']

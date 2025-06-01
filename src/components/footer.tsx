@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
         color: 'primary.contrastText',
       }}
     >
-      <footer>© 2019 USA GIJUTSU.</footer>
+      <footer>© 2019 うさ技術</footer>
     </StyledFooter>
   )
 }

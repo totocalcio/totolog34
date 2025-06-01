@@ -43,7 +43,7 @@ export const Seo: React.FC<Props> = ({
               summary
             }
             social {
-              twitter
+              x
             }
             siteUrl
           }
@@ -51,7 +51,7 @@ export const Seo: React.FC<Props> = ({
         icon: file(relativePath: { eq: "icon.png" }) {
           publicURL
         }
-        defaultImage: file(relativePath: { eq: "default.png" }) {
+        defaultImage: file(relativePath: { eq: "default.jpg" }) {
           publicURL
         }
         allFile(
@@ -135,27 +135,27 @@ export const Seo: React.FC<Props> = ({
           content: metaImage,
         },
         {
-          name: `twitter:site`,
+          name: `x:site`,
           content: `@${site.siteMetadata?.author?.summary}` || ``,
         },
         {
-          name: `twitter:card`,
+          name: `x:card`,
           content: `summary`,
         },
         // {
-        //   name: `twitter:creator`,
-        //   content: site.siteMetadata?.social?.twitter || ``,
+        //   name: `x:creator`,
+        //   content: site.siteMetadata?.social?.x || ``,
         // },
         {
-          name: `twitter:title`,
+          name: `x:title`,
           content: metaTitle,
         },
         {
-          name: `twitter:description`,
+          name: `x:description`,
           content: metaDescription,
         },
         {
-          name: `twitter:image`,
+          name: `x:image`,
           content: metaImage,
         },
         ...typeSafeMeta,

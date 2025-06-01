@@ -1,5 +1,5 @@
 ---
-_path: "/look-back-2024"
+slug: "/look-back-2024"
 date: '2025-01-03 17:03'
 title: '2024年振り返り'
 tags: ['日記']
