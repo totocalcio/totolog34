@@ -1,0 +1,76 @@
+:root {
+  --header-height-sm:60px ;
+  --header-height-xs:44px ;
+}
+
+@font-face {
+  font-family: 'JKGM';
+  src: url('../font/JKGM.woff2') format('woff2');
+  font-display: swap;
+}
+
+html,body{
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
+:target {
+  scroll-margin-top: var(--header-height-sm);
+  @media (width < 600px) {
+    scroll-margin-top: var(--header-height-xs);
+  }
+}
+
+#___gatsby,#gatsby-focus-wrapper {
+  min-height: 100vh;
+}
+
+ul {
+  padding-left: 1em;
+
+}
+
+a {
+  word-break: break-all;
+}
+
+blockquote {
+  position: relative;
+  margin: 0;
+  padding: 1em 40px;
+  background-color: #f5f2f0;
+  &::before {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 16px;
+    content:url(../images/quote.svg);
+  }
+}
+
+// cards
+.cards img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+// blog-post
+.blog-post-content {
+  a {
+    img {
+      -o-object-fit: contain;
+         object-fit: contain;
+    }
+  }
+  code[class*="language-"], pre[class*="language-"] {
+    white-space: break-spaces;
+  }
+}
