@@ -58,7 +58,7 @@
     "eslint-config-prettier": "^10.0.0",
     "eslint-config-react-app": "^7.0.1",
     "gatsby-remark-code-titles": "1.1.0",
-    "prettier": "3.5.3",
+    "prettier": "3.6.0",
     "tss-react": "^4.5.2",
     "typescript": "^5.0.0"
   },
